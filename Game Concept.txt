@@ -1,0 +1,19 @@
+----------------------META LOOP---------------------------
+
+The player is trapped on a strange planet and to survive he creates a small bunker underground to survive the harsh conditions on the surface.
+During the day the player can come out of the bunker to gather resources but he needs to quickly get back when the night falls because of the hazards {NEED TO THINK WHAT WILL HAPPER DURING NIGHT}.
+To survive, the long term objective is to create a rocket that will help the player escape the planet. Short term objective is to gather food from the surface, research parts to create the rocket, expand the bunker with different rooms to upgrade the working efficiency (e.g. better tools for mining, improved resource transfer rate, etc).
+
+If the player dies on the surface then he will respawn in the bunker loosing all the resources present on the surface {NEED TO THINK THE RESPAWN LOGIC}.
+The player needs to create all the tools and machines in the bunker before going to the surface.
+The machines on the surface can be placed very quickly but if the player wants to bring back the machine then it will take time.
+There will be different rooms with different usecases:
+Research room : To research rocket parts
+Mechanic room : To create tools
+Construction room : To create machines
+Storage room : To store everything
+Kitchen : To cook food and eat
+Rocket construction room : The rocket will be constructed here
+
+----------------------GAMEPLAY LOOP---------------------------
+
