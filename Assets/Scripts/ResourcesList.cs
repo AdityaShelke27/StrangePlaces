@@ -1,19 +1,7 @@
-public enum E_Resource
+public enum SurfaceNode
 {
-    Scraps,
-    Crystals,
-    Biomass
-}
-
-public enum E_Machine
-{
-    AutoMiner,
-    Generator
-}
-
-public enum E_Surface
-{
-    Debris,
-    CrystalNode,
-    AlienPlant
+    Ore,
+    Plant,
+    Gravitational_Anomaly,
+    Alien_Artifact
 }
