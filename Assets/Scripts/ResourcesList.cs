@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public enum SurfaceNode
 {
@@ -23,4 +24,9 @@ public static class ResourceData
         { SurfaceNodeAmount.Large, 50 },
         { SurfaceNodeAmount.Very_Large, 100 },
     };
+}
+[System.Serializable]
+public class Item : MonoBehaviour
+{
+
 }

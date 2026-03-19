@@ -35,4 +35,14 @@ public class ResourceNode : MonoBehaviour
 
         return amount;
     }
+
+    private void OnMouseDown()
+    {
+        Debug.Log("Mouse Click");
+        ResourceHandler.Instance.NodeSelected(this);
+    }
+    public SurfaceNode GetNodeType()
+    {
+        return m_NodeType;
+    }
 }
