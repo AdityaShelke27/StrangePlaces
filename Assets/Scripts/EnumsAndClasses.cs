@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,8 +26,14 @@ public static class ResourceData
         { SurfaceNodeAmount.Very_Large, 100 },
     };
 }
-[System.Serializable]
+/*[Serializable]
 public class Item : MonoBehaviour
 {
 
+}*/
+[Serializable]
+public class ItemSlot
+{
+    public Item item;
+    public int amount;
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ResourceNode : MonoBehaviour
+public class ResourceNodeTemp : MonoBehaviour
 {
     [SerializeField] SurfaceNode m_NodeType;
     [SerializeField] SurfaceNodeAmount m_NodeAmount;
@@ -38,7 +38,6 @@ public class ResourceNode : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Mouse Click");
         ResourceHandler.Instance.NodeSelected(this);
     }
     public SurfaceNode GetNodeType()

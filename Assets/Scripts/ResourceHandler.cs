@@ -4,8 +4,8 @@ public class ResourceHandler : MonoBehaviour
 {
     public static ResourceHandler Instance;
 
-    [SerializeField] Item[] m_Inventory = new Item[5];
-    [SerializeField] Item m_SelectedItem;
+    [SerializeField] ItemSlot[] m_Inventory = new ItemSlot[5];
+    [SerializeField] int m_SelectedItemIdx = -1;
     [SerializeField] Machine[] m_MachinePrefabs;
 
     private void Awake()
@@ -15,38 +15,51 @@ public class ResourceHandler : MonoBehaviour
             Instance = this;
         }
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        m_SelectedItemIdx = -1;
     }
 
     public void SelectItem(int idx)
     {
         if(idx < 0 || idx >= m_Inventory.Length) return;
 
-        m_SelectedItem = m_Inventory[idx];
+        m_SelectedItemIdx = idx;
     }
 
-    public void NodeSelected(ResourceNode node)
+    public void NodeSelected(ResourceNodeTemp node)
     {
-        if(m_SelectedItem is Machine)
+        /*if(m_SelectedItemIdx < 0)
         {
-            Machine machine = m_SelectedItem as Machine;
+            Debug.Log("No Item Selected");
+            return;
+        }
+
+        if (m_Inventory[m_SelectedItemIdx].item is Machine)
+        {   
+            Machine machine = m_Inventory[m_SelectedItemIdx].item as Machine;
             if(machine.IsNodeInput())
             {
                 if(machine.GetInputType() == node.GetNodeType())
                 {
                     GameObject machineInstance = Instantiate(m_MachinePrefabs[machine.GetMachineID()].gameObject, node.transform.position, Quaternion.identity);
+                    RemoveItemFromInventory(m_SelectedItemIdx);
                 }
             }
+        }*/
+    }
+
+    public void RemoveItemFromInventory(int itemIdx)
+    {
+        if(m_Inventory[itemIdx].amount > 1)
+        {
+            m_Inventory[itemIdx].amount--;
         }
+        else
+        {
+            m_Inventory[itemIdx] = null;
+        }
+            
+        m_SelectedItemIdx = -1;
     }
 }
