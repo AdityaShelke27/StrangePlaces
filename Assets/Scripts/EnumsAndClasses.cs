@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum SurfaceNode
 {
-    Ore,
-    Plant,
-    Gravitational_Anomaly,
-    Alien_Artifact
+    Ore_Node,
+    Plant_Node,
+    Gravitational_Anomaly_Node,
+    Alien_Ruin_Node
 }
 public enum SurfaceNodeAmount
 {
@@ -16,24 +16,92 @@ public enum SurfaceNodeAmount
     Large,
     Very_Large
 }
-public static class ResourceData
+public enum ResourceType
 {
-    public static readonly Dictionary<SurfaceNodeAmount, int> ResourceAmount = new()
-    {
-        { SurfaceNodeAmount.Small, 10 },
-        { SurfaceNodeAmount.Medium, 25 },
-        { SurfaceNodeAmount.Large, 50 },
-        { SurfaceNodeAmount.Very_Large, 100 },
-    };
+    Ore,
+    Plant,
+    Alien_Artifact,
+    Metal,
+    Biomass,
+    Electricity
 }
-/*[Serializable]
-public class Item : MonoBehaviour
+public enum StorableItemEnum
 {
+    Alien_Artifact,
+    Artifact_Scanner,
+    Axe,
+    Biomass,
+    BioProcessor,
+    BioReactor,
+    Gravity_Reactor,
+    Harvester,
+    Metal,
+    Miner,
+    Ore,
+    Pickaxe,
+    Plant,
+    Research_Station,
+    Smelter
+}
 
-}*/
+public enum MachineState
+{
+    Inactive,
+    Working,
+    Halted
+}
+public enum PlacementType
+{
+    None,
+    NodePlacement,
+    FreePlacement
+}
+
 [Serializable]
 public class ItemSlot
 {
-    public Item item;
+    public StorableItem item;
     public int amount;
+}
+public abstract class MachineIns : Item
+{
+    protected GameObject MachinePrefab;
+    protected float PowerConsumption;
+
+    public MachineIns(GameObject _MachinePrefab)
+    {
+        MachinePrefab = _MachinePrefab;
+    }
+
+    public GameObject GetMachinePrefab() => MachinePrefab;
+}
+class NodeMachineIns : MachineIns
+{
+    protected ResourceNodeInstance input;
+    protected ResourceIns output;
+
+    public NodeMachineIns(GameObject _MachinePrefab) : base(_MachinePrefab)
+    {
+        
+    }
+}
+class ResourceMachineIns : MachineIns
+{
+    protected ResourceIns input;
+    protected ResourceIns output;
+
+    public ResourceMachineIns(GameObject _MachinePrefab) : base(_MachinePrefab)
+    {
+
+    }
+}
+class ResourceIns : Item
+{
+    
+}
+class Tool0 : Item
+{
+    private float maxDurability;
+    private float durability;
+    private ResourceNodeInstance minableNode;
 }

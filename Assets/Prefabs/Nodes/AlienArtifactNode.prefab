@@ -102,10 +102,10 @@ GameObject:
   - component: {fileID: 7339773422841464889}
   - component: {fileID: 1763463714539460973}
   - component: {fileID: -2441888330572218469}
-  - component: {fileID: 1328466291246055488}
+  - component: {fileID: -3559088350967156776}
   m_Layer: 0
   m_Name: AlienArtifactNode
-  m_TagString: Untagged
+  m_TagString: ResourceNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1328466291246055488
+--- !u!114 &-3559088350967156776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,8 +197,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8829060133671559922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4805f14f70cdc4383be17a0d57c126, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a84db5883104b24daad98e2cb697b30, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
-  m_NodeType: 3
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceNodeInstance
+  m_OutputType: 3
   m_NodeAmount: 0

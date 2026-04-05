@@ -102,10 +102,10 @@ GameObject:
   - component: {fileID: 2668623614732123197}
   - component: {fileID: -1136048184016589092}
   - component: {fileID: 8774704557280956000}
-  - component: {fileID: 7318749156426586689}
+  - component: {fileID: 7870240720752566482}
   m_Layer: 0
   m_Name: PlantNode
-  m_TagString: Untagged
+  m_TagString: ResourceNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7318749156426586689
+--- !u!114 &7870240720752566482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,8 +197,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8160222688792120005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4805f14f70cdc4383be17a0d57c126, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a84db5883104b24daad98e2cb697b30, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
-  m_NodeType: 1
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceNodeInstance
+  m_OutputType: 1
   m_NodeAmount: 0

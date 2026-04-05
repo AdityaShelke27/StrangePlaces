@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcea3a8b275386418fb432a66d014dd, type: 3}
+  m_Name: ArtifactSanner
+  m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
+  itemID: artifact-scanner
+  itemName: 
+  itemImage: {fileID: 0}
+  itemDescription: 
+  PlacementType: 1
+  WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}
+  PlacableNodes:
+  - {fileID: 11400000, guid: d550277ebf530404da46bd942f7a8ae1, type: 2}
+  OutputSlots: 0
+  InputNode: {fileID: 11400000, guid: d550277ebf530404da46bd942f7a8ae1, type: 2}

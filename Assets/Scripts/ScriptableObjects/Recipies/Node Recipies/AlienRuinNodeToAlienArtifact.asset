@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d2de2f370476b428e1eb2ebaf4753f, type: 3}
+  m_Name: AlienRuinNodeToAlienArtifact
+  m_EditorClassIdentifier: Assembly-CSharp::NodeRecipeData
+  RecipeID: alien-ruin-node-to-alien-artifact
+  RecipeName: 
+  Input: {fileID: 11400000, guid: d550277ebf530404da46bd942f7a8ae1, type: 2}
+  Output:
+  - Resource: {fileID: 11400000, guid: 5f284b6691c1ac945b2b0ea4212c6a81, type: 2}
+    amount: 1
+  CraftTime: 0
