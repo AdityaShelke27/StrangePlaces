@@ -69,23 +69,25 @@ public class ResourceHandler : MonoBehaviour
         GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
         obj.GetComponent<WorldInstance>().Initialize(_item);
     }
-
-    public (bool, Vector3) CanPlaceWorld(StorableItem _item, Vector3 _pos)
+    public void InstantiateObjectToNodeWorld(StorableItem _item, Vector3 _pos, ResourceNodeInstance _node)
     {
-        switch (_item.PlacementType)
-        {
-            case PlacementType.NodePlacement:
-                return CheckNodePlacement(_item, _pos);
-            case PlacementType.FreePlacement:
-                return CheckFreePlacement(_item, _pos);
-            case PlacementType.None:
-                return (false, Vector3.zero);
-            default:
-                return (false, Vector3.zero);
-        }
+        GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
+        obj.GetComponent<WorldInstance>().Initialize(_item);
+        obj.GetComponent<NodeMachineInstance>().SetInputNode(_node);
     }
 
-    (bool, Vector3) CheckNodePlacement(StorableItem _item, Vector3 _pos)
+    public (bool, Vector3, ResourceNodeInstance) CanPlaceWorld(StorableItem _item, Vector3 _pos)
+    {
+        return _item.PlacementType switch
+        {
+            PlacementType.NodePlacement => CheckNodePlacement(_item, _pos),
+            PlacementType.FreePlacement => CheckFreePlacement(_item, _pos),
+            PlacementType.None => (false, Vector3.zero, null),
+            _ => (false, Vector3.zero, null),
+        };
+    }
+
+    (bool, Vector3, ResourceNodeInstance) CheckNodePlacement(StorableItem _item, Vector3 _pos)
     {
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(_pos);
         Collider2D col = Physics2D.OverlapPoint(worldPos);
@@ -94,15 +96,15 @@ public class ResourceHandler : MonoBehaviour
             ResourceNodeInstance m_Node = col.GetComponent<ResourceNodeInstance>();
             if(_item.GetPlacableNodes().Contains(m_Node.GetResourceNodeData()))
             {
-                return (true, m_Node.transform.position);
+                return (true, m_Node.transform.position, m_Node);
             }
             Debug.Log("Working");
         }
 
-        return (false, Vector3.zero);
+        return (false, Vector3.zero, null);
     }
-    (bool, Vector3) CheckFreePlacement(StorableItem _item, Vector3 _pos)
+    (bool, Vector3, ResourceNodeInstance) CheckFreePlacement(StorableItem _item, Vector3 _pos)
     {
-        return (false, Vector3.zero);
+        return (false, Vector3.zero, null);
     }
 }

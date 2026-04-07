@@ -17,5 +17,8 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   itemDescription: 
   PlacementType: 2
+  WorldPrefab: {fileID: 0}
+  PlacableNodes: []
+  Size: {x: 2, y: 2}
   OutputSlots: 0
   InputSlots: 0

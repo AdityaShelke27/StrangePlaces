@@ -9,7 +9,6 @@ public abstract class MachineInstance : WorldInstance
     [SerializeField] StorableItem m_Input;
     [SerializeField] ItemSlot m_Output;*/
     protected bool IsWorking;
-    [SerializeField] protected float TimeToProduce = 10f;
     protected MachineState State = MachineState.Inactive;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +22,9 @@ public abstract class MachineInstance : WorldInstance
         
     }
     public abstract void StartMachine();
+
+    public MachineState GetMachineState() => State;
+    public abstract void SetMachineState(MachineState _state);
     /*IEnumerator MachineWork()
     {
         yield return null;

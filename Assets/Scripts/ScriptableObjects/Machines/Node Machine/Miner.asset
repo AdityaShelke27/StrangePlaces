@@ -20,5 +20,6 @@ MonoBehaviour:
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}
   PlacableNodes:
   - {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}
+  Size: {x: 2, y: 2}
   OutputSlots: 0
   InputNode: {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}

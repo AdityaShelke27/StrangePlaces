@@ -9,6 +9,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     bool m_IsDragging;
     bool CanPlace;
     Vector3 m_TargetPos;
+    ResourceNodeInstance m_Node;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,7 +39,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         m_IsDragging = true;
         m_PointerData = eventData;
-        StartCoroutine(StartCheckNodeMachine());
+        StartCoroutine(StartCheckPlacementPointer());
     }
     public void OnPointerUp(PointerEventData eventData)
     {
@@ -51,26 +52,29 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         if(CanPlace)
         {
-            ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
+            if(m_ItemSlot.item.PlacementType == PlacementType.NodePlacement)
+            {
+                ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
+            }
+            else
+            {
+                ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
+            }
         }
 
         m_PointerData = null;
         m_IsDragging = false;
     }
 
-    IEnumerator StartCheckNodeMachine()
+    IEnumerator StartCheckPlacementPointer()
     {
         while (m_IsDragging)
         {
-            (CanPlace, m_TargetPos) = ResourceHandler.Instance.CanPlaceWorld(m_ItemSlot.item, m_PointerData.position);
+            (CanPlace, m_TargetPos, m_Node) = ResourceHandler.Instance.CanPlaceWorld(m_ItemSlot.item, m_PointerData.position);
 
             yield return null;
         }
         
-    }
-    IEnumerator StartCheckResourceMachine()
-    {
-        yield return null;
     }
 
     public void SetStorableItem(StorableItem _item)

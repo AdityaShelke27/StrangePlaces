@@ -31,4 +31,8 @@ public class ResourceMachineInstance : MachineInstance
         throw new NotImplementedException();
     }
 
+    public override void SetMachineState(MachineState _state)
+    {
+        throw new NotImplementedException();
+    }
 }
