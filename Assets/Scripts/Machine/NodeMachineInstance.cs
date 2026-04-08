@@ -9,7 +9,7 @@ public class NodeMachineInstance : MachineInstance
     [SerializeField] private ResourceNodeInstance m_Input;
     Coroutine m_MachineWorkingCoroutine;
     Coroutine m_MachineHaultedCoroutine;
-    private ItemSlot m_Output;
+    [SerializeField] private ItemSlot m_Output = new();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +27,7 @@ public class NodeMachineInstance : MachineInstance
         m_MachineData = data as NodeMachine;
         m_SpriteRenderer.sprite = m_MachineData.itemImage;
         GetComponent<BoxCollider2D>().size = m_MachineData.Size;
+        SetMachineState(MachineState.Halted);
     }
     public void SetInputNode(ResourceNodeInstance _input)
     {
@@ -52,6 +53,15 @@ public class NodeMachineInstance : MachineInstance
         {
             yield return new WaitForSeconds(m_MachineData.TimeToProduce);
             int amount = m_Input.FetchResource(1);
+
+            if(m_Output.item == null)
+            {
+                m_Output = new(m_Input.GetResourceNodeData().ResourceYield, amount);
+            }
+            else
+            {
+                m_Output.amount += amount;
+            }
         }
     }
     IEnumerator MachineHaulted()
@@ -74,9 +84,11 @@ public class NodeMachineInstance : MachineInstance
                 StopCoroutine(m_MachineWorkingCoroutine);
                 break;
             case MachineState.Working:
+                if (m_MachineWorkingCoroutine != null) StopCoroutine(m_MachineWorkingCoroutine);
                 m_MachineWorkingCoroutine = StartCoroutine(MachineWork());
                 break;
             case MachineState.Halted:
+                if (m_MachineHaultedCoroutine != null) StopCoroutine(m_MachineHaultedCoroutine);
                 m_MachineHaultedCoroutine = StartCoroutine(MachineHaulted());
                 break;
         }

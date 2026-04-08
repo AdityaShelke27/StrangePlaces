@@ -21,5 +21,7 @@ MonoBehaviour:
   PlacableNodes:
   - {fileID: 11400000, guid: 9975a3b173e15f349bd05b899642d926, type: 2}
   Size: {x: 2, y: 2}
+  TimeToProduce: 1
+  MachineHaltCheck: 1
   OutputSlots: 0
   InputNode: {fileID: 11400000, guid: 9975a3b173e15f349bd05b899642d926, type: 2}

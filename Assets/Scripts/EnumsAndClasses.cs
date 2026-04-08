@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public enum SurfaceNode
 {
@@ -62,6 +63,17 @@ public class ItemSlot
 {
     public StorableItem item;
     public int amount;
+
+    public ItemSlot()
+    {
+        item = null;
+        amount = 0;
+    }
+    public ItemSlot(StorableItem _item, int _amount)
+    {
+        item = _item;
+        amount = _amount;
+    }
 }
 public abstract class MachineIns : Item
 {

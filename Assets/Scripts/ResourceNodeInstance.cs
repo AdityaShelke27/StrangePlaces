@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ResourceNodeInstance : MonoBehaviour
@@ -5,7 +6,8 @@ public class ResourceNodeInstance : MonoBehaviour
     [SerializeField] ResourceNode m_ResourceNodeData;
     [SerializeField] SurfaceNodeAmount m_NodeAmount;
     int m_MaxAmount;
-    int m_AmountAvailable;
+    [SerializeField] int m_AmountAvailable;
+    bool m_AllResourcesDepleted = false;
 
     void Start()
     {
@@ -23,7 +25,9 @@ public class ResourceNodeInstance : MonoBehaviour
     }
     public int FetchResource(int amount)
     {
-        if(amount >= m_AmountAvailable)
+        if (m_AllResourcesDepleted) return 0;
+
+        if(amount < m_AmountAvailable)
         {
             m_AmountAvailable -= amount;
         }
@@ -31,10 +35,18 @@ public class ResourceNodeInstance : MonoBehaviour
         {
             amount = m_AmountAvailable;
             m_AmountAvailable = 0;
+            m_AllResourcesDepleted = true;
+            Debug.Log("Call");
+            StartCoroutine(DestroyNodeNextFrame());
         }
 
         return amount;
     }
+    IEnumerator DestroyNodeNextFrame()
+    {
+        yield return null;
 
+        Destroy(gameObject);
+    }
     public ResourceNode GetResourceNodeData() => m_ResourceNodeData;
 }

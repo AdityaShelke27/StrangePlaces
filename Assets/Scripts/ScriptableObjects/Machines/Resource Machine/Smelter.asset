@@ -20,5 +20,7 @@ MonoBehaviour:
   WorldPrefab: {fileID: 0}
   PlacableNodes: []
   Size: {x: 2, y: 2}
+  TimeToProduce: 1
+  MachineHaltCheck: 1
   OutputSlots: 0
   InputSlots: 0

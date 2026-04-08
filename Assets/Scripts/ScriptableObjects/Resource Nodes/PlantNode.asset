@@ -16,6 +16,6 @@ MonoBehaviour:
   itemName: 
   itemImage: {fileID: 906388131340123023, guid: 5f337bc4cd4791a4c895cfb91b94012e, type: 3}
   itemDescription: 
-  MaxAmount: 0
+  MaxAmount: 10
   NodeType: 1
   ResourceYield: {fileID: 11400000, guid: 1a51ad7a76aaf334f8dce79fee0ea4c4, type: 2}
