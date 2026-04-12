@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5986252678729289239, guid: 36522887a1d41264da9affc2c935ea2e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8829060133671559922
 GameObject:
@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 1763463714539460973}
   - component: {fileID: -2441888330572218469}
   - component: {fileID: -3559088350967156776}
-  m_Layer: 0
-  m_Name: AlienArtifactNode
+  m_Layer: 6
+  m_Name: Node
   m_TagString: ResourceNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,5 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a84db5883104b24daad98e2cb697b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNodeInstance
+  m_SpriteRenderer: {fileID: 1235349219370959428}
   m_ResourceNodeData: {fileID: 0}
   m_NodeAmount: 0
+  m_AmountAvailable: 0

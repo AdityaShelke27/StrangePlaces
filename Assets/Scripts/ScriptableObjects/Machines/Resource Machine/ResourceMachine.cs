@@ -4,4 +4,5 @@ using UnityEngine;
 public class ResourceMachine : Machine
 {
     public int InputSlots;
+    public ResourceRecipeData[] RecipeData;
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class NodeMachineInstance : MachineInstance
@@ -7,6 +8,7 @@ public class NodeMachineInstance : MachineInstance
     [SerializeField] private NodeMachine m_MachineData;
     [SerializeField] private SpriteRenderer m_SpriteRenderer;
     [SerializeField] private ResourceNodeInstance m_Input;
+    [SerializeField] private TMP_Text m_MachineStateText;
     Coroutine m_MachineWorkingCoroutine;
     Coroutine m_MachineHaultedCoroutine;
     [SerializeField] private ItemSlot m_Output = new();
@@ -63,6 +65,8 @@ public class NodeMachineInstance : MachineInstance
                 m_Output.amount += amount;
             }
         }
+
+        SetMachineState(MachineState.Halted);
     }
     IEnumerator MachineHaulted()
     {
@@ -92,5 +96,7 @@ public class NodeMachineInstance : MachineInstance
                 m_MachineHaultedCoroutine = StartCoroutine(MachineHaulted());
                 break;
         }
+
+        m_MachineStateText.text = "Machine State:" + _state.ToString();
     }
 }

@@ -17,10 +17,12 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   itemDescription: 
   PlacementType: 2
-  WorldPrefab: {fileID: 0}
+  WorldPrefab: {fileID: 8756248712972513278, guid: 8a79a81b536cec441a0f1041f38bedbf, type: 3}
   PlacableNodes: []
   Size: {x: 2, y: 2}
   TimeToProduce: 1
   MachineHaltCheck: 1
-  OutputSlots: 0
-  InputSlots: 0
+  OutputSlots: 1
+  InputSlots: 1
+  RecipeData:
+  - {fileID: 11400000, guid: a4ea7bacb8c702b43bf29553e8a17b45, type: 2}

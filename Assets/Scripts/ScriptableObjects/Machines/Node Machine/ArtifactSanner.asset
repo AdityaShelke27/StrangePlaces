@@ -23,5 +23,5 @@ MonoBehaviour:
   Size: {x: 2, y: 2}
   TimeToProduce: 1
   MachineHaltCheck: 1
-  OutputSlots: 0
+  OutputSlots: 1
   InputNode: {fileID: 11400000, guid: d550277ebf530404da46bd942f7a8ae1, type: 2}

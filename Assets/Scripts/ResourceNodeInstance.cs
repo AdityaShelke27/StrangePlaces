@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ResourceNodeInstance : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer m_SpriteRenderer;
     [SerializeField] ResourceNode m_ResourceNodeData;
     [SerializeField] SurfaceNodeAmount m_NodeAmount;
     int m_MaxAmount;
@@ -20,6 +21,7 @@ public class ResourceNodeInstance : MonoBehaviour
     }
     void Initialize()
     {
+        m_SpriteRenderer.sprite = m_ResourceNodeData.itemImage;
         m_MaxAmount = m_ResourceNodeData.MaxAmount;
         m_AmountAvailable = m_MaxAmount;
     }
@@ -36,7 +38,6 @@ public class ResourceNodeInstance : MonoBehaviour
             amount = m_AmountAvailable;
             m_AmountAvailable = 0;
             m_AllResourcesDepleted = true;
-            Debug.Log("Call");
             StartCoroutine(DestroyNodeNextFrame());
         }
 

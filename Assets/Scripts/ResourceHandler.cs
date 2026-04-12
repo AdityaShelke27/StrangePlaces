@@ -6,6 +6,7 @@ public class ResourceHandler : MonoBehaviour
     public static ResourceHandler Instance;
 
     [SerializeField] InventorySlot[] m_Inventory = new InventorySlot[5];
+    [SerializeField] LayerMask m_WorldPlacableLayer;
     [SerializeField] int m_SelectedItemIdx = -1;
 
     private void Awake()
@@ -90,7 +91,7 @@ public class ResourceHandler : MonoBehaviour
     (bool, Vector3, ResourceNodeInstance) CheckNodePlacement(StorableItem _item, Vector3 _pos)
     {
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(_pos);
-        Collider2D col = Physics2D.OverlapPoint(worldPos);
+        Collider2D col = Physics2D.OverlapBox(worldPos, _item.Size, 0, m_WorldPlacableLayer);
         if (col && col.CompareTag("ResourceNode"))
         {
             ResourceNodeInstance m_Node = col.GetComponent<ResourceNodeInstance>();
@@ -98,13 +99,22 @@ public class ResourceHandler : MonoBehaviour
             {
                 return (true, m_Node.transform.position, m_Node);
             }
-            Debug.Log("Working");
+            else
+            {
+                Debug.Log("Wrong Node");
+            }
         }
 
         return (false, Vector3.zero, null);
     }
     (bool, Vector3, ResourceNodeInstance) CheckFreePlacement(StorableItem _item, Vector3 _pos)
     {
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(_pos);
+        Collider2D col = Physics2D.OverlapBox(worldPos, _item.Size, 0, m_WorldPlacableLayer);
+        if (!col)
+        {
+            return (true, worldPos, null);
+        }
         return (false, Vector3.zero, null);
     }
 }

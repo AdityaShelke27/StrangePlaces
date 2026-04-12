@@ -1,22 +1,24 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] ItemSlot m_ItemSlot;
+    Image m_ItemImage;
     PointerEventData m_PointerData;
     bool m_IsDragging;
     bool CanPlace;
     Vector3 m_TargetPos;
     ResourceNodeInstance m_Node;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        
+        m_ItemImage = GetComponent<Image>();
+        SetStorableItem(m_ItemSlot.item);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -80,6 +82,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public void SetStorableItem(StorableItem _item)
     {
         m_ItemSlot.item = _item;
+        m_ItemImage.sprite = m_ItemSlot.item.itemImage;
     }
     public ItemSlot GetItemSlot() => m_ItemSlot;
 }
