@@ -26,16 +26,6 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        /*if(m_ItemSlot.item is NodeMachineIns)
-        {
-            m_PointerData = eventData;
-            m_IsDragging = true;
-            StartCoroutine(StartCheckNodeMachine());
-        }
-        else if(m_ItemSlot.item is ResourceMachineIns)
-        {
-            
-        }*/
 
         if (m_ItemSlot.item.PlacementType == PlacementType.None) return;
 
@@ -45,13 +35,6 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        /*if(m_ItemSlot.item is NodeMachineIns && m_Node)
-        {
-            Instantiate((m_ItemSlot.item as MachineIns).GetMachinePrefab(), m_Node.transform.position, Quaternion.identity);
-        }
-        m_PointerData = null;
-        m_IsDragging = false;*/
-
         if(CanPlace)
         {
             if(m_ItemSlot.item.PlacementType == PlacementType.NodePlacement)
