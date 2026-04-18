@@ -75,45 +75,9 @@ public class ItemSlot
         amount = _amount;
     }
 }
-public abstract class MachineIns : Item
+public interface IItemSlotUI
 {
-    protected GameObject MachinePrefab;
-    protected float PowerConsumption;
-
-    public MachineIns(GameObject _MachinePrefab)
-    {
-        MachinePrefab = _MachinePrefab;
-    }
-
-    public GameObject GetMachinePrefab() => MachinePrefab;
-}
-class NodeMachineIns : MachineIns
-{
-    protected ResourceNodeInstance input;
-    protected ResourceIns output;
-
-    public NodeMachineIns(GameObject _MachinePrefab) : base(_MachinePrefab)
-    {
-        
-    }
-}
-class ResourceMachineIns : MachineIns
-{
-    protected ResourceIns input;
-    protected ResourceIns output;
-
-    public ResourceMachineIns(GameObject _MachinePrefab) : base(_MachinePrefab)
-    {
-
-    }
-}
-class ResourceIns : Item
-{
-    
-}
-class Tool0 : Item
-{
-    private float maxDurability;
-    private float durability;
-    private ResourceNodeInstance minableNode;
+    ItemSlot GetItem();
+    void SetItem(ItemSlot item);
+    bool CanAccept(ItemSlot item);
 }

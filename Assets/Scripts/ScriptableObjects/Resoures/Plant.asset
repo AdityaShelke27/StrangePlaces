@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: plant
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: f005349c0770cf9498d8dc0df9d849f0, type: 3}
   itemDescription: 
+  PlacementType: 0
+  WorldPrefab: {fileID: 0}
+  PlacableNodes: []
+  Size: {x: 0, y: 0}
