@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
   itemID: artifact-scanner
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: fffc4d2a0d0a7234ea0c363bbc47e4b1, type: 3}
   itemDescription: 
   PlacementType: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}

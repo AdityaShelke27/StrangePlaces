@@ -75,9 +75,3 @@ public class ItemSlot
         amount = _amount;
     }
 }
-public interface IItemSlotUI
-{
-    ItemSlot GetItem();
-    void SetItem(ItemSlot item);
-    bool CanAccept(ItemSlot item);
-}

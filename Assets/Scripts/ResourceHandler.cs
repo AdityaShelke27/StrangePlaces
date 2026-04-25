@@ -58,9 +58,10 @@ public class ResourceHandler : MonoBehaviour
 
     public void RemoveItemFromInventory(int itemIdx)
     {
-        if(m_Inventory[itemIdx].GetItemSlot().amount > 0)
+        int _amount = m_Inventory[itemIdx].GetItemAmount();
+        if (_amount > 0)
         {
-            m_Inventory[itemIdx].GetItemSlot().amount--;
+            m_Inventory[itemIdx].SetItemAmount(_amount - 1);
         }
             
         m_SelectedItemIdx = -1;
@@ -79,6 +80,8 @@ public class ResourceHandler : MonoBehaviour
 
     public (bool, Vector3, ResourceNodeInstance) CanPlaceWorld(StorableItem _item, Vector3 _pos)
     {
+        if (_item == null) return (false, Vector3.zero, null);
+
         return _item.PlacementType switch
         {
             PlacementType.NodePlacement => CheckNodePlacement(_item, _pos),

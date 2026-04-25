@@ -1,7 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,20 +9,20 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     [SerializeField] ItemSlot m_ItemSlot;
     [SerializeField] Image m_ItemImage;
-    [SerializeField] TMP_Text m_ItemAmount;
-    [SerializeField] MonoScript[] m_IncludeItems;
-    [SerializeField] MonoScript[] m_ExcludeItems;
+    [SerializeField] TMP_Text m_ItemAmountText;
+    [SerializeField] List<StorableItem> m_IncludeItems;
+    [SerializeField] bool m_ShouldAcceptAllItems;
     PointerEventData m_PointerData;
     bool m_IsDragging;
     bool CanPlace;
     Vector3 m_TargetPos;
     ResourceNodeInstance m_Node;
 
-    public static ItemSlot s_SourceInventorySlot;
+    public static InventorySlot s_SourceInventorySlot;
 
     void Start()
     {
-        SetStorableItem(m_ItemSlot.item);
+        SetItemSlot(m_ItemSlot.item, m_ItemSlot.amount);
     }
 
     IEnumerator StartCheckPlacementPointer()
@@ -35,21 +34,33 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             yield return null;
         }
     }
-
-    public void SetStorableItem(StorableItem _item)
+    public void SetItemSlot(StorableItem _item, int _amount)
     {
         m_ItemSlot.item = _item;
-        m_ItemImage.sprite = m_ItemSlot.item.itemImage;
-    }
-    public ItemSlot GetItemSlot() => m_ItemSlot;
+        m_ItemSlot.amount = _amount;
 
+        if (_item == null)
+        {
+            m_ItemImage.enabled = false;
+            m_ItemAmountText.enabled = false;
+        }
+        else
+        {
+            m_ItemImage.enabled = true;
+            m_ItemAmountText.enabled = true;
+            m_ItemImage.sprite = _item.itemImage;
+            m_ItemAmountText.text = _amount.ToString();
+        }
+    }
+    public StorableItem GetItem() => m_ItemSlot.item;
+    public int GetItemAmount() => m_ItemSlot.amount;
     public void OnBeginDrag(PointerEventData eventData)
     {
         //if (m_ItemSlot.item.PlacementType == PlacementType.None) return;
         Debug.Log("Begin Drag");
         m_IsDragging = true;
         m_PointerData = eventData;
-        s_SourceInventorySlot = m_ItemSlot;
+        s_SourceInventorySlot = this;
         StartCoroutine(StartCheckPlacementPointer());
     }
 
@@ -77,32 +88,67 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (s_SourceInventorySlot == null) return;
         Debug.Log("Drop");
-        if(!CanAcceptItem(s_SourceInventorySlot.item)) return;
+        if(!CanAcceptItem(s_SourceInventorySlot.GetItem())) return;
 
-        SetStorableItem(s_SourceInventorySlot.item);
+        SetItemSlot(s_SourceInventorySlot.GetItem(), s_SourceInventorySlot.GetItemAmount());
+        s_SourceInventorySlot.RemoveItemFromInventory();
+        s_SourceInventorySlot = null;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Dragging");
+        Debug.Log($"Dragging");
     }
 
     bool CanAcceptItem(StorableItem _item)
     {
-        for(int i = 0; i < m_ExcludeItems.Length; i++)
+        if(m_ShouldAcceptAllItems) return true;
+
+        for (int i = 0; i < m_IncludeItems.Count; i++)
         {
-            System.Type type = m_ExcludeItems[i].GetClass();
-
-            if (type.IsAssignableFrom(_item.GetType())) return false;
-        }
-
-        for (int i = 0; i < m_IncludeItems.Length; i++)
-        {
-            System.Type type = m_IncludeItems[i].GetClass();
-
-            if (type.IsAssignableFrom(_item.GetType())) return true;
+            if(_item == m_IncludeItems[i]) return true;
         }
 
         return false;
+    }
+
+    public void AddIncludeItems(StorableItem _item)
+    {
+        m_IncludeItems.Add(_item);
+    }
+
+    public void AddIncludeItems(List<StorableItem> _items)
+    {
+        m_IncludeItems.AddRange(_items);
+    }
+    public void SetItemAmount(int _amount)
+    {
+        if(_amount < 0)
+        {
+            Debug.Log("Inventory slot item amount cant be negative");
+            return;
+        }
+
+        m_ItemSlot.amount = _amount;
+        m_ItemAmountText.text = _amount.ToString();
+    }
+    public void SetItem(StorableItem _item)
+    {
+        m_ItemSlot.item = _item;
+        if (_item == null)
+        {
+            m_ItemImage.enabled = false;
+            m_ItemAmountText.enabled = false;
+        }
+        else
+        {
+            m_ItemImage.enabled = true;
+            m_ItemAmountText.enabled = true;
+            m_ItemImage.sprite = _item.itemImage;
+        }
+    }
+    public void RemoveItemFromInventory()
+    {
+        SetItemSlot(null, 0);
     }
 }

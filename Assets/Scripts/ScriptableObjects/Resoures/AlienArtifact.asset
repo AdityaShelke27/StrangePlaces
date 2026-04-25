@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: alien-artifact
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: c3900942a9483f945ae7317b4050bdf6, type: 3}
   itemDescription: 
   PlacementType: 0
   WorldPrefab: {fileID: 0}
   PlacableNodes: []
+  Size: {x: 0, y: 0}

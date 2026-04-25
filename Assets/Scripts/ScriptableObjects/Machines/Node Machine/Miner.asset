@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
   itemID: miner
   itemName: 
-  itemImage: {fileID: 21300000, guid: 90107e2403dbd7e40ae32e35952593a1, type: 3}
+  itemImage: {fileID: 21300000, guid: e050ebb98c94f564186d60419014418d, type: 3}
   itemDescription: 
   PlacementType: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}

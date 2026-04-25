@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e6abfb347cd54ce439de2639fc2fb67a
+guid: 998c1f8ea266d084f8a427db9f1cfc41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3410517538262529913
-    second: Gravitational Anomaly_0
+      213: -5221120696728814359
+    second: BioProcessor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gravitational Anomaly_0
+      name: BioProcessor_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 99
+        x: 9
+        y: 2
+        width: 231
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 977b060a1a7945f20800000000000000
-      internalID: 3410517538262529913
+      spriteID: 9ecf906936ada87b0800000000000000
+      internalID: -5221120696728814359
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gravitational Anomaly_0: 3410517538262529913
+      BioProcessor_0: -5221120696728814359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

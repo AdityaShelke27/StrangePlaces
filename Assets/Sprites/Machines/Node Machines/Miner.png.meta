@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90107e2403dbd7e40ae32e35952593a1
+guid: e050ebb98c94f564186d60419014418d
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -129,10 +129,10 @@ TextureImporter:
       name: Miner_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 5
-        width: 82
-        height: 86
+        x: 16
+        y: 10
+        width: 164
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

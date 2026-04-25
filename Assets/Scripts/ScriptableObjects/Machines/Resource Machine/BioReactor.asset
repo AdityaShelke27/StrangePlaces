@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMachine
   itemID: bio-reactor
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 036aecfaf6ab34544bfc9ae63743b603, type: 3}
   itemDescription: 
   PlacementType: 2
   WorldPrefab: {fileID: 8756248712972513278, guid: 8a79a81b536cec441a0f1041f38bedbf, type: 3}
@@ -26,3 +26,5 @@ MonoBehaviour:
   InputSlots: 1
   RecipeData:
   - {fileID: 11400000, guid: dc712643742a05f4588d0d8efde05058, type: 2}
+  IncludeItems: []
+  ExcludeItems: []

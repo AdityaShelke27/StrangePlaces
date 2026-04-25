@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,44 +9,53 @@ public class ResourceMachineInstance : MachineInstance
     [SerializeField] private ResourceMachine m_MachineData;
     [SerializeField] private int m_SelectedRecipeIdx;
     [SerializeField] private TMP_Text m_MachineStateText;
-    private ItemSlot[] m_Inputs;
-    private ItemSlot[] m_Outputs;
+    [SerializeField] private Transform m_InputSlotListParent;
+    [SerializeField] private Transform m_OutputSlotListParent;
+    [SerializeField] private GameObject m_InventorySlotPrefab;
+    [SerializeField] private InventorySlot[] m_Inputs;
+    [SerializeField] private InventorySlot[] m_Outputs;
     Coroutine m_MachineWorkingCoroutine;
     Coroutine m_MachineHaultedCoroutine;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public override void Initialize(StorableItem data)
     {
         m_MachineData = data as ResourceMachine;
         m_SpriteRenderer.sprite = m_MachineData.itemImage;
         GetComponent<BoxCollider2D>().size = m_MachineData.Size;
-        m_Inputs = new ItemSlot[m_MachineData.InputSlots];
-        m_Outputs = new ItemSlot[m_MachineData.OutputSlots];
+
+        m_Inputs = new InventorySlot[m_MachineData.InputSlots];
+        m_Outputs = new InventorySlot[m_MachineData.OutputSlots];
 
         for (int i = 0; i < m_Inputs.Length; i++)
         {
-            m_Inputs[i] = new();
+	        GameObject _slot = Instantiate(m_InventorySlotPrefab, m_InputSlotListParent);
+            m_Inputs[i] = _slot.GetComponent<InventorySlot>();
+
+            int _length = m_MachineData.RecipeData[m_SelectedRecipeIdx].Input.Count;
+
+            for (int j = 0; j < _length; j++)
+            {
+                m_Inputs[i].AddIncludeItems(m_MachineData.RecipeData[m_SelectedRecipeIdx].Input[j].Resource);
+            }
         }
         for (int i = 0; i < m_Outputs.Length; i++)
         {
-            m_Outputs[i] = new();
+            GameObject _slot = Instantiate(m_InventorySlotPrefab, m_OutputSlotListParent);
+            m_Outputs[i] = _slot.GetComponent<InventorySlot>();
+
+            int _length = m_MachineData.RecipeData[m_SelectedRecipeIdx].Output.Count;
+
+            for (int j = 0; j < _length; j++)
+            {
+                m_Outputs[i].AddIncludeItems(m_MachineData.RecipeData[m_SelectedRecipeIdx].Output[j].Resource);
+            }
         }
         SetMachineState(MachineState.Halted);
     }
 
     public override void StartMachine()
     {
-        if (!m_Inputs[0].item)
+        if (!m_Inputs[0].GetItem())
         {
             Debug.LogWarning("Input Empty");
             SetMachineState(MachineState.Halted);
@@ -59,31 +68,40 @@ public class ResourceMachineInstance : MachineInstance
     {
         State = MachineState.Working;
 
-        while (m_Inputs[0].item)
+        while (m_Inputs[0].GetItem())
         {
             yield return new WaitForSeconds(m_MachineData.TimeToProduce);
 
             ResourceRecipeData data = m_MachineData.RecipeData[m_SelectedRecipeIdx];
-            if (m_Inputs[0].item == data.Input[0].Resource && m_Inputs[0].amount > data.Input[0].amount)
+
+            if (m_Inputs[0].GetItem() == data.Input[0].Resource && m_Inputs[0].GetItemAmount() >= data.Input[0].amount)
             {
-                if (m_Outputs[0].item == null)
+                m_Inputs[0].SetItemAmount(m_Inputs[0].GetItemAmount() - data.Input[0].amount);
+                if(m_Inputs[0].GetItemAmount() == 0)
                 {
-                    m_Outputs[0] = new(data.Output[0].Resource, data.Output[0].amount);
+                    m_Inputs[0].SetItem(null);
+                }
+                if (m_Outputs[0].GetItem() == null)
+                {
+                    m_Outputs[0].SetItemSlot(data.Output[0].Resource, data.Output[0].amount);
                 }
                 else
                 {
-                    m_Outputs[0].amount += data.Output[0].amount;
+                    m_Outputs[0].SetItemAmount(m_Outputs[0].GetItemAmount() + data.Output[0].amount);
                 }
             }
             else
             {
                 SetMachineState(MachineState.Halted);
             }
+
+            Debug.Log("Machine Working");
         }
+        SetMachineState(MachineState.Halted);
     }
     IEnumerator MachineHaulted()
     {
-        while (!m_Inputs[0].item)
+        while (!m_Inputs[0].GetItem())
         {
             yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
         }
