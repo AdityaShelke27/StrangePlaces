@@ -14,11 +14,6 @@ public class ResourceNodeInstance : MonoBehaviour
     {
         Initialize();
     }
-
-    void Update()
-    {
-        
-    }
     void Initialize()
     {
         m_SpriteRenderer.sprite = m_ResourceNodeData.itemImage;

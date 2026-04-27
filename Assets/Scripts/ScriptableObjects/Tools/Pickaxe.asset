@@ -16,5 +16,9 @@ MonoBehaviour:
   itemName: 
   itemImage: {fileID: 0}
   itemDescription: 
-  IsWorldPlacable: 1
+  PlacementType: 0
+  StackableAmount: 1
+  WorldPrefab: {fileID: 0}
+  PlacableNodes: []
+  Size: {x: 0, y: 0}
   MinableResource: {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}

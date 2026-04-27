@@ -1,17 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class ResourceMachineInstance : MachineInstance
 {
-    [SerializeField] private SpriteRenderer m_SpriteRenderer;
     [SerializeField] private ResourceMachine m_MachineData;
     [SerializeField] private int m_SelectedRecipeIdx;
     [SerializeField] private TMP_Text m_MachineStateText;
     [SerializeField] private Transform m_InputSlotListParent;
-    [SerializeField] private Transform m_OutputSlotListParent;
-    [SerializeField] private GameObject m_InventorySlotPrefab;
     [SerializeField] private InventorySlot[] m_Inputs;
     [SerializeField] private InventorySlot[] m_Outputs;
     Coroutine m_MachineWorkingCoroutine;
@@ -66,8 +62,7 @@ public class ResourceMachineInstance : MachineInstance
 
     IEnumerator MachineWork()
     {
-        State = MachineState.Working;
-
+        Debug.Log("Machine Working");
         while (m_Inputs[0].GetItem())
         {
             yield return new WaitForSeconds(m_MachineData.TimeToProduce);
@@ -76,7 +71,7 @@ public class ResourceMachineInstance : MachineInstance
 
             if (m_Inputs[0].GetItem() == data.Input[0].Resource && m_Inputs[0].GetItemAmount() >= data.Input[0].amount)
             {
-                m_Inputs[0].SetItemAmount(m_Inputs[0].GetItemAmount() - data.Input[0].amount);
+                m_Inputs[0].AddItemAmount(-data.Input[0].amount);
                 if(m_Inputs[0].GetItemAmount() == 0)
                 {
                     m_Inputs[0].SetItem(null);
@@ -87,43 +82,49 @@ public class ResourceMachineInstance : MachineInstance
                 }
                 else
                 {
-                    m_Outputs[0].SetItemAmount(m_Outputs[0].GetItemAmount() + data.Output[0].amount);
+                    int _sumAmount = m_Outputs[0].GetItemAmount() + data.Output[0].amount;
+                    m_Outputs[0].SetItemAmount(_sumAmount);
+                    if(_sumAmount >= m_Outputs[0].GetItem().StackableAmount)
+                    {
+                        Debug.Log("Machine should hault");
+                        SetMachineState(MachineState.Halted);
+                    }
                 }
             }
             else
             {
                 SetMachineState(MachineState.Halted);
             }
-
-            Debug.Log("Machine Working");
         }
         SetMachineState(MachineState.Halted);
     }
     IEnumerator MachineHaulted()
     {
-        while (!m_Inputs[0].GetItem())
+        while (!m_Inputs[0].GetItem() || (m_Outputs[0].GetItem() != null && m_Outputs[0].GetItemAmount() >= m_Outputs[0].GetItem().StackableAmount))
         {
+            Debug.Log("Machine Haulted");
             yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
         }
-
+        Debug.Log("Work Again");
         SetMachineState(MachineState.Working);
     }
 
     public override void SetMachineState(MachineState _state)
     {
         if (State == _state) return;
+        State = _state;
+
+        if (m_MachineWorkingCoroutine != null) StopCoroutine(m_MachineWorkingCoroutine);
+        if (m_MachineHaultedCoroutine != null) StopCoroutine(m_MachineHaultedCoroutine);
 
         switch (_state)
         {
             case MachineState.Inactive:
-                StopCoroutine(m_MachineWorkingCoroutine);
                 break;
             case MachineState.Working:
-                if (m_MachineWorkingCoroutine != null) StopCoroutine(m_MachineWorkingCoroutine);
                 m_MachineWorkingCoroutine = StartCoroutine(MachineWork());
                 break;
             case MachineState.Halted:
-                if (m_MachineHaultedCoroutine != null) StopCoroutine(m_MachineHaultedCoroutine);
                 m_MachineHaultedCoroutine = StartCoroutine(MachineHaulted());
                 break;
         }

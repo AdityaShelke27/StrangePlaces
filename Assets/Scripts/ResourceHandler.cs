@@ -5,6 +5,7 @@ public class ResourceHandler : MonoBehaviour
 {
     public static ResourceHandler Instance;
 
+    [SerializeField] Transform m_NavMeshParent;
     [SerializeField] InventorySlot[] m_Inventory = new InventorySlot[5];
     [SerializeField] LayerMask m_WorldPlacableLayer;
     [SerializeField] int m_SelectedItemIdx = -1;
@@ -19,11 +20,6 @@ public class ResourceHandler : MonoBehaviour
     private void Start()
     {
         m_SelectedItemIdx = -1;
-
-        for (int i = 0; i < m_Inventory.Length; i++) 
-        {
-            //m_Inventory[i].SetStorableItem(new NodeMachineIns(m_MachinePrefabs.gameObject));
-        }
     }
 
     public void SelectItem(int idx)
@@ -32,50 +28,20 @@ public class ResourceHandler : MonoBehaviour
 
         m_SelectedItemIdx = idx;
     }
-
-    public void NodeSelected(ResourceNodeInstance node)
-    {
-        /*if(m_SelectedItemIdx < 0)
-        {
-            Debug.Log("No Item Selected");
-            return;
-        }
-
-        Debug.Log($"Working {m_Inventory[m_SelectedItemIdx].item.GetType()}");
-        if (m_Inventory[m_SelectedItemIdx].item is MachineInstance)
-        {   
-            MachineInstance machine = m_Inventory[m_SelectedItemIdx].item as MachineInstance;
-            if(machine.IsNodeInput())
-            {
-                if(machine.GetInputType() == node.GetNodeType())
-                {
-                    GameObject machineInstance = Instantiate(m_MachinePrefabs[machine.GetMachineID()].gameObject, node.transform.position, Quaternion.identity);
-                    RemoveItemFromInventory(m_SelectedItemIdx);
-                }
-            }
-        }*/
-    }
-
-    public void RemoveItemFromInventory(int itemIdx)
-    {
-        int _amount = m_Inventory[itemIdx].GetItemAmount();
-        if (_amount > 0)
-        {
-            m_Inventory[itemIdx].SetItemAmount(_amount - 1);
-        }
-            
-        m_SelectedItemIdx = -1;
-    }
     public void InstantiateObjectToWorld(StorableItem _item, Vector3 _pos)
     {
         GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
+        obj.transform.parent = m_NavMeshParent;
         obj.GetComponent<WorldInstance>().Initialize(_item);
+        NavMeshManager.s_BuildNavmesh?.Invoke();
     }
     public void InstantiateObjectToNodeWorld(StorableItem _item, Vector3 _pos, ResourceNodeInstance _node)
     {
         GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
+        obj.transform.parent = m_NavMeshParent;
         obj.GetComponent<WorldInstance>().Initialize(_item);
         obj.GetComponent<NodeMachineInstance>().SetInputNode(_node);
+        NavMeshManager.s_BuildNavmesh?.Invoke();
     }
 
     public (bool, Vector3, ResourceNodeInstance) CanPlaceWorld(StorableItem _item, Vector3 _pos)

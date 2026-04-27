@@ -17,6 +17,7 @@ MonoBehaviour:
   itemImage: {fileID: 21300000, guid: e050ebb98c94f564186d60419014418d, type: 3}
   itemDescription: 
   PlacementType: 1
+  StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}
   PlacableNodes:
   - {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}

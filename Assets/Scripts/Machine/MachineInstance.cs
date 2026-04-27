@@ -1,35 +1,29 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class MachineInstance : WorldInstance
 {
-    /*[SerializeField] int m_MachineID;
-    [SerializeField] SurfaceNode m_InputType;
-    [SerializeField] bool m_IsNodeInput;
-    [SerializeField] StorableItem m_Input;
-    [SerializeField] ItemSlot m_Output;*/
+    [SerializeField] protected SpriteRenderer m_SpriteRenderer;
+    [SerializeField] protected GameObject m_InventoryPanel;
+    [SerializeField] protected Transform m_OutputSlotListParent;
+    [SerializeField] protected GameObject m_InventorySlotPrefab;
     protected bool IsWorking;
     protected MachineState State = MachineState.Inactive;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public abstract void StartMachine();
 
     public MachineState GetMachineState() => State;
     public abstract void SetMachineState(MachineState _state);
-    /*IEnumerator MachineWork()
+
+    public void CloseButton()
     {
-        yield return null;
+        m_InventoryPanel.SetActive(false);
     }
-    public bool IsNodeInput() => m_IsNodeInput;
-    public SurfaceNode GetInputType() => m_InputType;
-    public int GetMachineID() => m_MachineID;*/
+
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
+        m_InventoryPanel.SetActive(true);
+    }
 }

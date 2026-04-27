@@ -57,7 +57,6 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnBeginDrag(PointerEventData eventData)
     {
         //if (m_ItemSlot.item.PlacementType == PlacementType.None) return;
-        Debug.Log("Begin Drag");
         m_IsDragging = true;
         m_PointerData = eventData;
         s_SourceInventorySlot = this;
@@ -67,7 +66,6 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         if(eventData.pointerEnter != null) return;
-        Debug.Log("End Drag");
         if (CanPlace)
         {
             if (m_ItemSlot.item.PlacementType == PlacementType.NodePlacement)
@@ -87,17 +85,39 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrop(PointerEventData eventData)
     {
         if (s_SourceInventorySlot == null) return;
-        Debug.Log("Drop");
         if(!CanAcceptItem(s_SourceInventorySlot.GetItem())) return;
 
-        SetItemSlot(s_SourceInventorySlot.GetItem(), s_SourceInventorySlot.GetItemAmount());
-        s_SourceInventorySlot.RemoveItemFromInventory();
-        s_SourceInventorySlot = null;
+        if(GetItem() == s_SourceInventorySlot.GetItem())
+        {
+            int _sumAmount = GetItemAmount() + s_SourceInventorySlot.GetItemAmount();
+            if(_sumAmount >= GetItem().StackableAmount)
+            {
+                int _addAmount = GetItem().StackableAmount - GetItemAmount();
+                AddItemAmount(_addAmount);
+                s_SourceInventorySlot.AddItemAmount(-_addAmount);
+            }
+            else
+            {
+                SetItemAmount(_sumAmount);
+                s_SourceInventorySlot.RemoveItemFromInventory();
+                s_SourceInventorySlot = null;
+            }
+        }
+        else if(GetItem() != null)
+        {
+            return;
+        }
+        else
+        {
+            SetItemSlot(s_SourceInventorySlot.GetItem(), s_SourceInventorySlot.GetItemAmount());
+            s_SourceInventorySlot.RemoveItemFromInventory();
+            s_SourceInventorySlot = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log($"Dragging");
+        
     }
 
     bool CanAcceptItem(StorableItem _item)
@@ -131,6 +151,17 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         m_ItemSlot.amount = _amount;
         m_ItemAmountText.text = _amount.ToString();
+    }
+    public void AddItemAmount(int _amount)
+    {
+        if (m_ItemSlot.amount + _amount < 0)
+        {
+            Debug.Log("Inventory slot item amount cant be negative");
+            return;
+        }
+
+        m_ItemSlot.amount += _amount;
+        m_ItemAmountText.text = m_ItemSlot.amount.ToString();
     }
     public void SetItem(StorableItem _item)
     {

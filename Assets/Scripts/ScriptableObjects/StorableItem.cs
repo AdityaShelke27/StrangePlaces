@@ -5,6 +5,7 @@ using UnityEngine;
 public class StorableItem : Item
 {
     public PlacementType PlacementType;
+    public int StackableAmount;
     public GameObject WorldPrefab;
     public List<ResourceNode> PlacableNodes;
     public Vector2 Size;
