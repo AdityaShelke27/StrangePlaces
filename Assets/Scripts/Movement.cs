@@ -18,16 +18,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+	Vector3 pos = Vector3.Lerp(m_MainCam.transform.position, transform.position, Time.deltaTime * m_CamMoveSpeed);
+        pos.z = -10;
+        m_MainCam.transform.position = pos;
+
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         if (Input.GetMouseButtonUp(0))
         {
             UpdatePosition();
         }
-
-        Vector3 pos = Vector3.Lerp(m_MainCam.transform.position, transform.position, Time.deltaTime * m_CamMoveSpeed);
-        pos.z = -10;
-        m_MainCam.transform.position = pos;
     }
     void UpdatePosition()
     {

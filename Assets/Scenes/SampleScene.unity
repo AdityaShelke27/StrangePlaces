@@ -977,6 +977,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4457523716046474961, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.0778226
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (1)
@@ -1007,11 +1011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.49916
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84.8926
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,6 +1064,10 @@ PrefabInstance:
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162259322919617148, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.65802
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
@@ -1188,6 +1196,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4457523716046474961, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.0778226
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (2)
@@ -1218,11 +1230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.49916
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84.8926
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1271,6 +1283,10 @@ PrefabInstance:
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162259322919617148, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.65802
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
@@ -1318,6 +1334,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4457523716046474961, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.0778226
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot
@@ -1348,11 +1368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.49916
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84.8926
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1401,6 +1421,10 @@ PrefabInstance:
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162259322919617148, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.65802
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
@@ -1448,6 +1472,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4457523716046474961, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.0778226
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (3)
@@ -1478,11 +1506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.49916
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84.8926
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1531,6 +1559,10 @@ PrefabInstance:
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162259322919617148, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.65802
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
@@ -1589,6 +1621,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4457523716046474961, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.0778226
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (4)
@@ -1619,11 +1655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.49916
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84.8926
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1672,6 +1708,10 @@ PrefabInstance:
     - target: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162259322919617148, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.65802
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item

@@ -76,6 +76,8 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             {
                 ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
             }
+
+	    ResetSourceInventorySlot();
         }
         s_SourceInventorySlot = null;
         m_PointerData = null;
@@ -99,8 +101,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             else
             {
                 SetItemAmount(_sumAmount);
-                s_SourceInventorySlot.RemoveItemFromInventory();
-                s_SourceInventorySlot = null;
+                ResetSourceInventorySlot();
             }
         }
         else if(GetItem() != null)
@@ -110,8 +111,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         else
         {
             SetItemSlot(s_SourceInventorySlot.GetItem(), s_SourceInventorySlot.GetItemAmount());
-            s_SourceInventorySlot.RemoveItemFromInventory();
-            s_SourceInventorySlot = null;
+            ResetSourceInventorySlot();
         }
     }
 
@@ -181,5 +181,11 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void RemoveItemFromInventory()
     {
         SetItemSlot(null, 0);
+    }
+
+    public static void ResetSourceInventorySlot()
+    {
+	s_SourceInventorySlot.RemoveItemFromInventory();
+        s_SourceInventorySlot = null;
     }
 }
