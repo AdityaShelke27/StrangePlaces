@@ -6,6 +6,4 @@ public class ResourceMachine : Machine
 {
     public int InputSlots;
     public ResourceRecipeData[] RecipeData;
-    public MonoScript[] IncludeItems;
-    public MonoScript[] ExcludeItems;
 }
