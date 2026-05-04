@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
   itemID: alien-ruin-node
   itemName: 
-  itemImage: {fileID: 5986252678729289239, guid: 36522887a1d41264da9affc2c935ea2e, type: 3}
+  itemImage: {fileID: 21300000, guid: 36522887a1d41264da9affc2c935ea2e, type: 3}
   itemDescription: 
   MaxAmount: 10
   NodeType: 3
