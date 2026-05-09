@@ -102,10 +102,8 @@ public class ResourceMachineInstance : MachineInstance
     {
         while (!m_Inputs[0].GetItem() || (m_Outputs[0].GetItem() != null && m_Outputs[0].GetItemAmount() >= m_Outputs[0].GetItem().StackableAmount))
         {
-            Debug.Log("Machine Haulted");
             yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
         }
-        Debug.Log("Work Again");
         SetMachineState(MachineState.Working);
     }
 
