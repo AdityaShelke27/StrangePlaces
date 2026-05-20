@@ -14,6 +14,12 @@ public enum SurfaceNodeAmount
     Large,
     Very_Large
 }
+public enum RoomStairPlacement
+{
+	No_Stairs,
+	Right,
+	Left
+}
 public enum ResourceType
 {
     Ore,

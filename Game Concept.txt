@@ -15,6 +15,24 @@ Storage room : To store everything
 Kitchen : To cook food and eat
 Rocket construction room : The rocket will be constructed here
 
----------------------- GAMEPLAY LOOP ---------------------------
+To Do List:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Bunker Tasks =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+- Create room placement system where the player can place the new rooms adjacent to existing rooms
+- Design the room layout for all different types of rooms (Construction, storage, research, kitchen, rocket construction)
+- Construction Room Implementation:
+    - Create list of machines that the player can create
+    - Assign the resources required to create the machine
+- Storage Room Implementation:
+    - A big Inventory that stores everything
+    - An automated pipeline that connects the storage room with the bunker door (To automatically transfer resources from surface machine to storage room)
+- Research Room Implementation:
+    - It contains a research tree (Need to think but it mainly involves researching rocket parts and unlock other machines)
+- Kitchen Implementation:
+    - Contains a list of food that can be created and eaten by the player
+- Rocket Construction Implementation:
+    - A place where the unlocked rocket parts from research will be available here, the player needs to bring the required resources here and construct the rocket
 
-Resources
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Surface Tasks =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+- Create a node/conveyor system to connect one machine's output to other machine's input for automation
+- Implement electricity system where all the machines require and consume electricity to function
+- Create a procedurally generated surface layout
