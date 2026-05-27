@@ -4,8 +4,8 @@ public class RoomConstruction : MonoBehaviour
 {
 	[SerializeField] GameObject RoomConstructionPanel;
 	bool m_IsRoomConstructionPanelActive = false;
-    void Start()
-    {
+	void Start()
+	{
 		RoomConstructionPanel.SetActive(m_IsRoomConstructionPanelActive);
 	}
 

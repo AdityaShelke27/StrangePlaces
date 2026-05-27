@@ -13,6 +13,9 @@ public class Room : MonoBehaviour
 		BunkerMovement.s_MoveHere?.Invoke(m_GroundLevel, _Xpos);
 	}
 
-	public Vector2 GetSize() => new(7.68f, 3.84f);
+	public Vector2 GetSize() => Constant.ROOM_SIZE;
 	public RoomStairPlacement GetStairPlacement() => m_StairPlacement;
+	public void SetGroundLevel(int _level) => m_GroundLevel = _level;
+	public int GetGroundLevel() => m_GroundLevel;
+	public void SetStairPlacement(RoomStairPlacement _stairPlacement) => m_StairPlacement = _stairPlacement;
 }

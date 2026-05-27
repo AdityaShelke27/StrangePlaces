@@ -9,6 +9,8 @@ public class RoomPlacement : MonoBehaviour
 	[SerializeField] float m_RoomSpacing;
 	[SerializeField] Sprite m_BlankSprite;
 	[SerializeField] Transform m_RoomListParent;
+	[SerializeField] GameObject m_RoomPrefab;
+	List<GameObject> m_RoomSilhouletteList = new();
 
 	private void OnEnable()
 	{
@@ -44,18 +46,40 @@ public class RoomPlacement : MonoBehaviour
 			for(int j = 0; j < _targetPoses.Length; j++)
 			{
 				Vector2 _placement;
+				RoomStairPlacement _PlacementDirection;
+				int _groundLevel = 0;
 				if (j == 0 && _currentRoom.GetStairPlacement() == RoomStairPlacement.Left)
 				{
 					_placement = _targetPoses[j] + Constant.STAIR_SIZE.x * Vector2.left;
-					
+					_PlacementDirection = RoomStairPlacement.Right;
+					_groundLevel = _currentRoom.GetGroundLevel();
 				}
 				else if(j == 1 && _currentRoom.GetStairPlacement() == RoomStairPlacement.Right)
 				{
 					_placement = _targetPoses[j] + Constant.STAIR_SIZE.x * Vector2.right;
+					_PlacementDirection = RoomStairPlacement.Left;
+					_groundLevel = _currentRoom.GetGroundLevel();
+				}
+				else if(j == 0 || j == 1)
+				{
+					continue;
 				}
 				else
 				{
 					_placement = _targetPoses[j];
+
+					_PlacementDirection = _currentRoom.GetStairPlacement();
+
+					if(j == 2)
+					{
+						_groundLevel = _currentRoom.GetGroundLevel() - 1;
+					}
+					else if(j == 3)
+					{
+						_groundLevel = _currentRoom.GetGroundLevel() + 1;
+					}
+
+					if (_groundLevel < 1) continue;
 				}
 
 				if (_SearchedPoses.Contains(_placement)) continue;
@@ -63,18 +87,56 @@ public class RoomPlacement : MonoBehaviour
 				_SearchedPoses.Add(_placement);
 
 				Collider2D _col = Physics2D.OverlapBox(_placement, _roomSize, 0);
-
+				Debug.Log($"Silhouette {j}");
 				if (_col == null)
 				{
-					GameObject _obj = new("Placement_Effect", typeof(SpriteRenderer));
+					GameObject _obj = new("Placement_Effect", typeof(SpriteRenderer), typeof(RoomSilhouette), typeof(BoxCollider2D));
+					_obj.GetComponent<BoxCollider2D>().size = _obj.transform.localScale;
+					RoomSilhouette _script = _obj.GetComponent<RoomSilhouette>();
 					SpriteRenderer _renderer = _obj.GetComponent<SpriteRenderer>();
 					_renderer.sprite = m_BlankSprite;
 					_renderer.color = Color.green;
 
 					_obj.transform.position = _placement;
 					_obj.transform.localScale = new(_roomSize.x, _roomSize.y, 1);
+
+					m_RoomSilhouletteList.Add(_obj);
+					_script.SetRoomPlacementScript(this);
+					_script.SetIsDoorFacingLeft(_PlacementDirection);
+					_script.SetGroundLevel(_groundLevel);
 				}
 			}
 		}
+	}
+
+	public void ConstructRoomAtLocation(Vector3 _pos, RoomStairPlacement m_DoorFacingDirection, int _groundLevel)
+	{
+		GameObject _room = Instantiate(m_RoomPrefab, _pos, Quaternion.identity);
+		_room.transform.parent = m_RoomListParent;
+		Room _roomScript = _room.GetComponent<Room>();
+
+		bool _facingLeft = false;
+		switch(m_DoorFacingDirection)
+		{
+			case RoomStairPlacement.Left:
+				_facingLeft = true; 
+				break;
+			case RoomStairPlacement.Right:
+				_facingLeft = false;
+				break;
+			case RoomStairPlacement.No_Stairs: 
+				_facingLeft = false; 
+				break;
+		}
+		_room.GetComponent<SpriteRenderer>().flipX = !_facingLeft;
+		_roomScript.SetStairPlacement(m_DoorFacingDirection);
+		_roomScript.SetGroundLevel(_groundLevel);
+
+		foreach (GameObject _obj in m_RoomSilhouletteList)
+		{
+			Destroy(_obj);
+		}
+
+		m_RoomSilhouletteList.Clear();
 	}
 }
