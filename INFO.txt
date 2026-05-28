@@ -1,0 +1,139 @@
+Miner -> Mines Ores (Iron Ore, Copper Ore, Titanium Ore)
+Harvester -> Mines Plants (Fiber Plants, Energy Plants) {Vyrex Reed, Lumabloom, Karth Bamboo
+Gravity Reactor -> Mines gravitational Anomaly to electricity
+Artifact Scanner -> Mines Alien Ruins
+Research Station -> Converts Alien Artifacts to Research points
+Bio Processor -> Converts plants to biomass
+Bio Generator -> Canverts biomass to electricity
+Smelter -> Converts Ores to metal
+
+Updated Resources:
+Ore -> Iron Ore, Copper Ore, Titanium Ore
+Plant -> Vyrex Reed, Lumabloom, Karth Bamboo
+
+Resource Details:
+1) Vyrex Reed
+(Inspired by Hemp/Jute)
+
+- Tall fibrous alien plant with strong strands.
+
+Used For:
+- Rope
+- Reinforced fabric
+- Machine bindings
+- Structural composites
+
+Processed Into:
+- Fiber Mesh
+
+2) Lumabloom
+(Inspired by Flax)
+
+- Soft glowing plant with oily internal fibers.
+
+Used For:
+- Biofuel
+- Organic chemicals
+- Energy generation
+
+Processed Into:
+- Bio Resin
+
+3) Karth Bamboo
+(Inspired by Bamboo/Sisal)
+
+- Dense segmented plant with rigid internal structure.
+
+Used For:
+- Lightweight frames
+- Machine casings
+- Construction materials
+
+Processed Into:
+- Reinforced Panels
+
+| Resource     | Inspired By  | Description                        |
+| ------------ | ------------ | ---------------------------------- |
+| Vyrex Reed   | Hemp/Jute    | Tough fibrous alien reed           |
+| Lumabloom    | Flax         | Energy-rich glowing plant          |
+| Karth Bamboo | Bamboo/Sisal | Dense segmented construction plant |
+
+| Resource          | Created From | Purpose                          |
+| ----------------- | ------------ | -------------------------------- |
+| Fiber Mesh        | Vyrex Reed   | Reinforcement and bindings       |
+| Bio Resin         | Lumabloom    | Industrial organic fuel compound |
+| Reinforced Panels | Karth Bamboo | Lightweight structural material  |
+
+| Resource       | Created From | Purpose                         |
+| -------------- | ------------ | ------------------------------- |
+| Iron Plates    | Iron Ore     | Heavy construction              |
+| Copper Wiring  | Copper Ore   | Power/electronics               |
+| Titanium Alloy | Titanium Ore | Advanced machinery/rocket parts |
+
+Machine Construction Recipe:
+1) Miner
+| Resource          | Amount |
+| ----------------- | ------ |
+| Iron Plates       | 20     |
+| Copper Wiring     | 5      |
+| Reinforced Panels | 4      |
+
+2) Harvester
+| Resource      | Amount |
+| ------------- | ------ |
+| Iron Plates   | 10     |
+| Fiber Mesh    | 8      |
+| Copper Wiring | 3      |
+
+3) Smelter
+| Resource      | Amount |
+| ------------- | ------ |
+| Iron Plates   | 30     |
+| Copper Wiring | 8      |
+| Bio Resin     | 5      |
+
+4) Bio Processor
+| Resource    | Amount |
+| ----------- | ------ |
+| Iron Plates | 10     |
+| Fiber Mesh  | 5      |
+| Bio Resin   | 10     |
+
+5) Bio generator
+| Resource      | Amount |
+| ------------- | ------ |
+| Iron Plates   | 15     |
+| Copper Wiring | 10     |
+| Bio Resin     | 15     |
+
+6) Artifact Scanner
+| Resource          | Amount |
+| ----------------- | ------ |
+| Copper Wiring     | 20     |
+| Titanium Alloy    | 8      |
+| Reinforced Panels | 6      |
+
+7) Research Station
+| Resource       | Amount |
+| -------------- | ------ |
+| Iron Plates    | 15     |
+| Copper Wiring  | 25     |
+| Titanium Alloy | 12     |
+| Fiber Mesh     | 8      |
+
+8) Gravity Reactor
+| Resource          | Amount |
+| ----------------- | ------ |
+| Titanium Alloy    | 25     |
+| Copper Wiring     | 30     |
+| Iron Plates       | 20     |
+| Bio Resin         | 10     |
+| Reinforced Panels | 15     |
+
+Iron Ore -> Iron Plates
+Copper Ore -> Copper Wiring
+Titanium Ore -> Titanium Alloy
+
+Vyrex Reed -> Fiber Mesh
+Lumabloom -> Bio Resin
+Karth Bamboo -> Reinforced Panels
