@@ -6,7 +6,10 @@ public class BunkerMovement : MonoBehaviour
 {
 	public static Action<int, float> s_MoveHere;
 
-	[SerializeField] Transform[] m_Points;
+	[SerializeField] Transform m_PointsParent;
+	[SerializeField] Transform m_MainCam;
+	[SerializeField] float m_CamMoveSpeed;
+	[SerializeField] float m_CameraYOffset;
 	[SerializeField] int m_CurrentGroundLevel = 0;
 	[SerializeField] float m_Speed = 10;
 
@@ -19,6 +22,13 @@ public class BunkerMovement : MonoBehaviour
 	private void OnDisable()
 	{
 		s_MoveHere -= MoveToPoint;
+	}
+	private void Update()
+	{
+		Vector3 pos = m_MainCam.transform.position;
+		pos.y = Mathf.Lerp(pos.y, transform.position.y + m_CameraYOffset, Time.deltaTime * m_CamMoveSpeed);
+		pos.z = -10;
+		m_MainCam.transform.position = pos;
 	}
 	void MoveToPoint(int _groundLevel, float _pointX)
 	{
@@ -33,7 +43,7 @@ public class BunkerMovement : MonoBehaviour
 		Vector2 _movePos, _dir;
 		if (_groundLevel != m_CurrentGroundLevel)
 		{
-			_movePos = m_Points[m_CurrentGroundLevel].position;
+			_movePos = m_PointsParent.GetChild(m_CurrentGroundLevel).position;
 			_dir = (_movePos - (Vector2)transform.position).normalized;
 			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 			{
@@ -41,7 +51,7 @@ public class BunkerMovement : MonoBehaviour
 				yield return null;
 			}
 
-			_movePos = m_Points[_groundLevel].position;
+			_movePos = m_PointsParent.GetChild(_groundLevel).position;
 			_dir = (_movePos - (Vector2)transform.position).normalized;
 			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 			{
@@ -50,7 +60,7 @@ public class BunkerMovement : MonoBehaviour
 			}
 		}
 
-		_movePos = new Vector2(_pointX, m_Points[_groundLevel].position.y);
+		_movePos = new Vector2(_pointX, m_PointsParent.GetChild(_groundLevel).position.y);
 		_dir = (_movePos - (Vector2)transform.position).normalized;
 		while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 		{

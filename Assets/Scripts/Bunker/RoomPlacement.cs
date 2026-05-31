@@ -7,9 +7,14 @@ public class RoomPlacement : MonoBehaviour
 	public static Action<Vector2> s_GenerateAreas;
 
 	[SerializeField] float m_RoomSpacing;
+	[SerializeField] float m_StairPointOffset;
 	[SerializeField] Sprite m_BlankSprite;
+	[SerializeField] Sprite m_StairSprite;
 	[SerializeField] Transform m_RoomListParent;
+	[SerializeField] Transform m_StairsParent;
+	[SerializeField] Transform m_GroundLevelPointsParent;
 	[SerializeField] GameObject m_RoomPrefab;
+	[SerializeField] int m_BuiltGroundLevel;
 	List<GameObject> m_RoomSilhouletteList = new();
 
 	private void OnEnable()
@@ -138,5 +143,21 @@ public class RoomPlacement : MonoBehaviour
 		}
 
 		m_RoomSilhouletteList.Clear();
+
+		if (_groundLevel > m_BuiltGroundLevel) ConstructNewGroundLevel();
+	}
+
+	void ConstructNewGroundLevel()
+	{
+		m_BuiltGroundLevel++;
+
+		GameObject _stairsObj = new("Stairs", typeof(SpriteRenderer));
+		_stairsObj.GetComponent<SpriteRenderer>().sprite = m_StairSprite;
+		_stairsObj.transform.parent = m_StairsParent;
+		_stairsObj.transform.localPosition = Constant.STAIR_SIZE.y * (m_BuiltGroundLevel - 1) * Vector3.down;
+
+		GameObject _groundPoint = new("Point");
+		_groundPoint.transform.parent = m_GroundLevelPointsParent;
+		_groundPoint.transform.localPosition = (Constant.STAIR_SIZE.y * m_BuiltGroundLevel + m_StairPointOffset) * Vector3.down;
 	}
 }
