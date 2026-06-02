@@ -7,7 +7,6 @@ public class RoomSilhouette : MonoBehaviour
 	int m_GroundLevel;
 	private void OnMouseUpAsButton()
 	{
-		Debug.Log("Clicking");
 		m_RoomPlacementScript.ConstructRoomAtLocation(transform.position, m_DoorFacingDIrection, m_GroundLevel);
 	}
 

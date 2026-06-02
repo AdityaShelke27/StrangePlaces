@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033a88b5b535c0b428d04efe36745f52, type: 3}
+  m_Name: KarthBambooToReinforcedPanels
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceRecipeData
+  RecipeID: karth-bamboo-to-reinforced-panels
+  RecipeName: 
+  Input:
+  - Resource: {fileID: 11400000, guid: 1d8bc7d869af6704cb4f66c70bc3100e, type: 2}
+    amount: 1
+  Output:
+  - Resource: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 1
+  CraftTime: 0

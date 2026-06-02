@@ -28,8 +28,6 @@ public class RoomPlacement : MonoBehaviour
 
 	void GenerateAvailableAreas(Vector2 _roomSize)
 	{
-		Debug.Log("Generate Area");
-
 		List<Vector2> _SearchedPoses = new();
 
 		for(int i = 0; i < m_RoomListParent.childCount; i++)
@@ -37,8 +35,6 @@ public class RoomPlacement : MonoBehaviour
 			Room _currentRoom = m_RoomListParent.GetChild(i).GetComponent<Room>();
 			Vector2 _pos = m_RoomListParent.GetChild(i).position;
 			Vector2 _size = _currentRoom.GetSize();
-
-			Debug.Log($"Room {_currentRoom.GetStairPlacement()}");
 
 			Vector2[] _targetPoses =
 			{
@@ -92,7 +88,6 @@ public class RoomPlacement : MonoBehaviour
 				_SearchedPoses.Add(_placement);
 
 				Collider2D _col = Physics2D.OverlapBox(_placement, _roomSize, 0);
-				Debug.Log($"Silhouette {j}");
 				if (_col == null)
 				{
 					GameObject _obj = new("Placement_Effect", typeof(SpriteRenderer), typeof(RoomSilhouette), typeof(BoxCollider2D));

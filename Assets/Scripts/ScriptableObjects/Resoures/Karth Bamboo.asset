@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65d2ed8aa4038e941a900ae6bc19c5b6, type: 3}
-  m_Name: Plant
+  m_Name: Karth Bamboo
   m_EditorClassIdentifier: Assembly-CSharp::Resource
-  itemID: plant
+  itemID: karth-bamboo
   itemName: 
   itemImage: {fileID: 21300000, guid: f005349c0770cf9498d8dc0df9d849f0, type: 3}
   itemDescription: 

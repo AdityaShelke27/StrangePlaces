@@ -21,6 +21,8 @@ MonoBehaviour:
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}
   PlacableNodes:
   - {fileID: 11400000, guid: 9975a3b173e15f349bd05b899642d926, type: 2}
+  - {fileID: 11400000, guid: 8f6a86c44b7c84842a04b2dbd995d70d, type: 2}
+  - {fileID: 11400000, guid: fdfad2a392e54a745b2f4c848db34041, type: 2}
   Size: {x: 2, y: 2}
   TimeToProduce: 1
   MachineHaltCheck: 1

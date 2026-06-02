@@ -21,4 +21,7 @@ MonoBehaviour:
   WorldPrefab: {fileID: 0}
   PlacableNodes: []
   Size: {x: 0, y: 0}
-  MinableResource: {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}
+  MinableResources:
+  - {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}
+  - {fileID: 11400000, guid: 827b91fa2d9c8ae44a4be32699e26442, type: 2}
+  - {fileID: 11400000, guid: 0c2785e9adcfb33459d9e569c462a6b2, type: 2}

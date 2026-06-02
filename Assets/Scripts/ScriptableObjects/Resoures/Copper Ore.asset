@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65d2ed8aa4038e941a900ae6bc19c5b6, type: 3}
-  m_Name: Ore
+  m_Name: Copper Ore
   m_EditorClassIdentifier: Assembly-CSharp::Resource
-  itemID: ore
+  itemID: copper-ore
   itemName: 
   itemImage: {fileID: 21300000, guid: 61ebc89b9c9268a49ad65e4b826f2c36, type: 3}
   itemDescription: 
