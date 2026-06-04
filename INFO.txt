@@ -137,3 +137,14 @@ Titanium Ore -> Titanium Alloy
 Vyrex Reed -> Fiber Mesh
 Lumabloom -> Bio Resin
 Karth Bamboo -> Reinforced Panels
+
+
+KITCHEN ITEMS:
+
+| Food         | Hunger Restored | Buff                                  |
+| ------------ | --------------- | ------------------------------------- |
+| Nutrientbar  | 25              | No buff                               |
+| Protein Milk | 40              | +20% mining speed for 3 min           |
+| Mush Soup    | 35              | +15% movement speed for 3 min         |
+| Bloom Stew   | 50              | Hunger drains 50% slower for 5 min    |
+| Oatmeal      | 30              | +25% inventory capacity for 3 min     |

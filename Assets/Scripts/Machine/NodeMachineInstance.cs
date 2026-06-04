@@ -24,7 +24,7 @@ public class NodeMachineInstance : MachineInstance
 			m_Outputs[i] = _slot.GetComponent<InventorySlot>();
 		}
 
-		SetMachineState(MachineState.Halted);
+		SetMachineState(E_MachineState.Halted);
 	}
 	public void SetInputNode(ResourceNodeInstance _input)
 	{
@@ -36,10 +36,10 @@ public class NodeMachineInstance : MachineInstance
 		if(!m_Input)
 		{
 			Debug.LogWarning("Input Empty");
-			SetMachineState(MachineState.Halted);
+			SetMachineState(E_MachineState.Halted);
 			return;
 		}
-		SetMachineState(MachineState.Working);
+		SetMachineState(E_MachineState.Working);
 	}
 
 	IEnumerator MachineWork()
@@ -60,12 +60,12 @@ public class NodeMachineInstance : MachineInstance
 				if (_sumAmount >= m_Outputs[0].GetItem().StackableAmount)
 				{
 					Debug.Log("Machine should hault");
-					SetMachineState(MachineState.Halted);
+					SetMachineState(E_MachineState.Halted);
 				}
 			}
 		}
 
-		SetMachineState(MachineState.Halted);
+		SetMachineState(E_MachineState.Halted);
 	}
 	IEnumerator MachineHaulted()
 	{
@@ -74,10 +74,10 @@ public class NodeMachineInstance : MachineInstance
 			yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
 		}
 		
-		SetMachineState(MachineState.Working);
+		SetMachineState(E_MachineState.Working);
 	}
 
-	public override void SetMachineState(MachineState _state)
+	public override void SetMachineState(E_MachineState _state)
 	{
 		if(State == _state) return;
 		State = _state;
@@ -87,12 +87,12 @@ public class NodeMachineInstance : MachineInstance
 
 		switch (_state)
 		{
-			case MachineState.Inactive:
+			case E_MachineState.Inactive:
 				break;
-			case MachineState.Working:
+			case E_MachineState.Working:
 				m_MachineWorkingCoroutine = StartCoroutine(MachineWork());
 				break;
-			case MachineState.Halted:
+			case E_MachineState.Halted:
 				m_MachineHaultedCoroutine = StartCoroutine(MachineHaulted());
 				break;
 		}

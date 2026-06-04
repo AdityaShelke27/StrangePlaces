@@ -4,6 +4,6 @@ using UnityEngine;
 public class ResourceNode : Item
 {
 	public int MaxAmount;
-	public SurfaceNode NodeType;
+	public E_SurfaceNode NodeType;
 	public Resource ResourceYield;
 }

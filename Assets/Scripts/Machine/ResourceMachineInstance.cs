@@ -46,7 +46,7 @@ public class ResourceMachineInstance : MachineInstance
 				m_Outputs[i].AddIncludeItems(m_MachineData.RecipeData[m_SelectedRecipeIdx].Output[j].Resource);
 			}
 		}
-		SetMachineState(MachineState.Halted);
+		SetMachineState(E_MachineState.Halted);
 	}
 
 	public override void StartMachine()
@@ -54,10 +54,10 @@ public class ResourceMachineInstance : MachineInstance
 		if (!m_Inputs[0].GetItem())
 		{
 			Debug.LogWarning("Input Empty");
-			SetMachineState(MachineState.Halted);
+			SetMachineState(E_MachineState.Halted);
 			return;
 		}
-		SetMachineState(MachineState.Working);
+		SetMachineState(E_MachineState.Working);
 	}
 
 	IEnumerator MachineWork()
@@ -87,16 +87,16 @@ public class ResourceMachineInstance : MachineInstance
 					if(_sumAmount >= m_Outputs[0].GetItem().StackableAmount)
 					{
 						Debug.Log("Machine should hault");
-						SetMachineState(MachineState.Halted);
+						SetMachineState(E_MachineState.Halted);
 					}
 				}
 			}
 			else
 			{
-				SetMachineState(MachineState.Halted);
+				SetMachineState(E_MachineState.Halted);
 			}
 		}
-		SetMachineState(MachineState.Halted);
+		SetMachineState(E_MachineState.Halted);
 	}
 	IEnumerator MachineHaulted()
 	{
@@ -104,10 +104,10 @@ public class ResourceMachineInstance : MachineInstance
 		{
 			yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
 		}
-		SetMachineState(MachineState.Working);
+		SetMachineState(E_MachineState.Working);
 	}
 
-	public override void SetMachineState(MachineState _state)
+	public override void SetMachineState(E_MachineState _state)
 	{
 		if (State == _state) return;
 		State = _state;
@@ -117,12 +117,12 @@ public class ResourceMachineInstance : MachineInstance
 
 		switch (_state)
 		{
-			case MachineState.Inactive:
+			case E_MachineState.Inactive:
 				break;
-			case MachineState.Working:
+			case E_MachineState.Working:
 				m_MachineWorkingCoroutine = StartCoroutine(MachineWork());
 				break;
-			case MachineState.Halted:
+			case E_MachineState.Halted:
 				m_MachineHaultedCoroutine = StartCoroutine(MachineHaulted());
 				break;
 		}

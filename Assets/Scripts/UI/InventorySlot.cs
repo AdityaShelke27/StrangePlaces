@@ -67,11 +67,11 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if(eventData.pointerEnter != null) return;
         if (CanPlace)
         {
-            if (m_ItemSlot.item.PlacementType == PlacementType.NodePlacement)
+            if (m_ItemSlot.item.PlacementType == E_PlacementType.NodePlacement)
             {
                 ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
             }
-            else if(m_ItemSlot.item.PlacementType == PlacementType.FreePlacement)
+            else if(m_ItemSlot.item.PlacementType == E_PlacementType.FreePlacement)
             {
                 ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
             }

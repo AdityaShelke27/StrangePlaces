@@ -9,11 +9,11 @@ public abstract class MachineInstance : WorldInstance
 	[SerializeField] protected Transform m_OutputSlotListParent;
 	[SerializeField] protected GameObject m_InventorySlotPrefab;
 	protected bool IsWorking;
-	protected MachineState State = MachineState.Inactive;
+	protected E_MachineState State = E_MachineState.Inactive;
 	public abstract void StartMachine();
 
-	public MachineState GetMachineState() => State;
-	public abstract void SetMachineState(MachineState _state);
+	public E_MachineState GetMachineState() => State;
+	public abstract void SetMachineState(E_MachineState _state);
 
 	public void CloseButton()
 	{

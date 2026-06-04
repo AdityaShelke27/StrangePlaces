@@ -50,9 +50,9 @@ public class ResourceHandler : MonoBehaviour
 
         return _item.PlacementType switch
         {
-            PlacementType.NodePlacement => CheckNodePlacement(_item, _pos),
-            PlacementType.FreePlacement => CheckFreePlacement(_item, _pos),
-            PlacementType.None => (false, Vector3.zero, null),
+            E_PlacementType.NodePlacement => CheckNodePlacement(_item, _pos),
+            E_PlacementType.FreePlacement => CheckFreePlacement(_item, _pos),
+            E_PlacementType.None => (false, Vector3.zero, null),
             _ => (false, Vector3.zero, null),
         };
     }

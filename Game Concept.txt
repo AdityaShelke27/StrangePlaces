@@ -18,7 +18,7 @@ Rocket construction room : The rocket will be constructed here
 To Do List:
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Bunker Tasks =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 - Create room placement system where the player can place the new rooms adjacent to existing rooms
-- Design the room layout for all different types of rooms (Construction, storage, research, kitchen, rocket construction)
+- Design the room layout for all different types of rooms (Construction, mechanic, storage, research, kitchen, rocket construction)
 - Construction Room Implementation:
     - Create list of machines that the player can create
     - Assign the resources required to create the machine
@@ -31,6 +31,9 @@ To Do List:
     - Contains a list of food that can be created and eaten by the player
 - Rocket Construction Implementation:
     - A place where the unlocked rocket parts from research will be available here, the player needs to bring the required resources here and construct the rocket
+- Mechanic Room Implementation:
+    - Contains list of tool the player can create
+    - Contains a workbench where player can create basic machines and stuff manually
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Surface Tasks =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 - Create a node/conveyor system to connect one machine's output to other machine's input for automation

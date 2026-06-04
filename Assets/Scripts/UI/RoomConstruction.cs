@@ -19,26 +19,26 @@ public class RoomConstruction : MonoBehaviour
 	public void GenerateConstructionRoom()
 	{
 		ToggleRoomConstructionPanel();
-		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE);
+		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE, E_Rooms.Construction);
 	}
 	public void GenerateStorageRoom()
 	{
 		ToggleRoomConstructionPanel();
-		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE);
+		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE, E_Rooms.Storage);
 	}
 	public void GenerateKitchen()
 	{
 		ToggleRoomConstructionPanel();
-		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE);
+		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE, E_Rooms.Kitchen);
 	}
 	public void GenerateResearchRoom()
 	{
 		ToggleRoomConstructionPanel();
-		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE);
+		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE, E_Rooms.Research);
 	}
 	public void GenerateRocketConstructionRoom()
 	{
 		ToggleRoomConstructionPanel();
-		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE);
+		RoomPlacement.s_GenerateAreas(Constant.ROOM_SIZE, E_Rooms.Rocket_Construction);
 	}
 }

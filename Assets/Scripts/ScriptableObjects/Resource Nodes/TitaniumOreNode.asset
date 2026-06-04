@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
   itemID: titanium-ore-node
   itemName: 
-  itemImage: {fileID: 21300000, guid: 97fe9c3b235f1bb4d99466f288f84871, type: 3}
+  itemImage: {fileID: 21300000, guid: 489c650446805bc42b60357f4e9443d0, type: 3}
   itemDescription: 
   MaxAmount: 10
   NodeType: 0

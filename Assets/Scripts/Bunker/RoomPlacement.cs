@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomPlacement : MonoBehaviour
 {
-	public static Action<Vector2> s_GenerateAreas;
+	public static Action<Vector2, E_Rooms> s_GenerateAreas;
 
 	[SerializeField] float m_RoomSpacing;
 	[SerializeField] float m_StairPointOffset;
@@ -26,7 +26,7 @@ public class RoomPlacement : MonoBehaviour
 		s_GenerateAreas -= GenerateAvailableAreas;
 	}
 
-	void GenerateAvailableAreas(Vector2 _roomSize)
+	void GenerateAvailableAreas(Vector2 _roomSize, E_Rooms _room)
 	{
 		List<Vector2> _SearchedPoses = new();
 
@@ -47,18 +47,18 @@ public class RoomPlacement : MonoBehaviour
 			for(int j = 0; j < _targetPoses.Length; j++)
 			{
 				Vector2 _placement;
-				RoomStairPlacement _PlacementDirection;
+				E_RoomStairPlacement _PlacementDirection;
 				int _groundLevel = 0;
-				if (j == 0 && _currentRoom.GetStairPlacement() == RoomStairPlacement.Left)
+				if (j == 0 && _currentRoom.GetStairPlacement() == E_RoomStairPlacement.Left)
 				{
 					_placement = _targetPoses[j] + Constant.STAIR_SIZE.x * Vector2.left;
-					_PlacementDirection = RoomStairPlacement.Right;
+					_PlacementDirection = E_RoomStairPlacement.Right;
 					_groundLevel = _currentRoom.GetGroundLevel();
 				}
-				else if(j == 1 && _currentRoom.GetStairPlacement() == RoomStairPlacement.Right)
+				else if(j == 1 && _currentRoom.GetStairPlacement() == E_RoomStairPlacement.Right)
 				{
 					_placement = _targetPoses[j] + Constant.STAIR_SIZE.x * Vector2.right;
-					_PlacementDirection = RoomStairPlacement.Left;
+					_PlacementDirection = E_RoomStairPlacement.Left;
 					_groundLevel = _currentRoom.GetGroundLevel();
 				}
 				else if(j == 0 || j == 1)
@@ -109,7 +109,7 @@ public class RoomPlacement : MonoBehaviour
 		}
 	}
 
-	public void ConstructRoomAtLocation(Vector3 _pos, RoomStairPlacement m_DoorFacingDirection, int _groundLevel)
+	public void ConstructRoomAtLocation(Vector3 _pos, E_RoomStairPlacement m_DoorFacingDirection, int _groundLevel)
 	{
 		GameObject _room = Instantiate(m_RoomPrefab, _pos, Quaternion.identity);
 		_room.transform.parent = m_RoomListParent;
@@ -118,13 +118,13 @@ public class RoomPlacement : MonoBehaviour
 		bool _facingLeft = false;
 		switch(m_DoorFacingDirection)
 		{
-			case RoomStairPlacement.Left:
+			case E_RoomStairPlacement.Left:
 				_facingLeft = true; 
 				break;
-			case RoomStairPlacement.Right:
+			case E_RoomStairPlacement.Right:
 				_facingLeft = false;
 				break;
-			case RoomStairPlacement.No_Stairs: 
+			case E_RoomStairPlacement.No_Stairs: 
 				_facingLeft = false; 
 				break;
 		}

@@ -1,60 +1,41 @@
 using System;
 
-public enum SurfaceNode
+public enum E_SurfaceNode
 {
     Ore_Node,
     Plant_Node,
     Gravitational_Anomaly_Node,
     Alien_Ruin_Node
 }
-public enum SurfaceNodeAmount
+public enum E_SurfaceNodeAmount
 {
     Small,
     Medium,
     Large,
     Very_Large
 }
-public enum RoomStairPlacement
+public enum E_RoomStairPlacement
 {
 	No_Stairs,
 	Right,
 	Left
 }
-public enum ResourceType
+public enum E_Rooms
 {
-    Ore,
-    Plant,
-    Alien_Artifact,
-    Metal,
-    Biomass,
-    Electricity
+	Mechanic,
+	Construction,
+	Storage,
+	Research,
+	Kitchen,
+	Rocket_Construction
 }
-public enum StorableItemEnum
-{
-    Alien_Artifact,
-    Artifact_Scanner,
-    Axe,
-    Biomass,
-    BioProcessor,
-    BioReactor,
-    Gravity_Reactor,
-    Harvester,
-    Metal,
-    Miner,
-    Ore,
-    Pickaxe,
-    Plant,
-    Research_Station,
-    Smelter
-}
-
-public enum MachineState
+public enum E_MachineState
 {
     Inactive,
     Working,
     Halted
 }
-public enum PlacementType
+public enum E_PlacementType
 {
     None,
     NodePlacement,
