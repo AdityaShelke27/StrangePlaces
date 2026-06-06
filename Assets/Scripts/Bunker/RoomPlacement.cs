@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomPlacement : MonoBehaviour
 {
-	public static Action<Vector2, E_Rooms> s_GenerateAreas;
+	public static Action<Vector2, int> s_GenerateAreas;
 
 	[SerializeField] float m_RoomSpacing;
 	[SerializeField] float m_StairPointOffset;
@@ -13,10 +13,10 @@ public class RoomPlacement : MonoBehaviour
 	[SerializeField] Transform m_RoomListParent;
 	[SerializeField] Transform m_StairsParent;
 	[SerializeField] Transform m_GroundLevelPointsParent;
-	[SerializeField] GameObject m_RoomPrefab;
 	[SerializeField] int m_BuiltGroundLevel;
+	[SerializeField] GameObject[] m_Rooms;
+	[SerializeField] GameObject[] m_RoomConstructionButtons;
 	List<GameObject> m_RoomSilhouletteList = new();
-
 	private void OnEnable()
 	{
 		s_GenerateAreas += GenerateAvailableAreas;
@@ -26,7 +26,7 @@ public class RoomPlacement : MonoBehaviour
 		s_GenerateAreas -= GenerateAvailableAreas;
 	}
 
-	void GenerateAvailableAreas(Vector2 _roomSize, E_Rooms _room)
+	void GenerateAvailableAreas(Vector2 _roomSize, int _roomID)
 	{
 		List<Vector2> _SearchedPoses = new();
 
@@ -101,17 +101,15 @@ public class RoomPlacement : MonoBehaviour
 					_obj.transform.localScale = new(_roomSize.x, _roomSize.y, 1);
 
 					m_RoomSilhouletteList.Add(_obj);
-					_script.SetRoomPlacementScript(this);
-					_script.SetIsDoorFacingLeft(_PlacementDirection);
-					_script.SetGroundLevel(_groundLevel);
+					_script.SetInfo(this, _PlacementDirection, _groundLevel, _roomID);
 				}
 			}
 		}
 	}
 
-	public void ConstructRoomAtLocation(Vector3 _pos, E_RoomStairPlacement m_DoorFacingDirection, int _groundLevel)
+	public void ConstructRoomAtLocation(Vector3 _pos, E_RoomStairPlacement m_DoorFacingDirection, int _groundLevel, int _roomID)
 	{
-		GameObject _room = Instantiate(m_RoomPrefab, _pos, Quaternion.identity);
+		GameObject _room = Instantiate(m_Rooms[_roomID], _pos, Quaternion.identity);
 		_room.transform.parent = m_RoomListParent;
 		Room _roomScript = _room.GetComponent<Room>();
 
@@ -138,6 +136,7 @@ public class RoomPlacement : MonoBehaviour
 		}
 
 		m_RoomSilhouletteList.Clear();
+		if (m_RoomConstructionButtons[_roomID] != null) Destroy(m_RoomConstructionButtons[_roomID]);
 
 		if (_groundLevel > m_BuiltGroundLevel) ConstructNewGroundLevel();
 	}

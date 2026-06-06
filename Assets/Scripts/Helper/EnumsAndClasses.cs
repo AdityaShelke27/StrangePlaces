@@ -7,13 +7,6 @@ public enum E_SurfaceNode
     Gravitational_Anomaly_Node,
     Alien_Ruin_Node
 }
-public enum E_SurfaceNodeAmount
-{
-    Small,
-    Medium,
-    Large,
-    Very_Large
-}
 public enum E_RoomStairPlacement
 {
 	No_Stairs,

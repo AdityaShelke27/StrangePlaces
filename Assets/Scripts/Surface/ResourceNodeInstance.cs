@@ -5,7 +5,6 @@ public class ResourceNodeInstance : MonoBehaviour
 {
 	[SerializeField] SpriteRenderer m_SpriteRenderer;
 	[SerializeField] ResourceNode m_ResourceNodeData;
-	[SerializeField] E_SurfaceNodeAmount m_NodeAmount;
 	int m_MaxAmount;
 	[SerializeField] int m_AmountAvailable;
 	bool m_AllResourcesDepleted = false;
