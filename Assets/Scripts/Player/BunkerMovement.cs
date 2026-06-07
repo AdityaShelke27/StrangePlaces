@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BunkerMovement : MonoBehaviour
 {
-	public static Action<int, float> s_MoveHere;
+	public static Action<int, float, int> s_MoveHere;
 
 	[SerializeField] Transform m_PointsParent;
 	[SerializeField] Transform m_MainCam;
+	[SerializeField] Transform m_RoomListParent;
+	[SerializeField] int m_CurrentRoomID;
 	[SerializeField] float m_CamMoveSpeed;
 	[SerializeField] float m_CameraYOffset;
 	[SerializeField] int m_CurrentGroundLevel = 0;
@@ -30,13 +32,13 @@ public class BunkerMovement : MonoBehaviour
 		pos.z = -10;
 		m_MainCam.transform.position = pos;
 	}
-	void MoveToPoint(int _groundLevel, float _pointX)
+	void MoveToPoint(int _groundLevel, float _pointX, int _roomID)
 	{
 		if (m_IsMoving) return;
 
-		StartCoroutine(Cor_MoveToPoint(_groundLevel, _pointX));
+		StartCoroutine(Cor_MoveToPoint(_groundLevel, _pointX, _roomID));
 	}
-	IEnumerator Cor_MoveToPoint(int _groundLevel, float _pointX)
+	IEnumerator Cor_MoveToPoint(int _groundLevel, float _pointX, int _roomID)
 	{
 		m_IsMoving = true;
 
@@ -71,5 +73,13 @@ public class BunkerMovement : MonoBehaviour
 		m_CurrentGroundLevel = _groundLevel;
 
 		m_IsMoving = false;
+
+		for(int i = 0; i < m_RoomListParent.childCount; i++)
+		{
+			Room _room = m_RoomListParent.GetChild(i).GetComponent<Room>();
+
+			_room.GetComponent<BoxCollider2D>().enabled = _room.GetRoomID() != _roomID;
+		}
+		m_CurrentRoomID = _roomID;
 	}
 }

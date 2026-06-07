@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: copper-wires
   itemName: 
-  itemImage: {fileID: 21300000, guid: 3455c67c3fb6a1849b975014bfaeebc5, type: 3}
+  itemImage: {fileID: 21300000, guid: 5015ff0b99d38074aa59ca24176f2671, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10

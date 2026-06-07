@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: karth-bamboo
   itemName: 
-  itemImage: {fileID: 21300000, guid: f005349c0770cf9498d8dc0df9d849f0, type: 3}
+  itemImage: {fileID: 21300000, guid: 5ccffee81b3a80144b91e47e1e7f716c, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10

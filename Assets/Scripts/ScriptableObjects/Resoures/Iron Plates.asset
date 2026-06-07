@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: iron-plates
   itemName: 
-  itemImage: {fileID: 21300000, guid: 3455c67c3fb6a1849b975014bfaeebc5, type: 3}
+  itemImage: {fileID: 21300000, guid: 3bb2c375cb42bb146981c470ec088c0e, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10
