@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: bio-resin
   itemName: 
-  itemImage: {fileID: 21300000, guid: 5793281b3094971468b59f7c04829296, type: 3}
+  itemImage: {fileID: 21300000, guid: a387450b0817fea479bb2bf2b01c5718, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10

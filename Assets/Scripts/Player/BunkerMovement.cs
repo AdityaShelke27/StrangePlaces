@@ -42,6 +42,17 @@ public class BunkerMovement : MonoBehaviour
 	{
 		m_IsMoving = true;
 
+		for (int i = 0; i < m_RoomListParent.childCount; i++)
+		{
+			Room _room = m_RoomListParent.GetChild(i).GetComponent<Room>();
+
+			if(_room.GetRoomID() == m_CurrentRoomID)
+			{
+				_room.SwitchToInteractableCollider(false);
+				break;
+			}
+		}
+
 		Vector2 _movePos, _dir;
 		if (_groundLevel != m_CurrentGroundLevel)
 		{
@@ -78,7 +89,7 @@ public class BunkerMovement : MonoBehaviour
 		{
 			Room _room = m_RoomListParent.GetChild(i).GetComponent<Room>();
 
-			_room.GetComponent<BoxCollider2D>().enabled = _room.GetRoomID() != _roomID;
+			_room.SwitchToInteractableCollider(_room.GetRoomID() == _roomID);
 		}
 		m_CurrentRoomID = _roomID;
 	}
