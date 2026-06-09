@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BunkerMovement : MonoBehaviour
 {
+	public static BunkerMovement instance;
+
 	public static Action<int, float, int> s_MoveHere;
 
 	[SerializeField] Transform m_PointsParent;
@@ -17,6 +19,13 @@ public class BunkerMovement : MonoBehaviour
 
 	bool m_IsMoving = false;
 
+	private void Awake()
+	{
+		if(instance == null)
+		{
+			instance = this;
+		}
+	}
 	private void OnEnable()
 	{
 		s_MoveHere += MoveToPoint;
@@ -93,4 +102,6 @@ public class BunkerMovement : MonoBehaviour
 		}
 		m_CurrentRoomID = _roomID;
 	}
+
+	public int GetCurrentRoomID() => m_CurrentRoomID;
 }

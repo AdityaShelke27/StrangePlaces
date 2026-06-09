@@ -30,7 +30,14 @@ public class RoomPlacement : MonoBehaviour
 	{
 		List<Vector2> _SearchedPoses = new();
 
-		for(int i = 0; i < m_RoomListParent.childCount; i++)
+		for (int i = 0; i < m_RoomListParent.childCount; i++)
+		{
+			Room _room = m_RoomListParent.GetChild(i).GetComponent<Room>();
+
+			_room.SwitchToInteractableCollider(false);
+		}
+
+		for (int i = 0; i < m_RoomListParent.childCount; i++)
 		{
 			Room _currentRoom = m_RoomListParent.GetChild(i).GetComponent<Room>();
 			Vector2 _pos = m_RoomListParent.GetChild(i).position;
@@ -104,6 +111,14 @@ public class RoomPlacement : MonoBehaviour
 					_script.SetInfo(this, _PlacementDirection, _groundLevel, _roomID);
 				}
 			}
+		}
+
+		int _currentRoomID = BunkerMovement.instance.GetCurrentRoomID();
+		for (int i = 0; i < m_RoomListParent.childCount; i++)
+		{
+			Room _room = m_RoomListParent.GetChild(i).GetComponent<Room>();
+
+			_room.SwitchToInteractableCollider(_room.GetRoomID() == _currentRoomID);
 		}
 	}
 

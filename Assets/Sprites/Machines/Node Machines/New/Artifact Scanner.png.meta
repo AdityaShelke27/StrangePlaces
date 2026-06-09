@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f0bd3c4bde854614a9110ce5946b5866
+guid: 2740485f65d3ced4380db78279e1797d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4733580668584197225
-    second: Fiber Mesh_0
+      213: 1472331060310055828
+    second: Artifact Scanner_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fiber Mesh_0
+      name: Artifact Scanner_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 31
-        width: 247
-        height: 202
+        x: 21
+        y: 24
+        width: 214
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79302652671fe4eb0800000000000000
-      internalID: -4733580668584197225
+      spriteID: 49b1e817c45ce6410800000000000000
+      internalID: 1472331060310055828
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fiber Mesh_0: -4733580668584197225
+      Artifact Scanner_0: 1472331060310055828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

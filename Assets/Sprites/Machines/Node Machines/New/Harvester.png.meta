@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f0bd3c4bde854614a9110ce5946b5866
+guid: 8aae711fb0d7b8c4e87674509136e3c3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4733580668584197225
-    second: Fiber Mesh_0
+      213: -1404767373821689847
+    second: Harvester_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fiber Mesh_0
+      name: Harvester_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 31
-        width: 247
-        height: 202
+        x: 10
+        y: 21
+        width: 239
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79302652671fe4eb0800000000000000
-      internalID: -4733580668584197225
+      spriteID: 900cc4b2483418ce0800000000000000
+      internalID: -1404767373821689847
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fiber Mesh_0: -4733580668584197225
+      Harvester_0: -1404767373821689847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

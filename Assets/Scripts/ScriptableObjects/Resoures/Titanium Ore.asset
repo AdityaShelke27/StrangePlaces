@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: titanium-ore
   itemName: 
-  itemImage: {fileID: 21300000, guid: 61ebc89b9c9268a49ad65e4b826f2c36, type: 3}
+  itemImage: {fileID: 21300000, guid: 9b1098a6875bd904dba990a46d6a5c43, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10
