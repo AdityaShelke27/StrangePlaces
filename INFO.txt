@@ -153,22 +153,21 @@ KITCHEN ITEMS:
 Electricity -> All Machines -> Automation
 
 Resources(R):               Machines(M):                Abstract Resource (A):      Tools(T):       Rooms(O):                           Food(F):
-1- Iron Ore                 1- Miner                    1- Electricity              1- Pickaxe      1- Mechanic Room                    1- Nutrientbar
-2- Copper Ore               2- Harvester                2- Research Points          2- Axe          2- Construction Room                2- Protein Milk
-3- Titanium Ore             3- Smelter                                                              3- Storage Room                     3- Mush Soup
-4- Vyrex Reed               4- Organic Refiner                                                      4- Research Room                    4- Bloom Stew
-5- Lumabloom                5- Research Station                                                     5- Kitchen Room                     5- Oatmeal
-6- Karth Bamboo             6- Bio Generator                                                        6- Rocket Construction Room
-7- Fiber Mesh               7- Gravity Reactor
-8- Copper Wires             8- Artifact Scanner
-9- Reinforcement Panels
+1- Iron OrE                 1- MineR                    1- ElectricitY              1- PickaxE      1- Mechanic RooM                    1- NutrientbaR
+2- Copper OrE               2- HarvesteR                2- Research Points          2- AxE          2- Construction RooM                2- Protein MilK
+3- Titanium OrE             3- SmelteR                                                              3- Storage RooM                     3- Mush SouP
+4- Vyrex ReeD               4- Organic RefineR                                                      4- Research RooM                    4- Bloom SteW
+5- LumablooM                5- Research StatioN                                                     5- Kitchen RooM                     5- OatmeaL
+6- Karth BamboO             6- Bio GeneratoR                                                        6- Rocket Construction Room
+7- Fiber MesH               7- Gravity ReactoR
+8- Copper WireS             8- Artifact ScanneR
+9- Reinforcement PanelS
 10- Bio Resin
-11- Nutrient Paste
-12- Titanium Alloy
-13- Iron Plates
+11- Nutrient PastE
+12- Titanium AlloY
+13- Iron PlateS
 
-Start: (R1, R2, R4, R5, R7, R8, R10, R11, R13, T1, T2, O1, O4, O5, F1) -> F2 -> F3
-                                                                            \-> F4 -> F5
-                                                                      \-> R6 -> R9 -> A1 -> M1 -> M3
-                                                                                        \-> M2 -> M4
-                                                                                        \-> M8 -> M5
+Start: (R1, R2, R4, R5, R7, R8, R11, R13, T1, T2, O1, O4, O5, F1) -> F2 -> F3
+                                                                        \> F4 -> F5
+                                                                  \> R6 -> R9 -> A1 -> (O2, R10) -> (M1, M2, M6, M8) -> (R3, R12) -> (M3, M4, M5, M7)
+                                                                              \> O3

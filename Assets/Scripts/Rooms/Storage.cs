@@ -3,10 +3,23 @@ using UnityEngine.EventSystems;
 
 public class Storage : MonoBehaviour
 {
-	[SerializeField] private InventorySlot[] m_InventorySlots;
+	[SerializeField] Transform m_InventoryParent;
+	[SerializeField] GameObject m_InventorySlotPrefab;
+	[SerializeField] int m_InventoryAmount;
+	[SerializeField] GameObject m_InventoryPanelUI;
+	private void Start()
+	{
+		CloseInventoryPanel();
+		for (int i = 0; i < m_InventoryAmount; i++)
+		{
+			Instantiate(m_InventorySlotPrefab, m_InventoryParent);
+		}
+	}
 	private void OnMouseDown()
 	{
 		if (EventSystem.current.IsPointerOverGameObject()) return;
-		Debug.Log("Working");
+		
+		m_InventoryPanelUI.SetActive(true);
 	}
+	public void CloseInventoryPanel() => m_InventoryPanelUI.SetActive(false);
 }
