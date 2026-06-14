@@ -29,6 +29,20 @@ public class Room : MonoBehaviour
 			_col.enabled = _val;
 		}
 	}
+	public void SetRoomFlipped(bool _val)
+	{
+		gameObject.GetComponent<SpriteRenderer>().flipX = _val;
+
+		if(_val)
+		{
+			for (int i = 0; i < transform.childCount; i++)
+			{
+				Vector3 pos = transform.GetChild(i).localPosition;
+				pos.x *= -1;
+				transform.GetChild(i).localPosition = pos;
+			}
+		}
+	}
 	public Vector2 GetSize() => Constant.ROOM_SIZE;
 	public E_RoomStairPlacement GetStairPlacement() => m_StairPlacement;
 	public void SetGroundLevel(int _level) => m_GroundLevel = _level;

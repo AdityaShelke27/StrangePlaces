@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ed070b17d6cbc04095dd0bdf3bc18dc
+guid: bab12c6e57d759041ac37c152d72d31b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2311659948842064771
-    second: Player_0
+      213: -7965525267179709002
+    second: Bio Reactor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
+      name: Bio Reactor_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 131
-        height: 252
+        x: 29
+        y: 15
+        width: 196
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7465c336855befd0800000000000000
-      internalID: -2311659948842064771
+      spriteID: 6bdda5009f4c47190800000000000000
+      internalID: -7965525267179709002
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player_0: -2311659948842064771
+      Bio Reactor_0: -7965525267179709002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

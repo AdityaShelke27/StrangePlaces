@@ -1,4 +1,5 @@
 using System;
+using static UnityEditor.Progress;
 
 public enum E_SurfaceNode
 {
@@ -50,5 +51,16 @@ public class ItemSlot
     {
         item = _item;
         amount = _amount;
-    }
+	}
 }
+public class Save_ItemSlot
+{
+	public string id;
+	public int amount;
+	public Save_ItemSlot(string _id, int _amount)
+	{
+		id = _id;
+		amount = _amount;
+	}
+}
+

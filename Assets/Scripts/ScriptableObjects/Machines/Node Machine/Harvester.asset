@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
   itemID: harvester
   itemName: 
-  itemImage: {fileID: 21300000, guid: 6c226d034578cbc4ba8163031c93ea41, type: 3}
+  itemImage: {fileID: 21300000, guid: 8aae711fb0d7b8c4e87674509136e3c3, type: 3}
   itemDescription: 
   PlacementType: 1
   StackableAmount: 1

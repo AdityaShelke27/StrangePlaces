@@ -12,7 +12,8 @@ public class Storage : MonoBehaviour
 		CloseInventoryPanel();
 		for (int i = 0; i < m_InventoryAmount; i++)
 		{
-			Instantiate(m_InventorySlotPrefab, m_InventoryParent);
+			GameObject _invSlot = Instantiate(m_InventorySlotPrefab, m_InventoryParent);
+			_invSlot.GetComponent<InventorySlot>().ShouldAcceptAllItems(true);
 		}
 	}
 	private void OnMouseDown()

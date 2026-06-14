@@ -141,7 +141,7 @@ public class RoomPlacement : MonoBehaviour
 				_facingLeft = false; 
 				break;
 		}
-		_room.GetComponent<SpriteRenderer>().flipX = !_facingLeft;
+		_roomScript.SetRoomFlipped(!_facingLeft);
 		_roomScript.SetStairPlacement(m_DoorFacingDirection);
 		_roomScript.SetGroundLevel(_groundLevel);
 
@@ -163,10 +163,10 @@ public class RoomPlacement : MonoBehaviour
 		GameObject _stairsObj = new("Stairs", typeof(SpriteRenderer));
 		_stairsObj.GetComponent<SpriteRenderer>().sprite = m_StairSprite;
 		_stairsObj.transform.parent = m_StairsParent;
-		_stairsObj.transform.localPosition = Constant.STAIR_SIZE.y * (m_BuiltGroundLevel - 1) * Vector3.down;
+		_stairsObj.transform.localPosition = (Constant.STAIR_SIZE.y + m_RoomSpacing) * (m_BuiltGroundLevel - 1) * Vector3.down;
 
 		GameObject _groundPoint = new("Point");
 		_groundPoint.transform.parent = m_GroundLevelPointsParent;
-		_groundPoint.transform.localPosition = (Constant.STAIR_SIZE.y * m_BuiltGroundLevel + m_StairPointOffset) * Vector3.down;
+		_groundPoint.transform.localPosition = ((Constant.STAIR_SIZE.y + m_RoomSpacing) * m_BuiltGroundLevel + m_StairPointOffset) * Vector3.down;
 	}
 }

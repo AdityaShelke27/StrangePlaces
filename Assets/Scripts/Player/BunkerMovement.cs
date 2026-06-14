@@ -66,26 +66,26 @@ public class BunkerMovement : MonoBehaviour
 		if (_groundLevel != m_CurrentGroundLevel)
 		{
 			_movePos = m_PointsParent.GetChild(m_CurrentGroundLevel).position;
-			_dir = (_movePos - (Vector2)transform.position).normalized;
 			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 			{
+				_dir = (_movePos - (Vector2)transform.position).normalized;
 				transform.Translate(m_Speed * Time.deltaTime * _dir);
 				yield return null;
 			}
 
 			_movePos = m_PointsParent.GetChild(_groundLevel).position;
-			_dir = (_movePos - (Vector2)transform.position).normalized;
 			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 			{
+				_dir = (_movePos - (Vector2)transform.position).normalized;
 				transform.Translate(m_Speed * Time.deltaTime * _dir);
 				yield return null;
 			}
 		}
 
 		_movePos = new Vector2(_pointX, m_PointsParent.GetChild(_groundLevel).position.y);
-		_dir = (_movePos - (Vector2)transform.position).normalized;
 		while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 		{
+			_dir = (_movePos - (Vector2)transform.position).normalized;
 			transform.Translate(m_Speed * Time.deltaTime * _dir);
 			yield return null;
 		}
