@@ -6,7 +6,7 @@ public class ItemDatabase : MonoBehaviour
 	public static ItemDatabase Instance;
 
 	[SerializeField] Item[] m_Items;
-	Dictionary<string, Item> m_ItemDict;
+	readonly Dictionary<string, Item> m_ItemDict = new();
 
 	private void Awake()
 	{
@@ -29,5 +29,9 @@ public class ItemDatabase : MonoBehaviour
 		{
 			m_ItemDict[m_Items[i].itemID] = m_Items[i];
 		}
+	}
+	public Item GetItemByID(string _itemID)
+	{
+		return m_ItemDict.ContainsKey(_itemID) ? m_ItemDict[_itemID] : null;
 	}
 }

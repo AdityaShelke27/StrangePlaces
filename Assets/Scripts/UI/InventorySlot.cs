@@ -24,7 +24,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         SetItemSlot(m_ItemSlot.item, m_ItemSlot.amount);
 
-		Debug.Log($"JSON: {JsonUtility.ToJson(new Save_ItemSlot(m_ItemSlot.item.itemID, m_ItemSlot.amount))}");
+		//Debug.Log($"JSON: {JsonUtility.ToJson(new Save_ItemSlot(m_ItemSlot.item.itemID, m_ItemSlot.amount))}");
     }
 
     IEnumerator StartCheckPlacementPointer()

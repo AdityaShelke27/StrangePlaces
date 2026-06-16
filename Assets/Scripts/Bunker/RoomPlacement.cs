@@ -58,13 +58,13 @@ public class RoomPlacement : MonoBehaviour
 				int _groundLevel = 0;
 				if (j == 0 && _currentRoom.GetStairPlacement() == E_RoomStairPlacement.Left)
 				{
-					_placement = _targetPoses[j] + Constant.STAIR_SIZE.x * Vector2.left;
+					_placement = _targetPoses[j] + Constant.SIZE_STAIR.x * Vector2.left;
 					_PlacementDirection = E_RoomStairPlacement.Right;
 					_groundLevel = _currentRoom.GetGroundLevel();
 				}
 				else if(j == 1 && _currentRoom.GetStairPlacement() == E_RoomStairPlacement.Right)
 				{
-					_placement = _targetPoses[j] + Constant.STAIR_SIZE.x * Vector2.right;
+					_placement = _targetPoses[j] + Constant.SIZE_STAIR.x * Vector2.right;
 					_PlacementDirection = E_RoomStairPlacement.Left;
 					_groundLevel = _currentRoom.GetGroundLevel();
 				}
@@ -163,10 +163,10 @@ public class RoomPlacement : MonoBehaviour
 		GameObject _stairsObj = new("Stairs", typeof(SpriteRenderer));
 		_stairsObj.GetComponent<SpriteRenderer>().sprite = m_StairSprite;
 		_stairsObj.transform.parent = m_StairsParent;
-		_stairsObj.transform.localPosition = (Constant.STAIR_SIZE.y + m_RoomSpacing) * (m_BuiltGroundLevel - 1) * Vector3.down;
+		_stairsObj.transform.localPosition = (Constant.SIZE_STAIR.y + m_RoomSpacing) * (m_BuiltGroundLevel - 1) * Vector3.down;
 
 		GameObject _groundPoint = new("Point");
 		_groundPoint.transform.parent = m_GroundLevelPointsParent;
-		_groundPoint.transform.localPosition = ((Constant.STAIR_SIZE.y + m_RoomSpacing) * m_BuiltGroundLevel + m_StairPointOffset) * Vector3.down;
+		_groundPoint.transform.localPosition = ((Constant.SIZE_STAIR.y + m_RoomSpacing) * m_BuiltGroundLevel + m_StairPointOffset) * Vector3.down;
 	}
 }

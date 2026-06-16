@@ -28,6 +28,7 @@ public class ResourceHandler : MonoBehaviour
 
         m_SelectedItemIdx = idx;
     }
+	public InventorySlot[] GetInventorySlots() => m_Inventory;
     public void InstantiateObjectToWorld(StorableItem _item, Vector3 _pos)
     {
         GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
@@ -61,7 +62,7 @@ public class ResourceHandler : MonoBehaviour
     {
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(_pos);
         Collider2D col = Physics2D.OverlapBox(worldPos, _item.Size, 0, m_WorldPlacableLayer);
-        if (col && col.CompareTag("ResourceNode"))
+        if (col && col.CompareTag(Constant.TAG_RESOURCE_NODE))
         {
             ResourceNodeInstance m_Node = col.GetComponent<ResourceNodeInstance>();
             if(_item.GetPlacableNodes().Contains(m_Node.GetResourceNodeData()))

@@ -363,10 +363,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: f985aa3f46719f94281a093891a1f1f8, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -385,6 +385,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a700cadd64d77374186d6e362332d686, type: 3}
+--- !u!114 &63839599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+  m_PrefabInstance: {fileID: 63839598}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2efbe491213dd48ac2eaec7873a2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &67557976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,10 +1628,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 445ee3fad2137a1489bb7e7405058ee8, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -1639,6 +1650,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a700cadd64d77374186d6e362332d686, type: 3}
+--- !u!114 &726045904 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+  m_PrefabInstance: {fileID: 726045903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2efbe491213dd48ac2eaec7873a2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &734457260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751823233}
   - component: {fileID: 751823234}
+  - component: {fileID: 751823235}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1771,6 +1794,24 @@ MonoBehaviour:
   m_CameraYOffset: 0
   m_CurrentGroundLevel: 0
   m_Speed: 5
+--- !u!114 &751823235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751823232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068e6e8fe85cbb642a8098d2159900f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BunkerPlayer
+  m_InventorySlots:
+  - {fileID: 1419111158}
+  - {fileID: 63839599}
+  - {fileID: 1165309848}
+  - {fileID: 726045904}
+  - {fileID: 1452286858}
 --- !u!1 &775025243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,10 +2196,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 584ea56718308f74889ea8b862abb37a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -2177,6 +2218,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a700cadd64d77374186d6e362332d686, type: 3}
+--- !u!114 &1165309848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+  m_PrefabInstance: {fileID: 1165309847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2efbe491213dd48ac2eaec7873a2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &1170034529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,10 +2884,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 24a3b80ab01faa54ea4718dcd5a4023b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -2854,6 +2906,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a700cadd64d77374186d6e362332d686, type: 3}
+--- !u!114 &1419111158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+  m_PrefabInstance: {fileID: 1419111157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2efbe491213dd48ac2eaec7873a2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &1452286857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2965,10 +3028,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 24a3b80ab01faa54ea4718dcd5a4023b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -2987,6 +3050,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a700cadd64d77374186d6e362332d686, type: 3}
+--- !u!114 &1452286858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+  m_PrefabInstance: {fileID: 1452286857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2efbe491213dd48ac2eaec7873a2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!224 &1476088992 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5833032438733543700, guid: a700cadd64d77374186d6e362332d686, type: 3}
