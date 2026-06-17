@@ -9,7 +9,7 @@ public class Storage : MonoBehaviour
 	[SerializeField] GameObject m_InventoryPanelUI;
 	private void Start()
 	{
-		CloseInventoryPanel();
+		ClosePanel();
 		for (int i = 0; i < m_InventoryAmount; i++)
 		{
 			GameObject _invSlot = Instantiate(m_InventorySlotPrefab, m_InventoryParent);
@@ -22,5 +22,5 @@ public class Storage : MonoBehaviour
 		
 		m_InventoryPanelUI.SetActive(true);
 	}
-	public void CloseInventoryPanel() => m_InventoryPanelUI.SetActive(false);
+	public void ClosePanel() => m_InventoryPanelUI.SetActive(false);
 }
