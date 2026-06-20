@@ -1,19 +1,19 @@
-using Newtonsoft.Json;
 using UnityEngine;
 
 public class BunkerPlayer : MonoBehaviour
 {
 	[SerializeField] InventorySlot[] m_InventorySlots;
-    void Start()
-    {
+	void Start()
+	{
 		AssignInventory();
 	}
 	void AssignInventory()
 	{
 		if (!PlayerPrefs.HasKey(Constant.PREF_SAVE_INVENTORY)) return;
 
-		Save_ItemSlot[] _items = JsonConvert.DeserializeObject<Save_ItemSlot[]>(PlayerPrefs.GetString(Constant.PREF_SAVE_INVENTORY));
+		Save_ItemSlot _itemsArray = JsonUtility.FromJson<Save_ItemSlot>(PlayerPrefs.GetString(Constant.PREF_SAVE_INVENTORY));
 
+		Save_ItemSlotArray[] _items = _itemsArray.itemSlotArray;
 		for(int i = 0; i < _items.Length; i++)
 		{
 			if (string.IsNullOrEmpty(_items[i].id)) continue;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Miner
   m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
   itemID: miner
-  itemName: 
+  itemName: Miner
   itemImage: {fileID: 21300000, guid: 5607deed9e478404b92380a96d1798b2, type: 3}
   itemDescription: 
   PlacementType: 1

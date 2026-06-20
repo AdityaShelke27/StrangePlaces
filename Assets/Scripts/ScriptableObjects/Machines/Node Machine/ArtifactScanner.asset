@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fcea3a8b275386418fb432a66d014dd, type: 3}
-  m_Name: ArtifactSanner
+  m_Name: ArtifactScanner
   m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
   itemID: artifact-scanner
-  itemName: 
+  itemName: Artifact Scanner
   itemImage: {fileID: 21300000, guid: 2740485f65d3ced4380db78279e1797d, type: 3}
   itemDescription: 
   PlacementType: 1

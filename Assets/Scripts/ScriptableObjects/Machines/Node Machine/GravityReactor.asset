@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GravityReactor
   m_EditorClassIdentifier: Assembly-CSharp::NodeMachine
   itemID: gravity-reactor
-  itemName: 
+  itemName: Gravity Reactor
   itemImage: {fileID: 21300000, guid: fa963f70504795049a8d6685798ee7da, type: 3}
   itemDescription: 
   PlacementType: 1

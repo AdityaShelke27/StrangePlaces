@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BioReactor
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMachine
   itemID: bio-reactor
-  itemName: 
+  itemName: Bio Reactor
   itemImage: {fileID: 21300000, guid: bab12c6e57d759041ac37c152d72d31b, type: 3}
   itemDescription: 
   PlacementType: 2

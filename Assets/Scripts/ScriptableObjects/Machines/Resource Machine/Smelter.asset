@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Smelter
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMachine
   itemID: smelter
-  itemName: 
+  itemName: Smelter
   itemImage: {fileID: 21300000, guid: 497761ea272dfc3409d359228f385265, type: 3}
   itemDescription: 
   PlacementType: 2

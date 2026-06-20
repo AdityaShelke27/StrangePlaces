@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ResearchStation
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMachine
   itemID: research-station
-  itemName: 
+  itemName: Research Station
   itemImage: {fileID: 21300000, guid: 813a1a6b828461b488d2b481976ddd2b, type: 3}
   itemDescription: 
   PlacementType: 2
