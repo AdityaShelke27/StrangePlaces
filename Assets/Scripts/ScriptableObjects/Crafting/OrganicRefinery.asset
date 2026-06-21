@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0776115ff0dbd24eb10f4ef75c6f1ff, type: 3}
   m_Name: OrganicRefinery
   m_EditorClassIdentifier: Assembly-CSharp::CraftObject
-  CraftItem: {fileID: 11400000, guid: 24a3b80ab01faa54ea4718dcd5a4023b, type: 2}
+  CraftItem: {fileID: 11400000, guid: ea00434b55bdc5548a2d7ce311bc7f91, type: 2}
   ResourceRequirements:
   - item: {fileID: 11400000, guid: 445ee3fad2137a1489bb7e7405058ee8, type: 2}
     amount: 2

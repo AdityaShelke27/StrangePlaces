@@ -22,4 +22,6 @@ public class BunkerPlayer : MonoBehaviour
 		}
 		PlayerPrefs.DeleteKey(Constant.PREF_SAVE_INVENTORY);
 	}
+
+	public InventorySlot[] GetPlayerInventory() => m_InventorySlots;
 }

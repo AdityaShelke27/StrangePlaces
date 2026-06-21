@@ -3,12 +3,19 @@ using UnityEngine.EventSystems;
 
 public class Construction : MonoBehaviour
 {
+	public static Construction Instance;
+
 	[SerializeField] GameObject m_MachinePanelUI;
 	[SerializeField] GameObject m_MachineCraftButtonPrefab;
 	[SerializeField] GameObject m_ResourceRequirementPrefab;
 	[SerializeField] Transform m_ButtonContentParent;
 	[SerializeField] CraftObject[] m_CraftMachines;
 
+	private void Awake()
+	{
+		if (Instance == null) Instance = this;
+		else Destroy(gameObject);
+	}
 	private void Start()
 	{
 		ClosePanel();

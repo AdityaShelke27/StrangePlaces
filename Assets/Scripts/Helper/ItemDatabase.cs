@@ -34,4 +34,5 @@ public class ItemDatabase : MonoBehaviour
 	{
 		return m_ItemDict.ContainsKey(_itemID) ? m_ItemDict[_itemID] : null;
 	}
+	public Item[] GetAllItems() => m_Items;
 }
