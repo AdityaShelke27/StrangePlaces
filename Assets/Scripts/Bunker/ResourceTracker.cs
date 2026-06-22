@@ -3,37 +3,69 @@ using UnityEngine;
 
 public class ResourceTracker : MonoBehaviour
 {
+	public static ResourceTracker Instance;
+
 	[SerializeField] BunkerPlayer m_Player;
-	Dictionary<StorableItem, List<InventorySlot>> m_StoredItemDictionary = new();
-	void Start()
+
+	private void Awake()
 	{
-		CreateStoredItemDictionary();
+		if(Instance == null)
+		{
+			Instance = this;
+		}
+		else if(Instance != this)
+		{
+			Destroy(gameObject);
+		}
+	}
+	public bool SearchResourceAvailable(StorableItem _item, int _amount)
+	{
+		InventorySlot[] _playerInventory = m_Player.GetPlayerInventory();
+		int _searchedAmount = 0;
+
+		for(int i = 0; i < _playerInventory.Length; i++)
+		{
+			if (_playerInventory[i].GetItem() != _item) continue;
+
+			_searchedAmount += _playerInventory[i].GetItemAmount();
+		}
+
+		return _searchedAmount >= _amount;
 	}
 
-	private void CreateStoredItemDictionary()
+	public bool SearchAndRemoveResource(StorableItem _item, int _amount)
 	{
-		Item[] _items = ItemDatabase.Instance.GetAllItems();
+		InventorySlot[] _playerInventory = m_Player.GetPlayerInventory();
+		int _searchedAmount = 0;
+		List<int> _itemIdx = new();
 
-		foreach (Item item in _items) 
+		for (int i = 0; i < _playerInventory.Length; i++)
 		{
-			if(item is StorableItem)
+			if (_playerInventory[i].GetItem() != _item) continue;
+
+			_searchedAmount += _playerInventory[i].GetItemAmount();
+			_itemIdx.Add(i);
+		}
+
+		if(_searchedAmount >= _amount)
+		{
+			int _requiredAmount = _amount;
+			for(int i = 0; i < _itemIdx.Count; i++)
 			{
-				m_StoredItemDictionary[item as StorableItem] = new();
+				InventorySlot _selectedSlot = _playerInventory[_itemIdx[i]];
+				if (_selectedSlot.GetItemAmount() <= _requiredAmount)
+				{
+					_requiredAmount -= _selectedSlot.GetItemAmount();
+					_selectedSlot.RemoveItemFromInventory();
+				}
+				else
+				{
+					_selectedSlot.AddItemAmount(-_requiredAmount);
+					_requiredAmount = 0;
+				}
 			}
+			return true;
 		}
-		InventorySlot[] _playerInv = m_Player.GetPlayerInventory();
-
-		foreach(InventorySlot _slot in _playerInv)
-		{
-			m_StoredItemDictionary[_slot.GetItem()].Add(_slot);
-		}
-
-		if (Storage.Instance == null) return;
-
-		List<InventorySlot> _storageInv = Storage.Instance.GetStorageInventory();
-		foreach (InventorySlot _slot in _storageInv)
-		{
-			m_StoredItemDictionary[_slot.GetItem()].Add(_slot);
-		}
+		else return false;
 	}
 }
