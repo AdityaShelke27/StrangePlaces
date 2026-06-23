@@ -68,4 +68,27 @@ public class ResourceTracker : MonoBehaviour
 		}
 		else return false;
 	}
+	public int GetAvailableInventorySlots()
+	{
+		InventorySlot[] _playerInventory = m_Player.GetPlayerInventory();
+		int _availableSlots = 0;
+		for (int i = 0; i < _playerInventory.Length; i++)
+		{
+			if (_playerInventory[i].GetItem() == null) _availableSlots++;
+		}
+
+		return _availableSlots;
+	}
+	public void AddStorableItemToInventory(StorableItem _item, int _amount)
+	{
+		InventorySlot[] _playerInventory = m_Player.GetPlayerInventory();
+		for (int i = 0; i < _playerInventory.Length; i++)
+		{
+			if (_playerInventory[i].GetItem() == null)
+			{
+				_playerInventory[i].SetItemSlot(_item, _amount);
+				break;
+			}
+		}
+	}
 }

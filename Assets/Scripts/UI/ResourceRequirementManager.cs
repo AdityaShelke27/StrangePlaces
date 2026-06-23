@@ -12,4 +12,5 @@ public class ResourceRequirementManager : MonoBehaviour
 		m_Image.sprite = _image;
 		m_Amount.text = _text;
 	}
+	public TMP_Text GetAmountText() => m_Amount;
 }

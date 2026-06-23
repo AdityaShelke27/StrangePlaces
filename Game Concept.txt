@@ -19,11 +19,11 @@ To Do List:
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Bunker Tasks =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 - Create room placement system where the player can place the new rooms adjacent to existing rooms
 - Design the room layout for all different types of rooms (Construction, mechanic, storage, research, kitchen, rocket construction)
-- Construction Room Implementation:
+- Construction Room Implementation: //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
     - Create list of machines that the player can create
     - Assign the resources required to create the machine
 - Storage Room Implementation:
-    - A big Inventory that stores everything
+    - A big Inventory that stores everything //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
     - An automated pipeline that connects the storage room with the bunker door (To automatically transfer resources from surface machine to storage room)
 - Research Room Implementation:
     - It contains a research tree (Need to think but it mainly involves researching rocket parts and unlock other machines)

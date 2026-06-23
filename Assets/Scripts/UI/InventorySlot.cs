@@ -23,12 +23,11 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	void Start()
 	{
 		SetItemSlot(m_ItemSlot.item, m_ItemSlot.amount);
-
-		//Debug.Log($"JSON: {JsonUtility.ToJson(new Save_ItemSlot(m_ItemSlot.item.itemID, m_ItemSlot.amount))}");
 	}
 
 	IEnumerator StartCheckPlacementPointer()
 	{
+		if (ResourceHandler.Instance == null) yield break;
 		while (m_IsDragging)
 		{
 			(CanPlace, m_TargetPos, m_Node) = ResourceHandler.Instance.CanPlaceWorld(m_ItemSlot.item, m_PointerData.position);
@@ -78,7 +77,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 				ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
 			}
 
-		ResetSourceInventorySlot();
+			ResetSourceInventorySlot();
 		}
 		s_SourceInventorySlot = null;
 		m_PointerData = null;
