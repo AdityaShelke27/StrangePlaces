@@ -28,11 +28,11 @@ To Do List:
 - Research Room Implementation:
     - It contains a research tree (Need to think but it mainly involves researching rocket parts and unlock other machines)
 - Kitchen Implementation:
-    - Contains a list of food that can be created and eaten by the player
+    - Contains a list of food that can be created and eaten by the player //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Rocket Construction Implementation:
     - A place where the unlocked rocket parts from research will be available here, the player needs to bring the required resources here and construct the rocket
 - Mechanic Room Implementation:
-    - Contains list of tool the player can create
+    - Contains list of tool the player can create //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
     - Contains a workbench where player can create basic machines and stuff manually
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Surface Tasks =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
