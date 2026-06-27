@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,7 +17,13 @@ public class Room : MonoBehaviour
 	}
 	private void OnMouseDown()
 	{
-		if (EventSystem.current.IsPointerOverGameObject()) return;
+		StartCoroutine(DelayExecute());
+	}
+	IEnumerator DelayExecute()
+	{
+		yield return null;
+
+		if (EventSystem.current.IsPointerOverGameObject()) yield break;
 
 		BunkerMovement.s_MoveHere?.Invoke(m_GroundLevel, m_PlayerPresentPoint.position.x, m_RoomID);
 	}

@@ -315,7 +315,12 @@ MonoBehaviour:
   m_FoodCraftButtonPrefab: {fileID: 6729616062061996732, guid: f5696071477af0c41bd8d0f727b422cd, type: 3}
   m_ResourceRequirementPrefab: {fileID: 2776483426523333424, guid: 2da284d6b666deb4988ae63a7156ea73, type: 3}
   m_ButtonContentParent: {fileID: 4786359281763996730}
-  m_CraftMachines: []
+  m_CraftMachines:
+  - {fileID: 11400000, guid: b2c10dfffa63be7499f64fbcf674818a, type: 2}
+  - {fileID: 11400000, guid: fac50648a2caa2b46b2d6a527b310eeb, type: 2}
+  - {fileID: 11400000, guid: d7e455cda8a0af543950442c4088c7af, type: 2}
+  - {fileID: 11400000, guid: a7f261ca4c8049e409b922126aa4f024, type: 2}
+  - {fileID: 11400000, guid: 65e9dc1cef9973a448b005b0e5ea8a3b, type: 2}
 --- !u!1 &2426402404036234150
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +372,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -376,7 +381,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3777056095115355906
 MonoBehaviour:
