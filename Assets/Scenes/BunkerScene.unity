@@ -617,8 +617,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0.525
+  m_WholeNumbers: 1
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2487,7 +2487,6 @@ GameObject:
   - component: {fileID: 786469259}
   - component: {fileID: 786469262}
   - component: {fileID: 786469261}
-  - component: {fileID: 786469260}
   m_Layer: 5
   m_Name: HungerPanel
   m_TagString: Untagged
@@ -2511,25 +2510,11 @@ RectTransform:
   - {fileID: 235220905}
   m_Father: {fileID: 799843933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1206.547, y: -43.662476}
-  m_SizeDelta: {x: 0, y: 87.32495}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 531.0711, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &786469260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786469258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!114 &786469261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2601,7 +2586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.83350855}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -211.24878, y: 0}
+  m_AnchoredPosition: {x: -211.24878, y: 3.0023804}
   m_SizeDelta: {x: -422.4976, y: -130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &799843934
@@ -3462,8 +3447,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0.525
+  m_WholeNumbers: 1
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4041,7 +4026,6 @@ GameObject:
   - component: {fileID: 1438957693}
   - component: {fileID: 1438957696}
   - component: {fileID: 1438957695}
-  - component: {fileID: 1438957694}
   m_Layer: 5
   m_Name: ResearchPanel
   m_TagString: Untagged
@@ -4065,25 +4049,11 @@ RectTransform:
   - {fileID: 1924601734}
   m_Father: {fileID: 799843933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1936.858, y: -43.662476}
-  m_SizeDelta: {x: 0, y: 87.32495}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 309.6704, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1438957694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438957692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!114 &1438957695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5576,6 +5546,7 @@ GameObject:
   - component: {fileID: 2041402694}
   - component: {fileID: 2041402693}
   - component: {fileID: 2041402695}
+  - component: {fileID: 2041402696}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5645,6 +5616,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceTracker
   m_Player: {fileID: 751823235}
+--- !u!114 &2041402696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041402692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42505b9c78d85f84590845b35ce553ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsManager
+  m_MaxElectricity: 100
+  m_MaxHunger: 100
+  m_Electricity: 57
+  m_Hunger: 43
+  m_ResearchPoints: 61
+  m_ElectricitySlider: {fileID: 1303649840}
+  m_HungerSlider: {fileID: 235220906}
+  m_ElectricityText: {fileID: 601394853}
+  m_HungerText: {fileID: 603573624}
+  m_ResearchPointsText: {fileID: 1911703378}
 --- !u!1 &2056837936
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,7 +5649,6 @@ GameObject:
   - component: {fileID: 2056837937}
   - component: {fileID: 2056837939}
   - component: {fileID: 2056837938}
-  - component: {fileID: 2056837940}
   m_Layer: 5
   m_Name: ElectricityPanel
   m_TagString: Untagged
@@ -5680,10 +5672,10 @@ RectTransform:
   - {fileID: 1303649839}
   m_Father: {fileID: 799843933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 365.53555, y: -43.662476}
-  m_SizeDelta: {x: 0, y: 87.32495}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 531.0711, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056837938
 MonoBehaviour:
@@ -5719,20 +5711,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056837936}
   m_CullTransparentMesh: 1
---- !u!114 &2056837940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056837936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!1 &2070011630
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public enum E_SurfaceNode
 {
@@ -64,16 +65,6 @@ public class ItemSlot
 	}
 }
 [Serializable]
-public class Save_ItemSlot
-{
-	public Save_ItemSlotArray[] itemSlotArray;
-
-	public Save_ItemSlot(Save_ItemSlotArray[] _itemSlotArray)
-	{
-		itemSlotArray = _itemSlotArray;
-	}
-}
-[Serializable]
 public class Save_ItemSlotArray
 {
 	public string id;
@@ -89,5 +80,56 @@ public class ResourceRequirement
 {
 	public Item item;
 	public int amount;
+}
+[Serializable]
+public class Save_PlayerData
+{
+	public Save_ItemSlotArray[] itemSlotArray;
+	public int hunger;
+	public int electricity;
+	public int researchPoints;
+
+	public Save_PlayerData(Save_ItemSlotArray[] _itemSlotArray, int _hunger, int _electricity, int _researchPoints)
+	{
+		itemSlotArray = _itemSlotArray;
+		hunger = _hunger;
+		electricity = _electricity;
+		researchPoints = _researchPoints;
+	}
+}
+[Serializable]
+public static class PlayerData
+{
+	public static ItemSlot[] itemSlot = new ItemSlot[5];
+	public static int hunger;
+	public static int electricity;
+	public static int researchPoints;
+	public static bool isDataSaved = false;
+
+	public static void LoadData()
+	{
+		if (!PlayerPrefs.HasKey(Constant.PREF_SAVE_PLAYERDATA)) return;
+
+		Save_PlayerData _playerData = JsonUtility.FromJson<Save_PlayerData>(PlayerPrefs.GetString(Constant.PREF_SAVE_PLAYERDATA));
+		hunger = _playerData.hunger;
+		electricity = _playerData.electricity;
+		researchPoints = _playerData.researchPoints;
+		Save_ItemSlotArray[] _items = _playerData.itemSlotArray;
+		for (int i = 0; i < _items.Length; i++)
+		{
+			itemSlot[i] = string.IsNullOrEmpty(_items[i].id) ? new() : new(ItemDatabase.Instance.GetItemByID(_items[i].id) as StorableItem, _items[i].amount);
+		}
+	}
+	public static void SaveData()
+	{
+		Save_ItemSlotArray[] _saveItems = new Save_ItemSlotArray[itemSlot.Length];
+		for (int i = 0; i < itemSlot.Length; i++)
+		{
+			StorableItem _item = itemSlot[i].item;
+			_saveItems[i] = _item != null ? new(_item.itemID, itemSlot[i].amount) : new("", 0);
+		}
+
+		PlayerPrefs.SetString(Constant.PREF_SAVE_PLAYERDATA, JsonUtility.ToJson(new Save_PlayerData(_saveItems, hunger, electricity, researchPoints)));
+	}
 }
 

@@ -15,7 +15,7 @@ public static class Constant
 	public static readonly Vector2 SIZE_STAIR = new(1.28f, 3.84f);
 
 	// PLAYER_PREFS
-	public const string PREF_SAVE_INVENTORY = "Save_Inventory";
+	public const string PREF_SAVE_PLAYERDATA = "Save_PlayerData";
 
 	// SCENES
 	public const string SCENE_BUNKER = "BunkerScene";
