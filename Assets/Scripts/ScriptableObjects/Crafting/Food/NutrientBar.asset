@@ -16,3 +16,4 @@ MonoBehaviour:
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e24a5da205c99904ea25f02173de5374, type: 2}
     amount: 2
+  CraftAmount: 1

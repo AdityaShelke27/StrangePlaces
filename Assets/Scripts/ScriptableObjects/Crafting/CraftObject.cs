@@ -5,4 +5,5 @@ public class CraftObject : ScriptableObject
 {
 	public StorableItem CraftItem;
 	public ResourceRequirement[] ResourceRequirements;
+	public int CraftAmount;
 }

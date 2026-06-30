@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,8 @@ public class PlayerStatsManager : MonoBehaviour
 	[SerializeField] private int m_Electricity;
 	[SerializeField] private int m_Hunger;
 	[SerializeField] private int m_ResearchPoints;
+	int m_TotalHungerDepletionRate = 1;
+	float m_HungerDepletionInterval = 3;
 	[Header("UI")]
 	[SerializeField] private Slider m_ElectricitySlider;
 	[SerializeField] private Slider m_HungerSlider;
@@ -34,6 +37,23 @@ public class PlayerStatsManager : MonoBehaviour
 		UpdateElectricityUI();
 		UpdateHungerUI();
 		UpdateResearchPointsUI();
+
+		StartCoroutine(DepleteHunger());
+	}
+	IEnumerator DepleteHunger()
+	{
+		while(true)
+		{
+			if (m_Hunger <= 0)
+			{
+				Debug.LogWarning("Player severly hungry, died of hunger");
+				yield break;
+			}
+
+			AddHunger(-m_TotalHungerDepletionRate);
+
+			yield return new WaitForSeconds(m_HungerDepletionInterval);
+		}
 	}
 	public void SetElectricity(int _electricity)
 	{

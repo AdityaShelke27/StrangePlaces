@@ -18,3 +18,4 @@ MonoBehaviour:
     amount: 2
   - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
     amount: 3
+  CraftAmount: 1

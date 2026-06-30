@@ -78,7 +78,7 @@ public class Construction : MonoBehaviour
 	}
 	void ConstructMachine(CraftObject _craftMachine)
 	{
-		if (ResourceTracker.Instance.GetAvailableInventorySlots() == 0)
+		if (!ResourceTracker.Instance.IsItemAddable(_craftMachine.CraftItem, _craftMachine.CraftAmount))
 		{
 			Debug.LogWarning("Not enough inventory slots available");
 			return;
@@ -103,7 +103,7 @@ public class Construction : MonoBehaviour
 		{
 			ResourceTracker.Instance.SearchAndRemoveResource(_requirements[j].item as StorableItem, _requirements[j].amount);
 		}
-		ResourceTracker.Instance.AddStorableItemToInventory(_craftMachine.CraftItem, 1);
+		ResourceTracker.Instance.AddStorableItemToInventory(_craftMachine.CraftItem, _craftMachine.CraftAmount);
 		CheckAvailableResources();
 	}
 
