@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 507b791358da74e4abb1c4c94a2da716
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12408, guid: 0000000000000000e000000000000000, type: 0}
+  svgType: 1
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 100
+  gradientResolution: 64
+  alignment: 0
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 0
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 1
+  tessellationMode: 0
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 1
+  stepDistance: 1
+  samplingStepDistance: 3
+  maxCordDeviationEnabled: 1
+  maxCordDeviation: 0.05
+  maxTangentAngleEnabled: 1
+  maxTangentAngle: 0.01
+  keepTextureAspectRatio: 1
+  textureSize: 4096
+  textureWidth: 256
+  textureHeight: 256
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 0
+  useSVGPixelsPerUnit: 0
+  spriteData:
+    TessellationDetail: 0
+    SpriteName: Arrow
+    SpritePivot: {x: 0.5, y: 0.5}
+    SpriteAlignment: 0
+    SpriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    SpriteRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 4096
+      height: 1409
+    SpriteID: 6d6a61955f703ce479471c660a41e097
+    PhysicsOutlines: []
