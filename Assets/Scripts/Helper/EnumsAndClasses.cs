@@ -46,7 +46,12 @@ public enum E_Machine
 	Gravity_Reactor,
 	Research_Station
 }
-
+public enum E_ResearchStatus
+{
+	Locked,
+	Researched,
+	Available
+}
 [Serializable]
 public class ItemSlot
 {
@@ -65,37 +70,10 @@ public class ItemSlot
 	}
 }
 [Serializable]
-public class Save_ItemSlotArray
-{
-	public string id;
-	public int amount;
-	public Save_ItemSlotArray(string _id, int _amount)
-	{
-		id = _id;
-		amount = _amount;
-	}
-}
-[Serializable]
 public class ResourceRequirement
 {
 	public Item item;
 	public int amount;
-}
-[Serializable]
-public class Save_PlayerData
-{
-	public Save_ItemSlotArray[] itemSlotArray;
-	public int hunger;
-	public int electricity;
-	public int researchPoints;
-
-	public Save_PlayerData(Save_ItemSlotArray[] _itemSlotArray, int _hunger, int _electricity, int _researchPoints)
-	{
-		itemSlotArray = _itemSlotArray;
-		hunger = _hunger;
-		electricity = _electricity;
-		researchPoints = _researchPoints;
-	}
 }
 [Serializable]
 public static class PlayerData
@@ -132,4 +110,42 @@ public static class PlayerData
 		PlayerPrefs.SetString(Constant.PREF_SAVE_PLAYERDATA, JsonUtility.ToJson(new Save_PlayerData(_saveItems, hunger, electricity, researchPoints)));
 	}
 }
+[Serializable]
+public class ResearchNodeStatus
+{
+	public ResearchNodeInfo researchInfo;
+	public E_ResearchStatus researchStatus;
 
+	public ResearchNodeStatus(ResearchNodeInfo _ResearchInfo, E_ResearchStatus _ResearchStatus)
+	{
+		researchInfo = _ResearchInfo;
+		researchStatus = _ResearchStatus;
+	}
+}
+[Serializable]
+public class Save_ItemSlotArray
+{
+	public string id;
+	public int amount;
+	public Save_ItemSlotArray(string _id, int _amount)
+	{
+		id = _id;
+		amount = _amount;
+	}
+}
+[Serializable]
+public class Save_PlayerData
+{
+	public Save_ItemSlotArray[] itemSlotArray;
+	public int hunger;
+	public int electricity;
+	public int researchPoints;
+
+	public Save_PlayerData(Save_ItemSlotArray[] _itemSlotArray, int _hunger, int _electricity, int _researchPoints)
+	{
+		itemSlotArray = _itemSlotArray;
+		hunger = _hunger;
+		electricity = _electricity;
+		researchPoints = _researchPoints;
+	}
+}
