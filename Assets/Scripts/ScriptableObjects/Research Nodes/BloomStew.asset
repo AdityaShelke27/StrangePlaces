@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Bloom Stew
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 0f3d47e607dadff49b8198f05a0c04c9, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: 28a2825f0a18ab54da7c7d2cf8e3750a, type: 2}

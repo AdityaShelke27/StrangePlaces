@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Rocket Construction Room
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: feba9b665845897459d81826c2cfbacd, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: f9abdd39df2fd7c4596c802375097e2a, type: 2}

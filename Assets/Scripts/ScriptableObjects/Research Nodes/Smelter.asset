@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Smelter
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 98a48774f5736bf4fa38775eed73c908, type: 2}
+  - {fileID: 11400000, guid: b111ab655918b474ab198024ea22f54a, type: 2}
   Unlocks: []

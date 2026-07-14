@@ -152,7 +152,7 @@ KITCHEN ITEMS:
 
 Electricity -> All Machines -> Automation
 
-Resources(R):               Machines(M):                Abstract Resource (A):      Tools(T):       Rooms(O):                           Food(F):		Automation(A):
+Resources(R):               Machines(M):                Abstract Resource (B):      Tools(T):       Rooms(O):                           Food(F):		Automation(A):
 1- Iron Ore                 1- Miner                    1- Electricity              1- Pickaxe      1- Mechanic Room                    1- Nutrientbar		1- Conveyor
 2- Copper Ore               2- Harvester                2- Research Points          2- Axe          2- Construction Room                2- Protein Milk		2- Conveyor Speed I
 3- Titanium Ore             3- Smelter                                                              3- Storage Room                     3- Mush Soup		3- Conveyor Speed II
@@ -169,8 +169,8 @@ Resources(R):               Machines(M):             
 
 Start: (R1, R2, R4, R5, R7, R8, R11, R13, T1, T2, O1, O4, O5, F1) -> F2 -> F3
                                                                         \> F4 -> F5
-                                                                  \> (R6, R9) -> A1 -> O2 -> (M1, M2, M6, M8)  -> (M3, M4, M5, M7) -> Automation -> A1 -> A2 -> A4 -> A3
-                                                                              \> O3       \> O6 -> (R3, R12)   /                O3 /		 \> A5 -> A6
+                                                                  \> (R6, R9) -> B1 -> O2 -> (M1, M2, M6, M8)  -> (M3, M4, M5, M7) -> Automation -> A1 -> A2 -> A4 -> A3
+                                                                              \> O3       \> O6 -> R3 -> R12   /                O3 /		 \> A5 -> A6
                                                                   \> R10      /1
 
 ---------------------------------------------------------------------------------------------------------------

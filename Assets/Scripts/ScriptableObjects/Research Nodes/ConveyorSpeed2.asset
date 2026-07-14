@@ -17,5 +17,6 @@ MonoBehaviour:
   Name: Conveyor Speed II
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 7357216561457c14fa5e9d0a43b76b3e, type: 2}
   Unlocks: []

@@ -17,5 +17,8 @@ MonoBehaviour:
   Name: Storage Room
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 184f0bbf2ee6c794fbe0f9b02aa69472, type: 2}
+  - {fileID: 11400000, guid: 06f4b656223086b478927422c80f4bf2, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: e6a9bc0e7ef57a24180761407baa2d06, type: 2}

@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Bunker Input Node I
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: e6a9bc0e7ef57a24180761407baa2d06, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: b177056772ce24845bc08dd7d6fb27fb, type: 2}

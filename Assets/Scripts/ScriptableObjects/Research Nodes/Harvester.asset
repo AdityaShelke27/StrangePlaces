@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Harvester
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: feba9b665845897459d81826c2cfbacd, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: 9d75cc7ab5d44cc418a47b8fcdfe5d73, type: 2}

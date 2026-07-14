@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Gravity Reactor
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 5d20cf331382f56449430bf4c2702585, type: 2}
+  - {fileID: 11400000, guid: b111ab655918b474ab198024ea22f54a, type: 2}
   Unlocks: []

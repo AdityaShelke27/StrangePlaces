@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Bio Generator
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: feba9b665845897459d81826c2cfbacd, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: bb7c40627b809ab49985435de5503bf3, type: 2}

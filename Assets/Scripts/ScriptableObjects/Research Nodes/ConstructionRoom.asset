@@ -17,5 +17,11 @@ MonoBehaviour:
   Name: Construction Room
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: e075931081660da479e7e03554037a19, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: 98a48774f5736bf4fa38775eed73c908, type: 2}
+  - {fileID: 11400000, guid: 830ea10b590a9594e8c7ca7453bc3d77, type: 2}
+  - {fileID: 11400000, guid: 5d20cf331382f56449430bf4c2702585, type: 2}
+  - {fileID: 11400000, guid: 6d6aad8fe04093b4b83428636fdd8aa6, type: 2}
+  - {fileID: 11400000, guid: 76a0aadac07245744bf4e70c58964048, type: 2}

@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Organic Refiner
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 830ea10b590a9594e8c7ca7453bc3d77, type: 2}
+  - {fileID: 11400000, guid: b111ab655918b474ab198024ea22f54a, type: 2}
   Unlocks: []

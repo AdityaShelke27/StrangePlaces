@@ -18,4 +18,6 @@ MonoBehaviour:
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites: []
-  Unlocks: []
+  Unlocks:
+  - {fileID: 11400000, guid: e075931081660da479e7e03554037a19, type: 2}
+  - {fileID: 11400000, guid: 83b9f11e14ff08941a723938d09ac426, type: 2}

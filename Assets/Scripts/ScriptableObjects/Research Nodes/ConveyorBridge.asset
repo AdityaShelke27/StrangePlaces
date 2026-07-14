@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Conveyor Bridge
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 310ab4a19d4d1ca4e9b931f62eea65e8, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: d7afb9e08c1a4cb45bc519c1fdf45035, type: 2}

@@ -17,5 +17,7 @@ MonoBehaviour:
   Name: Titanium Ore
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: 76a0aadac07245744bf4e70c58964048, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: b111ab655918b474ab198024ea22f54a, type: 2}

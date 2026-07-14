@@ -17,5 +17,6 @@ MonoBehaviour:
   Name: Oatmeal
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
+  Prerequisites:
+  - {fileID: 11400000, guid: d32a474fea1b1264e9964221dcee4195, type: 2}
   Unlocks: []

@@ -17,5 +17,10 @@ MonoBehaviour:
   Name: Titanium Alloy
   ResearchCost: 0
   ResourceRequirements: []
-  Prerequisites: []
-  Unlocks: []
+  Prerequisites:
+  - {fileID: 11400000, guid: f9abdd39df2fd7c4596c802375097e2a, type: 2}
+  Unlocks:
+  - {fileID: 11400000, guid: f49178274710df34a86a951139bc64d1, type: 2}
+  - {fileID: 11400000, guid: 9d75cc7ab5d44cc418a47b8fcdfe5d73, type: 2}
+  - {fileID: 11400000, guid: 9eee6ee739156704190835eb23a6b3ab, type: 2}
+  - {fileID: 11400000, guid: bb7c40627b809ab49985435de5503bf3, type: 2}
