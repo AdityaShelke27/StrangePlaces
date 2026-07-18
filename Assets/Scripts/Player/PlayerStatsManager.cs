@@ -38,7 +38,7 @@ public class PlayerStatsManager : MonoBehaviour
 		UpdateHungerUI();
 		UpdateResearchPointsUI();
 
-		StartCoroutine(DepleteHunger());
+		//StartCoroutine(DepleteHunger());
 	}
 	IEnumerator DepleteHunger()
 	{
