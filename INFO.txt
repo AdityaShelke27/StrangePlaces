@@ -198,3 +198,128 @@ Features removed (Will be added after the release):
 - Food Research tree
 - Enemy NPCs
 - Weapons
+---------------------------------------------------------------------------------------------------------------
+Rocket Construction Research Tree
+
+                         Nano Alloy*
+                             │
+            ┌────────────┴────────────┐
+            ▼                         	      ▼
+      Rocket Frame              	Energy Core*
+            │                         		  │
+            │                  			Quantum Circuit*
+            │                    			  │
+            │                    			  ▼         
+            │             				Quantum Processor
+            │                    			  │
+            ├─────────────────────────┬
+            ▼            		      ▼
+         Engine      		 	Navigation Module
+            │								  │
+            ▼				      │
+        Fuel Tank			      │
+            │								  │
+	     ----------------------------------
+			    │
+            		    ▼
+         		  Cockpit
+
+Rocket Resources
+Research	Research Cost
+Nano Alloy	150 RP + 15 Titanium Alloy + 10 Reinforcement Panels
+Energy Core	200 RP + 20 Copper Wires + 10 Bio Resin + 5 Titanium Alloy
+Quantum Circuit	300 RP + 20 Copper Wires + 10 Titanium Alloy + 10 Bio Resin + 2 Energy Cores
+
+Rocket Parts
+🚀 Rocket Frame
+
+- Research
+
+-- 400 RP
+-- 5 Nano Alloy
+-- 20 Titanium Alloy
+-- 20 Reinforcement Panels
+-- 10 Iron Plates
+
+- Construction
+
+-- 10 Nano Alloy
+-- 50 Titanium Alloy
+-- 40 Reinforcement Panels
+-- 30 Iron Plates
+
+🚀 Engine
+
+- Research
+
+-- 500 RP
+-- 4 Energy Core
+-- 3 Nano Alloy
+-- 20 Copper Wires
+
+- Construction
+
+-- 8 Energy Core
+-- 8 Nano Alloy
+-- 40 Copper Wires
+-- 25 Titanium Alloy
+
+🚀 Fuel Tank
+
+- Research
+
+-- 350 RP
+-- 3 Nano Alloy
+-- 10 Reinforcement Panels
+
+- Construction
+
+-- 8 Nano Alloy
+-- 40 Reinforcement Panels
+-- 30 Titanium Alloy
+-- 20 Iron Plates
+
+🚀 Quantum Processor
+
+- Research
+
+-- 600 RP
+-- 8 Quantum Circuit
+-- 3 Energy Core
+
+- Construction
+
+-- 15 Quantum Circuit
+-- 8 Energy Core
+-- 30 Copper Wires
+
+🚀 Navigation Module
+
+- Research
+
+-- 500 RP
+-- 5 Quantum Circuit
+-- 1 Quantum Processor
+
+- Construction
+
+-- 10 Quantum Circuit
+-- 2 Quantum Processor
+-- 8 Energy Core
+-- 20 Copper Wires
+
+🚀 Cockpit
+
+- Research
+
+-- 700 RP
+-- 2 Quantum Processor
+-- 5 Nano Alloy
+
+- Construction
+
+-- 5 Quantum Processor
+-- 12 Nano Alloy
+-- 10 Quantum Circuit
+-- 30 Titanium Alloy
+-- 30 Reinforcement Panels
