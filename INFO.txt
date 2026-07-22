@@ -224,11 +224,12 @@ Rocket Construction Research Tree
             		    ▼
          		  Cockpit
 
-Rocket Resources
-Research	Research Cost
-Nano Alloy	150 RP + 15 Titanium Alloy + 10 Reinforcement Panels
-Energy Core	200 RP + 20 Copper Wires + 10 Bio Resin + 5 Titanium Alloy
-Quantum Circuit	300 RP + 20 Copper Wires + 10 Titanium Alloy + 10 Bio Resin + 2 Energy Cores
+| Resource            | Research Cost                                                               | Crafting Cost                                        |
+| ------------------- | --------------------------------------------------------------------------- | -----------------------------------------------------|
+| Nano Alloy          | 150 RP + 15 Titanium Alloy + 10 Reinforcement Panels                        | 3 Titanium Alloy + 2 Reinforcement Panels            |
+| Energy Core         | 200 RP + 20 Copper Wires + 10 Bio Resin + 5 Titanium Alloy                  | 4 Copper Wires + 2 Bio Resin + 1 Titanium Alloy      |
+| Quantum Circuit     | 300 RP + 20 Copper Wires + 10 Titanium Alloy + 10 Bio Resin + 2 Energy Core | 2 Energy Core + 3 Copper Wires + 2 Titanium Alloy    |
+
 
 Rocket Parts
 🚀 Rocket Frame

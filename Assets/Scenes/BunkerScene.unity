@@ -5579,12 +5579,14 @@ MonoBehaviour:
   - {fileID: 1121859021085518090, guid: 7d6943ca83300ef4fa446ddcab934d54, type: 3}
   - {fileID: 1121859021085518090, guid: ff920e463f7db01489494c94710a866c, type: 3}
   - {fileID: 1121859021085518090, guid: e697ff61689d59448b64b7303dcacd28, type: 3}
+  - {fileID: 0}
   - {fileID: 1121859021085518090, guid: 1e76f3ad6be5d63489e548464b1043e3, type: 3}
   m_RoomConstructionButtons:
   - {fileID: 604060265}
   - {fileID: 1836994080}
   - {fileID: 67557976}
   - {fileID: 318013425}
+  - {fileID: 0}
   - {fileID: 505935145}
 --- !u!4 &2041402694
 Transform:
