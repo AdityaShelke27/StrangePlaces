@@ -19,6 +19,7 @@ public static class Constant
 
 	// SCENES
 	public const string SCENE_BUNKER = "BunkerScene";
+	public const string SCENE_SURFACE = "SurfaceScene";
 
 	// TAGS
 	public const string TAG_PLAYER = "Player";

@@ -1,15 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bunker : MonoBehaviour
+public class Bunker : MonoBehaviour, IActivate
 {
-	private void OnTriggerEnter2D(Collider2D collision)
+	bool m_IsActivated = false;
+	private void OnMouseDown()
 	{
-		if(collision.CompareTag(Constant.TAG_PLAYER))
-		{
-			MovePlayerToBunker();
-		}
+		Debug.Log("Pressing");
+		SurfaceMovement.s_Selected?.Invoke(gameObject);
 	}
+	//private void OnTriggerEnter2D(Collider2D collision)
+	//{
+	//	if(collision.CompareTag(Constant.TAG_PLAYER))
+	//	{
+	//		MovePlayerToBunker();
+	//	}
+	//}
 	void MovePlayerToBunker()
 	{
 		InventorySlot[] _inventory = ResourceHandler.Instance.GetInventorySlots();
@@ -23,4 +29,11 @@ public class Bunker : MonoBehaviour
 		SceneManager.LoadScene(Constant.SCENE_BUNKER);
 	}
 
+	public void Activate()
+	{
+		if (m_IsActivated) return;
+
+		MovePlayerToBunker();
+		m_IsActivated = true;
+	}
 }

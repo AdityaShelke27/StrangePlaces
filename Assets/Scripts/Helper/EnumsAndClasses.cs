@@ -52,6 +52,12 @@ public enum E_ResearchStatus
 	Researched,
 	Available
 }
+
+public interface IActivate
+{
+	void Activate();
+}
+
 [Serializable]
 public class ItemSlot
 {
