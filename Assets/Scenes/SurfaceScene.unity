@@ -578,7 +578,14 @@ MonoBehaviour:
   m_WaterTile: {fileID: 11400000, guid: e1eedf569fe8398448029fc314edbf66, type: 2}
   m_Width: 512
   m_Height: 512
-  m_NoiseScale: 0.1
+  m_WaterThreshold: 0.3
+  m_SandThreshold: 0.4
+  m_GrassThreshold: 0.65
+  m_RockThreshold: 1
+  m_Octaves: 4
+  m_Persistance: 0.5
+  m_Lacunarity: 2
+  m_NoiseScale: 0.05
   m_Seed: 100
 --- !u!1 &405034823
 GameObject:

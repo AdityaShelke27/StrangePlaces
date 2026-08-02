@@ -1,6 +1,13 @@
 using System;
 using UnityEngine;
 
+public enum E_TerrainTypes
+{
+	Water,
+	Sand,
+	Grass,
+	Rock
+}
 public enum E_SurfaceNode
 {
 	Ore_Node,
