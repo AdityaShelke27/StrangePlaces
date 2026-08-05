@@ -324,3 +324,12 @@ Rocket Parts
 -- 10 Quantum Circuit
 -- 30 Titanium Alloy
 -- 30 Reinforcement Panels
+
+Resources Spawn Condition:
+| Terrain    | Resources                          |
+| ---------- | ---------------------------------- |
+| Water      | None                               |
+| Water Edge | Vyrex Reed                         |
+| Sand       | Karth Bamboo                       |
+| Grass      | Lumabloom                          |
+| Rock       | Iron Ore, Copper Ore, Titanium Ore |

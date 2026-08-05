@@ -27,11 +27,18 @@ public class WorldGenerator : MonoBehaviour
 	[SerializeField] private float m_Lacunarity = 2f;
 	[SerializeField] private float m_NoiseScale = 0.05f;
 	[SerializeField] private int m_Seed;
+	//float[,] m_Kernel =
+	//{
+	//	{ 0.11f, 0.11f, 0.11f },
+	//	{ 0.11f, 0.11f, 0.11f },
+	//	{ 0.11f, 0.11f, 0.11f },
+	//};
+
 	float[,] m_Kernel =
 	{
-		{ 0.11f, 0.11f, 0.11f },
-		{ 0.11f, 0.11f, 0.11f },
-		{ 0.11f, 0.11f, 0.11f },
+		{ 0.0625f, 0.125f, 0.0625f },
+		{ 0.125f, 0.25f, 0.125f },
+		{ 0.0625f, 0.125f, 0.0625f },
 	};
 
 	float[,] m_RawTerrain;
@@ -170,20 +177,27 @@ public class WorldGenerator : MonoBehaviour
 		//}
 
 		int clampVal = imageLength - kernelLength + 1;
-		float[,] newImage = new float[clampVal, clampVal];
-		for (int i = 0; i < clampVal; i++)
+		float[,] newImage = new float[imageLength, imageLength];
+		for (int i = 0; i < imageLength; i++)
 		{
-			for (int j = 0; j < clampVal; j++)
+			for (int j = 0; j < imageLength; j++)
 			{
-				float sum = 0;
-				for (int k = 0; k < kernelLength; k++)
+				if(i < clampVal && j < clampVal)
 				{
-					for (int l = 0; l < kernelLength; l++)
+					float sum = 0;
+					for (int k = 0; k < kernelLength; k++)
 					{
-						sum += image2d[i + k, j + l] * kernel2d[k, l];
+						for (int l = 0; l < kernelLength; l++)
+						{
+							sum += image2d[i + k, j + l] * kernel2d[k, l];
+						}
 					}
+					newImage[i, j] = sum;
 				}
-				newImage[i, j] = sum;
+				else
+				{
+					newImage[i, j] = image2d[i, j];
+				}
 			}
 		}
 
