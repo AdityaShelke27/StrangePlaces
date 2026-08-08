@@ -44,4 +44,9 @@ public class ResourceNodeInstance : MonoBehaviour
 		Destroy(gameObject);
 	}
 	public ResourceNode GetResourceNodeData() => m_ResourceNodeData;
+	public void SetResourceNodeData(ResourceNode _nodeData)
+	{
+		m_ResourceNodeData = _nodeData;
+		Initialize();
+	}
 }

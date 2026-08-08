@@ -1,6 +1,9 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 public class WorldGenerator : MonoBehaviour
 {
@@ -33,7 +36,24 @@ public class WorldGenerator : MonoBehaviour
 	//	{ 0.11f, 0.11f, 0.11f },
 	//	{ 0.11f, 0.11f, 0.11f },
 	//};
+	[SerializeField] private GameObject m_ResourceNodePrefab;
+	[Header("Resources Spawn Rate")]
+	[SerializeField] private float m_VyrexReedSpawnRate = 0.02f;
+	[SerializeField] private float m_KarthBambooSpawnRate = 0.02f;
+	[SerializeField] private float m_LumabloomSpawnRate = 0.02f;
 
+	[SerializeField] private float m_IronOreSpawnRate = 0.5f;
+	[SerializeField] private float m_CopperOreSpawnRate = 0.3f;
+	[SerializeField] private float m_TitaniumOreSpawnRate = 0.1f;
+
+	float m_TotalOreSpawnChance;
+	float m_IronSpawnChance;
+	float m_CopperSpawnChance;
+	float m_TitaniumSpawnChance;
+	float m_FinalIronSpawnChance;
+	float m_FinalCopperSpawnChance;
+
+	private Dictionary<Vector2, GameObject> m_ResourcesSpawns = new();
 	float[,] m_Kernel =
 	{
 		{ 0.0625f, 0.125f, 0.0625f },
@@ -47,6 +67,9 @@ public class WorldGenerator : MonoBehaviour
 
 	private float m_OffsetX;
 	private float m_OffsetY;
+
+	private int m_HalfWidth;
+	private int m_HalfHeight;
 	private void Start()
 	{
 		m_TerrainTileMapping = new() {
@@ -55,11 +78,24 @@ public class WorldGenerator : MonoBehaviour
 			{ E_TerrainTypes.Grass, m_GrassTile},
 			{ E_TerrainTypes.Rock, m_GroundTile},
 		};
+
+		m_HalfWidth = m_Width / 2;
+		m_HalfHeight = m_Height / 2;
+
+		m_TotalOreSpawnChance = m_IronOreSpawnRate + m_CopperOreSpawnRate + m_TitaniumOreSpawnRate;
+		m_IronSpawnChance = m_IronOreSpawnRate / m_TotalOreSpawnChance;
+		m_CopperSpawnChance = m_CopperOreSpawnRate / m_TotalOreSpawnChance;
+		m_TitaniumSpawnChance = m_TitaniumOreSpawnRate / m_TotalOreSpawnChance;
+
+		m_FinalCopperSpawnChance = m_TitaniumSpawnChance + m_CopperSpawnChance;
+		m_FinalIronSpawnChance = m_TitaniumSpawnChance + m_CopperSpawnChance + m_IronSpawnChance;
+
 		GenerateWorld();
 	}
 
 	private void GenerateWorld()
 	{
+		DateTime _start = DateTime.Now;
 		m_GroundTilemap.ClearAllTiles();
 
 		TileBase[] _tiles = new TileBase[m_Width * m_Height];
@@ -78,11 +114,24 @@ public class WorldGenerator : MonoBehaviour
 
 		// ----------------------------------------------------------------------------------------------
 
-		int _endX = m_Width / 2;
-		int _endY = m_Height / 2;
-
-		BoundsInt _bounds = new(new Vector3Int(-_endX, -_endY, 0), new Vector3Int(m_Width, m_Height, 1));
+		BoundsInt _bounds = new(new Vector3Int(-m_HalfWidth, -m_HalfHeight, 0), new Vector3Int(m_Width, m_Height, 1));
 		m_GroundTilemap.SetTilesBlock(_bounds, _tiles);
+
+		SpawnResources();
+
+		StartCoroutine(BuildNavMesh());
+
+		DateTime _end = DateTime.Now;
+
+		TimeSpan diff = _end - _start;
+		Debug.Log($"Time: {diff.TotalMilliseconds}");
+		Debug.Log($"Resources: {m_ResourcesSpawns.Count}");
+	}
+	IEnumerator BuildNavMesh()
+	{
+		yield return null;
+
+		NavMeshManager.s_BuildNavmesh?.Invoke();
 	}
 	private void GenerateRawTerrain()
 	{
@@ -91,7 +140,6 @@ public class WorldGenerator : MonoBehaviour
 			for (int y = 0; y < m_Height; y++)
 			{
 				m_RawTerrain[x, y] = GenerateNoise(x, y);
-
 			}
 		}
 	}
@@ -122,6 +170,91 @@ public class WorldGenerator : MonoBehaviour
 
 		return _tiles;
 	}
+	private bool IsPosEmpty(Vector2 pos)
+	{
+		return !m_ResourcesSpawns.ContainsKey(pos);
+	}
+	private void CreateNode(ResourceNode _nodeData, Vector2 _pos)
+	{
+		GameObject _nodeIns = Instantiate(m_ResourceNodePrefab, new Vector3(-m_HalfWidth + _pos.y + 0.5f, -m_HalfHeight + _pos.x + 0.5f, 0), Quaternion.identity);
+		m_ResourcesSpawns.Add(_pos, _nodeIns);
+		_nodeIns.GetComponent<ResourceNodeInstance>().SetResourceNodeData(_nodeData);
+	}
+	private bool IsWaterEdge(int x, int y)
+	{
+		for (int dx = -1; dx <= 1; dx++)
+		{
+			for (int dy = -1; dy <= 1; dy++)
+			{
+				if (dx == 0 && dy == 0) continue;
+
+				E_TerrainTypes _type = m_Terrain[x + dx, y + dy];
+				if (_type == E_TerrainTypes.Sand || _type == E_TerrainTypes.Grass) return true;
+			}
+		}
+
+		return false;
+	}
+	private void SpawnOre(ResourceNode iron, ResourceNode copper, ResourceNode titanium, Vector2 pos)
+	{
+		float roll = Random.value;
+
+		if (roll <= m_TitaniumSpawnChance)
+		{
+			CreateNode(titanium, pos);
+		}
+		else if (roll <= m_FinalCopperSpawnChance)
+		{
+			CreateNode(copper, pos);
+		}
+		else if (roll <= m_FinalIronSpawnChance)
+		{
+			CreateNode(iron, pos);
+		}
+	}
+	private void SpawnResources()
+	{
+		ResourceNode vyrex = ItemDatabase.Instance.GetItemByID("vyrex-reed-node") as ResourceNode;
+		ResourceNode bamboo = ItemDatabase.Instance.GetItemByID("karth-bamboo-node") as ResourceNode;
+		ResourceNode lumabloom = ItemDatabase.Instance.GetItemByID("lumabloom-node") as ResourceNode;
+		ResourceNode iron = ItemDatabase.Instance.GetItemByID("iron-ore-node") as ResourceNode;
+		ResourceNode copper = ItemDatabase.Instance.GetItemByID("copper-ore-node") as ResourceNode;
+		ResourceNode titanium = ItemDatabase.Instance.GetItemByID("titanium-ore-node") as ResourceNode;
+
+		for (int x = 1; x < m_Width - 1; x++)
+		{
+			for (int y = 1; y < m_Height - 1; y++)
+			{
+				Vector2 pos = new(x, y);
+
+				if (!IsPosEmpty(pos)) continue;
+
+				switch (m_Terrain[x, y])
+				{
+					case E_TerrainTypes.Sand:
+						if (Random.value <= m_KarthBambooSpawnRate) CreateNode(bamboo, pos);
+						break;
+
+					case E_TerrainTypes.Grass:
+						if (Random.value <= m_LumabloomSpawnRate) CreateNode(lumabloom, pos);
+						break;
+
+					case E_TerrainTypes.Rock:
+						SpawnOre(iron, copper, titanium, pos);
+
+						break;
+
+					case E_TerrainTypes.Water:
+						if (Random.value <= m_VyrexReedSpawnRate && IsWaterEdge(x, y))
+						{
+							CreateNode(vyrex, pos);
+						}
+						break;
+				}
+			}
+		}
+	}
+
 	private float GenerateNoise(int _x, int _y)
 	{
 		float _amplitude = 1f;
@@ -149,33 +282,6 @@ public class WorldGenerator : MonoBehaviour
 	}
 	public float[,] KerneledImage(float[,] image2d, float[,] kernel2d, int imageLength, int kernelLength)
 	{
-		//int imageLength = (int)Mathf.Sqrt(image.Length);
-		//int kernelLength = (int)Mathf.Sqrt(kernel.Length);
-
-		//float[][] image2d = new float[imageLength][];
-		//float[][] kernel2d = new float[kernelLength][];
-
-		//int count = 0;
-		//for (int i = 0; i < imageLength; i++)
-		//{
-		//	image2d[i] = new float[imageLength];
-		//	for (int j = 0; j < imageLength; j++)
-		//	{
-		//		image2d[i][j] = image[count];
-		//		count++;
-		//	}
-		//}
-		//count = 0;
-		//for (int i = 0; i < kernelLength; i++)
-		//{
-		//	kernel2d[i] = new float[kernelLength];
-		//	for (int j = 0; j < kernelLength; j++)
-		//	{
-		//		kernel2d[i][j] = kernel[count];
-		//		count++;
-		//	}
-		//}
-
 		int clampVal = imageLength - kernelLength + 1;
 		float[,] newImage = new float[imageLength, imageLength];
 		for (int i = 0; i < imageLength; i++)
