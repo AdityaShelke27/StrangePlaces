@@ -46,6 +46,11 @@ public class WorldGenerator : MonoBehaviour
 	[SerializeField] private float m_CopperOreSpawnRate = 0.3f;
 	[SerializeField] private float m_TitaniumOreSpawnRate = 0.1f;
 
+	[Header("Bunker Area")]
+	[SerializeField] private float m_BunkerGrassRadius = 30f;
+	[SerializeField] private float m_BunkerTransitionRadius = 30f;
+	[SerializeField] private float m_BunkerGrassTarget = 0.5f;
+
 	float m_TotalOreSpawnChance;
 	float m_IronSpawnChance;
 	float m_CopperSpawnChance;
@@ -108,7 +113,7 @@ public class WorldGenerator : MonoBehaviour
 		// WORLD GENERATION LAYERS ----------------------------------------------------------------------
 
 		GenerateRawTerrain();
-		m_RawTerrain = KerneledImage(m_RawTerrain, m_Kernel, m_Width, m_Kernel.GetLength(0));
+		//m_RawTerrain = KerneledImage(m_RawTerrain, m_Kernel, m_Width, m_Kernel.GetLength(0));
 		AssignTerrain();
 		_tiles = AssignTiles(_tiles);
 
@@ -278,7 +283,24 @@ public class WorldGenerator : MonoBehaviour
 			_frequency *= m_Lacunarity;
 		}
 
-		return _noiseHeight / _maxPossibleHeight;
+		float _noise = _noiseHeight / _maxPossibleHeight;
+
+		// Convert array coordinates to world coordinates.
+		float _worldX = _x - m_HalfWidth;
+		float _worldY = _y - m_HalfHeight;
+
+		float _distanceSqr = _worldX * _worldX + _worldY * _worldY;
+
+		float _transitionStartSqr = m_BunkerGrassRadius;
+		float _transitionEnd = m_BunkerGrassRadius + m_BunkerTransitionRadius;
+		float _transitionEndSqr = _transitionEnd * _transitionEnd;
+
+		float _grassInfluence = 1f - Mathf.InverseLerp(_transitionStartSqr, _transitionEndSqr, _distanceSqr);
+
+		// Smooth the transition.
+		_grassInfluence = Mathf.SmoothStep(0f, 1f, _grassInfluence);
+
+		return Mathf.Lerp(_noise, m_BunkerGrassTarget, _grassInfluence);
 	}
 	public float[,] KerneledImage(float[,] image2d, float[,] kernel2d, int imageLength, int kernelLength)
 	{

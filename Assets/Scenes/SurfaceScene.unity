@@ -319,6 +319,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1900157434}
+  - {fileID: 1788172169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &152188635
@@ -430,7 +431,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1788172169}
   - {fileID: 42009204}
   - {fileID: 784042457}
   - {fileID: 181364825}
@@ -625,8 +625,8 @@ MonoBehaviour:
   m_GrassTile: {fileID: 11400000, guid: a4c22b3889276e74982af53026df650f, type: 2}
   m_SandTile: {fileID: 11400000, guid: 036319d64db519a49926a959a5e6b8c9, type: 2}
   m_WaterTile: {fileID: 11400000, guid: e1eedf569fe8398448029fc314edbf66, type: 2}
-  m_Width: 512
-  m_Height: 512
+  m_Width: 256
+  m_Height: 256
   m_WaterThreshold: 0.3
   m_SandThreshold: 0.4
   m_GrassThreshold: 0.65
@@ -637,12 +637,15 @@ MonoBehaviour:
   m_NoiseScale: 0.05
   m_Seed: 100
   m_ResourceNodePrefab: {fileID: 8829060133671559922, guid: febffc13baaf13f4b884fe4017b298d4, type: 3}
-  m_VyrexReedSpawnRate: 0.02
+  m_VyrexReedSpawnRate: 0.2
   m_KarthBambooSpawnRate: 0.02
   m_LumabloomSpawnRate: 0.02
   m_IronOreSpawnRate: 0.5
   m_CopperOreSpawnRate: 0.3
   m_TitaniumOreSpawnRate: 0.1
+  m_BunkerGrassRadius: 3
+  m_BunkerTransitionRadius: 3
+  m_BunkerGrassTarget: 0.5
 --- !u!1 &405034823
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +790,7 @@ Transform:
   m_GameObject: {fileID: 422136687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.73, y: 0.81, z: 0}
+  m_LocalPosition: {x: -0.02, y: -1.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2087,11 +2090,11 @@ Transform:
   m_GameObject: {fileID: 1788172168}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0147, y: -0, z: 3.6694}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.63947344, y: 0.5866187, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 176033489}
+  m_Father: {fileID: 152188634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1788172170
 BoxCollider2D:
