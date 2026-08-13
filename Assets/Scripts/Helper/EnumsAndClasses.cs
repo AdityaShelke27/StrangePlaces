@@ -124,18 +124,6 @@ public static class PlayerData
 	}
 }
 [Serializable]
-public class ResearchNodeStatus
-{
-	public ResearchNodeInfo researchInfo;
-	public E_ResearchStatus researchStatus;
-
-	public ResearchNodeStatus(ResearchNodeInfo _ResearchInfo, E_ResearchStatus _ResearchStatus)
-	{
-		researchInfo = _ResearchInfo;
-		researchStatus = _ResearchStatus;
-	}
-}
-[Serializable]
 public class Save_ItemSlotArray
 {
 	public string id;

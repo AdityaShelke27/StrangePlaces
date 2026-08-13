@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class ResearchNode : MonoBehaviour
 {
-	public static Action<int, ResearchNodeStatus> s_SetResearchNodeStatus;
+	//public static Action<int, E_ResearchStatus> s_SetResearchNodeStatus;
 
 	[SerializeField] private ResearchNodeInfo m_ResearchNodeInfo;
-	private ResearchNodeStatus m_ResearchNodeStatus;
+	private E_ResearchStatus m_ResearchNodeStatus;
 	[Header("UI")]
 	[SerializeField] Image m_ResearchNodeIcon;
 	[SerializeField] TMP_Text m_ResearchNodeTitle;
@@ -21,25 +21,37 @@ public class ResearchNode : MonoBehaviour
 	{
 		SetupResearchNodeUI();
 	}
-	private void OnEnable()
-	{
-		s_SetResearchNodeStatus += SetResearchNodeStatus;
-	}
-	private void OnDisable()
-	{
-		s_SetResearchNodeStatus -= SetResearchNodeStatus;
-	}
-	void SetResearchNodeStatus(int _id, ResearchNodeStatus _nodeStatus)
-	{
-		if (_id != m_ResearchNodeInfo.ID) return;
+	//private void OnEnable()
+	//{
+	//	s_SetResearchNodeStatus += SetResearchNodeStatus;
+	//}
+	//private void OnDisable()
+	//{
+	//	s_SetResearchNodeStatus -= SetResearchNodeStatus;
+	//}
+	//void SetResearchNodeStatus(int _id, E_ResearchStatus _nodeStatus)
+	//{
+	//	if (_id != m_ResearchNodeInfo.ID) return;
 
-		SetNodeStatus(_nodeStatus);
-	}
-	void SetNodeStatus(ResearchNodeStatus _nodeStatus)
+	//	SetNodeStatus(_nodeStatus);
+	//}
+	public void SetNodeStatus(E_ResearchStatus _nodeStatus)
 	{
 		m_ResearchNodeStatus = _nodeStatus;
 
 		// CHANGE UI ACCORDING TO STATUS
+		switch(_nodeStatus)
+		{
+			case E_ResearchStatus.Available:
+				GetComponent<Image>().color = Color.green;
+				break;
+			case E_ResearchStatus.Researched:
+				GetComponent<Image>().color = Color.blue;
+				break;
+			case E_ResearchStatus.Locked:
+				GetComponent<Image>().color = Color.black;
+				break;
+		}
 	}
 	void SetupResearchNodeUI()
 	{
@@ -56,5 +68,5 @@ public class ResearchNode : MonoBehaviour
 			_requirementManagerScript.AssignResourceImageNameAndAmount(_resourceRequirement.item.itemImage, _resourceRequirement.item.itemName, _resourceRequirement.amount.ToString());
 		}
 	}
-
+	public ResearchNodeInfo GetResearchNodeInfo() => m_ResearchNodeInfo;
 }
