@@ -53,11 +53,12 @@ RectTransform:
   - {fileID: 5039840970512949493}
   - {fileID: 5106988064709772768}
   - {fileID: 7086456014629248182}
+  - {fileID: 1567300781064251195}
   m_Father: {fileID: 5349250054885951536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -90, y: 0}
+  m_AnchoredPosition: {x: -90, y: 1.9484863}
   m_SizeDelta: {x: 1736.956, y: 2619.9438}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &542752854899084784
@@ -1444,6 +1445,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5450198092948415746}
   m_CullTransparentMesh: 1
+--- !u!1 &6980857793405917865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567300781064251195}
+  m_Layer: 5
+  m_Name: Connections
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1567300781064251195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980857793405917865}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8117309741873588701}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1 &7260540821804512001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +1968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (4)
+      value: NavigationModule
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2122,7 +2158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (23)
+      value: BunkerInputNode2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2325,7 +2361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode
+      value: KarthBamboo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2516,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (21)
+      value: ConveyorBridge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2707,7 +2743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (6)
+      value: Miner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2898,7 +2934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (3)
+      value: Electricity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3089,7 +3125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (2)
+      value: BioResin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3280,7 +3316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (20)
+      value: ConveyorSpeed1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3471,7 +3507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (22)
+      value: ConveyorSpeed2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3638,7 +3674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode
+      value: NanoAlloy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3804,7 +3840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (1)
+      value: EnergyCore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3994,7 +4030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (17)
+      value: Automation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4161,7 +4197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (8)
+      value: Cockpit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4351,7 +4387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (1)
+      value: ReinforcementPanels
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4542,7 +4578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (5)
+      value: ConstructionRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4709,7 +4745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (2)
+      value: QuantumCircuit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4899,7 +4935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (7)
+      value: Harverster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5090,7 +5126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (13)
+      value: GravityReactor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5281,7 +5317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (4)
+      value: StorageRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5472,7 +5508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (12)
+      value: OrganicRefinery
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5663,7 +5699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (16)
+      value: TitaniumAlloy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5830,7 +5866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (5)
+      value: Engine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6020,7 +6056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (8)
+      value: BioGenerator
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6211,7 +6247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (11)
+      value: Smelter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6402,7 +6438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (15)
+      value: TitaniumOre
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6569,7 +6605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (7)
+      value: FuelTank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6759,7 +6795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (9)
+      value: ArtifactScanner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6950,7 +6986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (18)
+      value: Conveyor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -7141,7 +7177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (19)
+      value: BunkerInputNode1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -7332,7 +7368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (14)
+      value: ResearchStation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -7499,7 +7535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (6)
+      value: RocketFrame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7689,7 +7725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (10)
+      value: RocketConstructionRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -7856,7 +7892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057837560027478502, guid: 5b0c9057e88494546b889cea28aec17b, type: 3}
       propertyPath: m_Name
-      value: ResearchNode (3)
+      value: QuantumProcessor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

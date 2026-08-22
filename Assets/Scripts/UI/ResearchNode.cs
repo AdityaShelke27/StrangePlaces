@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ResearchNode : MonoBehaviour
 {
-	//public static Action<int, E_ResearchStatus> s_SetResearchNodeStatus;
-
 	[SerializeField] private ResearchNodeInfo m_ResearchNodeInfo;
 	private E_ResearchStatus m_ResearchNodeStatus;
 	[Header("UI")]
@@ -21,20 +19,6 @@ public class ResearchNode : MonoBehaviour
 	{
 		SetupResearchNodeUI();
 	}
-	//private void OnEnable()
-	//{
-	//	s_SetResearchNodeStatus += SetResearchNodeStatus;
-	//}
-	//private void OnDisable()
-	//{
-	//	s_SetResearchNodeStatus -= SetResearchNodeStatus;
-	//}
-	//void SetResearchNodeStatus(int _id, E_ResearchStatus _nodeStatus)
-	//{
-	//	if (_id != m_ResearchNodeInfo.ID) return;
-
-	//	SetNodeStatus(_nodeStatus);
-	//}
 	public void SetNodeStatus(E_ResearchStatus _nodeStatus)
 	{
 		m_ResearchNodeStatus = _nodeStatus;
@@ -69,4 +53,5 @@ public class ResearchNode : MonoBehaviour
 		}
 	}
 	public ResearchNodeInfo GetResearchNodeInfo() => m_ResearchNodeInfo;
+	public E_ResearchStatus GetNodeStatus() => m_ResearchNodeStatus;
 }
