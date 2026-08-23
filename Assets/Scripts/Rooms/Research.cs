@@ -10,18 +10,24 @@ public class Research : MonoBehaviour
 	[SerializeField] GameObject m_RocketResearchPanel;
 	[SerializeField] Transform m_MainResearchContentParent;
 	[SerializeField] Transform m_RocketResearchContentParent;
-	[SerializeField] Transform m_ConnectionsParent;
+	[SerializeField] Transform m_MainConnectionsParent;
+	[SerializeField] Transform m_RocketConnectionsParent;
 	[SerializeField] GameObject m_BazierConnection;
 	[SerializeField] GameObject m_ResearchCanvas;
 
 	string m_UnlockedResearch = "";
 	string m_DefaultResearchAvailable = "1 2 3";
-	Dictionary<int, ResearchNode> m_ResearchNode_Dict = new();
+	Dictionary<int, ResearchNode> m_MainResearchNode_Dict = new();
+	Dictionary<int, ResearchNode> m_RocketResearchNode_Dict = new();
 	private void Start()
 	{
 		m_ResearchCanvas.SetActive(false);
 		CreateResearchDictionary();
-		CreateResearchNodeStatus();
+
+		CreateResearchNodeStatus(m_MainResearchNode_Dict);
+		CreateResearchNodeStatus(m_RocketResearchNode_Dict);
+		CreateBazierConnections(m_MainResearchNode_Dict, true);
+		CreateBazierConnections(m_RocketResearchNode_Dict, false);
 	}
 	private void OnMouseDown()
 	{
@@ -41,17 +47,19 @@ public class Research : MonoBehaviour
 		m_MainResearchPanel.SetActive(false);
 		m_RocketResearchPanel.SetActive(true);
 	}
-	void CreateBazierConnections()
+	void CreateBazierConnections(Dictionary<int, ResearchNode> _researchDict, bool _isMainResearch)
 	{
-		foreach (int _key in m_ResearchNode_Dict.Keys)
+		foreach (int _key in _researchDict.Keys)
 		{
-			ResearchNodeInfo[] _unlocks = m_ResearchNode_Dict[_key].GetResearchNodeInfo().Unlocks;
+			ResearchNodeInfo[] _unlocks = _researchDict[_key].GetResearchNodeInfo().Unlocks;
+			RectTransform _nodeTransform = _researchDict[_key].GetComponent<RectTransform>();
+			Transform _connectionParent = _isMainResearch ? m_MainConnectionsParent : m_RocketConnectionsParent;
 
-			GameObject _connection = Instantiate(m_BazierConnection, m_ConnectionsParent);
-
-			foreach(ResearchNodeInfo _unlock in _unlocks)
+			foreach (ResearchNodeInfo _unlock in _unlocks)
 			{
-				
+				GameObject _connection = Instantiate(m_BazierConnection, _connectionParent);
+				BezierUIConnection _bezier = _connection.GetComponent<BezierUIConnection>();
+				_bezier.SetEndpoints(_nodeTransform, _researchDict[_unlock.ID].GetComponent<RectTransform>());
 			}
 		}
 	}
@@ -61,16 +69,16 @@ public class Research : MonoBehaviour
 		{
 			if(!m_MainResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
 
-			m_ResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
+			m_MainResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
 		}
 		for (int i = 0; i < m_RocketResearchContentParent.childCount; i++)
 		{
 			if (!m_RocketResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
 
-			m_ResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
+			m_RocketResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
 		}
 	}
-	void CreateResearchNodeStatus()
+	void CreateResearchNodeStatus(Dictionary<int, ResearchNode> _researchDict)
 	{
 		//m_UnlockedResearch = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
 
@@ -79,7 +87,8 @@ public class Research : MonoBehaviour
 			string[] _defaults = m_DefaultResearchAvailable.Split();
 			foreach(string _id in _defaults)
 			{
-				m_ResearchNode_Dict[Convert.ToInt32(_id)].SetNodeStatus(E_ResearchStatus.Available);
+				int _k = Convert.ToInt32(_id);
+				if(_researchDict.ContainsKey(_k)) _researchDict[_k].SetNodeStatus(E_ResearchStatus.Available);
 			}
 		}
 		else
@@ -89,18 +98,20 @@ public class Research : MonoBehaviour
 			foreach(string _id in _unlocked)
 			{
 				int _numID = Convert.ToInt32(_id);
-				m_ResearchNode_Dict[_numID].SetNodeStatus(E_ResearchStatus.Researched);
+				if (_researchDict.ContainsKey(_numID)) _researchDict[_numID].SetNodeStatus(E_ResearchStatus.Researched);
 			}
 			foreach (string _id in _unlocked)
 			{
 				int _numID = Convert.ToInt32(_id);
-				ResearchNodeInfo[] _unlocks = m_ResearchNode_Dict[_numID].GetResearchNodeInfo().Unlocks;
+				if (!_researchDict.ContainsKey(_numID)) continue;
+
+				ResearchNodeInfo[] _unlocks = _researchDict[_numID].GetResearchNodeInfo().Unlocks;
 
 				foreach(ResearchNodeInfo _unlock in _unlocks)
 				{
-					if(m_ResearchNode_Dict[_unlock.ID].GetNodeStatus() == E_ResearchStatus.Locked)
+					if(_researchDict[_unlock.ID].GetNodeStatus() == E_ResearchStatus.Locked)
 					{
-						m_ResearchNode_Dict[_unlock.ID].SetNodeStatus(E_ResearchStatus.Available);
+						_researchDict[_unlock.ID].SetNodeStatus(E_ResearchStatus.Available);
 					}
 				}
 			}

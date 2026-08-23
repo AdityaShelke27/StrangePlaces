@@ -15,9 +15,11 @@ MonoBehaviour:
   ID: 19
   Icon: {fileID: 0}
   Name: Research Station
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites:
   - {fileID: 11400000, guid: 6d6aad8fe04093b4b83428636fdd8aa6, type: 2}
   - {fileID: 11400000, guid: b111ab655918b474ab198024ea22f54a, type: 2}
-  Unlocks: []
+  Unlocks:
+  - {fileID: 11400000, guid: e6a9bc0e7ef57a24180761407baa2d06, type: 2}
