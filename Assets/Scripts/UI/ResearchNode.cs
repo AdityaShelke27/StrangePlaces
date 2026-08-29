@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ResearchNode : MonoBehaviour
 {
+	static ResearchNode s_SelectedButton;
+
 	[SerializeField] private ResearchNodeInfo m_ResearchNodeInfo;
 	private E_ResearchStatus m_ResearchNodeStatus;
 	[Header("UI")]
@@ -14,11 +16,11 @@ public class ResearchNode : MonoBehaviour
 	[SerializeField] Transform m_ResourceRequirementParent;
 	[SerializeField] GameObject m_ResourceRequirementSlotPrefab;
 	[SerializeField] TMP_Text m_ResearchPointText;
+	[SerializeField] GameObject m_ResearchButton;
 
-	void Start()
-	{
-		SetupResearchNodeUI();
-	}
+	[SerializeField] int m_UnlocksNeeded;
+	[SerializeField] int m_UnlocksCompleted;
+
 	public void SetNodeStatus(E_ResearchStatus _nodeStatus)
 	{
 		m_ResearchNodeStatus = _nodeStatus;
@@ -31,13 +33,15 @@ public class ResearchNode : MonoBehaviour
 				break;
 			case E_ResearchStatus.Researched:
 				GetComponent<Image>().color = Color.blue;
+				m_ResearchButton.SetActive(false);
 				break;
 			case E_ResearchStatus.Locked:
 				GetComponent<Image>().color = Color.black;
+				m_ResearchButton.SetActive(false);
 				break;
 		}
 	}
-	void SetupResearchNodeUI()
+	public void SetupResearchNodeUI()
 	{
 		m_ResearchNodeIcon.sprite = m_ResearchNodeInfo.Icon;
 		m_ResearchNodeTitle.text = m_ResearchNodeInfo.Name;
@@ -51,6 +55,39 @@ public class ResearchNode : MonoBehaviour
 			ResourceRequirement _resourceRequirement = m_ResearchNodeInfo.ResourceRequirements[i];
 			_requirementManagerScript.AssignResourceImageNameAndAmount(_resourceRequirement.item.itemImage, _resourceRequirement.item.itemName, _resourceRequirement.amount.ToString());
 		}
+
+		m_UnlocksNeeded = m_ResearchNodeInfo.Prerequisites.Length;
+	}
+	public void SelectButton()
+	{
+		if(s_SelectedButton)
+		{
+			s_SelectedButton.SetResearchButtonActive(false);
+		}
+
+		s_SelectedButton = this;
+		SetResearchButtonActive(true);
+	}
+	public void SetResearchButtonActive(bool _active)
+	{
+		m_ResearchButton.SetActive(_active && m_ResearchNodeStatus == E_ResearchStatus.Available);
+	}
+	public void ResearchButton()
+	{
+		string _researched = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
+		_researched = _researched + m_ResearchNodeInfo.ID + " ";
+		PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, _researched);
+		SetNodeStatus(E_ResearchStatus.Researched);
+
+		Research.Instance.RefreshResearchNodeStatus();
+	}
+	public void SetUnlocksCompleted(int _val) => m_UnlocksCompleted = _val;
+	public int GetUnlocksCompleted() => m_UnlocksCompleted;
+	public bool IsUnlocked() 
+	{
+		if (m_UnlocksNeeded == 0) return true;
+
+		return m_UnlocksCompleted / m_UnlocksNeeded == 1; 
 	}
 	public ResearchNodeInfo GetResearchNodeInfo() => m_ResearchNodeInfo;
 	public E_ResearchStatus GetNodeStatus() => m_ResearchNodeStatus;

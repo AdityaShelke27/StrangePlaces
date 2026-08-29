@@ -1,10 +1,13 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Research : MonoBehaviour
 {
+	public static Research Instance;
+
 	[Header("UI")]
 	[SerializeField] GameObject m_MainResearchPanel;
 	[SerializeField] GameObject m_RocketResearchPanel;
@@ -17,26 +20,36 @@ public class Research : MonoBehaviour
 
 	string m_UnlockedResearch = "";
 	string m_DefaultResearchAvailable = "1 2 3";
-	Dictionary<int, ResearchNode> m_MainResearchNode_Dict = new();
-	Dictionary<int, ResearchNode> m_RocketResearchNode_Dict = new();
+
+	Dictionary<int, ResearchNode> m_ResearchNode_Dict = new();
+
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+		}
+	}
 	private void Start()
 	{
 		m_ResearchCanvas.SetActive(false);
 		CreateResearchDictionary();
-
-		CreateResearchNodeStatus(m_MainResearchNode_Dict);
-		CreateResearchNodeStatus(m_RocketResearchNode_Dict);
-		CreateBazierConnections(m_MainResearchNode_Dict, true);
-		CreateBazierConnections(m_RocketResearchNode_Dict, false);
+		CreateResearchNodeStatus();
+		CreateBazierConnections();
 	}
 	private void OnMouseDown()
 	{
-		if (EventSystem.current.IsPointerOverGameObject()) return;
+		StartCoroutine(DelayExecute());
+	}
+	IEnumerator DelayExecute()
+	{
+		yield return null;
+
+		if (EventSystem.current.IsPointerOverGameObject()) yield break;
 
 		m_ResearchCanvas.SetActive(true);
 		SelectMainResearch();
 	}
-
 	public void SelectMainResearch()
 	{
 		m_MainResearchPanel.SetActive(true);
@@ -47,75 +60,131 @@ public class Research : MonoBehaviour
 		m_MainResearchPanel.SetActive(false);
 		m_RocketResearchPanel.SetActive(true);
 	}
-	void CreateBazierConnections(Dictionary<int, ResearchNode> _researchDict, bool _isMainResearch)
+	void CreateBazierConnections()
 	{
-		foreach (int _key in _researchDict.Keys)
+		foreach (int _key in m_ResearchNode_Dict.Keys)
 		{
-			ResearchNodeInfo[] _unlocks = _researchDict[_key].GetResearchNodeInfo().Unlocks;
-			RectTransform _nodeTransform = _researchDict[_key].GetComponent<RectTransform>();
-			Transform _connectionParent = _isMainResearch ? m_MainConnectionsParent : m_RocketConnectionsParent;
+			ResearchNodeInfo[] _unlocks = m_ResearchNode_Dict[_key].GetResearchNodeInfo().Unlocks;
+			RectTransform _nodeTransform = m_ResearchNode_Dict[_key].GetComponent<RectTransform>();
+			Transform _connectionParent = _nodeTransform.parent == m_MainResearchContentParent ? m_MainConnectionsParent : m_RocketConnectionsParent;
 
 			foreach (ResearchNodeInfo _unlock in _unlocks)
 			{
 				GameObject _connection = Instantiate(m_BazierConnection, _connectionParent);
 				BezierUIConnection _bezier = _connection.GetComponent<BezierUIConnection>();
-				_bezier.SetEndpoints(_nodeTransform, _researchDict[_unlock.ID].GetComponent<RectTransform>());
+				_bezier.SetEndpoints(_nodeTransform, m_ResearchNode_Dict[_unlock.ID].GetComponent<RectTransform>());
 			}
 		}
 	}
 	void CreateResearchDictionary()
 	{
-		for(int i = 0; i < m_MainResearchContentParent.childCount; i++)
+		for (int i = 0; i < m_MainResearchContentParent.childCount; i++)
 		{
-			if(!m_MainResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
+			if (!m_MainResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
 
-			m_MainResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
+			m_ResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
+			_script.SetupResearchNodeUI();
 		}
 		for (int i = 0; i < m_RocketResearchContentParent.childCount; i++)
 		{
 			if (!m_RocketResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
 
-			m_RocketResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
+			m_ResearchNode_Dict[_script.GetResearchNodeInfo().ID] = _script;
+			_script.SetupResearchNodeUI();
 		}
 	}
-	void CreateResearchNodeStatus(Dictionary<int, ResearchNode> _researchDict)
+	void CreateResearchNodeStatus()
 	{
-		//m_UnlockedResearch = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
+		m_UnlockedResearch = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
 
-		if(string.IsNullOrEmpty(m_UnlockedResearch))
-		{
-			string[] _defaults = m_DefaultResearchAvailable.Split();
-			foreach(string _id in _defaults)
-			{
-				int _k = Convert.ToInt32(_id);
-				if(_researchDict.ContainsKey(_k)) _researchDict[_k].SetNodeStatus(E_ResearchStatus.Available);
-			}
-		}
-		else
+		//if(string.IsNullOrEmpty(m_UnlockedResearch))
+		//{
+		//	string[] _defaults = m_DefaultResearchAvailable.Split();
+		//	foreach(string _id in _defaults)
+		//	{
+		//		int _k = Convert.ToInt32(_id);
+		//		if(m_ResearchNode_Dict.ContainsKey(_k)) m_ResearchNode_Dict[_k].SetNodeStatus(E_ResearchStatus.Available);
+		//	}
+		//}
+		//else
+		//{
+		//	string[] _unlocked = m_UnlockedResearch.Split();
+
+		//	foreach(string _id in _unlocked)
+		//	{
+		//		int _numID = Convert.ToInt32(_id);
+		//		if (m_ResearchNode_Dict.ContainsKey(_numID)) m_ResearchNode_Dict[_numID].SetNodeStatus(E_ResearchStatus.Researched);
+		//	}
+		//	foreach (string _id in _unlocked)
+		//	{
+		//		int _numID = Convert.ToInt32(_id);
+		//		if (!m_ResearchNode_Dict.ContainsKey(_numID)) continue;
+
+		//		ResearchNodeInfo[] _unlocks = m_ResearchNode_Dict[_numID].GetResearchNodeInfo().Unlocks;
+
+		//		foreach(ResearchNodeInfo _unlock in _unlocks)
+		//		{
+		//			if(m_ResearchNode_Dict[_unlock.ID].GetNodeStatus() == E_ResearchStatus.Locked)
+		//			{
+		//				m_ResearchNode_Dict[_unlock.ID].SetNodeStatus(E_ResearchStatus.Available);
+		//			}
+		//		}
+		//	}
+		//}
+
+		if(!string.IsNullOrEmpty(m_UnlockedResearch))
 		{
 			string[] _unlocked = m_UnlockedResearch.Split();
 
 			foreach(string _id in _unlocked)
 			{
-				int _numID = Convert.ToInt32(_id);
-				if (_researchDict.ContainsKey(_numID)) _researchDict[_numID].SetNodeStatus(E_ResearchStatus.Researched);
-			}
-			foreach (string _id in _unlocked)
-			{
-				int _numID = Convert.ToInt32(_id);
-				if (!_researchDict.ContainsKey(_numID)) continue;
+				if (string.IsNullOrEmpty(_id)) continue;
 
-				ResearchNodeInfo[] _unlocks = _researchDict[_numID].GetResearchNodeInfo().Unlocks;
+				int _numID = Convert.ToInt32(_id);
 
-				foreach(ResearchNodeInfo _unlock in _unlocks)
-				{
-					if(_researchDict[_unlock.ID].GetNodeStatus() == E_ResearchStatus.Locked)
-					{
-						_researchDict[_unlock.ID].SetNodeStatus(E_ResearchStatus.Available);
-					}
-				}
+				if (m_ResearchNode_Dict.ContainsKey(_numID)) m_ResearchNode_Dict[_numID].SetNodeStatus(E_ResearchStatus.Researched);
 			}
 		}
+
+		foreach(int _key in m_ResearchNode_Dict.Keys)
+		{
+			if (m_ResearchNode_Dict[_key].GetNodeStatus() == E_ResearchStatus.Researched) continue;
+
+			ResearchNodeInfo[] _prerequisites = m_ResearchNode_Dict[_key].GetResearchNodeInfo().Prerequisites;
+			int _researchComplete = 0;
+			foreach (ResearchNodeInfo _prerequisite in _prerequisites)
+			{
+				if(m_ResearchNode_Dict[_prerequisite.ID].GetNodeStatus() == E_ResearchStatus.Researched) _researchComplete++;
+			}
+			m_ResearchNode_Dict[_key].SetUnlocksCompleted(_researchComplete);
+			if(m_ResearchNode_Dict[_key].IsUnlocked())
+			{
+				m_ResearchNode_Dict[_key].SetNodeStatus(E_ResearchStatus.Available);
+			}
+		}
+	}
+	public void RefreshResearchNodeStatus()
+	{
+		foreach (int _key in m_ResearchNode_Dict.Keys)
+		{
+			if (m_ResearchNode_Dict[_key].GetNodeStatus() == E_ResearchStatus.Researched) continue;
+
+			ResearchNodeInfo[] _prerequisites = m_ResearchNode_Dict[_key].GetResearchNodeInfo().Prerequisites;
+			int _researchComplete = 0;
+			foreach (ResearchNodeInfo _prerequisite in _prerequisites)
+			{
+				if (m_ResearchNode_Dict[_prerequisite.ID].GetNodeStatus() == E_ResearchStatus.Researched) _researchComplete++;
+			}
+			m_ResearchNode_Dict[_key].SetUnlocksCompleted(_researchComplete);
+			if (m_ResearchNode_Dict[_key].IsUnlocked())
+			{
+				m_ResearchNode_Dict[_key].SetNodeStatus(E_ResearchStatus.Available);
+			}
+		}
+	}
+	public void SetMainResearchNodeStatus(int _id, E_ResearchStatus _status)
+	{
+		if (m_ResearchNode_Dict.ContainsKey(_id)) m_ResearchNode_Dict[_id].SetNodeStatus(_status);
 	}
 	public void ClosePanel() => m_ResearchCanvas.SetActive(false);
 }
