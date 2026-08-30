@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 3
   Icon: {fileID: 0}
   Name: Bio Resin
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites: []

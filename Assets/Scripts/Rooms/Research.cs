@@ -19,16 +19,12 @@ public class Research : MonoBehaviour
 	[SerializeField] GameObject m_ResearchCanvas;
 
 	string m_UnlockedResearch = "";
-	string m_DefaultResearchAvailable = "1 2 3";
 
 	Dictionary<int, ResearchNode> m_ResearchNode_Dict = new();
 
 	private void Awake()
 	{
-		if (Instance == null)
-		{
-			Instance = this;
-		}
+		if (Instance == null) Instance = this;
 	}
 	private void Start()
 	{
@@ -97,41 +93,6 @@ public class Research : MonoBehaviour
 	{
 		m_UnlockedResearch = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
 
-		//if(string.IsNullOrEmpty(m_UnlockedResearch))
-		//{
-		//	string[] _defaults = m_DefaultResearchAvailable.Split();
-		//	foreach(string _id in _defaults)
-		//	{
-		//		int _k = Convert.ToInt32(_id);
-		//		if(m_ResearchNode_Dict.ContainsKey(_k)) m_ResearchNode_Dict[_k].SetNodeStatus(E_ResearchStatus.Available);
-		//	}
-		//}
-		//else
-		//{
-		//	string[] _unlocked = m_UnlockedResearch.Split();
-
-		//	foreach(string _id in _unlocked)
-		//	{
-		//		int _numID = Convert.ToInt32(_id);
-		//		if (m_ResearchNode_Dict.ContainsKey(_numID)) m_ResearchNode_Dict[_numID].SetNodeStatus(E_ResearchStatus.Researched);
-		//	}
-		//	foreach (string _id in _unlocked)
-		//	{
-		//		int _numID = Convert.ToInt32(_id);
-		//		if (!m_ResearchNode_Dict.ContainsKey(_numID)) continue;
-
-		//		ResearchNodeInfo[] _unlocks = m_ResearchNode_Dict[_numID].GetResearchNodeInfo().Unlocks;
-
-		//		foreach(ResearchNodeInfo _unlock in _unlocks)
-		//		{
-		//			if(m_ResearchNode_Dict[_unlock.ID].GetNodeStatus() == E_ResearchStatus.Locked)
-		//			{
-		//				m_ResearchNode_Dict[_unlock.ID].SetNodeStatus(E_ResearchStatus.Available);
-		//			}
-		//		}
-		//	}
-		//}
-
 		if(!string.IsNullOrEmpty(m_UnlockedResearch))
 		{
 			string[] _unlocked = m_UnlockedResearch.Split();
@@ -185,6 +146,16 @@ public class Research : MonoBehaviour
 	public void SetMainResearchNodeStatus(int _id, E_ResearchStatus _status)
 	{
 		if (m_ResearchNode_Dict.ContainsKey(_id)) m_ResearchNode_Dict[_id].SetNodeStatus(_status);
+	}
+	public E_ResearchStatus GetResearchStatus(int _key)
+	{
+		if(!m_ResearchNode_Dict.ContainsKey(_key))
+		{
+			Debug.LogWarning("Research Node key not found");
+			return E_ResearchStatus.Locked;
+		}
+
+		return m_ResearchNode_Dict[_key].GetNodeStatus();
 	}
 	public void ClosePanel() => m_ResearchCanvas.SetActive(false);
 }

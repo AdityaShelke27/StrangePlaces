@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 13
   Icon: {fileID: 0}
   Name: Artifact Scanner
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites:

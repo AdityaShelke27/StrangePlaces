@@ -26,6 +26,17 @@ public class RoomPlacement : MonoBehaviour
 		s_GenerateAreas -= GenerateAvailableAreas;
 	}
 
+	private void Start()
+	{
+		Save_RoomData _roomData = Save_RoomData.LoadData();
+		if (_roomData == null) return;
+
+		foreach(Save_Room _room in _roomData.Rooms)
+		{
+			ConstructRoomDirectly(_room.Pos, _room.DoorDir, _room.GroundLevel, _room.RoomID);
+		}
+	}
+
 	void GenerateAvailableAreas(Vector2 _roomSize, int _roomID)
 	{
 		List<Vector2> _SearchedPoses = new();
@@ -75,17 +86,10 @@ public class RoomPlacement : MonoBehaviour
 				else
 				{
 					_placement = _targetPoses[j];
-
 					_PlacementDirection = _currentRoom.GetStairPlacement();
 
-					if(j == 2)
-					{
-						_groundLevel = _currentRoom.GetGroundLevel() - 1;
-					}
-					else if(j == 3)
-					{
-						_groundLevel = _currentRoom.GetGroundLevel() + 1;
-					}
+					if(j == 2) _groundLevel = _currentRoom.GetGroundLevel() - 1;
+					else if(j == 3) _groundLevel = _currentRoom.GetGroundLevel() + 1;
 
 					if (_groundLevel < 1) continue;
 				}
@@ -117,19 +121,18 @@ public class RoomPlacement : MonoBehaviour
 		for (int i = 0; i < m_RoomListParent.childCount; i++)
 		{
 			Room _room = m_RoomListParent.GetChild(i).GetComponent<Room>();
-
 			_room.SwitchToInteractableCollider(_room.GetRoomID() == _currentRoomID);
 		}
 	}
 
-	public void ConstructRoomAtLocation(Vector3 _pos, E_RoomStairPlacement m_DoorFacingDirection, int _groundLevel, int _roomID)
+	public void ConstructRoomAtLocation(Vector3 _pos, E_RoomStairPlacement _doorFacingDirection, int _groundLevel, int _roomID)
 	{
 		GameObject _room = Instantiate(m_Rooms[_roomID], _pos, Quaternion.identity);
 		_room.transform.parent = m_RoomListParent;
 		Room _roomScript = _room.GetComponent<Room>();
 
 		bool _facingLeft = false;
-		switch(m_DoorFacingDirection)
+		switch(_doorFacingDirection)
 		{
 			case E_RoomStairPlacement.Left:
 				_facingLeft = true; 
@@ -142,7 +145,7 @@ public class RoomPlacement : MonoBehaviour
 				break;
 		}
 		_roomScript.SetRoomFlipped(!_facingLeft);
-		_roomScript.SetStairPlacement(m_DoorFacingDirection);
+		_roomScript.SetStairPlacement(_doorFacingDirection);
 		_roomScript.SetGroundLevel(_groundLevel);
 
 		foreach (GameObject _obj in m_RoomSilhouletteList)
@@ -154,6 +157,9 @@ public class RoomPlacement : MonoBehaviour
 		if (m_RoomConstructionButtons[_roomID] != null) Destroy(m_RoomConstructionButtons[_roomID]);
 
 		if (_groundLevel > m_BuiltGroundLevel) ConstructNewGroundLevel();
+
+		Save_Room _roomData = new(_roomID, _groundLevel, _pos, _doorFacingDirection);
+		Save_RoomData.AppendNewRoom(_roomData);
 	}
 
 	void ConstructNewGroundLevel()
@@ -168,5 +174,33 @@ public class RoomPlacement : MonoBehaviour
 		GameObject _groundPoint = new("Point");
 		_groundPoint.transform.parent = m_GroundLevelPointsParent;
 		_groundPoint.transform.localPosition = ((Constant.SIZE_STAIR.y + m_RoomSpacing) * m_BuiltGroundLevel + m_StairPointOffset) * Vector3.down;
+	}
+
+	public void ConstructRoomDirectly(Vector3 _pos, E_RoomStairPlacement _doorFacingDirection, int _groundLevel, int _roomID)
+	{
+		GameObject _room = Instantiate(m_Rooms[_roomID], _pos, Quaternion.identity);
+		_room.transform.parent = m_RoomListParent;
+		Room _roomScript = _room.GetComponent<Room>();
+
+		bool _facingLeft = false;
+		switch (_doorFacingDirection)
+		{
+			case E_RoomStairPlacement.Left:
+				_facingLeft = true;
+				break;
+			case E_RoomStairPlacement.Right:
+				_facingLeft = false;
+				break;
+			case E_RoomStairPlacement.No_Stairs:
+				_facingLeft = false;
+				break;
+		}
+		_roomScript.SetRoomFlipped(!_facingLeft);
+		_roomScript.SetStairPlacement(_doorFacingDirection);
+		_roomScript.SetGroundLevel(_groundLevel);
+
+		if (m_RoomConstructionButtons[_roomID] != null) Destroy(m_RoomConstructionButtons[_roomID]);
+
+		if (_groundLevel > m_BuiltGroundLevel) ConstructNewGroundLevel();
 	}
 }

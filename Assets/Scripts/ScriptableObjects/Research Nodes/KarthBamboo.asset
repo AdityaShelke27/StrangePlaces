@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 1
   Icon: {fileID: 0}
   Name: Karth Bamboo
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites: []

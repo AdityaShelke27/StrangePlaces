@@ -15,6 +15,7 @@ public static class Constant
 	public static readonly Vector2 SIZE_STAIR = new(1.28f, 3.84f);
 
 	// PLAYER_PREFS
+	public const string PREF_ROOMSUNLOCKED = "RoomsUnlocked";
 	public const string PREF_RESEARCHEDNODES = "ResearchedNodes";
 	public const string PREF_SAVE_PLAYERDATA = "Save_PlayerData";
 

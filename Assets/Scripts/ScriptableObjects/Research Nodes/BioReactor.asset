@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb4b90bff1774064a907b705b46fc090, type: 3}
-  m_Name: BioGenerator
+  m_Name: BioReactor
   m_EditorClassIdentifier: Assembly-CSharp::ResearchNodeInfo
   ID: 12
   Icon: {fileID: 0}
-  Name: Bio Generator
+  Name: Bio Reactor
+  Description: 
+  ItemUnlock: {fileID: 11400000, guid: ffa54210b88d66945ad2b216f4a7ad70, type: 2}
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites:

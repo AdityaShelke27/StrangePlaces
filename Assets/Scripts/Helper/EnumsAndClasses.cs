@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum E_TerrainTypes
@@ -148,5 +150,65 @@ public class Save_PlayerData
 		hunger = _hunger;
 		electricity = _electricity;
 		researchPoints = _researchPoints;
+	}
+}
+[Serializable]
+public class Save_Room
+{
+	public int RoomID;
+	public int GroundLevel;
+	public Vector3 Pos;
+	public E_RoomStairPlacement DoorDir;
+
+	public Save_Room(int _roomID, int _groundLevel, Vector3 _pos, E_RoomStairPlacement _doorFacingDirection)
+	{
+		RoomID = _roomID;
+		GroundLevel = _groundLevel;
+		Pos = _pos;
+		DoorDir = _doorFacingDirection;
+	}
+}
+[Serializable]
+public class Save_RoomData
+{
+	public List<Save_Room> Rooms;
+	public Save_RoomData()
+	{
+		Rooms = new();
+	}
+	public Save_RoomData(Save_Room[] _rooms) 
+	{ 
+		Rooms = _rooms.ToList(); 
+	}
+	public Save_RoomData(List<Save_Room> _rooms)
+	{
+		Rooms = _rooms;
+	}
+	public void AddRoom(Save_Room _room)
+	{
+		Rooms.Add(_room);
+	}
+	public static void SaveData(Save_RoomData _roomData)
+	{
+		PlayerPrefs.SetString(Constant.PREF_ROOMSUNLOCKED, JsonUtility.ToJson(_roomData));
+	}
+	public static Save_RoomData LoadData()
+	{
+		string _dataStr = PlayerPrefs.GetString(Constant.PREF_ROOMSUNLOCKED, "");
+
+		if(string.IsNullOrEmpty(_dataStr)) return null;
+
+		Save_RoomData _data = JsonUtility.FromJson<Save_RoomData>(_dataStr);
+
+		return _data;
+	}
+	public static void AppendNewRoom(Save_Room _room)
+	{
+		if(_room == null) return;
+
+		Save_RoomData _roomData = LoadData();
+		_roomData ??= new();
+		_roomData.AddRoom(_room);
+		SaveData(_roomData);
 	}
 }

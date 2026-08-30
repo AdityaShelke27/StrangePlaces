@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 16
   Icon: {fileID: 0}
   Name: Titanium Alloy
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites:

@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 7
   Icon: {fileID: 0}
   Name: Electricity
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites:
