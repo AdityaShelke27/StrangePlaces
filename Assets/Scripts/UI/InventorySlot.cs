@@ -70,7 +70,16 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 		{
 			if (m_ItemSlot.item.PlacementType == E_PlacementType.NodePlacement)
 			{
-				ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
+				if(ResourceHandler.Instance.DoesItemIDExistInResearch(m_Node.GetResourceNodeData().itemID))
+				{
+					ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
+				}
+				else
+				{
+					Debug.LogWarning("Item not researched yet");
+					m_IsDragging = false;
+					return;
+				}
 			}
 			else if(m_ItemSlot.item.PlacementType == E_PlacementType.FreePlacement)
 			{

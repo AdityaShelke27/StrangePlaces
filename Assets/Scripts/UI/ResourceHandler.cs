@@ -1,4 +1,5 @@
-using System.Linq;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceHandler : MonoBehaviour
@@ -8,7 +9,7 @@ public class ResourceHandler : MonoBehaviour
     [SerializeField] Transform m_NavMeshParent;
     [SerializeField] InventorySlot[] m_Inventory = new InventorySlot[5];
     [SerializeField] LayerMask m_WorldPlacableLayer;
-    [SerializeField] int m_SelectedItemIdx = -1;
+	List<int> m_UnlockedResearchIDs = new();
 
     private void Awake()
     {
@@ -19,15 +20,39 @@ public class ResourceHandler : MonoBehaviour
     }
     private void Start()
     {
-        m_SelectedItemIdx = -1;
-    }
+		AssignResearchIds();
 
-    public void SelectItem(int idx)
-    {
-        if(idx < 0 || idx >= m_Inventory.Length) return;
+	}
+	void AssignResearchIds()
+	{
+		string _unlockedResearchStr = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
 
-        m_SelectedItemIdx = idx;
-    }
+		if (!string.IsNullOrEmpty(_unlockedResearchStr))
+		{
+			string[] _unlocked = _unlockedResearchStr.Split();
+
+			foreach (string _id in _unlocked)
+			{
+				if (string.IsNullOrEmpty(_id)) continue;
+
+				int _numID = Convert.ToInt32(_id);
+
+				m_UnlockedResearchIDs.Add(_numID);
+			}
+		}
+	}
+
+	public bool DoesItemIDExistInResearch(string _id)
+	{
+		foreach(int _key in m_UnlockedResearchIDs)
+		{
+			if (!Constant.m_ResearchID_ToItemID.ContainsKey(_key)) continue;
+			if (Constant.m_ResearchID_ToItemID[_key] == _id) return true;
+		}
+
+		return false;
+	}
+
 	public InventorySlot[] GetInventorySlots() => m_Inventory;
     public void InstantiateObjectToWorld(StorableItem _item, Vector3 _pos)
     {
@@ -67,8 +92,8 @@ public class ResourceHandler : MonoBehaviour
             ResourceNodeInstance m_Node = col.GetComponent<ResourceNodeInstance>();
             if(_item.GetPlacableNodes().Contains(m_Node.GetResourceNodeData()))
             {
-                return (true, m_Node.transform.position, m_Node);
-            }
+				return (true, m_Node.transform.position, m_Node);
+			}
             else
             {
                 Debug.Log("Wrong Node");
