@@ -74,7 +74,7 @@ public class ResearchNode : MonoBehaviour
 	}
 	public void ResearchButton()
 	{
-		string _researched = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "");
+		string _researched = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0");
 		_researched = _researched + m_ResearchNodeInfo.ID + " ";
 		PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, _researched);
 		SetNodeStatus(E_ResearchStatus.Researched);

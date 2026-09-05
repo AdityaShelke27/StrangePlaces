@@ -28,40 +28,41 @@ public static class Constant
 	public const string TAG_PLAYER = "Player";
 	public const string TAG_RESOURCE_NODE = "ResourceNode";
 
-	public static readonly Dictionary<int, string> m_ResearchID_ToItemID = new()
+	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
-		{ 1, "karth-bamboo-node"},
-		{ 2, "reinforced-panels"},
-		{ 3, "bio-resin"},
-		{ 7, "electricity"},
-		{ 9, "1"}, // Construction Room
-		{ 14, "5"}, // Rocket Construction Room
-		{ 15, "titanium-ore"},
-		{ 16, "titanium-alloy"},
-		{ 10, "miner"},
-		{ 17, "smelter"},
-		{ 11, "harvester"},
-		{ 18, "organic-refinery"},
-		{ 12, "bio-reactor"},
-		{ 20, "gravity-reactor"},
-		{ 21, ""}, // Automation
-		{ 22, ""}, // Conveyor
-		{ 24, ""}, // Conveyor Speed 1
-		{ 26, ""}, // Conveyor Bridge
-		{ 27, ""}, // Conveyor Speed 2
-		{ 23, ""}, // Bunker Input Node 1
-		{ 25, ""}, // Bunker Input Node 2
-		{ 13, "artifact-scanner"},
-		{ 19, "research-station"},
-		{ 8, "2"}, // Storage Room
-		{ 28, "nano-alloy"},
-		{ 30, "energy-core"},
-		{ 31, "quantum-circuit"},
-		{ 32, "quantum-processor"},
-		{ 34, "navigation-module"},
-		{ 33, "engine"},
-		{ 29, "rocket-frame"},
-		{ 35, "fuel-tank"},
-		{ 36, "cockpit"},
+		{ 0, new () {"iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "1", "4", "5", "nutrient-bar" } },
+		{ 1, new () {"karth-bamboo-node", "karth-bamboo" } },								// Done
+		{ 2, new () {"reinforced-panels" } },												// Done
+		{ 3, new () {"bio-resin" } },														// Done
+		{ 7, new () {"electricity" } },
+		{ 9, new () {"1"} }, // Construction Room
+		{ 14, new () {"5" } }, // Rocket Construction Room
+		{ 15, new () { "titanium-ore-node", "titanium-ore" } },								// Done
+		{ 16, new () {"titanium-alloy" } },
+		{ 10, new () {"miner"} },															// Done
+		{ 17, new () {"smelter"} },															// Done
+		{ 11, new () {"harvester"} },														// Done
+		{ 18, new () {"organic-refinery"} },												// Done
+		{ 12, new () {"bio-reactor"} },														// Done
+		{ 20, new () {"gravity-reactor"} },													// Done
+		{ 21, new () {""} }, // Automation
+		{ 22, new () {""} }, // Conveyor
+		{ 24, new () {""} }, // Conveyor Speed 1
+		{ 26, new () {""} }, // Conveyor Bridge
+		{ 27, new () {""} }, // Conveyor Speed 2
+		{ 23, new () {""} }, // Bunker Input Node 1
+		{ 25, new () {""} }, // Bunker Input Node 2
+		{ 13, new () {"artifact-scanner", "alien-artifact" } },								// Done
+		{ 19, new () {"research-station"} },												// Done
+		{ 8, new() { "2" }}, // Storage Room
+		{ 28, new () {"nano-alloy"} },
+		{ 30, new () {"energy-core"} },
+		{ 31, new () {"quantum-circuit"} },
+		{ 32, new () {"quantum-processor"} },
+		{ 34, new () {"navigation-module"} },
+		{ 33, new () {"engine"} },
+		{ 29, new () {"rocket-frame"} },
+		{ 35, new () {"fuel-tank"} },
+		{ 36, new () {"cockpit"} },
 	};
 }

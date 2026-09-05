@@ -59,8 +59,16 @@ public class Construction : MonoBehaviour
 
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
-			int _idx = i;
-			_objButton.GetComponent<Button>().onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
+
+			if(ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID))
+			{
+				int _idx = i;
+				_objButton.GetComponent<Button>().onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
+			}
+			else
+			{
+				Debug.LogWarning("Machine not researched");
+			}
 		}
 		m_AreResourcesAssigned = true;
 	}

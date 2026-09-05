@@ -27,3 +27,5 @@ MonoBehaviour:
   InputSlots: 1
   RecipeData:
   - {fileID: 11400000, guid: a4ea7bacb8c702b43bf29553e8a17b45, type: 2}
+  - {fileID: 11400000, guid: bf5c75d9d5dd04d44a3439eeb304bae7, type: 2}
+  - {fileID: 11400000, guid: a3b9866bc2b50dd4db7e5592cd8169d6, type: 2}

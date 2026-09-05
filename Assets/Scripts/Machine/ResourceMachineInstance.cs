@@ -27,11 +27,14 @@ public class ResourceMachineInstance : MachineInstance
 			GameObject _slot = Instantiate(m_InventorySlotPrefab, m_InputSlotListParent);
 			m_Inputs[i] = _slot.GetComponent<InventorySlot>();
 
-			int _length = m_MachineData.RecipeData[m_SelectedRecipeIdx].Input.Count;
-
-			for (int j = 0; j < _length; j++)
+			for(int j = 0; j < m_MachineData.RecipeData.Length; j++)
 			{
-				m_Inputs[i].AddIncludeItems(m_MachineData.RecipeData[m_SelectedRecipeIdx].Input[j].Resource);
+				int _length = m_MachineData.RecipeData[j].Input.Count;
+
+				for (int k = 0; k < _length; k++)
+				{
+					m_Inputs[i].AddIncludeItems(m_MachineData.RecipeData[j].Input[k].Resource);
+				}
 			}
 		}
 		for (int i = 0; i < m_Outputs.Length; i++)
@@ -39,11 +42,14 @@ public class ResourceMachineInstance : MachineInstance
 			GameObject _slot = Instantiate(m_InventorySlotPrefab, m_OutputSlotListParent);
 			m_Outputs[i] = _slot.GetComponent<InventorySlot>();
 
-			int _length = m_MachineData.RecipeData[m_SelectedRecipeIdx].Output.Count;
-
-			for (int j = 0; j < _length; j++)
+			for (int j = 0; j < m_MachineData.RecipeData.Length; j++)
 			{
-				m_Outputs[i].AddIncludeItems(m_MachineData.RecipeData[m_SelectedRecipeIdx].Output[j].Resource);
+				int _length = m_MachineData.RecipeData[j].Output.Count;
+
+				for (int k = 0; k < _length; k++)
+				{
+					m_Outputs[i].AddIncludeItems(m_MachineData.RecipeData[j].Output[k].Resource);
+				}
 			}
 		}
 		SetMachineState(E_MachineState.Halted);
@@ -67,7 +73,21 @@ public class ResourceMachineInstance : MachineInstance
 		{
 			yield return new WaitForSeconds(m_MachineData.TimeToProduce);
 
+			SelectRecipeFromItem(m_Inputs[0].GetItem().itemID);
 			ResourceRecipeData data = m_MachineData.RecipeData[m_SelectedRecipeIdx];
+
+			bool _isResearched = true;
+			foreach(ResourceAmount _resAmt in data.Output)
+			{
+				if(!ItemDatabase.Instance.DoesItemIDExistInResearch(_resAmt.Resource.itemID))
+				{
+					_isResearched = false;
+					Debug.LogWarning("Output Item not researched");
+					break;
+				}
+
+			}
+			if (!_isResearched) continue;
 
 			if (m_Inputs[0].GetItem() == data.Input[0].Resource && m_Inputs[0].GetItemAmount() >= data.Input[0].amount)
 			{
@@ -128,5 +148,21 @@ public class ResourceMachineInstance : MachineInstance
 		}
 
 		m_MachineStateText.text = "Machine State:" + _state.ToString();
+	}
+
+	void SelectRecipeFromItem(string _id)
+	{
+		for(int i = 0; i < m_MachineData.RecipeData.Length; i++)
+		{
+			ResourceRecipeData _data = m_MachineData.RecipeData[i];
+			foreach (ResourceAmount _resourceAmt in _data.Input)
+			{
+				if(_resourceAmt.Resource.itemID == _id)
+				{
+					m_SelectedRecipeIdx = i;
+					return;
+				}
+			}
+		}
 	}
 }

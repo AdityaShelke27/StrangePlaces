@@ -70,7 +70,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 		{
 			if (m_ItemSlot.item.PlacementType == E_PlacementType.NodePlacement)
 			{
-				if(ResourceHandler.Instance.DoesItemIDExistInResearch(m_Node.GetResourceNodeData().itemID))
+				if(ItemDatabase.Instance.DoesItemIDExistInResearch(m_Node.GetResourceNodeData().itemID))
 				{
 					ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
 				}
@@ -97,6 +97,8 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	{
 		if (s_SourceInventorySlot == null) return;
 		if(!CanAcceptItem(s_SourceInventorySlot.GetItem())) return;
+		Debug.Log($"ID: {s_SourceInventorySlot.GetItem().itemID}, {ItemDatabase.Instance.DoesItemIDExistInResearch(s_SourceInventorySlot.GetItem().itemID)}");
+		if (!ItemDatabase.Instance.DoesItemIDExistInResearch(s_SourceInventorySlot.GetItem().itemID)) return;
 
 		if(GetItem() == s_SourceInventorySlot.GetItem())
 		{
