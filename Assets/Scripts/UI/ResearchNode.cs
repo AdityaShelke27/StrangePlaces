@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ResearchNode : MonoBehaviour
 {
+	public static Action<int> s_ResearchedAction;
 	static ResearchNode s_SelectedButton;
 
 	[SerializeField] private ResearchNodeInfo m_ResearchNodeInfo;
@@ -74,12 +75,19 @@ public class ResearchNode : MonoBehaviour
 	}
 	public void ResearchButton()
 	{
-		string _researched = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0");
-		_researched = _researched + m_ResearchNodeInfo.ID + " ";
+		if (!PlayerPrefs.HasKey(Constant.PREF_RESEARCHEDNODES))
+		{
+			PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, "0 ");
+		}
+		int _researchID = m_ResearchNodeInfo.ID;
+		string _researched = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0 ");
+		_researched = _researched + _researchID + " ";
 		PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, _researched);
 		SetNodeStatus(E_ResearchStatus.Researched);
 
 		Research.Instance.RefreshResearchNodeStatus();
+		ItemDatabase.Instance.AddResearchID(_researchID);
+		s_ResearchedAction?.Invoke(_researchID);
 	}
 	public void SetUnlocksCompleted(int _val) => m_UnlocksCompleted = _val;
 	public int GetUnlocksCompleted() => m_UnlocksCompleted;

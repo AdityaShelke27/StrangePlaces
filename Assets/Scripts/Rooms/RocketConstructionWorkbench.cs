@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,8 +13,18 @@ public class RocketConstructionWorkbench : MonoBehaviour
 	[SerializeField] GameObject m_ResourceRequirementPrefab;
 	[SerializeField] Transform m_ButtonContentParent;
 	[SerializeField] CraftObject[] m_CraftParts;
+	List<GameObject> m_RCPartsButtons = new();
 	bool m_AreResourcesAssigned = false;
 	TMP_Text[][] m_RequiredResourcesTexts;
+
+	private void OnEnable()
+	{
+		ResearchNode.s_ResearchedAction += UnlockRCPartResearched;
+	}
+	private void OnDisable()
+	{
+		ResearchNode.s_ResearchedAction -= UnlockRCPartResearched;
+	}
 
 	private void Awake()
 	{
@@ -43,6 +54,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		for (int i = 0; i < m_CraftParts.Length; i++)
 		{
 			GameObject _objButton = Instantiate(m_RCPartsButtonPrefab, m_ButtonContentParent);
+			m_RCPartsButtons.Add(_objButton);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftParts[i].CraftItem.itemName);
 			_buttonManager.SetImage(m_CraftParts[i].CraftItem.itemImage);
@@ -60,7 +72,16 @@ public class RocketConstructionWorkbench : MonoBehaviour
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
 			int _idx = i;
-			_objButton.GetComponent<Button>().onClick.AddListener(() => ConstructRCParts(m_CraftParts[_idx]));
+			Button _objButtonComp = _objButton.GetComponent<Button>();
+			_objButtonComp.onClick.AddListener(() => ConstructRCParts(m_CraftParts[_idx]));
+
+			GameObject _notResearched = _objButton.transform.Find("NotResearchedPanel").gameObject;
+			_notResearched.SetActive(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftParts[i].CraftItem.itemID));
+			_objButtonComp.interactable = !_notResearched.activeSelf;
+			if (!_notResearched.activeSelf)
+			{
+				Debug.LogWarning("Machine not researched");
+			}
 		}
 		m_AreResourcesAssigned = true;
 	}
@@ -107,5 +128,16 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		CheckAvailableResources();
 	}
 
+	void UnlockRCPartResearched(int _id)
+	{
+		for (int i = 0; i < m_CraftParts.Length; i++)
+		{
+			bool _isResearched = ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftParts[i].CraftItem.itemID);
+
+			GameObject _notResearched = m_RCPartsButtons[i].transform.Find("NotResearchedPanel").gameObject;
+			_notResearched.SetActive(!_isResearched);
+			m_RCPartsButtons[i].GetComponent<Button>().interactable = !_notResearched.activeSelf;
+		}
+	}
 	public void ClosePanel() => m_RCWorkbenchUI.SetActive(false);
 }

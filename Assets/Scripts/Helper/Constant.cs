@@ -30,15 +30,15 @@ public static class Constant
 
 	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
-		{ 0, new () {"iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "1", "4", "5", "nutrient-bar" } },
+		{ 0, new () {"iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },
 		{ 1, new () {"karth-bamboo-node", "karth-bamboo" } },								// Done
 		{ 2, new () {"reinforced-panels" } },												// Done
 		{ 3, new () {"bio-resin" } },														// Done
 		{ 7, new () {"electricity" } },
-		{ 9, new () {"1"} }, // Construction Room
-		{ 14, new () {"5" } }, // Rocket Construction Room
+		{ 9, new () {"1"} }, // Construction Room											// Done
+		{ 14, new () {"5" } }, // Rocket Construction Room									// Done
 		{ 15, new () { "titanium-ore-node", "titanium-ore" } },								// Done
-		{ 16, new () {"titanium-alloy" } },
+		{ 16, new () {"titanium-alloy" } },													// Done
 		{ 10, new () {"miner"} },															// Done
 		{ 17, new () {"smelter"} },															// Done
 		{ 11, new () {"harvester"} },														// Done
@@ -54,7 +54,7 @@ public static class Constant
 		{ 25, new () {""} }, // Bunker Input Node 2
 		{ 13, new () {"artifact-scanner", "alien-artifact" } },								// Done
 		{ 19, new () {"research-station"} },												// Done
-		{ 8, new() { "2" }}, // Storage Room
+		{ 8, new() { "2" }}, // Storage Room												// Done
 		{ 28, new () {"nano-alloy"} },
 		{ 30, new () {"energy-core"} },
 		{ 31, new () {"quantum-circuit"} },

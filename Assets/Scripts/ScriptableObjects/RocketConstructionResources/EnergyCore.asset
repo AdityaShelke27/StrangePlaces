@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: energy-core
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 4519bfc9ea93dd1418806edf8bacd687, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10

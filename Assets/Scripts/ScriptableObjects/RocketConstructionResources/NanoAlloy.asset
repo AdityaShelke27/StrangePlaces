@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: nano-alloy
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 5f67f46aefd27174db78333cce2ccbb9, type: 3}
   itemDescription: 
   PlacementType: 0
   StackableAmount: 10

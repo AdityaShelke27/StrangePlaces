@@ -42,7 +42,11 @@ public class ItemDatabase : MonoBehaviour
 
 	void AssignResearchIds()
 	{
-		string _unlockedResearchStr = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0");
+		if(!PlayerPrefs.HasKey(Constant.PREF_RESEARCHEDNODES))
+		{
+			PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, "0 ");
+		}
+		string _unlockedResearchStr = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0 ");
 
 		if (!string.IsNullOrEmpty(_unlockedResearchStr))
 		{
@@ -58,6 +62,7 @@ public class ItemDatabase : MonoBehaviour
 			}
 		}
 	}
+	public void AddResearchID(int _id) => m_UnlockedResearchIDs.Add(_id);
 
 	public bool DoesItemIDExistInResearch(string _id)
 	{

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,9 +13,18 @@ public class Construction : MonoBehaviour
 	[SerializeField] GameObject m_ResourceRequirementPrefab;
 	[SerializeField] Transform m_ButtonContentParent;
 	[SerializeField] CraftObject[] m_CraftMachines;
+	List<GameObject> m_MachineButtons = new();
 	bool m_AreResourcesAssigned = false;
 	TMP_Text[][] m_RequiredResourcesTexts;
 
+	private void OnEnable()
+	{
+		ResearchNode.s_ResearchedAction += UnlockMachineResearched;
+	}
+	private void OnDisable()
+	{
+		ResearchNode.s_ResearchedAction -= UnlockMachineResearched;
+	}
 	private void Awake()
 	{
 		if (Instance == null) Instance = this;
@@ -43,6 +53,7 @@ public class Construction : MonoBehaviour
 		for (int i = 0; i < m_CraftMachines.Length; i++)
 		{
 			GameObject _objButton = Instantiate(m_MachineCraftButtonPrefab, m_ButtonContentParent);
+			m_MachineButtons.Add(_objButton);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftMachines[i].CraftItem.itemName);
 			_buttonManager.SetImage(m_CraftMachines[i].CraftItem.itemImage);
@@ -60,12 +71,14 @@ public class Construction : MonoBehaviour
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
 
-			if(ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID))
-			{
-				int _idx = i;
-				_objButton.GetComponent<Button>().onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
-			}
-			else
+			int _idx = i;
+			Button _objButtonComp = _objButton.GetComponent<Button>();
+			_objButtonComp.onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
+
+			GameObject _notResearched = _objButton.transform.Find("NotResearchedPanel").gameObject;
+			_notResearched.SetActive(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID));
+			_objButtonComp.interactable = !_notResearched.activeSelf;
+			if (!_notResearched.activeSelf)
 			{
 				Debug.LogWarning("Machine not researched");
 			}
@@ -115,5 +128,16 @@ public class Construction : MonoBehaviour
 		CheckAvailableResources();
 	}
 
+	void UnlockMachineResearched(int _id)
+	{
+		for (int i = 0; i < m_CraftMachines.Length; i++)
+		{
+			bool _isResearched = ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID);
+
+			GameObject _notResearched = m_MachineButtons[i].transform.Find("NotResearchedPanel").gameObject;
+			_notResearched.SetActive(!_isResearched);
+			m_MachineButtons[i].GetComponent<Button>().interactable = !_notResearched.activeSelf;
+		}
+	}
 	public void ClosePanel() => m_MachinePanelUI.SetActive(false);
 }

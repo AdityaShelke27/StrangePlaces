@@ -91,7 +91,11 @@ public class Research : MonoBehaviour
 	}
 	void CreateResearchNodeStatus()
 	{
-		m_UnlockedResearch = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0");
+		if (!PlayerPrefs.HasKey(Constant.PREF_RESEARCHEDNODES))
+		{
+			PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, "0 ");
+		}
+		m_UnlockedResearch = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0 ");
 
 		if(!string.IsNullOrEmpty(m_UnlockedResearch))
 		{

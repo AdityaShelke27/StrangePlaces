@@ -1526,7 +1526,7 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: ea00434b55bdc5548a2d7ce311bc7f91, type: 2}
+      objectReference: {fileID: 11400000, guid: 584ea56718308f74889ea8b862abb37a, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
       value: 10
@@ -1951,7 +1951,7 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 0f76d88e921e1cc48873b02681a0745d, type: 2}
+      objectReference: {fileID: 11400000, guid: 98d3967d875f7284bbeec43ae90b76e7, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
       value: 5
