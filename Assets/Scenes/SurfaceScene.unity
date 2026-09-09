@@ -642,6 +642,8 @@ MonoBehaviour:
   m_IronOreSpawnRate: 0.5
   m_CopperOreSpawnRate: 0.3
   m_TitaniumOreSpawnRate: 0.1
+  m_GravitationalAnomalySpawnRate: 0.004
+  m_AlienRuinSpawnRate: 0.01
   m_BunkerGrassRadius: 3
   m_BunkerTransitionRadius: 3
   m_BunkerGrassTarget: 0.5

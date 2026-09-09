@@ -46,6 +46,9 @@ public class WorldGenerator : MonoBehaviour
 	[SerializeField] private float m_CopperOreSpawnRate = 0.3f;
 	[SerializeField] private float m_TitaniumOreSpawnRate = 0.1f;
 
+	[SerializeField] private float m_GravitationalAnomalySpawnRate;
+	[SerializeField] private float m_AlienRuinSpawnRate;
+
 	[Header("Bunker Area")]
 	[SerializeField] private float m_BunkerGrassRadius = 30f;
 	[SerializeField] private float m_BunkerTransitionRadius = 30f;
@@ -225,6 +228,8 @@ public class WorldGenerator : MonoBehaviour
 		ResourceNode iron = ItemDatabase.Instance.GetItemByID("iron-ore-node") as ResourceNode;
 		ResourceNode copper = ItemDatabase.Instance.GetItemByID("copper-ore-node") as ResourceNode;
 		ResourceNode titanium = ItemDatabase.Instance.GetItemByID("titanium-ore-node") as ResourceNode;
+		ResourceNode gravitationalAnomaly = ItemDatabase.Instance.GetItemByID("gravitational-anomaly-node") as ResourceNode;
+		ResourceNode alienRuin = ItemDatabase.Instance.GetItemByID("alien-ruin-node") as ResourceNode;
 
 		for (int x = 1; x < m_Width - 1; x++)
 		{
@@ -238,10 +243,14 @@ public class WorldGenerator : MonoBehaviour
 				{
 					case E_TerrainTypes.Sand:
 						if (Random.value <= m_KarthBambooSpawnRate) CreateNode(bamboo, pos);
+						else if (Random.value <= m_AlienRuinSpawnRate) CreateNode(alienRuin, pos);
+						else if(Random.value <= m_GravitationalAnomalySpawnRate) CreateNode(gravitationalAnomaly, pos);
 						break;
 
 					case E_TerrainTypes.Grass:
 						if (Random.value <= m_LumabloomSpawnRate) CreateNode(lumabloom, pos);
+						else if (Random.value <= m_AlienRuinSpawnRate) CreateNode(alienRuin, pos);
+						else if (Random.value <= m_GravitationalAnomalySpawnRate) CreateNode(gravitationalAnomaly, pos);
 						break;
 
 					case E_TerrainTypes.Rock:
