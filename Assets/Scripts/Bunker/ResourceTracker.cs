@@ -5,8 +5,7 @@ public class ResourceTracker : MonoBehaviour
 {
 	public static ResourceTracker Instance;
 
-	[SerializeField] BunkerPlayer m_Player;
-	InventorySlot[] m_PlayerInventory;
+	[SerializeField] InventorySlot[] m_PlayerInventory;
 
 	private void Awake()
 	{
@@ -21,7 +20,7 @@ public class ResourceTracker : MonoBehaviour
 	}
 	private void Start()
 	{
-		m_PlayerInventory = m_Player.GetPlayerInventory();
+		//m_PlayerInventory = m_Player.GetPlayerInventory();
 	}
 	public bool SearchResourceAvailable(StorableItem _item, int _amount)
 	{
@@ -83,29 +82,48 @@ public class ResourceTracker : MonoBehaviour
 	}
 	public bool IsItemAddable(StorableItem _item, int _amount)
 	{
+		int _amountToAdd = _amount;
 		for (int i = 0; i < m_PlayerInventory.Length; i++)
 		{
-			if (m_PlayerInventory[i].GetItem() == null && _amount <= _item.StackableAmount) return true;
+			if (m_PlayerInventory[i].GetItem() == null) _amountToAdd -= _item.StackableAmount;
+			else if (m_PlayerInventory[i].GetItem() == _item)
+			{
+				_amountToAdd -= _item.StackableAmount - m_PlayerInventory[i].GetItemAmount();
+			}
 
-			if(m_PlayerInventory[i].GetItem() == _item && m_PlayerInventory[i].GetItemAmount() + _amount <= _item.StackableAmount) return true;
+			if(_amountToAdd <= 0) return true;
 		}
 
 		return false;
 	}
 	public void AddStorableItemToInventory(StorableItem _item, int _amount)
 	{
+		int _amountToAdd = _amount;
 		for (int i = 0; i < m_PlayerInventory.Length; i++)
 		{
 			if (m_PlayerInventory[i].GetItem() == null)
 			{
-				m_PlayerInventory[i].SetItemSlot(_item, _amount);
-				break;
+				int _added = Mathf.Min(_amountToAdd, _item.StackableAmount);
+				m_PlayerInventory[i].SetItemSlot(_item, _added);
+				_amountToAdd -= _added;
 			}
-			else if(m_PlayerInventory[i].GetItem() == _item && m_PlayerInventory[i].GetItemAmount() + _amount <= _item.StackableAmount)
+			else if(m_PlayerInventory[i].GetItem() == _item)
 			{
-				m_PlayerInventory[i].AddItemAmount(_amount);
-				break;
+				int _added = Mathf.Min(_amountToAdd, _item.StackableAmount - m_PlayerInventory[i].GetItemAmount());
+				m_PlayerInventory[i].AddItemAmount(_added);
+				_amountToAdd -= _added;
 			}
+			if (_amountToAdd == 0) return;
+			else if(_amountToAdd < 0)
+			{
+				Debug.LogWarning($"Something went wrong while adding item: {m_PlayerInventory[i].GetItem().itemName}");
+				return;
+			}
+		}
+
+		if(_amountToAdd > 0)
+		{
+			Debug.LogWarning($"Remaining amount cannot be added: {_amountToAdd} for item {_item.itemName}");
 		}
 	}
 }

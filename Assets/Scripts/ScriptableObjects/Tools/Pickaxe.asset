@@ -14,14 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tool
   itemID: pickaxe
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 252bf26c2aa6976408c5a6af54527323, type: 3}
   itemDescription: 
-  PlacementType: 0
-  StackableAmount: 1
+  PlacementType: 1
+  StackableAmount: 5
   WorldPrefab: {fileID: 0}
-  PlacableNodes: []
+  PlacableNodes:
+  - {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}
+  - {fileID: 11400000, guid: 827b91fa2d9c8ae44a4be32699e26442, type: 2}
+  - {fileID: 11400000, guid: 0c2785e9adcfb33459d9e569c462a6b2, type: 2}
   Size: {x: 0, y: 0}
   MinableResources:
   - {fileID: 11400000, guid: 232e5249f60925d45ad57ff33c9b94ee, type: 2}
   - {fileID: 11400000, guid: 827b91fa2d9c8ae44a4be32699e26442, type: 2}
   - {fileID: 11400000, guid: 0c2785e9adcfb33459d9e569c462a6b2, type: 2}
+  MineAmount: 3

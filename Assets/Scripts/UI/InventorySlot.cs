@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
@@ -65,14 +66,28 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-		if(eventData.pointerEnter != null) return;
+		if (eventData.pointerEnter != null) return;
 		if (CanPlace)
 		{
 			if (m_ItemSlot.item.PlacementType == E_PlacementType.NodePlacement)
 			{
 				if(ItemDatabase.Instance.DoesItemIDExistInResearch(m_Node.GetResourceNodeData().itemID))
 				{
-					ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
+					if (m_ItemSlot.item is Tool)
+					{
+						Debug.Log("ITS A TOOL");
+						Tool _tool = m_ItemSlot.item as Tool;
+						int _amount = Mathf.Min(m_Node.GetAmountAvailable(), _tool.MineAmount);
+						Resource _resource = m_Node.GetResourceNodeData().ResourceYield;
+
+						if (ResourceTracker.Instance.IsItemAddable(_resource, _amount))
+						{
+							ResourceTracker.Instance.AddStorableItemToInventory(_resource, m_Node.FetchResource(_tool.MineAmount));
+							AddItemAmount(-1);
+						}
+						else Debug.LogWarning("Not enough space in inventory");
+					}
+					else ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
 				}
 				else
 				{
@@ -86,7 +101,9 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 				ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
 			}
 
-			ResetSourceInventorySlot();
+			//ResetSourceInventorySlot();
+			if (m_ItemSlot.item is not Tool)
+				AddItemAmount(-1);
 		}
 		s_SourceInventorySlot = null;
 		m_PointerData = null;
@@ -173,6 +190,8 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 		m_ItemSlot.amount += _amount;
 		m_ItemAmountText.text = m_ItemSlot.amount.ToString();
+
+		if (m_ItemSlot.amount <= 0) RemoveItemFromInventory();
 	}
 	public void SetItem(StorableItem _item)
 	{
@@ -198,7 +217,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 	public static void ResetSourceInventorySlot()
 	{
-	s_SourceInventorySlot.RemoveItemFromInventory();
+		s_SourceInventorySlot.RemoveItemFromInventory();
 		s_SourceInventorySlot = null;
 	}
 }

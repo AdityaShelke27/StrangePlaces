@@ -28,7 +28,7 @@ public class ResourceHandler : MonoBehaviour
     }
     public void InstantiateObjectToNodeWorld(StorableItem _item, Vector3 _pos, ResourceNodeInstance _node)
     {
-        GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
+		GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
         obj.transform.parent = m_NavMeshParent;
         obj.GetComponent<WorldInstance>().Initialize(_item);
         obj.GetComponent<NodeMachineInstance>().SetInputNode(_node);

@@ -4,4 +4,5 @@ using UnityEngine;
 public class Tool : StorableItem
 {
     public ResourceNode[] MinableResources;
+	public int MineAmount;
 }

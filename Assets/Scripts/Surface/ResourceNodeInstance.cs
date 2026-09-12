@@ -49,4 +49,5 @@ public class ResourceNodeInstance : MonoBehaviour
 		m_ResourceNodeData = _nodeData;
 		Initialize();
 	}
+	public int GetAmountAvailable() => m_AmountAvailable;
 }

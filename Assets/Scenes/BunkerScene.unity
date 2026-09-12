@@ -4067,10 +4067,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 5f284b6691c1ac945b2b0ea4212c6a81, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -7057,7 +7057,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1186b0bbbcbc3424ab236c8677547186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceTracker
-  m_Player: {fileID: 751823235}
+  m_PlayerInventory:
+  - {fileID: 1419111158}
+  - {fileID: 63839599}
+  - {fileID: 1165309848}
+  - {fileID: 726045904}
+  - {fileID: 1452286858}
 --- !u!114 &2041402696
 MonoBehaviour:
   m_ObjectHideFlags: 0

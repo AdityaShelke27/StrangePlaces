@@ -535,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 284352276}
   - component: {fileID: 284352277}
+  - component: {fileID: 284352281}
   - component: {fileID: 284352278}
   - component: {fileID: 284352279}
   - component: {fileID: 284352280}
@@ -647,6 +648,24 @@ MonoBehaviour:
   m_BunkerGrassRadius: 3
   m_BunkerTransitionRadius: 3
   m_BunkerGrassTarget: 0.5
+--- !u!114 &284352281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284352275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1186b0bbbcbc3424ab236c8677547186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceTracker
+  m_PlayerInventory:
+  - {fileID: 2049637101}
+  - {fileID: 1319052969}
+  - {fileID: 2095187073}
+  - {fileID: 1546262327}
+  - {fileID: 1613963379}
 --- !u!1 &405034823
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +778,8 @@ GameObject:
   m_Component:
   - component: {fileID: 422136690}
   - component: {fileID: 422136691}
-  - component: {fileID: 422136688}
   - component: {fileID: 422136692}
+  - component: {fileID: 422136688}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1218,10 +1237,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: f985aa3f46719f94281a093891a1f1f8, type: 2}
+      objectReference: {fileID: 11400000, guid: 7de04acf5635d1249a1b659162542129, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -1531,7 +1550,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 584ea56718308f74889ea8b862abb37a, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -1666,10 +1685,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 24a3b80ab01faa54ea4718dcd5a4023b, type: 2}
+      objectReference: {fileID: 11400000, guid: 70fa1ef6c432eb64cbf7ee1cd7952d02, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -1804,10 +1823,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 79d70f9e1a886ff49968b97248b7fd93, type: 2}
+      objectReference: {fileID: 11400000, guid: 5f284b6691c1ac945b2b0ea4212c6a81, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -1953,10 +1972,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 98d3967d875f7284bbeec43ae90b76e7, type: 2}
+      objectReference: {fileID: 11400000, guid: 5f284b6691c1ac945b2b0ea4212c6a81, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
