@@ -9,26 +9,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: GrassTile
-  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.RuleTile
-  m_DefaultSprite: {fileID: 445520083, guid: 29e449d2331b01d42a8e5f0bfc566dd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b033cb3c8f257b4b9acd2cfe815627f, type: 3}
+  m_Name: Grass
+  m_EditorClassIdentifier: Assembly-CSharp::TerrainRuleTile
+  m_DefaultSprite: {fileID: 884680721, guid: 29e449d2331b01d42a8e5f0bfc566dd3, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: -1364769629, guid: 29e449d2331b01d42a8e5f0bfc566dd3, type: 3}
+    - {fileID: 0}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
     m_RandomTransform: 0
-    m_Neighbors: 010000000100000001000000
+    m_Neighbors: 0400000003000000030000000300000003000000030000000300000003000000
     m_NeighborPositions:
+    - {x: -1, y: 1, z: 0}
+    - {x: -1, y: 0, z: 0}
     - {x: -1, y: -1, z: 0}
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 1, y: 1, z: 0}
+    - {x: 0, y: 1, z: 0}
     m_RuleTransform: 0
+  terrainType: 0

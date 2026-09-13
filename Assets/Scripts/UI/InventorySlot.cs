@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
 {
@@ -20,6 +19,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	ResourceNodeInstance m_Node;
 
 	public static InventorySlot s_SourceInventorySlot;
+	public static GameObject s_DragImage;
 
 	void Start()
 	{
@@ -62,10 +62,12 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 		m_PointerData = eventData;
 		s_SourceInventorySlot = this;
 		StartCoroutine(StartCheckPlacementPointer());
+		CreateDragImage();
 	}
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
+		if (s_DragImage != null) Destroy(s_DragImage.transform.parent.gameObject);
 		if (eventData.pointerEnter != null) return;
 		if (CanPlace)
 		{
@@ -112,6 +114,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 	public void OnDrop(PointerEventData eventData)
 	{
+		if (s_DragImage != null) Destroy(s_DragImage.transform.parent.gameObject);
 		if (s_SourceInventorySlot == null) return;
 		if(!CanAcceptItem(s_SourceInventorySlot.GetItem())) return;
 		Debug.Log($"ID: {s_SourceInventorySlot.GetItem().itemID}, {ItemDatabase.Instance.DoesItemIDExistInResearch(s_SourceInventorySlot.GetItem().itemID)}");
@@ -145,9 +148,32 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 	public void OnDrag(PointerEventData eventData)
 	{
-		
+		if(s_DragImage == null) return;
+
+		s_DragImage.transform.position = eventData.position;
 	}
 
+	void CreateDragImage()
+	{
+		if (s_DragImage != null) Destroy(s_DragImage.transform.parent.gameObject);
+
+		s_DragImage = new GameObject("DragImage", typeof(Image));
+		GameObject _canvas = new GameObject("DragCanvas", typeof(Canvas));
+		Canvas _canvasComp = _canvas.GetComponent<Canvas>();
+		_canvasComp.sortingOrder = 1000;
+		_canvasComp.renderMode = RenderMode.ScreenSpaceOverlay;
+		_canvasComp.overrideSorting = true;
+		_canvas.AddComponent<GraphicRaycaster>();
+
+		Image _dragImage = s_DragImage.GetComponent<Image>();
+		_dragImage.sprite = s_SourceInventorySlot.m_ItemImage.sprite;
+		_dragImage.raycastTarget = false;
+
+		s_DragImage.transform.SetParent(_canvas.transform, false);
+		_canvasComp.enabled = false;
+		_canvasComp.enabled = true;
+
+	}
 	bool CanAcceptItem(StorableItem _item)
 	{
 		if(m_ShouldAcceptAllItems) return true;

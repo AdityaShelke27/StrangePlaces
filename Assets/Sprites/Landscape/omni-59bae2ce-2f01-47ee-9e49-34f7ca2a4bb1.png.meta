@@ -1,0 +1,976 @@
+fileFormatVersion: 2
+guid: 29e449d2331b01d42a8e5f0bfc566dd3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6061223831545819424
+    second: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 853
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee4498f90532eba0800000000000000
+      internalID: -6061223831545819424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 853
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad74569a01383e8478ef6c6bef0fb10a
+      internalID: 260497031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 853
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c4f1dfeed874148aa9568c96b110b9
+      internalID: 729107674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_3
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 853
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4417aef832055f4cb2a02503d8e5393
+      internalID: -1352322853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_4
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 853
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b420ba15669471d4ea9da20ceaf873b4
+      internalID: -1240494639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 682
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2a6f8de7262d8488dec1c8b079bf27
+      internalID: 646953446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_6
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 682
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f420473ef1bade4a8e41ed0857e19e2
+      internalID: -675477559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_7
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 682
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4670329a55010644ba3498263dd1d392
+      internalID: -120805635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_8
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 682
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5333f4ecd43313d4db5b667606945b65
+      internalID: 1441659357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_9
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 682
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5504fb17dcedff46b92dff31b639ae7
+      internalID: -2119343238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0505d66574c45b44ad77682cc17380d
+      internalID: 1603353457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_11
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 511
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466beaaf2eabf0e439319e0d7f77ca9f
+      internalID: -1446220418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_12
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 511
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c522756f57a1ac47bd65b4020b25ea0
+      internalID: 445520083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_13
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 511
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78643457c03714643ac412269bd8bfca
+      internalID: 884680721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_14
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 511
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6494189c92b3f4b9a586584fcda09c
+      internalID: -51916678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2117a3ca440f42545a41f3c09d375367
+      internalID: -933704562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_16
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 340
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aab869867adc9e488dd867bf303a0fc
+      internalID: 131128014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_17
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 340
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057176b4bf1c8c04bb94e4772049dffd
+      internalID: 1881762758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_18
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 340
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf37673f73efc646a916ea754d05787
+      internalID: 1684029719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_19
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 340
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75456e63f92c0649ac9d7fbad2f7464
+      internalID: 438667947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7e806906b43b24aa1e0f77c9e08848
+      internalID: 829497991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 169
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a156552d27e1bb4c95dbe75bb01452e
+      internalID: -2107099382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_22
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 169
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97763b5c869075498cea45561002c98
+      internalID: 537140494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_23
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 169
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df2bcb21c433b94fac10bf2f0908215
+      internalID: 1374114437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_24
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 169
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83771d10b423fea44a89580bc76a1b0b
+      internalID: 441236683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_25
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 853
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4b68d4349fa704785274828437bd7a
+      internalID: -895781749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_26
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 682
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9cdd75cd546344d8005278ff948be6
+      internalID: 415321347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_27
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 512
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f5c0886ecc7ad418f5d3dc8d3c0de3
+      internalID: -1537855283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_28
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 341
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658af864aafea314484afa4a035dcddf
+      internalID: -1159707466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_29
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 171
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7408123eb601e4aa6a379a69cca2f9
+      internalID: -2075682345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_30
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 0
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b27f8a0a8ff9b54cbe18edab2e214ed
+      internalID: 1543636908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_31
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 0
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5037b4f88a3bc949ab0b9b82601f670
+      internalID: -1644878640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d695343fc969e459cc1bbf5be8ab3a
+      internalID: -1364769629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_33
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 0
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bc37d408a01f84c895d8650532ad02
+      internalID: 1351750819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_34
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d39fcbeab301b43a3a0ea406eb3d26
+      internalID: -235577822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d484be8401307694aa2218343fc20514
+      internalID: -1367553961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ea31f8fa21105a54f8466375b88fcc63
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":171.0,"y":171.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_0: -6061223831545819424
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_1: 260497031
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_10: 1603353457
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_11: -1446220418
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_12: 445520083
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_13: 884680721
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_14: -51916678
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_15: -933704562
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_16: 131128014
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_17: 1881762758
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_18: 1684029719
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_19: 438667947
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_2: 729107674
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_20: 829497991
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_21: -2107099382
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_22: 537140494
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_23: 1374114437
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_24: 441236683
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_25: -895781749
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_26: 415321347
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_27: -1537855283
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_28: -1159707466
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_29: -2075682345
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_3: -1352322853
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_30: 1543636908
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_31: -1644878640
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_32: -1364769629
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_33: 1351750819
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_34: -235577822
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_35: -1367553961
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_4: -1240494639
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_5: 646953446
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_6: -675477559
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_7: -120805635
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_8: 1441659357
+      omni-59bae2ce-2f01-47ee-9e49-34f7ca2a4bb1_9: -2119343238
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
