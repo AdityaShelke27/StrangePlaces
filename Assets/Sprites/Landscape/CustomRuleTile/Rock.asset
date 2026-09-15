@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b033cb3c8f257b4b9acd2cfe815627f, type: 3}
-  m_Name: Sand
+  m_Name: Rock
   m_EditorClassIdentifier: Assembly-CSharp::TerrainRuleTile
-  m_DefaultSprite: {fileID: -778885132, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
+  m_DefaultSprite: {fileID: 2097061510, guid: 3b38e9ab0b28e8947b08a83b5a1ddde4, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: -778885132, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
-    - {fileID: -1034308403, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
-    - {fileID: -1906716606, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
-    - {fileID: -1324659715, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
-    - {fileID: -1030476839, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
-    - {fileID: 1746020285, guid: 7b94f19bdfc43f348b0a6bce6710f159, type: 3}
+    - {fileID: 1847511799, guid: 3b38e9ab0b28e8947b08a83b5a1ddde4, type: 3}
+    - {fileID: -1977851967, guid: 3b38e9ab0b28e8947b08a83b5a1ddde4, type: 3}
+    - {fileID: 982554922, guid: 3b38e9ab0b28e8947b08a83b5a1ddde4, type: 3}
+    - {fileID: 2097061510, guid: 3b38e9ab0b28e8947b08a83b5a1ddde4, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -42,4 +40,4 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
     m_RuleTransform: 0
-  terrainType: 1
+  terrainType: 2
