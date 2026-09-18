@@ -13,6 +13,8 @@ public class ResourceMachineInstance : MachineInstance
 	Coroutine m_MachineWorkingCoroutine;
 	Coroutine m_MachineHaultedCoroutine;
 
+	bool m_IsOutputAbstract = false;
+
 	public override void Initialize(StorableItem data)
 	{
 		m_MachineData = data as ResourceMachine;
@@ -37,21 +39,29 @@ public class ResourceMachineInstance : MachineInstance
 				}
 			}
 		}
-		for (int i = 0; i < m_Outputs.Length; i++)
+		if(m_MachineData.itemID.Equals("research-station") || m_MachineData.itemID.Equals("bio-reactor"))
 		{
-			GameObject _slot = Instantiate(m_InventorySlotPrefab, m_OutputSlotListParent);
-			m_Outputs[i] = _slot.GetComponent<InventorySlot>();
-
-			for (int j = 0; j < m_MachineData.RecipeData.Length; j++)
+			m_IsOutputAbstract = true;
+		}
+		else
+		{
+			for (int i = 0; i < m_Outputs.Length; i++)
 			{
-				int _length = m_MachineData.RecipeData[j].Output.Count;
+				GameObject _slot = Instantiate(m_InventorySlotPrefab, m_OutputSlotListParent);
+				m_Outputs[i] = _slot.GetComponent<InventorySlot>();
 
-				for (int k = 0; k < _length; k++)
+				for (int j = 0; j < m_MachineData.RecipeData.Length; j++)
 				{
-					m_Outputs[i].AddIncludeItems(m_MachineData.RecipeData[j].Output[k].Resource);
+					int _length = m_MachineData.RecipeData[j].Output.Count;
+
+					for (int k = 0; k < _length; k++)
+					{
+						m_Outputs[i].AddIncludeItems(m_MachineData.RecipeData[j].Output[k].Resource);
+					}
 				}
 			}
 		}
+			
 		SetMachineState(E_MachineState.Halted);
 	}
 
@@ -92,22 +102,29 @@ public class ResourceMachineInstance : MachineInstance
 			if (m_Inputs[0].GetItem() == data.Input[0].Resource && m_Inputs[0].GetItemAmount() >= data.Input[0].amount)
 			{
 				m_Inputs[0].AddItemAmount(-data.Input[0].amount);
-				if(m_Inputs[0].GetItemAmount() == 0)
+				if(m_Inputs[0].GetItemAmount() == 0) m_Inputs[0].SetItem(null);
+
+				if (m_IsOutputAbstract)
 				{
-					m_Inputs[0].SetItem(null);
-				}
-				if (m_Outputs[0].GetItem() == null)
-				{
-					m_Outputs[0].SetItemSlot(data.Output[0].Resource, data.Output[0].amount);
+					string _outputResourceID = data.Output[0].Resource.itemID;
+					if(_outputResourceID.Equals("research-point")) PlayerStatsManager.Instance.AddResearchPoints(data.Output[0].amount);
+					else PlayerStatsManager.Instance.AddElectricity(data.Output[0].amount);
 				}
 				else
 				{
-					int _sumAmount = m_Outputs[0].GetItemAmount() + data.Output[0].amount;
-					m_Outputs[0].SetItemAmount(_sumAmount);
-					if(_sumAmount >= m_Outputs[0].GetItem().StackableAmount)
+					if (m_Outputs[0].GetItem() == null)
 					{
-						Debug.Log("Machine should hault");
-						SetMachineState(E_MachineState.Halted);
+						m_Outputs[0].SetItemSlot(data.Output[0].Resource, data.Output[0].amount);
+					}
+					else
+					{
+						int _sumAmount = m_Outputs[0].GetItemAmount() + data.Output[0].amount;
+						m_Outputs[0].SetItemAmount(_sumAmount);
+						if (_sumAmount >= m_Outputs[0].GetItem().StackableAmount)
+						{
+							Debug.Log("Machine should hault");
+							SetMachineState(E_MachineState.Halted);
+						}
 					}
 				}
 			}
@@ -120,10 +137,21 @@ public class ResourceMachineInstance : MachineInstance
 	}
 	IEnumerator MachineHaulted()
 	{
-		while (!m_Inputs[0].GetItem() || (m_Outputs[0].GetItem() != null && m_Outputs[0].GetItemAmount() >= m_Outputs[0].GetItem().StackableAmount))
+		if(m_IsOutputAbstract)
 		{
-			yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
+			while (!m_Inputs[0].GetItem())
+			{
+				yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
+			}
 		}
+		else
+		{
+			while (!m_Inputs[0].GetItem() || (m_Outputs[0].GetItem() != null && m_Outputs[0].GetItemAmount() >= m_Outputs[0].GetItem().StackableAmount))
+			{
+				yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
+			}
+		}
+			
 		SetMachineState(E_MachineState.Working);
 	}
 

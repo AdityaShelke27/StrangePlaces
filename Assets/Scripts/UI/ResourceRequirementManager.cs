@@ -19,5 +19,19 @@ public class ResourceRequirementManager : MonoBehaviour
 		m_Title.text = _name;
 		m_Amount.text = _amount;
 	}
+
+	public void SetResourceAvailableStatus(bool _areResourceAvailable)
+	{
+		if(_areResourceAvailable)
+		{
+			m_Title.color = Color.green;
+			m_Amount.color = Color.green;
+		}
+		else
+		{
+			m_Title.color = Color.red;
+			m_Amount.color = Color.red;
+		}
+	}
 	public TMP_Text GetAmountText() => m_Amount;
 }

@@ -15,8 +15,15 @@ MonoBehaviour:
   ID: 23
   Icon: {fileID: 0}
   Name: Bunker Input Node I
-  ResearchCost: 0
-  ResourceRequirements: []
+  Description: 
+  ResearchCost: 175
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 15
+  - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 5
   Prerequisites:
   - {fileID: 11400000, guid: e6a9bc0e7ef57a24180761407baa2d06, type: 2}
   Unlocks:

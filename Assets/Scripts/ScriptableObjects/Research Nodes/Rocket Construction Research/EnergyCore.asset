@@ -16,8 +16,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Energy Core
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 200
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: 79d70f9e1a886ff49968b97248b7fd93, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}
+    amount: 5
   Prerequisites:
   - {fileID: 11400000, guid: b132eb12061f1fd449c8bad7ade28393, type: 2}
   Unlocks:

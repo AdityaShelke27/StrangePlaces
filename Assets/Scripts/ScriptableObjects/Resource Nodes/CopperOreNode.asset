@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CopperOreNode
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
   itemID: copper-ore-node
-  itemName: 
+  itemName: Copper Ore Node
   itemImage: {fileID: 21300000, guid: 6cd4d6959af9dc2408b72543df1cb9ab, type: 3}
   itemDescription: 
   MaxAmount: 10

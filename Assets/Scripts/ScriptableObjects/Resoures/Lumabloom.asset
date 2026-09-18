@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lumabloom
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: lumabloom
-  itemName: 
+  itemName: Lumabloom
   itemImage: {fileID: 21300000, guid: 5053721296158424f98fc161b97a050e, type: 3}
   itemDescription: 
   PlacementType: 0

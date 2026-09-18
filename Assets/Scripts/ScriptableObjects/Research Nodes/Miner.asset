@@ -16,8 +16,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Miner
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 100
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 4
   Prerequisites:
   - {fileID: 11400000, guid: feba9b665845897459d81826c2cfbacd, type: 2}
   Unlocks:

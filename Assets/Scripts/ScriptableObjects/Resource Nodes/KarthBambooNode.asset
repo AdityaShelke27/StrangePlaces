@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KarthBambooNode
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
   itemID: karth-bamboo-node
-  itemName: 
+  itemName: Karth Bamboo Node
   itemImage: {fileID: 21300000, guid: 1474319a13f3bd84597ddddf27a3c15e, type: 3}
   itemDescription: 
   MaxAmount: 10

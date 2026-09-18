@@ -1,9 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Bunker : MonoBehaviour, IActivate
 {
 	bool m_IsActivated = false;
+	Animator m_Animator;
+
+	private void Start()
+	{
+		m_Animator = GetComponent<Animator>();
+	}
 	private void OnMouseDown()
 	{
 		Debug.Log("Pressing");
@@ -32,8 +39,16 @@ public class Bunker : MonoBehaviour, IActivate
 	public void Activate()
 	{
 		if (m_IsActivated) return;
+		m_IsActivated = true;
+
+		StartCoroutine(ActivateTime());
+	}
+	IEnumerator ActivateTime()
+	{
+		m_Animator.SetTrigger(Constant.BUNKER_OPEN);
+
+		yield return new WaitForSeconds(1);
 
 		MovePlayerToBunker();
-		m_IsActivated = true;
 	}
 }

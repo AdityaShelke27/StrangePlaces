@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RoomPlacement : MonoBehaviour
 {
@@ -69,13 +70,13 @@ public class RoomPlacement : MonoBehaviour
 				int _groundLevel = 0;
 				if (j == 0 && _currentRoom.GetStairPlacement() == E_RoomStairPlacement.Left)
 				{
-					_placement = _targetPoses[j] + Constant.SIZE_STAIR.x * Vector2.left;
+					_placement = _targetPoses[j] + (Constant.SIZE_STAIR.x - m_RoomSpacing) * Vector2.left;
 					_PlacementDirection = E_RoomStairPlacement.Right;
 					_groundLevel = _currentRoom.GetGroundLevel();
 				}
 				else if(j == 1 && _currentRoom.GetStairPlacement() == E_RoomStairPlacement.Right)
 				{
-					_placement = _targetPoses[j] + Constant.SIZE_STAIR.x * Vector2.right;
+					_placement = _targetPoses[j] + (Constant.SIZE_STAIR.x - m_RoomSpacing) * Vector2.right;
 					_PlacementDirection = E_RoomStairPlacement.Left;
 					_groundLevel = _currentRoom.GetGroundLevel();
 				}
@@ -107,6 +108,8 @@ public class RoomPlacement : MonoBehaviour
 					SpriteRenderer _renderer = _obj.GetComponent<SpriteRenderer>();
 					_renderer.sprite = m_BlankSprite;
 					_renderer.color = Color.green;
+					_renderer.sortingLayerName = "WorldItems";
+					_renderer.sortingOrder = 1;
 
 					_obj.transform.position = _placement;
 					_obj.transform.localScale = new(_roomSize.x, _roomSize.y, 1);
@@ -167,7 +170,11 @@ public class RoomPlacement : MonoBehaviour
 		m_BuiltGroundLevel++;
 
 		GameObject _stairsObj = new("Stairs", typeof(SpriteRenderer));
-		_stairsObj.GetComponent<SpriteRenderer>().sprite = m_StairSprite;
+		SpriteRenderer _stairRenderer = _stairsObj.GetComponent<SpriteRenderer>();
+		_stairRenderer.sprite = m_StairSprite;
+		_stairRenderer.sortingLayerName = "WorldItems";
+		_stairRenderer.sortingOrder = 1;
+
 		_stairsObj.transform.parent = m_StairsParent;
 		_stairsObj.transform.localPosition = (Constant.SIZE_STAIR.y + m_RoomSpacing) * (m_BuiltGroundLevel - 1) * Vector3.down;
 

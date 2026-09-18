@@ -16,8 +16,12 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Karth Bamboo
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 40
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: eda131da0a2880e4e814e1281946e568, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 10
   Prerequisites: []
   Unlocks:
   - {fileID: 11400000, guid: e075931081660da479e7e03554037a19, type: 2}

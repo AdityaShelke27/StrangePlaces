@@ -16,8 +16,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Engine
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 500
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: c708453634cec314a8f7668de992c179, type: 2}
+    amount: 4
+  - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}
+    amount: 3
+  - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}
+    amount: 20
   Prerequisites:
   - {fileID: 11400000, guid: fc8c0829272bcc44787e6b8b22bab3f6, type: 2}
   - {fileID: 11400000, guid: 74f38db3a5c55174abdb4c9928a92f2b, type: 2}

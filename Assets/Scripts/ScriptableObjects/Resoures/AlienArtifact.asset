@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlienArtifact
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: alien-artifact
-  itemName: 
+  itemName: Alien Artifact
   itemImage: {fileID: 21300000, guid: 0490e4cdadc47a445bd30ee44ae876bd, type: 3}
   itemDescription: 
   PlacementType: 0

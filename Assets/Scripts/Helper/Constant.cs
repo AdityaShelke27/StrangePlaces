@@ -12,8 +12,8 @@ public static class Constant
 	public const int ID_ROCKETCONSTRUCTION_ROOM = 5;
 
 	// ROOM AND STAIR SIZE
-	public static readonly Vector2 SIZE_ROOM = new(7.68f, 3.84f);
-	public static readonly Vector2 SIZE_STAIR = new(1.28f, 3.84f);
+	public static readonly Vector2 SIZE_ROOM = new(13.82f, 5.46f);//new(7.68f, 3.84f);
+	public static readonly Vector2 SIZE_STAIR = new(1.25f, 5.46f);//new(1.28f, 3.84f);
 
 	// PLAYER_PREFS
 	public const string PREF_ROOMSUNLOCKED = "RoomsUnlocked";
@@ -28,9 +28,12 @@ public static class Constant
 	public const string TAG_PLAYER = "Player";
 	public const string TAG_RESOURCE_NODE = "ResourceNode";
 
+	// Animation Triggers
+	public const string BUNKER_OPEN = "Open";
+
 	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
-		{ 0, new () {"iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },
+		{ 0, new () { "research-point", "electricity", "iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },
 		{ 1, new () {"karth-bamboo-node", "karth-bamboo" } },								// Done
 		{ 2, new () {"reinforced-panels" } },												// Done
 		{ 3, new () {"bio-resin" } },														// Done

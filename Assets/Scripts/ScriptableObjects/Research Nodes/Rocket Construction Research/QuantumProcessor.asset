@@ -16,8 +16,12 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Quantum Processor
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 600
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: 2f5767c86c5364e459016e3471709a2b, type: 2}
+    amount: 8
+  - item: {fileID: 11400000, guid: c708453634cec314a8f7668de992c179, type: 2}
+    amount: 3
   Prerequisites:
   - {fileID: 11400000, guid: 13097dd51bab3454b8457b75e53f553b, type: 2}
   Unlocks:

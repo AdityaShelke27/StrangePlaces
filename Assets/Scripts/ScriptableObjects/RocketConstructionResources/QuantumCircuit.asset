@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: QuantumCircuit
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: quantum-circuit
-  itemName: 
+  itemName: Quantum Circuit
   itemImage: {fileID: 21300000, guid: d1c298b14d546554fa66d65af9fed86d, type: 3}
   itemDescription: 
   PlacementType: 0

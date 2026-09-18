@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: Assembly-CSharp::Tool
   itemID: axe
-  itemName: 
+  itemName: Axe
   itemImage: {fileID: 21300000, guid: 0b2de056b8d82b4479c2c52cbe8d59d1, type: 3}
   itemDescription: 
   PlacementType: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Nutrient Paste
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: nutrient-paste
-  itemName: 
+  itemName: Nutrient Paste
   itemImage: {fileID: 21300000, guid: f37151eadcbfe634eb90b1e29f8190d0, type: 3}
   itemDescription: 
   PlacementType: 0

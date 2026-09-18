@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Copper Wires
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: copper-wires
-  itemName: 
+  itemName: Copper Wires
   itemImage: {fileID: 21300000, guid: 5015ff0b99d38074aa59ca24176f2671, type: 3}
   itemDescription: 
   PlacementType: 0

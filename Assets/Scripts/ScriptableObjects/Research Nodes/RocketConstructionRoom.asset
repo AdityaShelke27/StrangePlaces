@@ -15,8 +15,15 @@ MonoBehaviour:
   ID: 14
   Icon: {fileID: 0}
   Name: Rocket Construction Room
-  ResearchCost: 0
-  ResourceRequirements: []
+  Description: 
+  ResearchCost: 250
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 40
+  - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 20
   Prerequisites:
   - {fileID: 11400000, guid: feba9b665845897459d81826c2cfbacd, type: 2}
   Unlocks:

@@ -15,8 +15,15 @@ MonoBehaviour:
   ID: 8
   Icon: {fileID: 0}
   Name: Storage Room
-  ResearchCost: 0
-  ResourceRequirements: []
+  Description: 
+  ResearchCost: 100
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 30
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: eda131da0a2880e4e814e1281946e568, type: 2}
+    amount: 5
   Prerequisites:
   - {fileID: 11400000, guid: 184f0bbf2ee6c794fbe0f9b02aa69472, type: 2}
   - {fileID: 11400000, guid: 06f4b656223086b478927422c80f4bf2, type: 2}

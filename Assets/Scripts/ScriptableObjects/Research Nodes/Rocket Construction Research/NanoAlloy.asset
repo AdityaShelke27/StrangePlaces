@@ -16,8 +16,12 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Nano Alloy
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 150
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}
+    amount: 15
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 10
   Prerequisites: []
   Unlocks:
   - {fileID: 11400000, guid: fc8c0829272bcc44787e6b8b22bab3f6, type: 2}

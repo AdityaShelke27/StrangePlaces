@@ -16,8 +16,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Cockpit
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 700
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: 2f5767c86c5364e459016e3471709a2b, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: c708453634cec314a8f7668de992c179, type: 2}
+    amount: 1
   Prerequisites:
   - {fileID: 11400000, guid: 0b4ae88b7e677f546ad1729f11c588e9, type: 2}
   - {fileID: 11400000, guid: 9deae796802d683488418c698eca2e97, type: 2}

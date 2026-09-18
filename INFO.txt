@@ -300,7 +300,7 @@ Rocket Parts
 
 -- 500 RP
 -- 5 Quantum Circuit
--- 1 Quantum Processor
+-- 1 Energy Core
 
 - Construction
 
@@ -314,7 +314,8 @@ Rocket Parts
 - Research
 
 -- 700 RP
--- 2 Quantum Processor
+-- 2 Quantum Circuit
+-- 1 Energy Core
 -- 5 Nano Alloy
 
 - Construction

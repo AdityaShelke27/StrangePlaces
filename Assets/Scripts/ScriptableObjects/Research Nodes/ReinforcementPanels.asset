@@ -16,8 +16,12 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Reinforcement Panels
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 50
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: 1d8bc7d869af6704cb4f66c70bc3100e, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 10
   Prerequisites: []
   Unlocks:
   - {fileID: 11400000, guid: e075931081660da479e7e03554037a19, type: 2}

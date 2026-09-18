@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Titanium Ore
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: titanium-ore
-  itemName: 
+  itemName: Titanium Ore
   itemImage: {fileID: 21300000, guid: 9b1098a6875bd904dba990a46d6a5c43, type: 3}
   itemDescription: 
   PlacementType: 0

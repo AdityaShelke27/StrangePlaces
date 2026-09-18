@@ -16,8 +16,16 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Rocket Frame
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 400
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 10
   Prerequisites:
   - {fileID: 11400000, guid: b132eb12061f1fd449c8bad7ade28393, type: 2}
   Unlocks:

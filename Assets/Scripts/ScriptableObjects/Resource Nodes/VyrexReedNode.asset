@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VyrexReedNode
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
   itemID: vyrex-reed-node
-  itemName: 
+  itemName: Vyrex Reed Node
   itemImage: {fileID: 21300000, guid: d8154608de80db54eaa0cfcb6275ea47, type: 3}
   itemDescription: 
   MaxAmount: 10

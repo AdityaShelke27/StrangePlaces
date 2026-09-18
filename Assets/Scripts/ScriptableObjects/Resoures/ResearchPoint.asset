@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ResearchPoint
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: research-point
-  itemName: 
+  itemName: Research Point
   itemImage: {fileID: 21300000, guid: 63ca0ebee9a79d341826d8fdc07db831, type: 3}
   itemDescription: 
   PlacementType: 0

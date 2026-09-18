@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fiber Mesh
   m_EditorClassIdentifier: Assembly-CSharp::Resource
   itemID: fiber-mesh
-  itemName: 
+  itemName: Fiber Mesh
   itemImage: {fileID: 21300000, guid: f0bd3c4bde854614a9110ce5946b5866, type: 3}
   itemDescription: 
   PlacementType: 0

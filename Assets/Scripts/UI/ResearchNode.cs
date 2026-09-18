@@ -19,6 +19,8 @@ public class ResearchNode : MonoBehaviour
 	[SerializeField] TMP_Text m_ResearchPointText;
 	[SerializeField] GameObject m_ResearchButton;
 
+	ResourceRequirementManager[] m_ResourceRequirementSlots;
+
 	[SerializeField] int m_UnlocksNeeded;
 	[SerializeField] int m_UnlocksCompleted;
 
@@ -34,6 +36,7 @@ public class ResearchNode : MonoBehaviour
 				break;
 			case E_ResearchStatus.Researched:
 				GetComponent<Image>().color = Color.blue;
+				m_ResourceRequirementParent.gameObject.SetActive(false);
 				m_ResearchButton.SetActive(false);
 				break;
 			case E_ResearchStatus.Locked:
@@ -49,12 +52,13 @@ public class ResearchNode : MonoBehaviour
 		m_ResearchNodeDescription.text = m_ResearchNodeInfo.Description;
 		m_ResearchPointText.text = m_ResearchNodeInfo.ResearchCost.ToString() + " RP";
 
+		m_ResourceRequirementSlots = new ResourceRequirementManager[m_ResearchNodeInfo.ResourceRequirements.Length];
 		for (int i = 0; i < m_ResearchNodeInfo.ResourceRequirements.Length; i++)
 		{
 			GameObject _requirementSlot = Instantiate(m_ResourceRequirementSlotPrefab, m_ResourceRequirementParent);
-			ResourceRequirementManager _requirementManagerScript = _requirementSlot.GetComponent<ResourceRequirementManager>();
+			m_ResourceRequirementSlots[i] = _requirementSlot.GetComponent<ResourceRequirementManager>();
 			ResourceRequirement _resourceRequirement = m_ResearchNodeInfo.ResourceRequirements[i];
-			_requirementManagerScript.AssignResourceImageNameAndAmount(_resourceRequirement.item.itemImage, _resourceRequirement.item.itemName, _resourceRequirement.amount.ToString());
+			m_ResourceRequirementSlots[i].AssignResourceImageNameAndAmount(_resourceRequirement.item.itemImage, _resourceRequirement.item.itemName, _resourceRequirement.amount.ToString());
 		}
 
 		m_UnlocksNeeded = m_ResearchNodeInfo.Prerequisites.Length;
@@ -75,10 +79,39 @@ public class ResearchNode : MonoBehaviour
 	}
 	public void ResearchButton()
 	{
+		if(PlayerStatsManager.Instance.GetResearchPoints() < m_ResearchNodeInfo.ResearchCost)
+		{
+			Debug.LogWarning("Not enough research points");
+			return;
+		}
+
+		ResourceRequirement[] _requirements = m_ResearchNodeInfo.ResourceRequirements;
+		bool _areResourcesAvailable = true;
+		for (int j = 0; j < _requirements.Length; j++)
+		{
+			if (!ResourceTracker.Instance.SearchResourceAvailable(_requirements[j].item as StorableItem, _requirements[j].amount))
+			{
+				_areResourcesAvailable = false;
+				break;
+			}
+		}
+		if (!_areResourcesAvailable)
+		{
+			Debug.LogWarning("Not enough resources available in the inventory");
+			return;
+		}
+		for (int j = 0; j < _requirements.Length; j++)
+		{
+			ResourceTracker.Instance.SearchAndRemoveResource(_requirements[j].item as StorableItem, _requirements[j].amount);
+		}
+		PlayerStatsManager.Instance.AddResearchPoints(-m_ResearchNodeInfo.ResearchCost);
+
+
 		if (!PlayerPrefs.HasKey(Constant.PREF_RESEARCHEDNODES))
 		{
 			PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, "0 ");
 		}
+
 		int _researchID = m_ResearchNodeInfo.ID;
 		string _researched = PlayerPrefs.GetString(Constant.PREF_RESEARCHEDNODES, "0 ");
 		_researched = _researched + _researchID + " ";
@@ -89,6 +122,11 @@ public class ResearchNode : MonoBehaviour
 		ItemDatabase.Instance.AddResearchID(_researchID);
 		s_ResearchedAction?.Invoke(_researchID);
 	}
+	public void SetResearchPointAvailableStatus(bool _areResearchPointsAvailable)
+	{
+		m_ResearchPointText.color = _areResearchPointsAvailable ? Color.green : Color.red;
+	}
+	public ResourceRequirementManager GetResourceRequirementSlot(int i) => m_ResourceRequirementSlots[i];
 	public void SetUnlocksCompleted(int _val) => m_UnlocksCompleted = _val;
 	public int GetUnlocksCompleted() => m_UnlocksCompleted;
 	public bool IsUnlocked() 

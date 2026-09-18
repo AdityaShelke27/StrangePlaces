@@ -112,6 +112,8 @@ public class PlayerStatsManager : MonoBehaviour
 		m_ResearchPoints = _sum;
 		UpdateResearchPointsUI();
 	}
+	public int GetElectricity() => m_Electricity;
+	public int GetResearchPoints() => m_ResearchPoints;
 	private void UpdateElectricityUI()
 	{
 		m_ElectricitySlider.value = m_Electricity;

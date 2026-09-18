@@ -771,6 +771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 284352276}
+  - component: {fileID: 284352282}
   - component: {fileID: 284352277}
   - component: {fileID: 284352281}
   - component: {fileID: 284352278}
@@ -903,6 +904,28 @@ MonoBehaviour:
   - {fileID: 2095187073}
   - {fileID: 1546262327}
   - {fileID: 1613963379}
+--- !u!114 &284352282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284352275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42505b9c78d85f84590845b35ce553ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsManager
+  m_MaxElectricity: 100
+  m_MaxHunger: 100
+  m_Electricity: 53
+  m_Hunger: 23
+  m_ResearchPoints: 60
+  m_ElectricitySlider: {fileID: 1700264278}
+  m_HungerSlider: {fileID: 77729515}
+  m_ElectricityText: {fileID: 1068009048}
+  m_HungerText: {fileID: 414864889}
+  m_ResearchPointsText: {fileID: 972269769}
 --- !u!1 &405034823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,7 +2852,7 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 584ea56718308f74889ea8b862abb37a, type: 2}
+      objectReference: {fileID: 11400000, guid: 9b84bc2b8de30b34d9e683ddef27439b, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
       value: 2
@@ -3539,6 +3562,7 @@ GameObject:
   - component: {fileID: 1788172171}
   - component: {fileID: 1788172170}
   - component: {fileID: 1788172174}
+  - component: {fileID: 1788172175}
   - component: {fileID: 1788172173}
   m_Layer: 0
   m_Name: Bunker
@@ -3600,8 +3624,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.07, y: 3.53}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 6.9713407, y: 5.02}
+    newSize: {x: 6.9713407, y: 5.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3673,12 +3697,12 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0da59cff5671261409be162435c13473, type: 3}
+  m_Sprite: {fileID: 1797201128194229901, guid: e4c3158f35654534795dd2425877574f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.9713407, y: 5.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3722,6 +3746,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1788172175
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788172168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 772a87edd0d3e5542bb35c9df6f8199d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1815907839
 GameObject:
   m_ObjectHideFlags: 0

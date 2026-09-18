@@ -16,8 +16,12 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: Titanium Ore
   Description: 
-  ResearchCost: 0
-  ResourceRequirements: []
+  ResearchCost: 175
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}
+    amount: 15
+  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    amount: 10
   Prerequisites:
   - {fileID: 11400000, guid: 76a0aadac07245744bf4e70c58964048, type: 2}
   Unlocks:

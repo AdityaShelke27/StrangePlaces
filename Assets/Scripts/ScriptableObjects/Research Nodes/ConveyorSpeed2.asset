@@ -15,8 +15,15 @@ MonoBehaviour:
   ID: 27
   Icon: {fileID: 0}
   Name: Conveyor Speed II
-  ResearchCost: 0
-  ResourceRequirements: []
+  Description: 
+  ResearchCost: 200
+  ResourceRequirements:
+  - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
+    amount: 20
+  - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}
+    amount: 5
   Prerequisites:
   - {fileID: 11400000, guid: 7357216561457c14fa5e9d0a43b76b3e, type: 2}
   Unlocks: []

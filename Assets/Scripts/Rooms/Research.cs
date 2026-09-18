@@ -45,6 +45,7 @@ public class Research : MonoBehaviour
 
 		m_ResearchCanvas.SetActive(true);
 		SelectMainResearch();
+		SetResourceAvailableForResearch();
 	}
 	public void SelectMainResearch()
 	{
@@ -160,6 +161,43 @@ public class Research : MonoBehaviour
 		}
 
 		return m_ResearchNode_Dict[_key].GetNodeStatus();
+	}
+	void SetResourceAvailableForResearch()
+	{
+		int _availableResearchPoints = PlayerStatsManager.Instance.GetResearchPoints();
+
+		for (int i = 0; i < m_MainResearchContentParent.childCount; i++)
+		{
+			if (!m_MainResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
+
+			if(_script.GetNodeStatus() == E_ResearchStatus.Available)
+			{
+				ResourceRequirement[] _requirements = _script.GetResearchNodeInfo().ResourceRequirements;
+				for (int j = 0; j < _requirements.Length; j++)
+				{
+					ResourceRequirement _requirement = _requirements[j];
+					_script.GetResourceRequirementSlot(j).SetResourceAvailableStatus(ResourceTracker.Instance.SearchResourceAvailable(_requirement.item as StorableItem, _requirement.amount));
+				}
+
+				_script.SetResearchPointAvailableStatus(_availableResearchPoints >= _script.GetResearchNodeInfo().ResearchCost);
+			}
+		}
+		for (int i = 0; i < m_RocketResearchContentParent.childCount; i++)
+		{
+			if (!m_RocketResearchContentParent.GetChild(i).TryGetComponent(out ResearchNode _script)) continue;
+
+			if (_script.GetNodeStatus() == E_ResearchStatus.Available)
+			{
+				ResourceRequirement[] _requirements = _script.GetResearchNodeInfo().ResourceRequirements;
+				for (int j = 0; j < _requirements.Length; j++)
+				{
+					ResourceRequirement _requirement = _requirements[j];
+					_script.GetResourceRequirementSlot(j).SetResourceAvailableStatus(ResourceTracker.Instance.SearchResourceAvailable(_requirement.item as StorableItem, _requirement.amount));
+				}
+
+				_script.SetResearchPointAvailableStatus(_availableResearchPoints >= _script.GetResearchNodeInfo().ResearchCost);
+			}
+		}
 	}
 	public void ClosePanel() => m_ResearchCanvas.SetActive(false);
 }
