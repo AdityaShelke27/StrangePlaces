@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 32
   Icon: {fileID: 0}
   Name: Quantum Processor
-  Description: 
+  Description: Advanced computer that handles the rocket's complex systems.
   ResearchCost: 600
   ResourceRequirements:
   - item: {fileID: 11400000, guid: 2f5767c86c5364e459016e3471709a2b, type: 2}

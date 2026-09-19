@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 8
   Icon: {fileID: 0}
   Name: Storage Room
-  Description: 
+  Description: Provides additional storage for resources and items.
   ResearchCost: 100
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}

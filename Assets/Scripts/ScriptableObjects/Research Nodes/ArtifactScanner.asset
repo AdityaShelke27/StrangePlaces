@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 13
   Icon: {fileID: 0}
   Name: Artifact Scanner
-  Description: 
+  Description: Scans alien artifacts and generates research points.
   ResearchCost: 150
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}

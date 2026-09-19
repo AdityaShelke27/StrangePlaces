@@ -215,11 +215,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1670596765
-  m_SortingLayer: 2
+  m_SortingLayerID: -54881985
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 4929ac541aabda948b931343d15afb83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 961d4883e615d20439a9ebd98fc6a659, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -267,13 +267,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.68, y: 3.84}
+    oldSize: {x: 13.83, y: 5.46}
     newSize: {x: 10.24, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.68, y: 3.84}
+  m_Size: {x: 13.82, y: 5.46}
   m_EdgeRadius: 0
 --- !u!114 &6308443115312027506
 MonoBehaviour:
@@ -1121,8 +1121,8 @@ Transform:
   m_GameObject: {fileID: 5403033011065281634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4672, y: -0.7363, z: 0}
-  m_LocalScale: {x: 2.1037686, y: 1.9474468, z: 1}
+  m_LocalPosition: {x: -2.3271, y: -0.2766, z: 0}
+  m_LocalScale: {x: 3.0696087, y: 3.1667213, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 267626057404835873}
@@ -1173,12 +1173,12 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1670596765
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4188679, g: 0.4188679, b: 0.4188679, a: 1}
+  m_Color: {r: 0.4188679, g: 0.4188679, b: 0.4188679, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1825,8 +1825,8 @@ Transform:
   m_GameObject: {fileID: 9092290295696052647}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03, y: -1.3026, z: 0}
-  m_LocalScale: {x: 2.0257688, y: 0.7949, z: 1}
+  m_LocalPosition: {x: 2.9543, y: -0.3412, z: 0}
+  m_LocalScale: {x: 2.9426832, y: 3.1558661, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2184232166234692530}
@@ -1877,12 +1877,12 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1670596765
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.6457487, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.6457487, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

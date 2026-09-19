@@ -19,15 +19,15 @@ public class RoomConstruction : MonoBehaviour
 	{
 		RoomConstructionPanel.SetActive(m_IsRoomConstructionPanelActive);
 
-		//for(int i = 0; i < m_NotResearchedPanel.Length; i++)
-		//{
-		//	bool _isResearched = ItemDatabase.Instance.DoesItemIDExistInResearch(i.ToString());
+		for (int i = 0; i < m_NotResearchedPanel.Length; i++)
+		{
+			bool _isResearched = ItemDatabase.Instance.DoesItemIDExistInResearch(i.ToString());
 
-		//	if (m_NotResearchedPanel[i] == null) continue;
+			if (m_NotResearchedPanel[i] == null) continue;
 
-		//	m_NotResearchedPanel[i].SetActive(!_isResearched);
-		//	m_NotResearchedPanel[i].transform.parent.GetComponent<Button>().interactable = _isResearched;
-		//}
+			m_NotResearchedPanel[i].SetActive(!_isResearched);
+			m_NotResearchedPanel[i].transform.parent.GetComponent<Button>().interactable = _isResearched;
+		}
 	}
 
 	public void ToggleRoomConstructionPanel()

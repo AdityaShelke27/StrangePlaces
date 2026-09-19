@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 20
   Icon: {fileID: 0}
   Name: Gravity Reactor
-  Description: 
+  Description: Generates large amounts of electricity from gravitational anomalies.
   ResearchCost: 200
   ResourceRequirements:
   - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}

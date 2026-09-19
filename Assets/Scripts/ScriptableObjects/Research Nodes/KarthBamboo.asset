@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 1
   Icon: {fileID: 0}
   Name: Karth Bamboo
-  Description: 
+  Description: Strong organic material used for advanced crafting.
   ResearchCost: 40
   ResourceRequirements:
   - item: {fileID: 11400000, guid: eda131da0a2880e4e814e1281946e568, type: 2}

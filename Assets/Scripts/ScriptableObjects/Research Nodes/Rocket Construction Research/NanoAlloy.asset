@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 28
   Icon: {fileID: 0}
   Name: Nano Alloy
-  Description: 
+  Description: Advanced alloy for the rocket's primary structural components.
   ResearchCost: 150
   ResourceRequirements:
   - item: {fileID: 11400000, guid: 9ec4be15f6c49364fa7abdcb43ddfd8b, type: 2}

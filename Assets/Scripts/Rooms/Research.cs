@@ -115,6 +115,7 @@ public class Research : MonoBehaviour
 		foreach(int _key in m_ResearchNode_Dict.Keys)
 		{
 			if (m_ResearchNode_Dict[_key].GetNodeStatus() == E_ResearchStatus.Researched) continue;
+			else m_ResearchNode_Dict[_key].SetNodeStatus(E_ResearchStatus.Locked);
 
 			ResearchNodeInfo[] _prerequisites = m_ResearchNode_Dict[_key].GetResearchNodeInfo().Prerequisites;
 			int _researchComplete = 0;
@@ -147,6 +148,8 @@ public class Research : MonoBehaviour
 				m_ResearchNode_Dict[_key].SetNodeStatus(E_ResearchStatus.Available);
 			}
 		}
+
+		SetResourceAvailableForResearch();
 	}
 	public void SetMainResearchNodeStatus(int _id, E_ResearchStatus _status)
 	{

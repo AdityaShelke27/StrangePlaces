@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 36
   Icon: {fileID: 0}
   Name: Cockpit
-  Description: 
+  Description: Houses the controls and systems needed to operate the rocket.
   ResearchCost: 700
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}

@@ -10,14 +10,20 @@ public class ResearchNode : MonoBehaviour
 
 	[SerializeField] private ResearchNodeInfo m_ResearchNodeInfo;
 	private E_ResearchStatus m_ResearchNodeStatus;
+	[Header("Sprites")]
+	[SerializeField] Sprite m_ResearchedIcon;
+	[SerializeField] Sprite m_LockedIcon;
 	[Header("UI")]
-	[SerializeField] Image m_ResearchNodeIcon;
+	[SerializeField] Image m_ResearchNodeImage;
+	[SerializeField] Image m_ResearchStatusImage;
 	[SerializeField] TMP_Text m_ResearchNodeTitle;
 	[SerializeField] TMP_Text m_ResearchNodeDescription;
 	[SerializeField] Transform m_ResourceRequirementParent;
 	[SerializeField] GameObject m_ResourceRequirementSlotPrefab;
 	[SerializeField] TMP_Text m_ResearchPointText;
 	[SerializeField] GameObject m_ResearchButton;
+	[SerializeField] GameObject m_MiddleSection;
+	[SerializeField] GameObject m_BottomSection;
 
 	ResourceRequirementManager[] m_ResourceRequirementSlots;
 
@@ -32,22 +38,32 @@ public class ResearchNode : MonoBehaviour
 		switch(_nodeStatus)
 		{
 			case E_ResearchStatus.Available:
-				GetComponent<Image>().color = Color.green;
+				GetComponent<Image>().color = Constant.RESEARCH_STATUS_AVAILABLE;
+				m_ResearchStatusImage.enabled = false;
+				m_MiddleSection.SetActive(true);
+				m_BottomSection.SetActive(true);
+				m_ResearchButton.SetActive(true);
 				break;
 			case E_ResearchStatus.Researched:
-				GetComponent<Image>().color = Color.blue;
-				m_ResourceRequirementParent.gameObject.SetActive(false);
-				m_ResearchButton.SetActive(false);
+				GetComponent<Image>().color = Constant.RESEARCH_STATUS_RESEARCHED;
+				m_ResearchStatusImage.sprite = m_ResearchedIcon;
+				m_ResearchStatusImage.enabled = true;
+				m_MiddleSection.SetActive(false);
+				m_BottomSection.SetActive(false);
 				break;
 			case E_ResearchStatus.Locked:
-				GetComponent<Image>().color = Color.black;
+				m_ResearchStatusImage.sprite = m_LockedIcon;
+				m_ResearchStatusImage.enabled = true;
+				GetComponent<Image>().color = Constant.RESEARCH_STATUS_LOCKED;
+				m_MiddleSection.SetActive(false);
+				m_BottomSection.SetActive(false);
 				m_ResearchButton.SetActive(false);
 				break;
 		}
 	}
 	public void SetupResearchNodeUI()
 	{
-		m_ResearchNodeIcon.sprite = m_ResearchNodeInfo.Icon;
+		m_ResearchNodeImage.sprite = m_ResearchNodeInfo.Icon;
 		m_ResearchNodeTitle.text = m_ResearchNodeInfo.Name;
 		m_ResearchNodeDescription.text = m_ResearchNodeInfo.Description;
 		m_ResearchPointText.text = m_ResearchNodeInfo.ResearchCost.ToString() + " RP";
@@ -67,7 +83,12 @@ public class ResearchNode : MonoBehaviour
 	{
 		if(s_SelectedButton)
 		{
-			s_SelectedButton.SetResearchButtonActive(false);
+			if (s_SelectedButton == this)
+			{
+				s_SelectedButton.SetResearchButtonActive(!m_MiddleSection.activeSelf);
+				return;
+			}
+			else s_SelectedButton.SetResearchButtonActive(false);
 		}
 
 		s_SelectedButton = this;
@@ -75,7 +96,11 @@ public class ResearchNode : MonoBehaviour
 	}
 	public void SetResearchButtonActive(bool _active)
 	{
-		m_ResearchButton.SetActive(_active && m_ResearchNodeStatus == E_ResearchStatus.Available);
+		if(m_ResearchNodeStatus == E_ResearchStatus.Locked)
+		{
+			m_MiddleSection.SetActive(_active);
+			m_BottomSection.SetActive(_active);
+		}
 	}
 	public void ResearchButton()
 	{

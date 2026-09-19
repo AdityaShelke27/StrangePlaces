@@ -31,6 +31,11 @@ public static class Constant
 	// Animation Triggers
 	public const string BUNKER_OPEN = "Open";
 
+	// Research
+	public static readonly Color RESEARCH_STATUS_RESEARCHED = new(0.4f, 1, 0.37f);
+	public static readonly Color RESEARCH_STATUS_AVAILABLE = new(0.35f, 0.455f, 1);
+	public static readonly Color RESEARCH_STATUS_LOCKED = new(0.765f, 0.97f, 0.984f);
+
 	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
 		{ 0, new () { "research-point", "electricity", "iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },

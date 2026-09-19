@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 35
   Icon: {fileID: 0}
   Name: Fuel Tank
-  Description: 
+  Description: Stores the fuel required to power the rocket engine.
   ResearchCost: 350
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}

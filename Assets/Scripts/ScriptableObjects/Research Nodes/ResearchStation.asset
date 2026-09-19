@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 19
   Icon: {fileID: 0}
   Name: Research Station
-  Description: 
+  Description: Produces Research Points from alien artifacts.
   ResearchCost: 175
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}

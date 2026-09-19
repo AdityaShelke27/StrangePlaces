@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 33
   Icon: {fileID: 0}
   Name: Engine
-  Description: 
+  Description: Propulsion system required to launch the rocket from the planet.
   ResearchCost: 500
   ResourceRequirements:
   - item: {fileID: 11400000, guid: c708453634cec314a8f7668de992c179, type: 2}

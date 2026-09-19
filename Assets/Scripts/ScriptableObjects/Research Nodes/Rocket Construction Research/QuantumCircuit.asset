@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 31
   Icon: {fileID: 0}
   Name: Quantum Circuit
-  Description: 
+  Description: Advanced electronic component used for navigation and quantum systems.
   ResearchCost: 300
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}

@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Aditya_Shelke
   productName: StrangePlaces
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -788,7 +788,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -810,11 +816,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: e77ce9eb-791a-4217-8de7-bbffbb4a9236
+  cloudProjectId: 44236cb3-edaf-423d-bf9b-970dd78d4e73
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: StrangePlaces
-  organizationId: adityashelke270802
+  organizationId: aditya_shelke
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

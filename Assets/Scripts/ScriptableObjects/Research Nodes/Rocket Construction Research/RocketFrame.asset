@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 29
   Icon: {fileID: 0}
   Name: Rocket Frame
-  Description: 
+  Description: Structural framework that forms the foundation of the rocket.
   ResearchCost: 400
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}

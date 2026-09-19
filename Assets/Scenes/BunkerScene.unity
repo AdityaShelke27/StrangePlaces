@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 39.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3645,10 +3645,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 0f76d88e921e1cc48873b02681a0745d, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -3854,7 +3854,7 @@ Transform:
   m_GameObject: {fileID: 775025243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.378, z: 0}
+  m_LocalPosition: {x: 0, y: -4.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4172,8 +4172,8 @@ Transform:
   m_GameObject: {fileID: 916551335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4929, y: -1.324, z: 0}
-  m_LocalScale: {x: 2.6862, y: 0.7901, z: 1}
+  m_LocalPosition: {x: -1.3012, y: -1.046, z: 0}
+  m_LocalScale: {x: 5.483877, y: 1.2221266, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5105751494553826024}
@@ -4269,12 +4269,12 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1670596765
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.33860826, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.33860826, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6520,7 +6520,7 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 445ee3fad2137a1489bb7e7405058ee8, type: 2}
+      objectReference: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
       value: 20
@@ -6741,10 +6741,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 1d8bc7d869af6704cb4f66c70bc3100e, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ShouldAcceptAllItems
@@ -8196,7 +8196,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.15
+  m_fontSize: 60.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8504,12 +8504,12 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2364771048617998762, guid: ab36c80483c441149912d057dff9bf40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab36c80483c441149912d057dff9bf40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 3.84}
+  m_Size: {x: 0.90295064, y: 5.460363}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8523,7 +8523,7 @@ Transform:
   m_GameObject: {fileID: 1973654965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.99, z: 0}
+  m_LocalPosition: {x: 0, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8880,9 +8880,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomPlacement
   m_RoomSpacing: 0.1
-  m_StairPointOffset: -1.17
+  m_StairPointOffset: -0.7
   m_BlankSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_StairSprite: {fileID: -2364771048617998762, guid: ab36c80483c441149912d057dff9bf40, type: 3}
+  m_StairSprite: {fileID: 21300000, guid: ab36c80483c441149912d057dff9bf40, type: 3}
   m_RoomListParent: {fileID: 1831270812}
   m_StairsParent: {fileID: 1314842059}
   m_GroundLevelPointsParent: {fileID: 1723689607}
@@ -8950,7 +8950,7 @@ MonoBehaviour:
   m_MaxHunger: 100
   m_Electricity: 57
   m_Hunger: 43
-  m_ResearchPoints: 61
+  m_ResearchPoints: 200
   m_ElectricitySlider: {fileID: 1303649840}
   m_HungerSlider: {fileID: 235220906}
   m_ElectricityText: {fileID: 601394853}
@@ -9191,11 +9191,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1670596765
-  m_SortingLayer: 2
+  m_SortingLayerID: -54881985
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c50c633c6fead404b92bbdb50cb1a27e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cde8d320c3f42645853c2dfac300123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9261,7 +9261,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.82, y: 5.46}
+    oldSize: {x: 13.83, y: 5.46}
     newSize: {x: 10.24, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9278,7 +9278,7 @@ Transform:
   m_GameObject: {fileID: 9204704630134532017}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.56, y: -1.69, z: 0}
+  m_LocalPosition: {x: -3.72, y: -1.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

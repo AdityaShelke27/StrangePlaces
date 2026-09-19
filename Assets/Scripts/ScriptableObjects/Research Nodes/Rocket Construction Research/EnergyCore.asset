@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 30
   Icon: {fileID: 0}
   Name: Energy Core
-  Description: 
+  Description: High-density power source for the rocket's advanced systems.
   ResearchCost: 200
   ResourceRequirements:
   - item: {fileID: 11400000, guid: e742f12d94baa054ca78e1a67bbb48b7, type: 2}
