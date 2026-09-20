@@ -13,7 +13,6 @@ public class Bunker : MonoBehaviour, IActivate
 	}
 	private void OnMouseDown()
 	{
-		Debug.Log("Pressing");
 		SurfaceMovement.s_Selected?.Invoke(gameObject);
 	}
 	//private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +31,13 @@ public class Bunker : MonoBehaviour, IActivate
 			InventorySlot _inv = _inventory[i];
 			PlayerData.itemSlot[i] = new(_inv.GetItem(), _inv.GetItemAmount());
 		}
-		PlayerData.isDataSaved = true;
+
+		PlayerData.electricity = PlayerStatsManager.Instance.GetElectricity();
+		PlayerData.hunger = PlayerStatsManager.Instance.GetHunger();
+		PlayerData.researchPoints = PlayerStatsManager.Instance.GetResearchPoints();
+
+		//PlayerData.isDataSaved = true;
+		PlayerData.SaveData();
 		SceneManager.LoadScene(Constant.SCENE_BUNKER);
 	}
 

@@ -13,12 +13,16 @@ public static class Constant
 
 	// ROOM AND STAIR SIZE
 	public static readonly Vector2 SIZE_ROOM = new(13.82f, 5.46f);//new(7.68f, 3.84f);
+	public static readonly Vector2 SIZE_ROCKET_ROOM = new(19f, 5.46f);//new(7.68f, 3.84f);
 	public static readonly Vector2 SIZE_STAIR = new(1.25f, 5.46f);//new(1.28f, 3.84f);
 
 	// PLAYER_PREFS
 	public const string PREF_ROOMSUNLOCKED = "RoomsUnlocked";
 	public const string PREF_RESEARCHEDNODES = "ResearchedNodes";
 	public const string PREF_SAVE_PLAYERDATA = "Save_PlayerData";
+	public const string PREF_SAVE_ELECTRICITY = "Save_Electricity";
+	public const string PREF_SAVE_HUNGER = "Save_Hunger";
+	public const string PREF_SAVE_RESEARCHPOINTS = "Save_ResearchPoints";
 
 	// SCENES
 	public const string SCENE_BUNKER = "BunkerScene";
@@ -28,8 +32,11 @@ public static class Constant
 	public const string TAG_PLAYER = "Player";
 	public const string TAG_RESOURCE_NODE = "ResourceNode";
 
-	// Animation Triggers
+	// Animation Variables
 	public const string BUNKER_OPEN = "Open";
+	public const string PLAYER_RUN = "IsRunning";
+	public const string PLAYER_CLIMB = "IsClimbing";
+	public const string PLAYER_BUILD = "IsBuilding";
 
 	// Research
 	public static readonly Color RESEARCH_STATUS_RESEARCHED = new(0.4f, 1, 0.37f);

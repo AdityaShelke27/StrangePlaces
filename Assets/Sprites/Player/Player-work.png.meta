@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: e32406ff5355e444389fbf695ecdfe96
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8574088598224087343
+    second: Player-work_0
+  - first:
+      213: -8708017483504878816
+    second: Player-work_1
+  - first:
+      213: -1581486766505084587
+    second: Player-work_2
+  - first:
+      213: 6384000922024796441
+    second: Player-work_3
+  - first:
+      213: -5053089395170370527
+    second: Player-work_4
+  - first:
+      213: -3267962732649511804
+    second: Player-work_5
+  - first:
+      213: -1774428837298346016
+    second: Player-work_6
+  - first:
+      213: 7442191691524023842
+    second: Player-work_7
+  - first:
+      213: 5787170544409592938
+    second: Player-work_8
+  - first:
+      213: -7007276011219972656
+    second: Player-work_9
+  - first:
+      213: -4557911364813587338
+    second: Player-work_10
+  - first:
+      213: 1346508971362013038
+    second: Player-work_11
+  - first:
+      213: 6032833632678986249
+    second: Player-work_12
+  - first:
+      213: -4701989811071900611
+    second: Player-work_13
+  - first:
+      213: -4053006144095197159
+    second: Player-work_14
+  - first:
+      213: -6817100954368416281
+    second: Player-work_15
+  - first:
+      213: -901582712952087038
+    second: Player-work_16
+  - first:
+      213: -9000664480395302086
+    second: Player-work_17
+  - first:
+      213: -8246108270226031390
+    second: Player-work_18
+  - first:
+      213: -5215558420476878258
+    second: Player-work_19
+  - first:
+      213: 2526863155058938487
+    second: Player-work_20
+  - first:
+      213: -1281802424763084086
+    second: Player-work_21
+  - first:
+      213: 6222931886058016962
+    second: Player-work_22
+  - first:
+      213: 343082181398744748
+    second: Player-work_23
+  - first:
+      213: -6183970999816258412
+    second: Player-work_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player-work_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1052
+        width: 85
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6502ee8d7b20980800000000000000
+      internalID: -8574088598224087343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_1
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1052
+        width: 85
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02bfccd5c38e62780800000000000000
+      internalID: -8708017483504878816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1052
+        width: 78
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559bb793a2e6d0ae0800000000000000
+      internalID: -1581486766505084587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_3
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1052
+        width: 73
+        height: 203
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911ed03c307889850800000000000000
+      internalID: 6384000922024796441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_4
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1052
+        width: 73
+        height: 207
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c939ea7f1dfd9b0800000000000000
+      internalID: -5053089395170370527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_5
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 796
+        width: 74
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4840635853dd5a2d0800000000000000
+      internalID: -3267962732649511804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_6
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 796
+        width: 83
+        height: 200
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e76f91bf56ff57e0800000000000000
+      internalID: -1774428837298346016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_7
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 796
+        width: 107
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22627abb9e9f74760800000000000000
+      internalID: 7442191691524023842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_8
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 796
+        width: 105
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64432ac2f8205050800000000000000
+      internalID: 5787170544409592938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_9
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 796
+        width: 89
+        height: 173
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd0e1c089721ce90800000000000000
+      internalID: -7007276011219972656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_10
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 540
+        width: 88
+        height: 173
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cf19633cb0fb0c0800000000000000
+      internalID: -4557911364813587338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_11
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 540
+        width: 89
+        height: 173
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fc8ec76c2cfa210800000000000000
+      internalID: 1346508971362013038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_12
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 540
+        width: 88
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9024cd0c93ee8b350800000000000000
+      internalID: 6032833632678986249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_13
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 540
+        width: 88
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34ad85dd2d2fbeb0800000000000000
+      internalID: -4701989811071900611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_14
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 540
+        width: 89
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918eabcb264d0c7c0800000000000000
+      internalID: -4053006144095197159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_15
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 284
+        width: 88
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5e4e0fccac461a0800000000000000
+      internalID: -6817100954368416281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_16
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 284
+        width: 87
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e9bd2ac4fec73f0800000000000000
+      internalID: -901582712952087038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_17
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 284
+        width: 94
+        height: 179
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bef87b757371380800000000000000
+      internalID: -9000664480395302086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 284
+        width: 105
+        height: 185
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec34cdc730ff8d80800000000000000
+      internalID: -8246108270226031390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_19
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 284
+        width: 102
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42ad22ff3d9e97b0800000000000000
+      internalID: -5215558420476878258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_20
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 28
+        width: 93
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7729f41d6a8311320800000000000000
+      internalID: 2526863155058938487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_21
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 28
+        width: 88
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac213c76c7f163ee0800000000000000
+      internalID: -1281802424763084086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_22
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 28
+        width: 85
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c090f1749b4c5650800000000000000
+      internalID: 6222931886058016962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_23
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 28
+        width: 85
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caec90f1d6fd2c400800000000000000
+      internalID: 343082181398744748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-work_24
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 28
+        width: 85
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c72a6c32f1e2aa0800000000000000
+      internalID: -6183970999816258412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 230372b2c61c95d4495177591fee663b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Player-work_0: -8574088598224087343
+      Player-work_1: -8708017483504878816
+      Player-work_10: -4557911364813587338
+      Player-work_11: 1346508971362013038
+      Player-work_12: 6032833632678986249
+      Player-work_13: -4701989811071900611
+      Player-work_14: -4053006144095197159
+      Player-work_15: -6817100954368416281
+      Player-work_16: -901582712952087038
+      Player-work_17: -9000664480395302086
+      Player-work_18: -8246108270226031390
+      Player-work_19: -5215558420476878258
+      Player-work_2: -1581486766505084587
+      Player-work_20: 2526863155058938487
+      Player-work_21: -1281802424763084086
+      Player-work_22: 6222931886058016962
+      Player-work_23: 343082181398744748
+      Player-work_24: -6183970999816258412
+      Player-work_3: 6384000922024796441
+      Player-work_4: -5053089395170370527
+      Player-work_5: -3267962732649511804
+      Player-work_6: -1774428837298346016
+      Player-work_7: 7442191691524023842
+      Player-work_8: 5787170544409592938
+      Player-work_9: -7007276011219972656
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

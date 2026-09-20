@@ -1,8 +1,7 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class MachineInstance : WorldInstance
+public abstract class MachineInstance : WorldInstance, IActivate
 {
 	[SerializeField] protected SpriteRenderer m_SpriteRenderer;
 	[SerializeField] protected GameObject m_InventoryPanel;
@@ -24,6 +23,11 @@ public abstract class MachineInstance : WorldInstance
 	{
 		if (EventSystem.current.IsPointerOverGameObject()) return;
 
+		SurfaceMovement.s_Selected?.Invoke(gameObject);
+	}
+
+	public void Activate()
+	{
 		m_InventoryPanel.SetActive(true);
 	}
 }

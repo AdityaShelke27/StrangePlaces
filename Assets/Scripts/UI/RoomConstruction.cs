@@ -75,6 +75,6 @@ public class RoomConstruction : MonoBehaviour
 	public void GenerateRocketConstructionRoom()
 	{
 		ToggleRoomConstructionPanel();
-		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROOM, Constant.ID_ROCKETCONSTRUCTION_ROOM);
+		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROCKET_ROOM, Constant.ID_ROCKETCONSTRUCTION_ROOM);
 	}
 }

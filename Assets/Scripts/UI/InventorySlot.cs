@@ -78,18 +78,18 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 					if (m_ItemSlot.item is Tool)
 					{
 						Debug.Log("ITS A TOOL");
-						Tool _tool = m_ItemSlot.item as Tool;
-						int _amount = Mathf.Min(m_Node.GetAmountAvailable(), _tool.MineAmount);
-						Resource _resource = m_Node.GetResourceNodeData().ResourceYield;
+						ResourceHandler.Instance.UseTool(m_ItemSlot.item as Tool, m_Node, () => AddItemAmount(-1));
+						//int _amount = Mathf.Min(m_Node.GetAmountAvailable(), _tool.MineAmount);
+						//Resource _resource = m_Node.GetResourceNodeData().ResourceYield;
 
-						if (ResourceTracker.Instance.IsItemAddable(_resource, _amount))
-						{
-							ResourceTracker.Instance.AddStorableItemToInventory(_resource, m_Node.FetchResource(_tool.MineAmount));
-							AddItemAmount(-1);
-						}
-						else Debug.LogWarning("Not enough space in inventory");
+						//if (ResourceTracker.Instance.IsItemAddable(_resource, _amount))
+						//{
+						//	ResourceTracker.Instance.AddStorableItemToInventory(_resource, m_Node.FetchResource(_tool.MineAmount));
+						//	AddItemAmount(-1);
+						//}
+						//else Debug.LogWarning("Not enough space in inventory");
 					}
-					else ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node);
+					else ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node, () => AddItemAmount(-1));
 				}
 				else
 				{
@@ -100,12 +100,12 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 			}
 			else if(m_ItemSlot.item.PlacementType == E_PlacementType.FreePlacement)
 			{
-				ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos);
+				ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos, () => AddItemAmount(-1));
 			}
 
 			//ResetSourceInventorySlot();
-			if (m_ItemSlot.item is not Tool)
-				AddItemAmount(-1);
+			//if (m_ItemSlot.item is not Tool)
+			//	AddItemAmount(-1);
 		}
 		s_SourceInventorySlot = null;
 		m_PointerData = null;

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class BunkerMovement : MonoBehaviour
 {
@@ -9,6 +8,8 @@ public class BunkerMovement : MonoBehaviour
 
 	public static Action<int, float, int> s_MoveHere;
 
+	[SerializeField] SpriteRenderer m_PlayerRenderer;
+	[SerializeField] Animator m_Animator;
 	[SerializeField] Transform m_PointsParent;
 	[SerializeField] Transform m_MainCam;
 	[SerializeField] Transform m_RoomListParent;
@@ -64,16 +65,20 @@ public class BunkerMovement : MonoBehaviour
 		}
 
 		Vector2 _movePos, _dir;
+		m_Animator.SetBool(Constant.PLAYER_RUN, true);
 		if (_groundLevel != m_CurrentGroundLevel)
 		{
 			_movePos = m_PointsParent.GetChild(m_CurrentGroundLevel).position;
 			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 			{
 				_dir = (_movePos - (Vector2)transform.position).normalized;
+				m_PlayerRenderer.flipX = _dir.x < 0;
+
 				transform.Translate(m_Speed * Time.deltaTime * _dir);
 				yield return null;
 			}
 
+			m_Animator.SetBool(Constant.PLAYER_CLIMB, true);
 			_movePos = m_PointsParent.GetChild(_groundLevel).position;
 			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 			{
@@ -81,16 +86,18 @@ public class BunkerMovement : MonoBehaviour
 				transform.Translate(m_Speed * Time.deltaTime * _dir);
 				yield return null;
 			}
+			m_Animator.SetBool(Constant.PLAYER_CLIMB, false);
 		}
-
 		_movePos = new Vector2(_pointX, m_PointsParent.GetChild(_groundLevel).position.y);
 		while (Vector2.Distance(transform.position, _movePos) > 0.01f)
 		{
 			_dir = (_movePos - (Vector2)transform.position).normalized;
+			m_PlayerRenderer.flipX = _dir.x < 0;
+
 			transform.Translate(m_Speed * Time.deltaTime * _dir);
 			yield return null;
 		}
-
+		m_Animator.SetBool(Constant.PLAYER_RUN, false);
 		m_CurrentGroundLevel = _groundLevel;
 
 		m_IsMoving = false;

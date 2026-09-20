@@ -1,16 +1,21 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
-public class ResourceHandler : MonoBehaviour
+public class ResourceHandler : MonoBehaviour, IActivate
 {
     public static ResourceHandler Instance;
+	private Action PlaceMachine;
 
     [SerializeField] Transform m_NavMeshParent;
     [SerializeField] InventorySlot[] m_Inventory = new InventorySlot[5];
     [SerializeField] LayerMask m_WorldPlacableLayer;
+	[SerializeField] float m_BuildTime;
+	[SerializeField] float m_BuildDistance;
+	[SerializeField] float m_WorkTime;
+	[SerializeField] float m_WorkDistance;
 
-    private void Awake()
+	private void Awake()
     {
         if (Instance == null)
         {
@@ -19,22 +24,77 @@ public class ResourceHandler : MonoBehaviour
     }
 	
 	public InventorySlot[] GetInventorySlots() => m_Inventory;
-    public void InstantiateObjectToWorld(StorableItem _item, Vector3 _pos)
+    public void InstantiateObjectToWorld(StorableItem _item, Vector3 _pos, Action _action)
     {
-        GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
-        obj.transform.parent = m_NavMeshParent;
-        obj.GetComponent<WorldInstance>().Initialize(_item);
-        NavMeshManager.s_BuildNavmesh?.Invoke();
-    }
-    public void InstantiateObjectToNodeWorld(StorableItem _item, Vector3 _pos, ResourceNodeInstance _node)
+		SurfaceMovement.Instance.MoveToKeepDistance(_pos, m_BuildDistance);
+		//SurfaceMovement.Instance.MoveTo(_pos);
+		PlaceMachine = () =>
+		{
+			SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, true);
+			StartCoroutine(DelayAction(m_BuildTime, () =>
+			{
+				SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, false);
+				GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
+				obj.transform.parent = m_NavMeshParent;
+				obj.GetComponent<WorldInstance>().Initialize(_item);
+				_action?.Invoke();
+				NavMeshManager.s_BuildNavmesh?.Invoke();
+			}));
+			
+		};
+		SurfaceMovement.s_Selected(gameObject);
+	}
+    public void InstantiateObjectToNodeWorld(StorableItem _item, Vector3 _pos, ResourceNodeInstance _node, Action _action)
     {
-		GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
-        obj.transform.parent = m_NavMeshParent;
-        obj.GetComponent<WorldInstance>().Initialize(_item);
-        obj.GetComponent<NodeMachineInstance>().SetInputNode(_node);
-        NavMeshManager.s_BuildNavmesh?.Invoke();
-    }
+		SurfaceMovement.Instance.MoveToKeepDistance(_pos, m_BuildDistance);
+		//SurfaceMovement.Instance.MoveTo(_pos);
+		PlaceMachine = () => 
+		{
+			SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, true);
+			StartCoroutine(DelayAction(m_BuildTime, () =>
+			{
+				SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, false);
+				GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
+				obj.transform.parent = m_NavMeshParent;
+				obj.GetComponent<WorldInstance>().Initialize(_item);
+				obj.GetComponent<NodeMachineInstance>().SetInputNode(_node);
+				_action?.Invoke();
+				NavMeshManager.s_BuildNavmesh?.Invoke();
+			}));
+				
+		};
+		SurfaceMovement.s_Selected(gameObject);
+	}
+	IEnumerator DelayAction(float _time, Action _action)
+	{
+		yield return new WaitForSeconds(_time);
 
+		_action?.Invoke();
+	}
+	public void UseTool(Tool _tool, ResourceNodeInstance _node, Action _action)
+	{
+		int _amount = Mathf.Min(_node.GetAmountAvailable(), _tool.MineAmount);
+		Resource _resource = _node.GetResourceNodeData().ResourceYield;
+		if (ResourceTracker.Instance.IsItemAddable(_resource, _amount))
+		{
+			SurfaceMovement.Instance.MoveToKeepDistance(_node.transform.position, m_WorkDistance);
+			PlaceMachine = () =>
+			{
+				SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, true);
+				int _amount = Mathf.Min(_node.GetAmountAvailable(), _tool.MineAmount);
+				Resource _resource = _node.GetResourceNodeData().ResourceYield;
+				StartCoroutine(DelayAction(m_WorkTime, () =>
+				{
+					SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, false);
+					ResourceTracker.Instance.AddStorableItemToInventory(_resource, _node.FetchResource(_tool.MineAmount));
+					_action?.Invoke();
+					//AddItemAmount(-1);
+				}));
+			};
+			SurfaceMovement.s_Selected(gameObject);
+		}
+		else Debug.LogWarning("Not enough space in inventory");
+	}
     public (bool, Vector3, ResourceNodeInstance) CanPlaceWorld(StorableItem _item, Vector3 _pos)
     {
         if (_item == null) return (false, Vector3.zero, null);
@@ -77,4 +137,9 @@ public class ResourceHandler : MonoBehaviour
         }
         return (false, Vector3.zero, null);
     }
+
+	public void Activate()
+	{
+		PlaceMachine?.Invoke();
+	}
 }

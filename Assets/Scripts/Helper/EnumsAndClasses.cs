@@ -103,10 +103,12 @@ public static class PlayerData
 	{
 		if (!PlayerPrefs.HasKey(Constant.PREF_SAVE_PLAYERDATA)) return;
 
-		Save_PlayerData _playerData = JsonUtility.FromJson<Save_PlayerData>(PlayerPrefs.GetString(Constant.PREF_SAVE_PLAYERDATA));
-		hunger = _playerData.hunger;
-		electricity = _playerData.electricity;
-		researchPoints = _playerData.researchPoints;
+		Save_PlayerData _playerData = JsonUtility.FromJson<Save_PlayerData>(PlayerPrefs.GetString(Constant.PREF_SAVE_PLAYERDATA, ""));
+		electricity = PlayerPrefs.GetInt(Constant.PREF_SAVE_ELECTRICITY, 0);
+		hunger = PlayerPrefs.GetInt(Constant.PREF_SAVE_HUNGER, 0);
+		researchPoints = PlayerPrefs.GetInt(Constant.PREF_SAVE_RESEARCHPOINTS, 0);
+
+		if(_playerData == null) return;
 		Save_ItemSlotArray[] _items = _playerData.itemSlotArray;
 		for (int i = 0; i < _items.Length; i++)
 		{
@@ -122,7 +124,10 @@ public static class PlayerData
 			_saveItems[i] = _item != null ? new(_item.itemID, itemSlot[i].amount) : new("", 0);
 		}
 
-		PlayerPrefs.SetString(Constant.PREF_SAVE_PLAYERDATA, JsonUtility.ToJson(new Save_PlayerData(_saveItems, hunger, electricity, researchPoints)));
+		PlayerPrefs.SetString(Constant.PREF_SAVE_PLAYERDATA, JsonUtility.ToJson(new Save_PlayerData(_saveItems, 0, 0, 0)));
+		PlayerPrefs.SetInt(Constant.PREF_SAVE_ELECTRICITY, electricity);
+		PlayerPrefs.SetInt(Constant.PREF_SAVE_HUNGER, hunger);
+		PlayerPrefs.SetInt(Constant.PREF_SAVE_RESEARCHPOINTS, researchPoints);
 	}
 }
 [Serializable]

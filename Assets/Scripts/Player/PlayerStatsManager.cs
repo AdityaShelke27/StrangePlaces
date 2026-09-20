@@ -113,6 +113,7 @@ public class PlayerStatsManager : MonoBehaviour
 		UpdateResearchPointsUI();
 	}
 	public int GetElectricity() => m_Electricity;
+	public int GetHunger() => m_Hunger;
 	public int GetResearchPoints() => m_ResearchPoints;
 	private void UpdateElectricityUI()
 	{

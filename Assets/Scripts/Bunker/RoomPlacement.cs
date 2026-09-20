@@ -86,7 +86,7 @@ public class RoomPlacement : MonoBehaviour
 				}
 				else
 				{
-					_placement = _targetPoses[j];
+					_placement = _targetPoses[j] + Vector2.right * ((_roomSize.x - _size.x) / 2);
 					_PlacementDirection = _currentRoom.GetStairPlacement();
 
 					if(j == 2) _groundLevel = _currentRoom.GetGroundLevel() - 1;
