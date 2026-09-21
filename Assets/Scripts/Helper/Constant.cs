@@ -23,6 +23,7 @@ public static class Constant
 	public const string PREF_SAVE_ELECTRICITY = "Save_Electricity";
 	public const string PREF_SAVE_HUNGER = "Save_Hunger";
 	public const string PREF_SAVE_RESEARCHPOINTS = "Save_ResearchPoints";
+	public const string PREF_SAVE_STORAGEROOM = "Save_StorageRoom";
 
 	// SCENES
 	public const string SCENE_BUNKER = "BunkerScene";

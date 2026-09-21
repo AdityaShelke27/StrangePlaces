@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
 public class Storage : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Storage : MonoBehaviour
 	[SerializeField] GameObject m_InventorySlotPrefab;
 	[SerializeField] int m_InventoryAmount;
 	[SerializeField] GameObject m_InventoryPanelUI;
-	readonly List<InventorySlot> m_StorageInventory = new();
+	List<InventorySlot> m_StorageInventory = new();
 
 	private void Awake()
 	{
@@ -36,4 +37,38 @@ public class Storage : MonoBehaviour
 	}
 	public List<InventorySlot> GetStorageInventory() => m_StorageInventory;
 	public void ClosePanel() => m_InventoryPanelUI.SetActive(false);
+
+	public void SaveStorage()
+	{
+		Save_Inventory _saveInv = new()
+		{
+			itemSlot = new Save_ItemSlotArray[m_StorageInventory.Count]
+		};
+
+		for (int i = 0; i < m_StorageInventory.Count; i++)
+		{
+			StorableItem _item = m_StorageInventory[i].GetItem();
+			_saveInv.itemSlot[i] = _item != null ? new(_item.itemID, m_StorageInventory[i].GetItemAmount()) : new("", 0);
+		}
+
+		Save_Inventory.SaveData(_saveInv);
+	}
+
+	public void LoadStorage()
+	{
+		Save_ItemSlotArray[] _itemArray = Save_Inventory.LoadData();
+		if (_itemArray != null) return;
+
+		for (int i = 0; i < _itemArray.Length; i++)
+		{
+			if(string.IsNullOrEmpty(_itemArray[i].id))
+			{
+				m_StorageInventory[i].SetItemSlot(null, 0);
+			}
+			else
+			{
+				m_StorageInventory[i].SetItemSlot(ItemDatabase.Instance.GetItemByID(_itemArray[i].id) as StorableItem, _itemArray[i].amount);
+			}
+		}
+	}
 }

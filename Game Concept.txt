@@ -39,3 +39,20 @@ To Do List:
 - Create a node/conveyor system to connect one machine's output to other machine's input for automation
 - Implement electricity system where all the machines require and consume electricity to function
 - Create a procedurally generated surface layout
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+New To Do List:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+- Add construction materials to room construction //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
+- Implement Storage room saving //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
+- Create Rocket Construction progression panel and step by step rocket construct sprites
+- Machines consume electricity (Show electric wiring?)
+- Implement Automation
+- Add Machine building animation when building a machine on surface
+- Add room construction animation / effect when constructing room
+- Create and add UI to all panels
+- Create Main Menu, Settings and all that shit
+- Create storm effect to warn player that radiation storm is approaching / Create a timer which shows when the radiation storm will start (LAME APPROACH)
+- Create Tutorial
+- Add Sound
+- Add Haptics

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public enum E_TerrainTypes
 {
@@ -128,6 +129,23 @@ public static class PlayerData
 		PlayerPrefs.SetInt(Constant.PREF_SAVE_ELECTRICITY, electricity);
 		PlayerPrefs.SetInt(Constant.PREF_SAVE_HUNGER, hunger);
 		PlayerPrefs.SetInt(Constant.PREF_SAVE_RESEARCHPOINTS, researchPoints);
+	}
+}
+[Serializable]
+public class Save_Inventory
+{
+	public Save_ItemSlotArray[] itemSlot;
+
+	public static void SaveData(Save_Inventory _save)
+	{
+		PlayerPrefs.SetString(Constant.PREF_SAVE_STORAGEROOM, JsonUtility.ToJson(_save));
+	}
+	public static Save_ItemSlotArray[] LoadData()
+	{
+		if (!PlayerPrefs.HasKey(Constant.PREF_SAVE_STORAGEROOM)) return null;
+		Save_Inventory _playerData = JsonUtility.FromJson<Save_Inventory>(PlayerPrefs.GetString(Constant.PREF_SAVE_STORAGEROOM, ""));
+
+		return _playerData.itemSlot;
 	}
 }
 [Serializable]

@@ -41,7 +41,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		if (EventSystem.current.IsPointerOverGameObject()) return;
 		if (!m_AreResourcesAssigned)
 		{
-			Debug.LogWarning("Construction resources art not yet assigned");
+			Debug.LogWarning("Construction resources are not yet assigned");
 			return;
 		}
 

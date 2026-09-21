@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class RoomPlacement : MonoBehaviour
 {
-	public static Action<Vector2, int> s_GenerateAreas;
+	public static Action<Vector2, int, Action> s_GenerateAreas;
 
 	[SerializeField] float m_RoomSpacing;
 	[SerializeField] float m_StairPointOffset;
@@ -38,7 +37,7 @@ public class RoomPlacement : MonoBehaviour
 		}
 	}
 
-	void GenerateAvailableAreas(Vector2 _roomSize, int _roomID)
+	void GenerateAvailableAreas(Vector2 _roomSize, int _roomID, Action _actionAfterBuild)
 	{
 		List<Vector2> _SearchedPoses = new();
 
@@ -86,8 +85,8 @@ public class RoomPlacement : MonoBehaviour
 				}
 				else
 				{
-					_placement = _targetPoses[j] + Vector2.right * ((_roomSize.x - _size.x) / 2);
 					_PlacementDirection = _currentRoom.GetStairPlacement();
+					_placement = _targetPoses[j] + (_PlacementDirection == E_RoomStairPlacement.Left ? Vector2.right : Vector2.left) * ((_roomSize.x - _size.x) / 2);
 
 					if(j == 2) _groundLevel = _currentRoom.GetGroundLevel() - 1;
 					else if(j == 3) _groundLevel = _currentRoom.GetGroundLevel() + 1;
@@ -115,7 +114,7 @@ public class RoomPlacement : MonoBehaviour
 					_obj.transform.localScale = new(_roomSize.x, _roomSize.y, 1);
 
 					m_RoomSilhouletteList.Add(_obj);
-					_script.SetInfo(this, _PlacementDirection, _groundLevel, _roomID);
+					_script.SetInfo(this, _PlacementDirection, _groundLevel, _roomID, _actionAfterBuild);
 				}
 			}
 		}

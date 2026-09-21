@@ -334,3 +334,13 @@ Resources Spawn Condition:
 | Sand       | Karth Bamboo                       |
 | Grass      | Lumabloom                          |
 | Rock       | Iron Ore, Copper Ore, Titanium Ore |
+
+Room Construction Cost
+| Room                         | Construction Cost                                         |
+| ---------------------------- | --------------------------------------------------------- |
+| Mechanic Room                | 10 Iron Plates + 5 Fiber Mesh                             |
+| Research Room                | 10 Iron Plates + 5 Copper Wires + 5 Fiber Mesh            |
+| Kitchen Room                 | 10 Iron Plates + 5 Reinforced Panels                      |
+| Construction Room            | 20 Iron Plates + 5 Copper Wires + 5 Reinforced Panels     |
+| Storage Room                 | 20 Iron Plates + 10 Reinforced Panels                     |
+| Rocket Construction Room     | 40 Iron Plates + 20 Titanium Alloy + 20 Reinforced Panels |
