@@ -305,7 +305,7 @@ Rocket Parts
 - Construction
 
 -- 10 Quantum Circuit
--- 2 Quantum Processor
+-- 2 Nano Alloy
 -- 8 Energy Core
 -- 20 Copper Wires
 
@@ -320,7 +320,6 @@ Rocket Parts
 
 - Construction
 
--- 5 Quantum Processor
 -- 12 Nano Alloy
 -- 10 Quantum Circuit
 -- 30 Titanium Alloy

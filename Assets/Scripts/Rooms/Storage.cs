@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEditor.Progress;
 
 public class Storage : MonoBehaviour
 {
@@ -31,9 +30,12 @@ public class Storage : MonoBehaviour
 	}
 	private void OnMouseDown()
 	{
-		if (EventSystem.current.IsPointerOverGameObject()) return;
-		
-		m_InventoryPanelUI.SetActive(true);
+		StartCoroutine(Constant.DelayExecute(() =>
+		{
+			if (EventSystem.current.IsPointerOverGameObject()) return;
+
+			m_InventoryPanelUI.SetActive(true);
+		}));
 	}
 	public List<InventorySlot> GetStorageInventory() => m_StorageInventory;
 	public void ClosePanel() => m_InventoryPanelUI.SetActive(false);

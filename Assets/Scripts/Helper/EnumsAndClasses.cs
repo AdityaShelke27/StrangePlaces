@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem.EnhancedTouch;
 
 public enum E_TerrainTypes
 {
@@ -67,7 +66,6 @@ public interface IActivate
 {
 	void Activate();
 }
-
 [Serializable]
 public class ItemSlot
 {

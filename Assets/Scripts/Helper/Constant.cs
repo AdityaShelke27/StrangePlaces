@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,4 +83,11 @@ public static class Constant
 		{ 35, new () {"fuel-tank"} },
 		{ 36, new () {"cockpit"} },
 	};
+
+	public static IEnumerator DelayExecute(Action _action)
+	{
+		yield return null;
+
+		_action?.Invoke();
+	}
 }

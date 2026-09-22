@@ -69,7 +69,7 @@ public class BunkerMovement : MonoBehaviour
 		if (_groundLevel != m_CurrentGroundLevel)
 		{
 			_movePos = m_PointsParent.GetChild(m_CurrentGroundLevel).position;
-			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
+			while (Vector2.Distance(transform.position, _movePos) > m_Speed * Time.deltaTime)
 			{
 				_dir = (_movePos - (Vector2)transform.position).normalized;
 				m_PlayerRenderer.flipX = _dir.x < 0;
@@ -80,7 +80,7 @@ public class BunkerMovement : MonoBehaviour
 
 			m_Animator.SetBool(Constant.PLAYER_CLIMB, true);
 			_movePos = m_PointsParent.GetChild(_groundLevel).position;
-			while (Vector2.Distance(transform.position, _movePos) > 0.01f)
+			while (Vector2.Distance(transform.position, _movePos) > m_Speed * Time.deltaTime)
 			{
 				_dir = (_movePos - (Vector2)transform.position).normalized;
 				transform.Translate(m_Speed * Time.deltaTime * _dir);
@@ -89,7 +89,7 @@ public class BunkerMovement : MonoBehaviour
 			m_Animator.SetBool(Constant.PLAYER_CLIMB, false);
 		}
 		_movePos = new Vector2(_pointX, m_PointsParent.GetChild(_groundLevel).position.y);
-		while (Vector2.Distance(transform.position, _movePos) > 0.01f)
+		while (Vector2.Distance(transform.position, _movePos) > m_Speed * Time.deltaTime)
 		{
 			_dir = (_movePos - (Vector2)transform.position).normalized;
 			m_PlayerRenderer.flipX = _dir.x < 0;

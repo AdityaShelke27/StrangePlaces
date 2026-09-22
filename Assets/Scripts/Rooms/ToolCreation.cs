@@ -27,15 +27,18 @@ public class ToolCreation : MonoBehaviour
 	}
 	private void OnMouseDown()
 	{
-		if (EventSystem.current.IsPointerOverGameObject()) return;
-		if (!m_AreResourcesAssigned)
+		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			Debug.LogWarning("Construction resources art not yet assigned");
-			return;
-		}
+			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (!m_AreResourcesAssigned)
+			{
+				Debug.LogWarning("Construction resources art not yet assigned");
+				return;
+			}
 
-		CheckAvailableResources();
-		m_ToolPanelUI.SetActive(true);
+			CheckAvailableResources();
+			m_ToolPanelUI.SetActive(true);
+		}));
 	}
 	private void AssignMachineCraftingData()
 	{
@@ -55,7 +58,7 @@ public class ToolCreation : MonoBehaviour
 				ResourceRequirement _requirement = _requirements[j];
 				GameObject _objSlot = Instantiate(m_ResourceRequirementPrefab, _buttonManager.GetResourceInputParent());
 				ResourceRequirementManager _objResourceManager = _objSlot.GetComponent<ResourceRequirementManager>();
-				_objResourceManager.AssignResourceImageAndAmount(_requirement.item.itemImage, _requirement.amount.ToString());
+				_objResourceManager.AssignResourceImageNameAndAmount(_requirement.item.itemImage, _requirement.item.itemName, _requirement.amount.ToString());
 
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}

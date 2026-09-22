@@ -3,6 +3,12 @@ using UnityEngine;
 public class BunkerPlayer : MonoBehaviour
 {
 	[SerializeField] InventorySlot[] m_InventorySlots;
+	private void Awake()
+	{
+		QualitySettings.vSyncCount = 0;
+		// Dynamically match the screen's refresh rate (e.g., 60, 90, 120)
+		Application.targetFrameRate = (int)Screen.currentResolution.refreshRateRatio.value;
+	}
 	void Start()
 	{
 		AssignInventory();

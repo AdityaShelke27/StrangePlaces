@@ -17,15 +17,12 @@ public class Room : MonoBehaviour
 	}
 	private void OnMouseDown()
 	{
-		StartCoroutine(DelayExecute());
-	}
-	IEnumerator DelayExecute()
-	{
-		yield return null;
+		StartCoroutine(Constant.DelayExecute(() =>
+		{
+			if (EventSystem.current.IsPointerOverGameObject()) return;
 
-		if (EventSystem.current.IsPointerOverGameObject()) yield break;
-
-		BunkerMovement.s_MoveHere?.Invoke(m_GroundLevel, m_PlayerPresentPoint.position.x, m_RoomID);
+			BunkerMovement.s_MoveHere?.Invoke(m_GroundLevel, m_PlayerPresentPoint.position.x, m_RoomID);
+		}));
 	}
 	public void SwitchToInteractableCollider(bool _val)
 	{

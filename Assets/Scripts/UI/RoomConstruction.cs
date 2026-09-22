@@ -65,7 +65,7 @@ public class RoomConstruction : MonoBehaviour
 			{
 				GameObject _objSlot = Instantiate(m_ResourceItemPrefab, m_InputList[i]);
 				ResourceRequirementManager _objResourceManager = _objSlot.GetComponent<ResourceRequirementManager>();
-				_objResourceManager.AssignResourceImageAndAmount(m_RoomCostRequirement[i][j].item.itemImage, m_RoomCostRequirement[i][j].amount.ToString());
+				_objResourceManager.AssignResourceImageNameAndAmount(m_RoomCostRequirement[i][j].item.itemImage, m_RoomCostRequirement[i][j].item.itemName, m_RoomCostRequirement[i][j].amount.ToString());
 
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}

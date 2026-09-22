@@ -35,17 +35,14 @@ public class Research : MonoBehaviour
 	}
 	private void OnMouseDown()
 	{
-		StartCoroutine(DelayExecute());
-	}
-	IEnumerator DelayExecute()
-	{
-		yield return null;
+		StartCoroutine(Constant.DelayExecute(() =>
+		{
+			if (EventSystem.current.IsPointerOverGameObject()) return;
 
-		if (EventSystem.current.IsPointerOverGameObject()) yield break;
-
-		m_ResearchCanvas.SetActive(true);
-		SelectMainResearch();
-		SetResourceAvailableForResearch();
+			m_ResearchCanvas.SetActive(true);
+			SelectMainResearch();
+			SetResourceAvailableForResearch();
+		}));
 	}
 	public void SelectMainResearch()
 	{
