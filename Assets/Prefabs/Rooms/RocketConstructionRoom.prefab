@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 672429981125389508, guid: 8a57ac84bebf3b941918a7a8a04e1d6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f68b0b6fb4adee47949102eb391659c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -705,7 +705,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1877252415754191711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2527589655569669012}
+        m_TargetAssemblyTypeName: RocketPanel, Assembly-CSharp
+        m_MethodName: ConstructButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2385138842005881366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 672429981125389508, guid: 8a57ac84bebf3b941918a7a8a04e1d6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eac128979ae1b134595744c1eaef0845, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2234,13 +2246,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketPanel
   m_RCPanelUI: {fileID: 45732235450781414}
-  m_RocketProgression: 1
+  m_RocketProgression: 5
   m_BlueprintImage: {fileID: 4222043477030282906}
   m_PartImage: {fileID: 4147542575740640385}
   m_PartText: {fileID: 1911144561579260224}
   m_RocketRenderer: {fileID: 683365933737060257}
   m_ResourceInputParent: {fileID: 7200303438124149024}
   m_ResourceItemPrefab: {fileID: 2776483426523333424, guid: 2da284d6b666deb4988ae63a7156ea73, type: 3}
+  m_ConstructButton: {fileID: 5572261848505452058}
+  m_ConstructButtonText: {fileID: 5646646825513859869}
   m_RocketFrameRequirement:
   - item: {fileID: 11400000, guid: e7454c83ba0977d49aae7b6bb9a5ee63, type: 2}
     amount: 10
@@ -2294,25 +2308,25 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
     amount: 30
   m_RocketPartSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: eac128979ae1b134595744c1eaef0845, type: 3}
+  - {fileID: 21300000, guid: bfcc6ac945394904f8f003670e8dbfba, type: 3}
+  - {fileID: 21300000, guid: 1f68b0b6fb4adee47949102eb391659c, type: 3}
+  - {fileID: 21300000, guid: a6f20ceace8eca04cadca614d1bf2ff4, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   m_RocketProgressionSprites:
   - {fileID: 21300000, guid: 59066bc1c6e5b974fb415a85d5d204e6, type: 3}
   - {fileID: 21300000, guid: 77539dfdf6f95c4498e787d6bb6ab321, type: 3}
-  - {fileID: 21300000, guid: 77539dfdf6f95c4498e787d6bb6ab321, type: 3}
-  - {fileID: 21300000, guid: 77539dfdf6f95c4498e787d6bb6ab321, type: 3}
-  - {fileID: 21300000, guid: 77539dfdf6f95c4498e787d6bb6ab321, type: 3}
+  - {fileID: 21300000, guid: a9861be6cbda7e84c8ce32075a003233, type: 3}
+  - {fileID: 21300000, guid: 81e15c04c24c44349ab72eaecf6f49e4, type: 3}
+  - {fileID: 21300000, guid: 09ed2a04c7c9ac841aa6f79a2411155d, type: 3}
   - {fileID: 21300000, guid: 77539dfdf6f95c4498e787d6bb6ab321, type: 3}
   m_RocketBlueprintSprites:
   - {fileID: 21300000, guid: 5518e70a8dd315e499371b8b7d05638f, type: 3}
-  - {fileID: 21300000, guid: 5518e70a8dd315e499371b8b7d05638f, type: 3}
-  - {fileID: 21300000, guid: 5518e70a8dd315e499371b8b7d05638f, type: 3}
-  - {fileID: 21300000, guid: 5518e70a8dd315e499371b8b7d05638f, type: 3}
-  - {fileID: 21300000, guid: 5518e70a8dd315e499371b8b7d05638f, type: 3}
+  - {fileID: 21300000, guid: 722d01e1e6346014a9e3e96a22a1bf66, type: 3}
+  - {fileID: 21300000, guid: 1d2c4192e393e434fa0a0eb9fda990fc, type: 3}
+  - {fileID: 21300000, guid: 99e2769448cf40b40a51de6c65c50433, type: 3}
+  - {fileID: 21300000, guid: fb66eefb411cb444fa5d150cd80e9956, type: 3}
   - {fileID: 21300000, guid: 5518e70a8dd315e499371b8b7d05638f, type: 3}
   m_RocketPartNames:
   - Rocket Frame
@@ -2321,6 +2335,7 @@ MonoBehaviour:
   - Navigation Module
   - Fuel Tank
   - Cockpit
+  m_CurrentResourcesAdded: 
 --- !u!1 &4842864374435373964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,7 +2402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 672429981125389508, guid: 8a57ac84bebf3b941918a7a8a04e1d6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6f20ceace8eca04cadca614d1bf2ff4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3609,7 +3624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 672429981125389508, guid: 8a57ac84bebf3b941918a7a8a04e1d6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfcc6ac945394904f8f003670e8dbfba, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

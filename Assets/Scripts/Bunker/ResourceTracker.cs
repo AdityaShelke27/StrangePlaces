@@ -70,6 +70,29 @@ public class ResourceTracker : MonoBehaviour
 		}
 		else return false;
 	}
+	public int SearchAndRemoveMaxAmountResource(StorableItem _item, int _amount)
+	{
+		int _requiredAmount = _amount;
+
+		for (int i = 0; i < m_PlayerInventory.Length; i++)
+		{
+			if (m_PlayerInventory[i].GetItem() != _item) continue;
+
+			if(m_PlayerInventory[i].GetItemAmount() > _requiredAmount)
+			{
+				m_PlayerInventory[i].SetItemAmount(m_PlayerInventory[i].GetItemAmount() - _requiredAmount);
+
+				return _amount;
+			}
+			else
+			{
+				_requiredAmount -= m_PlayerInventory[i].GetItemAmount();
+				m_PlayerInventory[i].RemoveItemFromInventory();
+			}
+		}
+
+		return _amount - _requiredAmount;
+	}
 	public int GetEmptyInventorySlots()
 	{
 		int _availableSlots = 0;
