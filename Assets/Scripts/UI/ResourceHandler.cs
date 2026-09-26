@@ -9,6 +9,7 @@ public class ResourceHandler : MonoBehaviour, IActivate
 
     [SerializeField] Transform m_NavMeshParent;
     [SerializeField] InventorySlot[] m_Inventory = new InventorySlot[5];
+	[SerializeField] Sprite[] m_MachineConstructionSprites;
     [SerializeField] LayerMask m_WorldPlacableLayer;
 	[SerializeField] float m_BuildTime;
 	[SerializeField] float m_BuildDistance;
@@ -31,8 +32,19 @@ public class ResourceHandler : MonoBehaviour, IActivate
 		PlaceMachine = () =>
 		{
 			SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, true);
+
+			GameObject _constObj = new("Construction", typeof(SpriteRenderer));
+			_constObj.transform.position = _pos;
+			SpriteRenderer _rend = _constObj.GetComponent<SpriteRenderer>();
+			_rend.sprite = m_MachineConstructionSprites[0];
+			StartCoroutine(DelayAction(m_BuildTime / 2, () =>
+			{
+				_rend.sprite = m_MachineConstructionSprites[1];
+			}));
+
 			StartCoroutine(DelayAction(m_BuildTime, () =>
 			{
+				Destroy(_constObj);
 				SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, false);
 				GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
 				obj.transform.parent = m_NavMeshParent;
@@ -51,8 +63,19 @@ public class ResourceHandler : MonoBehaviour, IActivate
 		PlaceMachine = () => 
 		{
 			SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, true);
+
+			GameObject _constObj = new("Construction", typeof(SpriteRenderer));
+			_constObj.transform.position = _pos;
+			SpriteRenderer _rend = _constObj.GetComponent<SpriteRenderer>();
+			_rend.sprite = m_MachineConstructionSprites[0];
+			StartCoroutine(DelayAction(m_BuildTime / 2, () =>
+			{
+				_rend.sprite = m_MachineConstructionSprites[1];
+			}));
+
 			StartCoroutine(DelayAction(m_BuildTime, () =>
 			{
+				Destroy(_constObj);
 				SurfaceMovement.Instance.GetAnimator().SetBool(Constant.PLAYER_BUILD, false);
 				GameObject obj = Instantiate(_item.GetWorldPrefab(), _pos, Quaternion.identity);
 				obj.transform.parent = m_NavMeshParent;

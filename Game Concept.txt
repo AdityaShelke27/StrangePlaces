@@ -45,11 +45,10 @@ New To Do List:
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 - Add construction materials to room construction //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Implement Storage room saving //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
-- Create Rocket Construction progression panel and step by step rocket construct sprites
-- Machines consume electricity (Show electric wiring?)
+- Create Rocket Construction progression panel and step by step rocket construct sprites //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
+- Machines consume electricity (Show electric wiring?) //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Implement Automation
-- Add Machine building animation when building a machine on surface
-- Add room construction animation / effect when constructing room
+- Add Machine building animation when building a machine on surface //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Create and add UI to all panels
 - Create Main Menu, Settings and all that shit
 - Create storm effect to warn player that radiation storm is approaching / Create a timer which shows when the radiation storm will start (LAME APPROACH)

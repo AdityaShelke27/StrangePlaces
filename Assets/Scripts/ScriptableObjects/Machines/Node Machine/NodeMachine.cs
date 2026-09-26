@@ -4,4 +4,5 @@ using UnityEngine;
 public class NodeMachine : Machine
 {
     public ResourceNode InputNode;
+	public Vector2 ConveyorOutputPos;
 }

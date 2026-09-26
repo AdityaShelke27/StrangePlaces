@@ -5,5 +5,7 @@ using UnityEngine;
 public class ResourceMachine : Machine
 {
 	public int InputSlots;
+	public Vector2 ConveyorInputPos;
+	public Vector2 ConveyorOutputPos;
 	public ResourceRecipeData[] RecipeData;
 }

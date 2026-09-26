@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,6 +17,7 @@ public class RocketPanel : MonoBehaviour
 	[SerializeField] GameObject m_ResourceItemPrefab;
 	[SerializeField] Button m_ConstructButton;
 	[SerializeField] TMP_Text m_ConstructButtonText;
+	[SerializeField] GameObject[] m_SizePanelProgressDone;
 	[Header("Resource Requirement")]
 	[SerializeField] ResourceRequirement[] m_RocketFrameRequirement;
 	[SerializeField] ResourceRequirement[] m_QuantumProcessorRequirement;
@@ -33,7 +35,7 @@ public class RocketPanel : MonoBehaviour
 	ResourceRequirement[][] m_RocketResourceRequirement;
 	ResourceRequirement[] m_CurrentResourceRequirement;
 
-	[SerializeField] int[] m_CurrentResourcesAdded;
+	int[] m_CurrentResourcesAdded;
 
 	bool m_IsResearchComplete = false;
 	bool m_IsInConstructMode = false;
@@ -57,9 +59,14 @@ public class RocketPanel : MonoBehaviour
 			m_CockpitRequirement,
 		};
 
-		m_RocketProgression = Mathf.Min(m_RocketProgression, 5);
+		m_RocketProgression = Mathf.Min(m_RocketProgression, 6);
 		m_IsResearchComplete = !(m_RocketProgression <= 5);
 		m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
+
+		for(int i = 0; i < m_RocketProgression; i++)
+		{
+			m_SizePanelProgressDone[i].SetActive(true);
+		}
 
 		m_CurrentResourceRequirement = m_RocketResourceRequirement[m_RocketProgression];
 		m_CurrentResourcesAdded = new int[m_CurrentResourceRequirement.Length];
@@ -83,6 +90,7 @@ public class RocketPanel : MonoBehaviour
 
 		if(m_IsInConstructMode)
 		{
+			m_SizePanelProgressDone[m_RocketProgression].SetActive(true);
 			m_RocketProgression++;
 			m_IsResearchComplete = !(m_RocketProgression <= 5);
 			m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
@@ -163,12 +171,12 @@ public class RocketPanel : MonoBehaviour
 	}
 	void UpdateSpriteAndText()
 	{
-		if (m_RocketProgression > 5) return; 
+		int _rocketProgress = Mathf.Min(m_RocketProgression, 5);
 
-		m_BlueprintImage.sprite = m_RocketBlueprintSprites[m_RocketProgression];
-		m_PartImage.sprite = m_RocketPartSprites[m_RocketProgression];
-		m_RocketRenderer.sprite = m_RocketProgressionSprites[m_RocketProgression];
-		m_PartText.text = m_RocketPartNames[m_RocketProgression];
+		m_BlueprintImage.sprite = m_RocketBlueprintSprites[_rocketProgress];
+		m_PartImage.sprite = m_RocketPartSprites[_rocketProgress];
+		m_RocketRenderer.sprite = m_RocketProgressionSprites[_rocketProgress];
+		m_PartText.text = m_RocketPartNames[_rocketProgress];
 
 		m_BlueprintImage.preserveAspect = true;
 		m_PartImage.preserveAspect = true;

@@ -34,10 +34,10 @@ public class SurfaceMovement : MonoBehaviour
 	}
 	void Start()
 	{
-		PlayerData.LoadData();
-		PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);
-		PlayerStatsManager.Instance.SetHunger(PlayerData.hunger);
-		PlayerStatsManager.Instance.SetResearchPoints(PlayerData.researchPoints);
+		//PlayerData.LoadData();
+		//PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);
+		//PlayerStatsManager.Instance.SetHunger(PlayerData.hunger);
+		//PlayerStatsManager.Instance.SetResearchPoints(PlayerData.researchPoints);
 
 		m_Camera = m_MainCam.GetComponent<Camera>();
 		agent = GetComponent<NavMeshAgent>();
@@ -85,6 +85,7 @@ public class SurfaceMovement : MonoBehaviour
 	void UpdatePosition(InputAction.CallbackContext ctx)
 	{
 		if (EventSystem.current.IsPointerOverGameObject()) return;
+		if (ConveyorManager.Instance.GetIsInConveyorMode()) return;
 
 		if(m_IsHasWork)
 		{

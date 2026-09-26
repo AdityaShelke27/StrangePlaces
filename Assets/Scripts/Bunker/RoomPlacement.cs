@@ -87,7 +87,6 @@ public class RoomPlacement : MonoBehaviour
 				{
 					_PlacementDirection = _currentRoom.GetStairPlacement();
 					_placement = _targetPoses[j] + (_PlacementDirection == E_RoomStairPlacement.Left ? Vector2.right : Vector2.left) * ((_roomSize.x - _size.x) / 2);
-
 					if(j == 2) _groundLevel = _currentRoom.GetGroundLevel() - 1;
 					else if(j == 3) _groundLevel = _currentRoom.GetGroundLevel() + 1;
 
@@ -105,13 +104,17 @@ public class RoomPlacement : MonoBehaviour
 					_obj.GetComponent<BoxCollider2D>().size = _obj.transform.localScale;
 					RoomSilhouette _script = _obj.GetComponent<RoomSilhouette>();
 					SpriteRenderer _renderer = _obj.GetComponent<SpriteRenderer>();
-					_renderer.sprite = m_BlankSprite;
+
+					_renderer.sprite = /*m_BlankSprite;*/m_Rooms[_roomID].GetComponent<SpriteRenderer>().sprite;
 					_renderer.color = Color.green;
 					_renderer.sortingLayerName = "WorldItems";
 					_renderer.sortingOrder = 1;
+					_obj.GetComponent<BoxCollider2D>().size = _renderer.bounds.size;
+
+					if (_PlacementDirection == E_RoomStairPlacement.Right) _renderer.flipX = true;
 
 					_obj.transform.position = _placement;
-					_obj.transform.localScale = new(_roomSize.x, _roomSize.y, 1);
+					//_obj.transform.localScale = new(_roomSize.x, _roomSize.y, 1);
 
 					m_RoomSilhouletteList.Add(_obj);
 					_script.SetInfo(this, _PlacementDirection, _groundLevel, _roomID, _actionAfterBuild);

@@ -5,5 +5,6 @@ public class Machine : StorableItem
 {
 	public float TimeToProduce = 10f;
 	public float MachineHaltCheck = 1f;
+	public int ElectricityConsumption = 1;
 	public int OutputSlots;
 }

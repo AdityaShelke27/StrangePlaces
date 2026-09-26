@@ -7,10 +7,21 @@ public class NodeMachineInstance : MachineInstance
 	[SerializeField] private NodeMachine m_MachineData;
 	[SerializeField] private ResourceNodeInstance m_Input;
 	[SerializeField] private TMP_Text m_MachineStateText;
+	[SerializeField] private GameObject m_OutputSocket;
 	Coroutine m_MachineWorkingCoroutine;
 	Coroutine m_MachineHaultedCoroutine;
 	[SerializeField] private InventorySlot[] m_Outputs;
 
+	private void OnEnable()
+	{
+		ConveyorManager.s_StartConveyorMode += StartConveyorMode;
+		ConveyorManager.s_EndConveyorMode += EndConveyorMode;
+	}
+	private void OnDisable()
+	{
+		ConveyorManager.s_StartConveyorMode -= StartConveyorMode;
+		ConveyorManager.s_EndConveyorMode -= EndConveyorMode;
+	}
 	public override void Initialize(StorableItem data)
 	{
 		m_MachineData = data as NodeMachine;
@@ -23,6 +34,9 @@ public class NodeMachineInstance : MachineInstance
 			GameObject _slot = Instantiate(m_InventorySlotPrefab, m_OutputSlotListParent);
 			m_Outputs[i] = _slot.GetComponent<InventorySlot>();
 		}
+
+		m_OutputSocket.transform.localPosition = m_MachineData.ConveyorOutputPos;
+		m_OutputSocket.SetActive(false);
 
 		SetMachineState(E_MachineState.Halted);
 	}
@@ -44,11 +58,11 @@ public class NodeMachineInstance : MachineInstance
 
 	IEnumerator MachineWork()
 	{
-		while(m_Input)
+		while(m_Input && PlayerStatsManager.Instance.GetElectricity() >= m_MachineData.ElectricityConsumption)
 		{
 			yield return new WaitForSeconds(m_MachineData.TimeToProduce);
-			int _amount = m_Input.FetchResource(1);
 
+			int _amount = m_Input.FetchResource(1);
 			if (m_Outputs[0].GetItem() == null)
 			{
 				m_Outputs[0].SetItemSlot(m_Input.GetResourceNodeData().ResourceYield, _amount);
@@ -63,13 +77,15 @@ public class NodeMachineInstance : MachineInstance
 					SetMachineState(E_MachineState.Halted);
 				}
 			}
+
+			PlayerStatsManager.Instance.AddElectricity(-m_MachineData.ElectricityConsumption);
 		}
 
 		SetMachineState(E_MachineState.Halted);
 	}
 	IEnumerator MachineHaulted()
 	{
-		while(!m_Input || (m_Outputs[0].GetItem() != null && m_Outputs[0].GetItemAmount() >= m_Outputs[0].GetItem().StackableAmount))
+		while(!m_Input || PlayerStatsManager.Instance.GetElectricity() < m_MachineData.ElectricityConsumption || (m_Outputs[0].GetItem() != null && m_Outputs[0].GetItemAmount() >= m_Outputs[0].GetItem().StackableAmount))
 		{
 			yield return new WaitForSeconds(m_MachineData.MachineHaltCheck);
 		}
@@ -98,5 +114,21 @@ public class NodeMachineInstance : MachineInstance
 		}
 
 		m_MachineStateText.text = "Machine State:" + _state.ToString();
+	}
+
+	public void EnterConveyorMode()
+	{
+		m_InventoryPanel.SetActive(false);
+
+		ConveyorManager.s_StartConveyorMode?.Invoke();
+	}
+
+	void StartConveyorMode()
+	{
+		m_OutputSocket.SetActive(true);
+	}
+	void EndConveyorMode()
+	{
+		m_OutputSocket.SetActive(false);
 	}
 }

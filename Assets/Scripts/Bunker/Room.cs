@@ -47,7 +47,11 @@ public class Room : MonoBehaviour
 			}
 		}
 	}
-	public Vector2 GetSize() => Constant.SIZE_ROOM;
+	public Vector2 GetSize() 
+	{ 
+		if(m_RoomID == Constant.ID_ROCKETCONSTRUCTION_ROOM) return Constant.SIZE_ROCKET_ROOM;
+		return Constant.SIZE_ROOM; 
+	}
 	public E_RoomStairPlacement GetStairPlacement() => m_StairPlacement;
 	public void SetGroundLevel(int _level) => m_GroundLevel = _level;
 	public int GetGroundLevel() => m_GroundLevel;
