@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7249503430288625624}
   - component: {fileID: 2202072405766008479}
   - component: {fileID: 8807905553986848713}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ConveyorOutput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa74b005d2f8b434a95fd8304c9f05c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorSocket
+  m_MachineScript: {fileID: -7840313727673123956}
   m_IsInputSocket: 0
 --- !u!1 &457114956740629722
 GameObject:
@@ -460,7 +461,7 @@ GameObject:
   - component: {fileID: 3832316993301183633}
   - component: {fileID: 2061820452481624134}
   - component: {fileID: 2975858558781142831}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ConveyorInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,6 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa74b005d2f8b434a95fd8304c9f05c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorSocket
+  m_MachineScript: {fileID: -7840313727673123956}
   m_IsInputSocket: 1
 --- !u!1 &1408311997721055738
 GameObject:

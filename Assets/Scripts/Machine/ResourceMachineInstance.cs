@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class ResourceMachineInstance : MachineInstance
 	[SerializeField] private InventorySlot[] m_Outputs;
 	Coroutine m_MachineWorkingCoroutine;
 	Coroutine m_MachineHaultedCoroutine;
+
+	List<StorableItem> m_AddableInputItems;
 
 	bool m_IsOutputAbstract = false;
 
@@ -36,6 +39,7 @@ public class ResourceMachineInstance : MachineInstance
 		m_Inputs = new InventorySlot[m_MachineData.InputSlots];
 		m_Outputs = new InventorySlot[m_MachineData.OutputSlots];
 
+		m_AddableInputItems = new();
 		for (int i = 0; i < m_Inputs.Length; i++)
 		{
 			GameObject _slot = Instantiate(m_InventorySlotPrefab, m_InputSlotListParent);
@@ -48,6 +52,7 @@ public class ResourceMachineInstance : MachineInstance
 				for (int k = 0; k < _length; k++)
 				{
 					m_Inputs[i].AddIncludeItems(m_MachineData.RecipeData[j].Input[k].Resource);
+					m_AddableInputItems.Add(m_MachineData.RecipeData[j].Input[k].Resource);
 				}
 			}
 		}
@@ -212,20 +217,34 @@ public class ResourceMachineInstance : MachineInstance
 			}
 		}
 	}
+	public override InventorySlot[] GetInputSlots() => m_Inputs;
+	public override InventorySlot[] GetOutputSlots()
+	{
+		if(!m_IsOutputAbstract) return m_Outputs;
+		else return null;
+	}
+	public override StorableItem GetCurrentResourceOutput()
+	{
+		return m_MachineData.RecipeData[m_SelectedRecipeIdx].Output[0].Resource;
+	}
+	public override bool IsItemAddable(StorableItem _item)
+	{
+		return m_AddableInputItems.Contains(_item);
+	}
 
-	public void EnterConveyorMode()
+	public override void EnterConveyorMode()
 	{
 		m_InventoryPanel.SetActive(false);
 
 		ConveyorManager.s_StartConveyorMode?.Invoke();
 	}
 
-	void StartConveyorMode()
+	protected override void StartConveyorMode()
 	{
-		m_InputSocket.SetActive(true);
+		m_InputSocket.SetActive(!m_IsOutputAbstract);
 		m_OutputSocket.SetActive(true);
 	}
-	void EndConveyorMode()
+	protected override void EndConveyorMode()
 	{
 		m_InputSocket.SetActive(false);
 		m_OutputSocket.SetActive(false);

@@ -46,6 +46,12 @@ public static class Constant
 	public static readonly Color RESEARCH_STATUS_AVAILABLE = new(0.35f, 0.455f, 1);
 	public static readonly Color RESEARCH_STATUS_LOCKED = new(0.765f, 0.97f, 0.984f);
 
+	// Automation
+	public const float CONVEYOR_ALIGNMENT_THRESHOLD = 1.0f;
+
+	// Misc
+	public const int STORAGE_SLOT_COUNT = 20;
+
 	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
 		{ 0, new () { "research-point", "electricity", "iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },
@@ -63,13 +69,13 @@ public static class Constant
 		{ 18, new () {"organic-refinery"} },												// Done
 		{ 12, new () {"bio-reactor"} },														// Done
 		{ 20, new () {"gravity-reactor"} },													// Done
-		{ 21, new () {""} }, // Automation
-		{ 22, new () {""} }, // Conveyor
-		{ 24, new () {""} }, // Conveyor Speed 1
-		{ 26, new () {""} }, // Conveyor Bridge
-		{ 27, new () {""} }, // Conveyor Speed 2
-		{ 23, new () {""} }, // Bunker Input Node 1
-		{ 25, new () {""} }, // Bunker Input Node 2
+		{ 21, new () {"automation"} }, // Automation
+		{ 22, new () {"conveyor"} }, // Conveyor
+		{ 24, new () {"conveyor-speed-1"} }, // Conveyor Speed 1
+		{ 26, new () {"conveyor-bridge"} }, // Conveyor Bridge
+		{ 27, new () {"conveyor-speed-2"} }, // Conveyor Speed 2
+		{ 23, new () {"bunker-input-node-1"} }, // Bunker Input Node 1
+		{ 25, new () {"bunker-input-node-2"} }, // Bunker Input Node 2
 		{ 13, new () {"artifact-scanner", "alien-artifact" } },								// Done
 		{ 19, new () {"research-station"} },												// Done
 		{ 8, new() { "2" }}, // Storage Room												// Done

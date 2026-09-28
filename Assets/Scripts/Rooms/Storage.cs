@@ -8,7 +8,6 @@ public class Storage : MonoBehaviour
 
 	[SerializeField] Transform m_InventoryParent;
 	[SerializeField] GameObject m_InventorySlotPrefab;
-	[SerializeField] int m_InventoryAmount;
 	[SerializeField] GameObject m_InventoryPanelUI;
 	List<InventorySlot> m_StorageInventory = new();
 
@@ -20,7 +19,7 @@ public class Storage : MonoBehaviour
 	private void Start()
 	{
 		ClosePanel();
-		for (int i = 0; i < m_InventoryAmount; i++)
+		for (int i = 0; i < Constant.STORAGE_SLOT_COUNT; i++)
 		{
 			GameObject _invSlot = Instantiate(m_InventorySlotPrefab, m_InventoryParent);
 			InventorySlot _slot = _invSlot.GetComponent<InventorySlot>();

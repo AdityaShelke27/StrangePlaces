@@ -69,6 +69,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	{
 		if (s_DragImage != null) Destroy(s_DragImage.transform.parent.gameObject);
 		if (eventData.pointerEnter != null) return;
+		if (ConveyorManager.Instance.GetIsInConveyorMode()) return;
 		if (CanPlace)
 		{
 			if (m_ItemSlot.item.PlacementType == E_PlacementType.NodePlacement)
@@ -79,15 +80,6 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 					{
 						Debug.Log("ITS A TOOL");
 						ResourceHandler.Instance.UseTool(m_ItemSlot.item as Tool, m_Node, () => AddItemAmount(-1));
-						//int _amount = Mathf.Min(m_Node.GetAmountAvailable(), _tool.MineAmount);
-						//Resource _resource = m_Node.GetResourceNodeData().ResourceYield;
-
-						//if (ResourceTracker.Instance.IsItemAddable(_resource, _amount))
-						//{
-						//	ResourceTracker.Instance.AddStorableItemToInventory(_resource, m_Node.FetchResource(_tool.MineAmount));
-						//	AddItemAmount(-1);
-						//}
-						//else Debug.LogWarning("Not enough space in inventory");
 					}
 					else ResourceHandler.Instance.InstantiateObjectToNodeWorld(m_ItemSlot.item, m_TargetPos, m_Node, () => AddItemAmount(-1));
 				}
@@ -102,10 +94,6 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 			{
 				ResourceHandler.Instance.InstantiateObjectToWorld(m_ItemSlot.item, m_TargetPos, () => AddItemAmount(-1));
 			}
-
-			//ResetSourceInventorySlot();
-			//if (m_ItemSlot.item is not Tool)
-			//	AddItemAmount(-1);
 		}
 		s_SourceInventorySlot = null;
 		m_PointerData = null;
@@ -116,6 +104,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	{
 		if (s_DragImage != null) Destroy(s_DragImage.transform.parent.gameObject);
 		if (s_SourceInventorySlot == null) return;
+		
 		if(!CanAcceptItem(s_SourceInventorySlot.GetItem())) return;
 		Debug.Log($"ID: {s_SourceInventorySlot.GetItem().itemID}, {ItemDatabase.Instance.DoesItemIDExistInResearch(s_SourceInventorySlot.GetItem().itemID)}");
 		if (!ItemDatabase.Instance.DoesItemIDExistInResearch(s_SourceInventorySlot.GetItem().itemID)) return;

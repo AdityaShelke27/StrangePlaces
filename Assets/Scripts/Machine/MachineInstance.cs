@@ -13,7 +13,13 @@ public abstract class MachineInstance : WorldInstance, IActivate
 
 	public E_MachineState GetMachineState() => State;
 	public abstract void SetMachineState(E_MachineState _state);
-
+	public abstract InventorySlot[] GetInputSlots();
+	public abstract InventorySlot[] GetOutputSlots();
+	public abstract bool IsItemAddable(StorableItem _item);
+	public abstract StorableItem GetCurrentResourceOutput();
+	public abstract void EnterConveyorMode();
+	protected abstract void StartConveyorMode();
+	protected abstract void EndConveyorMode();
 	public void CloseButton()
 	{
 		m_InventoryPanel.SetActive(false);

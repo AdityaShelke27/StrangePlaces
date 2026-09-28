@@ -115,19 +115,29 @@ public class NodeMachineInstance : MachineInstance
 
 		m_MachineStateText.text = "Machine State:" + _state.ToString();
 	}
-
-	public void EnterConveyorMode()
+	public override InventorySlot[] GetInputSlots() => null;
+	public override InventorySlot[] GetOutputSlots() => m_Outputs;
+	public override bool IsItemAddable(StorableItem _item)
+	{
+		Debug.LogWarning("Node Machine cant use this method");
+		return false;
+	}
+	public override StorableItem GetCurrentResourceOutput()
+	{
+		return m_MachineData.InputNode.ResourceYield;
+	}
+	public override void EnterConveyorMode()
 	{
 		m_InventoryPanel.SetActive(false);
 
 		ConveyorManager.s_StartConveyorMode?.Invoke();
 	}
 
-	void StartConveyorMode()
+	protected override void StartConveyorMode()
 	{
 		m_OutputSocket.SetActive(true);
 	}
-	void EndConveyorMode()
+	protected override void EndConveyorMode()
 	{
 		m_OutputSocket.SetActive(false);
 	}

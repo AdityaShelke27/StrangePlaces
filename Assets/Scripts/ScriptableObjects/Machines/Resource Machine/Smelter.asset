@@ -23,8 +23,11 @@ MonoBehaviour:
   Size: {x: 2, y: 2}
   TimeToProduce: 1
   MachineHaltCheck: 1
+  ElectricityConsumption: 1
   OutputSlots: 1
   InputSlots: 1
+  ConveyorInputPos: {x: -1, y: 0}
+  ConveyorOutputPos: {x: 1, y: 0}
   RecipeData:
   - {fileID: 11400000, guid: a4ea7bacb8c702b43bf29553e8a17b45, type: 2}
   - {fileID: 11400000, guid: bf5c75d9d5dd04d44a3439eeb304bae7, type: 2}

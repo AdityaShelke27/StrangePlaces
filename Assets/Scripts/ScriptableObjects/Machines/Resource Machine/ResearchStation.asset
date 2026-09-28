@@ -26,7 +26,7 @@ MonoBehaviour:
   ElectricityConsumption: 1
   OutputSlots: 1
   InputSlots: 1
-  ConveyorInputPos: {x: -1, y: 0}
-  ConveyorOutputPos: {x: 1, y: 0}
+  ConveyorInputPos: {x: 0, y: 0}
+  ConveyorOutputPos: {x: 0, y: 0}
   RecipeData:
   - {fileID: 11400000, guid: c955011587dece445be847867196a992, type: 2}
