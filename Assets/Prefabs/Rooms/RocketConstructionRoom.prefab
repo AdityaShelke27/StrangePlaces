@@ -3389,7 +3389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808c732276215074aaf54a0e9a08cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketPanel
-  m_RCPanelUI: {fileID: 45732235450781414}
+  m_RCPanelUI: {fileID: 8204648532349322197}
   m_RocketProgression: 0
   m_BlueprintImage: {fileID: 4222043477030282906}
   m_PartImage: {fileID: 4147542575740640385}

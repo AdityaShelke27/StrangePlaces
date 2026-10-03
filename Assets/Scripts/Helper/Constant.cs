@@ -28,6 +28,7 @@ public static class Constant
 	public const string PREF_SAVE_STORAGEROOM = "Save_StorageRoom";
 
 	// SCENES
+	public const string SCENE_MAIN_MENU = "MainMenuScene";
 	public const string SCENE_BUNKER = "BunkerScene";
 	public const string SCENE_SURFACE = "SurfaceScene";
 
