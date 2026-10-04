@@ -10,6 +10,12 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	[SerializeField] ItemSlot m_ItemSlot;
 	[SerializeField] Image m_ItemImage;
 	[SerializeField] TMP_Text m_ItemAmountText;
+	[SerializeField] GameObject m_SelectionPanel;
+	[SerializeField] Image m_Selection_Icon;
+	[SerializeField] TMP_Text m_Selection_Name;
+	[SerializeField] TMP_Text m_Selection_Type;
+	[SerializeField] TMP_Text m_Selection_Description;
+	[SerializeField] TMP_Text m_Selection_Amount;
 	[SerializeField] List<StorableItem> m_IncludeItems;
 	[SerializeField] bool m_ShouldAcceptAllItems;
 	PointerEventData m_PointerData;
@@ -18,12 +24,14 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	Vector3 m_TargetPos;
 	ResourceNodeInstance m_Node;
 
+	public static InventorySlot s_SelectionPanelActive;
 	public static InventorySlot s_SourceInventorySlot;
 	public static GameObject s_DragImage;
 
 	void Start()
 	{
 		SetItemSlot(m_ItemSlot.item, m_ItemSlot.amount);
+		SetActiveSelectionPanel(false);
 	}
 
 	IEnumerator StartCheckPlacementPointer()
@@ -234,5 +242,35 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	{
 		s_SourceInventorySlot.RemoveItemFromInventory();
 		s_SourceInventorySlot = null;
+	}
+
+	public void SetActiveSelectionPanel(bool _active)
+	{
+		m_SelectionPanel.SetActive(_active);
+	}
+	public void ActivateSelectionPanel()
+	{
+		if(m_ItemSlot == null || m_ItemSlot.item == null) return;
+
+		if(s_SelectionPanelActive == this)
+		{
+			m_SelectionPanel.SetActive(false);
+			s_SelectionPanelActive = null;
+			return;
+		}
+
+		if (s_SelectionPanelActive != null) s_SelectionPanelActive.SetActiveSelectionPanel(false);
+
+		AssignSelectionPanelInfo();
+		m_SelectionPanel.SetActive(true);
+		s_SelectionPanelActive = this;
+	}
+	void AssignSelectionPanelInfo()
+	{
+		m_Selection_Icon.sprite = m_ItemSlot.item.itemImage;
+		m_Selection_Name.text = m_ItemSlot.item.itemName;
+		m_Selection_Type.text = m_ItemSlot.item.itemName;
+		m_Selection_Description.text = m_ItemSlot.item.itemDescription;
+		m_Selection_Amount.text = "x" + m_ItemSlot.amount.ToString();
 	}
 }

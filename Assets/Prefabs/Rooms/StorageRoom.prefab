@@ -537,7 +537,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2560, y: 1440}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -881,6 +881,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot
@@ -987,6 +991,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (6)
@@ -1093,6 +1101,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (9)
@@ -1199,6 +1211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (5)
@@ -1305,6 +1321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (1)
@@ -1411,6 +1431,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (8)
@@ -1517,6 +1541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (4)
@@ -1623,6 +1651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (7)
@@ -1729,6 +1761,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (2)
@@ -1835,6 +1871,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5760972414622389432}
     m_Modifications:
+    - target: {fileID: 3745291246158799850, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_fontSize
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353901405838864, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_Name
       value: Slot (3)

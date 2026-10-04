@@ -75,7 +75,10 @@ public class Workbench : MonoBehaviour
 			for (int j = 0; j < _requirements.Length; j++)
 			{
 				ResourceRequirement _requirement = _requirements[j];
-				m_RequiredResourcesTexts[i][j].color = ResourceTracker.Instance.SearchResourceAvailable(_requirement.item as StorableItem, _requirement.amount) ? Color.green : Color.red;
+
+				int _amount = ResourceTracker.Instance.SearchResourceAvailableAmount(_requirement.item as StorableItem, _requirement.amount);
+				m_RequiredResourcesTexts[i][j].text = $"{_amount} / {_requirement.amount}";
+				m_RequiredResourcesTexts[i][j].color = _amount >= _requirement.amount ? Constant.COLOR_RESOURCE_AVAILABLE : Constant.COLOR_RESOURCE_UNAVAILABLE;
 			}
 		}
 	}

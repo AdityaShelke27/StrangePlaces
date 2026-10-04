@@ -166,7 +166,7 @@ public class RocketPanel : MonoBehaviour
 		for (int i = 0; i < m_CurrentResourceRequirement.Length; i++)
 		{
 			m_RequiredResourcesTexts[i].text = $"{m_CurrentResourcesAdded[i]} / {m_CurrentResourceRequirement[i].amount}";
-			m_RequiredResourcesTexts[i].color = m_CurrentResourcesAdded[i] == m_CurrentResourceRequirement[i].amount ? Color.green : Color.red;
+			m_RequiredResourcesTexts[i].color = m_CurrentResourcesAdded[i] == m_CurrentResourceRequirement[i].amount ? Constant.COLOR_RESOURCE_AVAILABLE : Constant.COLOR_RESOURCE_UNAVAILABLE;
 		}
 	}
 	void UpdateSpriteAndText()

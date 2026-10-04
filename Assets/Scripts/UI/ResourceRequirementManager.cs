@@ -19,13 +19,13 @@ public class ResourceRequirementManager : MonoBehaviour
 	{
 		if(_areResourceAvailable)
 		{
-			m_Title.color = Color.green;
-			m_Amount.color = Color.green;
+			m_Title.color = Constant.COLOR_RESOURCE_AVAILABLE;
+			m_Amount.color = Constant.COLOR_RESOURCE_AVAILABLE;
 		}
 		else
 		{
-			m_Title.color = Color.red;
-			m_Amount.color = Color.red;
+			m_Title.color = Constant.COLOR_RESOURCE_UNAVAILABLE;
+			m_Amount.color = Constant.COLOR_RESOURCE_UNAVAILABLE;
 		}
 	}
 	public TMP_Text GetAmountText() => m_Amount;

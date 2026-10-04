@@ -1,12 +1,10 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class NodeMachineInstance : MachineInstance
 {
 	[SerializeField] private NodeMachine m_MachineData;
 	[SerializeField] private ResourceNodeInstance m_Input;
-	[SerializeField] private TMP_Text m_MachineStateText;
 	[SerializeField] private GameObject m_OutputSocket;
 	Coroutine m_MachineWorkingCoroutine;
 	Coroutine m_MachineHaultedCoroutine;
@@ -34,6 +32,10 @@ public class NodeMachineInstance : MachineInstance
 			GameObject _slot = Instantiate(m_InventorySlotPrefab, m_OutputSlotListParent);
 			m_Outputs[i] = _slot.GetComponent<InventorySlot>();
 		}
+
+		m_InventoryPanel.SetActive(false);
+		m_MachineNameText.text = m_MachineData.itemName;
+		m_MachineIconImage.sprite = m_MachineData.itemImage;
 
 		m_OutputSocket.transform.localPosition = m_MachineData.ConveyorOutputPos;
 		m_OutputSocket.SetActive(false);
@@ -113,7 +115,7 @@ public class NodeMachineInstance : MachineInstance
 				break;
 		}
 
-		m_MachineStateText.text = "Machine State:" + _state.ToString();
+		m_MachineStateRenderer.sprite = m_MachineStateIcons[_state == E_MachineState.Working ? 1 : 0];
 	}
 	public override InventorySlot[] GetInputSlots() => null;
 	public override InventorySlot[] GetOutputSlots() => m_Outputs;

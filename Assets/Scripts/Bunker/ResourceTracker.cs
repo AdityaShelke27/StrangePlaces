@@ -35,6 +35,19 @@ public class ResourceTracker : MonoBehaviour
 
 		return _searchedAmount >= _amount;
 	}
+	public int SearchResourceAvailableAmount(StorableItem _item, int _amount)
+	{
+		int _searchedAmount = 0;
+
+		for (int i = 0; i < m_PlayerInventory.Length; i++)
+		{
+			if (m_PlayerInventory[i].GetItem() != _item) continue;
+
+			_searchedAmount += m_PlayerInventory[i].GetItemAmount();
+		}
+
+		return _searchedAmount;
+	}
 
 	public bool SearchAndRemoveResource(StorableItem _item, int _amount)
 	{

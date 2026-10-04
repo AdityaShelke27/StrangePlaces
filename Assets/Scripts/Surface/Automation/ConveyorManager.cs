@@ -12,6 +12,7 @@ public class ConveyorManager : MonoBehaviour
 	public static Action s_EndConveyorMode;
 
 	[SerializeField] Image m_ConveyorButtonImage;
+	[SerializeField] Sprite[] m_ConveyorButtonSprites;
 	[SerializeField] GameObject m_ConveyorConnectionPrefab;
 	[SerializeField] Camera m_Camera;
 	[SerializeField] LayerMask m_SocketLayer;
@@ -47,14 +48,14 @@ public class ConveyorManager : MonoBehaviour
 	void StartConveyorMode()
 	{
 		m_IsInConveyorMode = true;
-		m_ConveyorButtonImage.color = Color.green;
+		m_ConveyorButtonImage.sprite = m_ConveyorButtonSprites[1];
 
 		Debug.Log("Conveyor Active");
 	}
 	void EndConveyorMode()
 	{
 		m_IsInConveyorMode = false;
-		m_ConveyorButtonImage.color = Color.white;
+		m_ConveyorButtonImage.sprite = m_ConveyorButtonSprites[0];
 
 		Debug.Log("Conveyor Inactive");
 	}

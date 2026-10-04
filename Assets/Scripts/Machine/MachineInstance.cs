@@ -1,9 +1,15 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public abstract class MachineInstance : WorldInstance, IActivate
 {
 	[SerializeField] protected SpriteRenderer m_SpriteRenderer;
+	[SerializeField] protected SpriteRenderer m_MachineStateRenderer;
+	[SerializeField] protected TMP_Text m_MachineNameText;
+	[SerializeField] protected Image m_MachineIconImage;
+	[SerializeField] protected Sprite[] m_MachineStateIcons;
 	[SerializeField] protected GameObject m_InventoryPanel;
 	[SerializeField] protected Transform m_OutputSlotListParent;
 	[SerializeField] protected GameObject m_InventorySlotPrefab;

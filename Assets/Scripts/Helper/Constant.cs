@@ -42,10 +42,14 @@ public static class Constant
 	public const string PLAYER_CLIMB = "IsClimbing";
 	public const string PLAYER_BUILD = "IsBuilding";
 
-	// Research
+	// Color
 	public static readonly Color RESEARCH_STATUS_RESEARCHED = new(0.4f, 1, 0.37f);
 	public static readonly Color RESEARCH_STATUS_AVAILABLE = new(0.35f, 0.455f, 1);
 	public static readonly Color RESEARCH_STATUS_LOCKED = new(0.765f, 0.97f, 0.984f);
+
+	public static readonly Color COLOR_RESOURCE_AVAILABLE = new(0.33f, 0.91f, 0.47451f);
+	public static readonly Color COLOR_RESOURCE_UNAVAILABLE = new(1f, 0.33f, 0.33f);
+
 
 	// Automation
 	public const float CONVEYOR_ALIGNMENT_THRESHOLD = 1.0f;

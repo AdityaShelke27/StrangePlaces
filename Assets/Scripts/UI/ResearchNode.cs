@@ -149,7 +149,7 @@ public class ResearchNode : MonoBehaviour
 	}
 	public void SetResearchPointAvailableStatus(bool _areResearchPointsAvailable)
 	{
-		m_ResearchPointText.color = _areResearchPointsAvailable ? Color.green : Color.red;
+		m_ResearchPointText.color = _areResearchPointsAvailable ? Constant.COLOR_RESOURCE_AVAILABLE : Constant.COLOR_RESOURCE_UNAVAILABLE;
 	}
 	public ResourceRequirementManager GetResourceRequirementSlot(int i) => m_ResourceRequirementSlots[i];
 	public void SetUnlocksCompleted(int _val) => m_UnlocksCompleted = _val;

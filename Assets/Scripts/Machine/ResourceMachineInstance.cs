@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class ResourceMachineInstance : MachineInstance
 {
 	[SerializeField] private ResourceMachine m_MachineData;
 	[SerializeField] private int m_SelectedRecipeIdx;
-	[SerializeField] private TMP_Text m_MachineStateText;
 	[SerializeField] private Transform m_InputSlotListParent;
 	[SerializeField] private GameObject m_InputSocket;
 	[SerializeField] private GameObject m_OutputSocket;
@@ -78,6 +76,10 @@ public class ResourceMachineInstance : MachineInstance
 				}
 			}
 		}
+
+		m_InventoryPanel.SetActive(false);
+		m_MachineNameText.text = m_MachineData.itemName;
+		m_MachineIconImage.sprite = m_MachineData.itemImage;
 
 		m_InputSocket.transform.localPosition = m_MachineData.ConveyorInputPos;
 		m_OutputSocket.transform.localPosition = m_MachineData.ConveyorOutputPos;
@@ -199,7 +201,7 @@ public class ResourceMachineInstance : MachineInstance
 				break;
 		}
 
-		m_MachineStateText.text = "Machine State:" + _state.ToString();
+		m_MachineStateRenderer.sprite = m_MachineStateIcons[_state == E_MachineState.Working ? 1 : 0];
 	}
 
 	void SelectRecipeFromItem(string _id)
