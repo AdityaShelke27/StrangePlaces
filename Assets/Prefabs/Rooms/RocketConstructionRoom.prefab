@@ -1876,10 +1876,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7069899777062036597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00037142853, y: -0.0008392173}
-  m_SizeDelta: {x: 0, y: 623.6}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2627251065867781108
 MonoBehaviour:
@@ -1900,10 +1900,10 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 3
   m_Spacing: 50
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -2518,7 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketConstructionWorkbench
   m_RCWorkbenchUI: {fileID: 5984069936571517629}
-  m_RCPartsButtonPrefab: {fileID: 6729616062061996732, guid: 8bff8f810e6920c47a08fe84c9319ace, type: 3}
+  m_RCPartsButtonPrefab: {fileID: 6729616062061996732, guid: 7389ec0a1d8fa3743a9c4fc6100f33fd, type: 3}
   m_ResourceRequirementPrefab: {fileID: 2776483426523333424, guid: 2da284d6b666deb4988ae63a7156ea73, type: 3}
   m_ButtonContentParent: {fileID: 4865142656034398364}
   m_CraftParts:
@@ -3527,7 +3527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0.00012207031}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0.00012207031}
   m_SizeDelta: {x: -238, y: -329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3533257978204787890

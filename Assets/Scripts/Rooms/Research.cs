@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Research : MonoBehaviour
 {
@@ -17,6 +19,14 @@ public class Research : MonoBehaviour
 	[SerializeField] Transform m_RocketConnectionsParent;
 	[SerializeField] GameObject m_BazierConnection;
 	[SerializeField] GameObject m_ResearchCanvas;
+
+	[Header("UI Update")]
+	[SerializeField] Image m_MainResearchButtonImage;
+	[SerializeField] Image m_RocketResearchButtonImage;
+	[SerializeField] TMP_Text m_MainResearchButtonText;
+	[SerializeField] TMP_Text m_RocketResearchButtonText;
+	[SerializeField] Sprite[] m_MainButtonImageState;
+	[SerializeField] Sprite[] m_RocketButtonImageState;
 
 	string m_UnlockedResearch = "";
 
@@ -48,11 +58,23 @@ public class Research : MonoBehaviour
 	{
 		m_MainResearchPanel.SetActive(true);
 		m_RocketResearchPanel.SetActive(false);
+
+		m_MainResearchButtonImage.sprite = m_MainButtonImageState[1];
+		m_RocketResearchButtonImage.sprite = m_RocketButtonImageState[0];
+
+		m_MainResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_SELECTED;
+		m_RocketResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_UNSELECTED;
 	}
 	public void SelectRocketResearch()
 	{
 		m_MainResearchPanel.SetActive(false);
 		m_RocketResearchPanel.SetActive(true);
+
+		m_MainResearchButtonImage.sprite = m_MainButtonImageState[0];
+		m_RocketResearchButtonImage.sprite = m_RocketButtonImageState[1];
+
+		m_MainResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_UNSELECTED;
+		m_RocketResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_SELECTED;
 	}
 	void CreateBazierConnections()
 	{

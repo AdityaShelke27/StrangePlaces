@@ -631,7 +631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &267626057404835873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -747,10 +747,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6711024856785478809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00037142853, y: -0.0008392173}
-  m_SizeDelta: {x: 0, y: 623.6}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5701876636088223595
 MonoBehaviour:
@@ -771,10 +771,10 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 3
   m_Spacing: 50
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -917,7 +917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2184232166234692530
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToolCreation
   m_ToolPanelUI: {fileID: 3211397066858653959}
-  m_ToolCraftButtonPrefab: {fileID: 6729616062061996732, guid: 70dccd11aac21744d850d198970a40d4, type: 3}
+  m_ToolCraftButtonPrefab: {fileID: 6729616062061996732, guid: 4484d82b33f9563429c180ab9f535407, type: 3}
   m_ResourceRequirementPrefab: {fileID: 2776483426523333424, guid: 2da284d6b666deb4988ae63a7156ea73, type: 3}
   m_ButtonContentParent: {fileID: 5628275636191882503}
   m_CraftTools:
@@ -1783,10 +1783,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 196723080033893613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00037142853, y: -0.0008392173}
-  m_SizeDelta: {x: -1510.33, y: 623.6}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &370784845796748304
 MonoBehaviour:
@@ -1807,10 +1807,10 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 3
   m_Spacing: 50
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Workbench
   m_WorkbenchPanelUI: {fileID: 4731034475289793887}
-  m_WorkbenchCraftButtonPrefab: {fileID: 6729616062061996732, guid: 5e49d2c8f2702d449a9600f77c8f6c94, type: 3}
+  m_WorkbenchCraftButtonPrefab: {fileID: 6729616062061996732, guid: bde6c5f82632dda49acd7de194390e2e, type: 3}
   m_ResourceRequirementPrefab: {fileID: 2776483426523333424, guid: 2da284d6b666deb4988ae63a7156ea73, type: 3}
   m_ButtonContentParent: {fileID: 5593602897792619989}
   m_CraftItems:
