@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3ee47d43ff588c4418f448248164a6dc
+guid: afa7c919da52dc24490066b5fb5630ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2969098507955940684
-    second: ChatGPT Image Sep 26, 2026, 12_29_49 PM_0
+      213: -4623767357677003813
+    second: RC_AddResourcesButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 30, y: 0, z: 30, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Sep 26, 2026, 12_29_49 PM_0
+      name: RC_AddResourcesButton_0
       rect:
         serializedVersion: 2
-        x: 186
-        y: 59
-        width: 884
-        height: 1111
+        x: 0
+        y: 0
+        width: 350
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4d2bddac5b543920800000000000000
-      internalID: 2969098507955940684
+      spriteID: bdb9d91061415dfb0800000000000000
+      internalID: -4623767357677003813
       vertices: []
       indices: 
       edges: []
@@ -152,7 +152,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Sep 26, 2026, 12_29_49 PM_0: 2969098507955940684
+      RC_AddResourcesButton_0: -4623767357677003813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

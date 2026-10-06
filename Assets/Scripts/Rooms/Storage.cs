@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Storage : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Storage : MonoBehaviour
 	[SerializeField] Transform m_InventoryParent;
 	[SerializeField] GameObject m_InventorySlotPrefab;
 	[SerializeField] GameObject m_InventoryPanelUI;
+	[SerializeField] Sprite m_StorageSlotSprite;
 	List<InventorySlot> m_StorageInventory = new();
 
 	private void Awake()
@@ -23,6 +25,7 @@ public class Storage : MonoBehaviour
 		{
 			GameObject _invSlot = Instantiate(m_InventorySlotPrefab, m_InventoryParent);
 			InventorySlot _slot = _invSlot.GetComponent<InventorySlot>();
+			_invSlot.GetComponent<Image>().sprite = m_StorageSlotSprite;
 			_slot.ShouldAcceptAllItems(true);
 			m_StorageInventory.Add(_slot);
 		}

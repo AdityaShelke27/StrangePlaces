@@ -66,6 +66,8 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	public int GetItemAmount() => m_ItemSlot.amount;
 	public void OnBeginDrag(PointerEventData eventData)
 	{
+		if (m_ItemSlot.item == null) return;
+
 		m_IsDragging = true;
 		m_PointerData = eventData;
 		s_SourceInventorySlot = this;

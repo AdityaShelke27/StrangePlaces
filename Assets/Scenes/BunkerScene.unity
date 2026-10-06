@@ -9879,6 +9879,7 @@ MonoBehaviour:
   m_Electricity: 57
   m_Hunger: 43
   m_ResearchPoints: 200
+  m_IsInBunker: 1
   m_ElectricitySlider: {fileID: 1451557616}
   m_HungerSlider: {fileID: 2028945284}
   m_ElectricityText: {fileID: 1396275062}

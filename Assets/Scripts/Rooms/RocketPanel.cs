@@ -17,7 +17,7 @@ public class RocketPanel : MonoBehaviour
 	[SerializeField] GameObject m_ResourceItemPrefab;
 	[SerializeField] Button m_ConstructButton;
 	[SerializeField] TMP_Text m_ConstructButtonText;
-	[SerializeField] GameObject[] m_SizePanelProgressDone;
+	//[SerializeField] GameObject[] m_SizePanelProgressDone;
 	[Header("Resource Requirement")]
 	[SerializeField] ResourceRequirement[] m_RocketFrameRequirement;
 	[SerializeField] ResourceRequirement[] m_QuantumProcessorRequirement;
@@ -63,10 +63,10 @@ public class RocketPanel : MonoBehaviour
 		m_IsResearchComplete = !(m_RocketProgression <= 5);
 		m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
 
-		for(int i = 0; i < m_RocketProgression; i++)
-		{
-			m_SizePanelProgressDone[i].SetActive(true);
-		}
+		//for(int i = 0; i < m_RocketProgression; i++)
+		//{
+		//	m_SizePanelProgressDone[i].SetActive(true);
+		//}
 
 		m_CurrentResourceRequirement = m_RocketResourceRequirement[m_RocketProgression];
 		m_CurrentResourcesAdded = new int[m_CurrentResourceRequirement.Length];
@@ -90,7 +90,7 @@ public class RocketPanel : MonoBehaviour
 
 		if(m_IsInConstructMode)
 		{
-			m_SizePanelProgressDone[m_RocketProgression].SetActive(true);
+			//m_SizePanelProgressDone[m_RocketProgression].SetActive(true);
 			m_RocketProgression++;
 			m_IsResearchComplete = !(m_RocketProgression <= 5);
 			m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);

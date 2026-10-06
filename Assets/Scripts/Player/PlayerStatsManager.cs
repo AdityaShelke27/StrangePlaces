@@ -11,8 +11,10 @@ public class PlayerStatsManager : MonoBehaviour
 	[SerializeField] private int m_Electricity;
 	[SerializeField] private int m_Hunger;
 	[SerializeField] private int m_ResearchPoints;
+	[SerializeField] bool m_IsInBunker;
 	int m_TotalHungerDepletionRate = 1;
 	float m_HungerDepletionInterval = 3;
+
 	[Header("UI")]
 	[SerializeField] private Slider m_ElectricitySlider;
 	[SerializeField] private Slider m_HungerSlider;
@@ -128,4 +130,6 @@ public class PlayerStatsManager : MonoBehaviour
 	{
 		m_ResearchPointsText.text = m_ResearchPoints.ToString();
 	}
+
+	public bool GetIsInBunker() => m_IsInBunker;
 }

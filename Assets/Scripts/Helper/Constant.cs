@@ -57,7 +57,7 @@ public static class Constant
 	public const float CONVEYOR_ALIGNMENT_THRESHOLD = 1.0f;
 
 	// Misc
-	public const int STORAGE_SLOT_COUNT = 20;
+	public const int STORAGE_SLOT_COUNT = 50;
 
 	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
