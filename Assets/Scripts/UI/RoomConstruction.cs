@@ -120,6 +120,11 @@ public class RoomConstruction : MonoBehaviour
 		m_IsRoomConstructionPanelActive = !m_IsRoomConstructionPanelActive;
 		RoomConstructionPanel.SetActive(m_IsRoomConstructionPanelActive);
 	}
+	public void CloseRoomConstructionPanel()
+	{
+		m_IsRoomConstructionPanelActive = false;
+		RoomConstructionPanel.SetActive(m_IsRoomConstructionPanelActive);
+	}
 	void UnlockRoomResearched(int _id)
 	{
 		for (int i = 0; i < m_NotResearchedPanel.Length; i++)
@@ -136,42 +141,42 @@ public class RoomConstruction : MonoBehaviour
 	{
 		if (!CheckBuildResources(m_ConstructionRoomResourceRequirement)) return;
 
-		ToggleRoomConstructionPanel();
+		CloseRoomConstructionPanel();
 		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROOM, Constant.ID_CONSTRUCTION_ROOM, () => ConsumeBuildResources(m_ConstructionRoomResourceRequirement));
 	}
 	public void GenerateMechanicRoom()
 	{
 		if (!CheckBuildResources(m_MechanicRoomResourceRequirement)) return;
 
-		ToggleRoomConstructionPanel();
+		CloseRoomConstructionPanel();
 		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROOM, Constant.ID_MECHANIC_ROOM, () => ConsumeBuildResources(m_MechanicRoomResourceRequirement));
 	}
 	public void GenerateStorageRoom()
 	{
 		if (!CheckBuildResources(m_StorageRoomResourceRequirement)) return;
 
-		ToggleRoomConstructionPanel();
+		CloseRoomConstructionPanel();
 		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROOM, Constant.ID_STORAGE_ROOM, () => ConsumeBuildResources(m_StorageRoomResourceRequirement));
 	}
 	public void GenerateKitchen()
 	{
 		if (!CheckBuildResources(m_KitchenRoomResourceRequirement)) return;
 
-		ToggleRoomConstructionPanel();
+		CloseRoomConstructionPanel();
 		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROOM, Constant.ID_KITCHEN_ROOM, () => ConsumeBuildResources(m_KitchenRoomResourceRequirement));
 	}
 	public void GenerateResearchRoom()
 	{
 		if (!CheckBuildResources(m_ResearchRoomResourceRequirement)) return;
 
-		ToggleRoomConstructionPanel();
+		CloseRoomConstructionPanel();
 		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROOM, Constant.ID_RESEARCH_ROOM, () => ConsumeBuildResources(m_ResearchRoomResourceRequirement));
 	}
 	public void GenerateRocketConstructionRoom()
 	{
 		if (!CheckBuildResources(m_RocketConstructionRoomResourceRequirement)) return;
 
-		ToggleRoomConstructionPanel();
+		CloseRoomConstructionPanel();
 		RoomPlacement.s_GenerateAreas(Constant.SIZE_ROCKET_ROOM, Constant.ID_ROCKETCONSTRUCTION_ROOM, () => ConsumeBuildResources(m_RocketConstructionRoomResourceRequirement));
 	}
 }

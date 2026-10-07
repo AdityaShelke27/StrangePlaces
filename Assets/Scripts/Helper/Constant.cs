@@ -13,6 +13,8 @@ public static class Constant
 	public const int ID_KITCHEN_ROOM = 4;
 	public const int ID_ROCKETCONSTRUCTION_ROOM = 5;
 
+	public const int ROOM_TOTAL_COUNT = 5;
+
 	// ROOM AND STAIR SIZE
 	public static readonly Vector2 SIZE_ROOM = new(13.82f, 5.46f);//new(7.68f, 3.84f);
 	public static readonly Vector2 SIZE_ROCKET_ROOM = new(19f, 5.46f);//new(7.68f, 3.84f);

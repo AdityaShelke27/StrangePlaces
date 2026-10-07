@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -17,7 +16,12 @@ public class RocketPanel : MonoBehaviour
 	[SerializeField] GameObject m_ResourceItemPrefab;
 	[SerializeField] Button m_ConstructButton;
 	[SerializeField] TMP_Text m_ConstructButtonText;
-	//[SerializeField] GameObject[] m_SizePanelProgressDone;
+	[SerializeField] Transform m_SideSlotParent;
+	[SerializeField] Sprite m_SelectedBG;
+	[SerializeField] Sprite m_SelectedIconBG;
+	[SerializeField] Sprite m_CompletedBG;
+	[SerializeField] Sprite m_CompletedIconBG;
+	[SerializeField] GameObject[] m_TickPanels;
 	[Header("Resource Requirement")]
 	[SerializeField] ResourceRequirement[] m_RocketFrameRequirement;
 	[SerializeField] ResourceRequirement[] m_QuantumProcessorRequirement;
@@ -63,13 +67,18 @@ public class RocketPanel : MonoBehaviour
 		m_IsResearchComplete = !(m_RocketProgression <= 5);
 		m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
 
-		//for(int i = 0; i < m_RocketProgression; i++)
-		//{
-		//	m_SizePanelProgressDone[i].SetActive(true);
-		//}
+		for (int i = 0; i < m_RocketProgression; i++)
+		{
+			m_TickPanels[i].SetActive(true);
+			m_SideSlotParent.GetChild(i).GetComponent<Image>().sprite = m_CompletedBG;
+			m_SideSlotParent.GetChild(i).Find("IconBG").GetComponent<Image>().sprite = m_CompletedIconBG;
+		}
 
 		m_CurrentResourceRequirement = m_RocketResourceRequirement[m_RocketProgression];
 		m_CurrentResourcesAdded = new int[m_CurrentResourceRequirement.Length];
+
+		m_SideSlotParent.GetChild(m_RocketProgression).GetComponent<Image>().sprite = m_SelectedBG;
+		m_SideSlotParent.GetChild(m_RocketProgression).Find("IconBG").GetComponent<Image>().sprite = m_SelectedIconBG;
 
 		AddResources();
 		UpdateConstructMode();
@@ -90,7 +99,10 @@ public class RocketPanel : MonoBehaviour
 
 		if(m_IsInConstructMode)
 		{
-			//m_SizePanelProgressDone[m_RocketProgression].SetActive(true);
+			m_TickPanels[m_RocketProgression].SetActive(true);
+			m_SideSlotParent.GetChild(m_RocketProgression).GetComponent<Image>().sprite = m_CompletedBG;
+			m_SideSlotParent.GetChild(m_RocketProgression).Find("IconBG").GetComponent<Image>().sprite = m_CompletedIconBG;
+
 			m_RocketProgression++;
 			m_IsResearchComplete = !(m_RocketProgression <= 5);
 			m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
@@ -99,6 +111,9 @@ public class RocketPanel : MonoBehaviour
 			{ 
 				m_CurrentResourceRequirement = m_RocketResourceRequirement[m_RocketProgression];
 				m_CurrentResourcesAdded = new int[m_CurrentResourceRequirement.Length];
+
+				m_SideSlotParent.GetChild(m_RocketProgression).GetComponent<Image>().sprite = m_SelectedBG;
+				m_SideSlotParent.GetChild(m_RocketProgression).Find("IconBG").GetComponent<Image>().sprite = m_SelectedIconBG;
 			}
 			UpdateSpriteAndText();
 			AddResources();
@@ -125,7 +140,7 @@ public class RocketPanel : MonoBehaviour
 		}
 
 		bool _areAllResourceAdded = true;
-		for(int i = 0; i < m_CurrentResourceRequirement.Length; i++)
+		for (int i = 0; i < m_CurrentResourceRequirement.Length; i++)
 		{
 			if (m_CurrentResourcesAdded[i] < m_CurrentResourceRequirement[i].amount)
 			{

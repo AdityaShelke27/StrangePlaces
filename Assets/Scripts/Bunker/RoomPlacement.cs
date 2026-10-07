@@ -13,10 +13,13 @@ public class RoomPlacement : MonoBehaviour
 	[SerializeField] Transform m_RoomListParent;
 	[SerializeField] Transform m_StairsParent;
 	[SerializeField] Transform m_GroundLevelPointsParent;
+	[SerializeField] GameObject m_AllRoomsCreatedPanel;
 	[SerializeField] int m_BuiltGroundLevel;
 	[SerializeField] GameObject[] m_Rooms;
 	[SerializeField] GameObject[] m_RoomConstructionButtons;
 	List<GameObject> m_RoomSilhouletteList = new();
+
+	[SerializeField] int m_TotalRoomsCreated = 0;
 	private void OnEnable()
 	{
 		s_GenerateAreas += GenerateAvailableAreas;
@@ -28,13 +31,19 @@ public class RoomPlacement : MonoBehaviour
 
 	private void Start()
 	{
+		m_AllRoomsCreatedPanel.SetActive(false);
 		Save_RoomData _roomData = Save_RoomData.LoadData();
 		if (_roomData == null) return;
 
+		int _roomCount = 0;
 		foreach(Save_Room _room in _roomData.Rooms)
 		{
 			ConstructRoomDirectly(_room.Pos, _room.DoorDir, _room.GroundLevel, _room.RoomID);
+			m_TotalRoomsCreated++;
+			Debug.Log(_room.RoomID);
 		}
+
+		if (m_TotalRoomsCreated >= Constant.ROOM_TOTAL_COUNT) m_AllRoomsCreatedPanel.SetActive(true);
 	}
 
 	void GenerateAvailableAreas(Vector2 _roomSize, int _roomID, Action _actionAfterBuild)
@@ -161,6 +170,8 @@ public class RoomPlacement : MonoBehaviour
 		m_RoomSilhouletteList.Clear();
 		if (m_RoomConstructionButtons[_roomID] != null) Destroy(m_RoomConstructionButtons[_roomID]);
 
+		m_TotalRoomsCreated++;
+		if (m_TotalRoomsCreated >= Constant.ROOM_TOTAL_COUNT) m_AllRoomsCreatedPanel.SetActive(true);
 		if (_groundLevel > m_BuiltGroundLevel) ConstructNewGroundLevel();
 
 		Save_Room _roomData = new(_roomID, _groundLevel, _pos, _doorFacingDirection);
