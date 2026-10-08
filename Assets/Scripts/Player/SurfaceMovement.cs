@@ -15,7 +15,7 @@ public class SurfaceMovement : MonoBehaviour
 	[SerializeField] Transform m_Bunker;
 	[SerializeField] RectTransform m_BunkerPointer;
 	[SerializeField] float m_CamMoveSpeed;
-	Camera m_Camera;
+	[SerializeField] Camera m_Camera;
 	private NavMeshAgent agent;
 	bool m_IsMoving = false;
 	bool m_IsHasWork = false;
@@ -39,7 +39,6 @@ public class SurfaceMovement : MonoBehaviour
 		PlayerStatsManager.Instance.SetHunger(PlayerData.hunger);
 		PlayerStatsManager.Instance.SetResearchPoints(PlayerData.researchPoints);
 
-		m_Camera = m_MainCam.GetComponent<Camera>();
 		agent = GetComponent<NavMeshAgent>();
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;

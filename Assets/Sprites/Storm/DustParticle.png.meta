@@ -1,10 +1,70 @@
 fileFormatVersion: 2
-guid: 0209394b0946f664d8aa6ee606d6e12f
+guid: bf730f7a5b9ff61429bc84d1701dd8a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1689676017800005785
-    second: Soft Dust Cloud on White_0
+      213: 6879662373593653540
+    second: Soft Beige Dust Cloud Overlay_0
+  - first:
+      213: -15761163812518652
+    second: Soft Beige Dust Cloud Overlay_1
+  - first:
+      213: -2297256948626009754
+    second: Soft Beige Dust Cloud Overlay_2
+  - first:
+      213: -6094839501358553049
+    second: Soft Beige Dust Cloud Overlay_3
+  - first:
+      213: -1609026581629447722
+    second: Soft Beige Dust Cloud Overlay_4
+  - first:
+      213: -7121582797675611604
+    second: Soft Beige Dust Cloud Overlay_5
+  - first:
+      213: -1856920374470550380
+    second: Soft Beige Dust Cloud Overlay_6
+  - first:
+      213: 2687727468225076808
+    second: Soft Beige Dust Cloud Overlay_7
+  - first:
+      213: -3995673033345365925
+    second: Soft Beige Dust Cloud Overlay_8
+  - first:
+      213: 4841588820853831417
+    second: Soft Beige Dust Cloud Overlay_9
+  - first:
+      213: -7392782298399751977
+    second: Soft Beige Dust Cloud Overlay_10
+  - first:
+      213: -2109075692944175152
+    second: Soft Beige Dust Cloud Overlay_11
+  - first:
+      213: -1337782484819831685
+    second: Soft Beige Dust Cloud Overlay_12
+  - first:
+      213: 8999868336555515409
+    second: Soft Beige Dust Cloud Overlay_13
+  - first:
+      213: -325950022840322899
+    second: Soft Beige Dust Cloud Overlay_14
+  - first:
+      213: -6230136208785762327
+    second: Soft Beige Dust Cloud Overlay_15
+  - first:
+      213: -4808167421040911893
+    second: Soft Beige Dust Cloud Overlay_16
+  - first:
+      213: -1913646261452549196
+    second: Soft Beige Dust Cloud Overlay_17
+  - first:
+      213: -6167981155193779831
+    second: Soft Beige Dust Cloud Overlay_18
+  - first:
+      213: -6560406000888605947
+    second: Soft Beige Dust Cloud Overlay_19
+  - first:
+      213: 2737072160955186367
+    second: Soft Beige Dust Cloud Overlay_20
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +106,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +186,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soft Dust Cloud on White_0
+      name: Soft Beige Dust Cloud Overlay_0
       rect:
         serializedVersion: 2
-        x: 423
-        y: 389
-        width: 414
-        height: 462
+        x: 43
+        y: 1040
+        width: 127
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +201,448 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 998477ac26fe27710800000000000000
-      internalID: 1689676017800005785
+      spriteID: 421aba09a78797f50800000000000000
+      internalID: 6879662373593653540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1173
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40545b51e4108cff0800000000000000
+      internalID: -15761163812518652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_2
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1132
+        width: 411
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66159530af08e10e0800000000000000
+      internalID: -2297256948626009754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_3
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1147
+        width: 59
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728218ee3c7ca6ba0800000000000000
+      internalID: -6094839501358553049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 915
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1d0d759d69ba9e0800000000000000
+      internalID: -1609026581629447722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 371
+        width: 73
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a33026d2e0b2d90800000000000000
+      internalID: -7121582797675611604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 1208
+        height: 1119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c5f7ff1c4ea36e0800000000000000
+      internalID: -1856920374470550380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 881
+        width: 56
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e9d9464e9bc4520800000000000000
+      internalID: 2687727468225076808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 988
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5887d0db848c88c0800000000000000
+      internalID: -3995673033345365925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_9
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 972
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6be777167c03340800000000000000
+      internalID: 4841588820853831417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_10
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 978
+        width: 19
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d046121baf876990800000000000000
+      internalID: -7392782298399751977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_11
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 805
+        width: 144
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfc6a5e4de0bb2e0800000000000000
+      internalID: -2109075692944175152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_12
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1036
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74139dfaed3f6de0800000000000000
+      internalID: -1337782484819831685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_13
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 934
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e5da99194f5ec70800000000000000
+      internalID: 8999868336555515409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_14
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 859
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da472126e2ef97bf0800000000000000
+      internalID: -325950022840322899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_15
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 672
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e79605702c1a89a0800000000000000
+      internalID: -6230136208785762327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_16
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 594
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be910409435f54db0800000000000000
+      internalID: -4808167421040911893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_17
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 532
+        width: 104
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3dd583ddc5175e0800000000000000
+      internalID: -1913646261452549196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_18
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 399
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9890f5791dde66aa0800000000000000
+      internalID: -6167981155193779831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_19
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 177
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50391be2081c4f4a0800000000000000
+      internalID: -6560406000888605947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soft Beige Dust Cloud Overlay_20
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 53
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc3856f0a80cf520800000000000000
+      internalID: 2737072160955186367
       vertices: []
       indices: 
       edges: []
@@ -151,7 +651,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +661,27 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Soft Dust Cloud on White_0: 1689676017800005785
+      Soft Beige Dust Cloud Overlay_0: 6879662373593653540
+      Soft Beige Dust Cloud Overlay_1: -15761163812518652
+      Soft Beige Dust Cloud Overlay_10: -7392782298399751977
+      Soft Beige Dust Cloud Overlay_11: -2109075692944175152
+      Soft Beige Dust Cloud Overlay_12: -1337782484819831685
+      Soft Beige Dust Cloud Overlay_13: 8999868336555515409
+      Soft Beige Dust Cloud Overlay_14: -325950022840322899
+      Soft Beige Dust Cloud Overlay_15: -6230136208785762327
+      Soft Beige Dust Cloud Overlay_16: -4808167421040911893
+      Soft Beige Dust Cloud Overlay_17: -1913646261452549196
+      Soft Beige Dust Cloud Overlay_18: -6167981155193779831
+      Soft Beige Dust Cloud Overlay_19: -6560406000888605947
+      Soft Beige Dust Cloud Overlay_2: -2297256948626009754
+      Soft Beige Dust Cloud Overlay_20: 2737072160955186367
+      Soft Beige Dust Cloud Overlay_3: -6094839501358553049
+      Soft Beige Dust Cloud Overlay_4: -1609026581629447722
+      Soft Beige Dust Cloud Overlay_5: -7121582797675611604
+      Soft Beige Dust Cloud Overlay_6: -1856920374470550380
+      Soft Beige Dust Cloud Overlay_7: 2687727468225076808
+      Soft Beige Dust Cloud Overlay_8: -3995673033345365925
+      Soft Beige Dust Cloud Overlay_9: 4841588820853831417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

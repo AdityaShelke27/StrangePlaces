@@ -18,22 +18,41 @@ public class StormController : MonoBehaviour
 	[Range(0f, 1f)]
 	[SerializeField] private float m_DebugStormIntensity;
 
+	[Header("Gusts")]
+	[SerializeField] private float m_MinGustInterval = 4f;
+	[SerializeField] private float m_MaxGustInterval = 10f;
+
+	[SerializeField] private float m_MinGustDuration = 0.5f;
+	[SerializeField] private float m_MaxGustDuration = 1.5f;
+
+	[SerializeField]
+	private AnimationCurve m_GustCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+
+	private float m_GustTimer;
+	private float m_NextGustTime;
+
+	private float m_CurrentGustDuration;
+	private bool m_IsGusting;
+
 	private float m_StormTimer;
 	private bool m_IsStormApproaching;
 
 	public float StormIntensity { get; private set; }
+	public float GustIntensity { get; private set; }
 
 	private static readonly int StormIntensityID = Shader.PropertyToID("_StormIntensity");
-
 	private static readonly int WindDirectionID = Shader.PropertyToID("_WindDirection");
+	private static readonly int GustIntensityID = Shader.PropertyToID("_GustIntensity");
 
 	private void Start()
 	{
 		SetStormIntensity(0f);
+		ScheduleNextGust();
 	}
 
 	private void Update()
 	{
+		UpdateGusts();
 		if (m_DebugMode)
 		{
 			SetStormIntensity(m_DebugStormIntensity);
@@ -57,6 +76,7 @@ public class StormController : MonoBehaviour
 
 			OnFullStormReached();
 		}
+		
 	}
 
 	public void StartStorm()
@@ -102,5 +122,66 @@ public class StormController : MonoBehaviour
 	private void OnFullStormReached()
 	{
 		Debug.Log("Full storm reached.");
+	}
+	private void UpdateGusts()
+	{
+		if (StormIntensity < 0.25f)
+		{
+			GustIntensity = 0f;
+			return;
+		}
+
+		if (!m_IsGusting)
+		{
+			m_GustTimer += Time.deltaTime;
+
+			if (m_GustTimer >= m_NextGustTime)
+			{
+				StartGust();
+			}
+
+			return;
+		}
+
+		m_GustTimer += Time.deltaTime;
+		float progress = Mathf.Clamp01(m_GustTimer / m_CurrentGustDuration);
+
+		// Rise and fall.
+		float wave = Mathf.Sin(progress * Mathf.PI);
+		GustIntensity = wave * StormIntensity;
+
+		Shader.SetGlobalFloat(GustIntensityID, GustIntensity);
+
+		if (progress >= 1f)
+		{
+			m_IsGusting = false;
+			GustIntensity = 0f;
+
+			ScheduleNextGust();
+		}
+	}
+
+	private void StartGust()
+	{
+		m_IsGusting = true;
+		m_GustTimer = 0f;
+
+		m_CurrentGustDuration =
+			Random.Range(
+				m_MinGustDuration,
+				m_MaxGustDuration
+			);
+	}
+
+	private void ScheduleNextGust()
+	{
+		m_IsGusting = false;
+		m_GustTimer = 0f;
+
+		m_NextGustTime =
+			Random.Range(
+				m_MinGustInterval,
+				m_MaxGustInterval
+			);
 	}
 }

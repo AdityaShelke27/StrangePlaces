@@ -63,6 +63,8 @@ Shader "Custom/VegetationWind"
             float _StormIntensity;
             float4 _WindDirection;
 
+			float _GustIntensity;
+
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -131,6 +133,13 @@ Shader "Custom/VegetationWind"
                 float totalWind =
                     (sway * baseWind) +
                     gustAmount;
+
+				totalWind *=
+					lerp(
+						1.0,
+						1.8,
+						_GustIntensity
+					);
 
                 float2 direction =
                     normalize(_WindDirection.xy + 0.0001);

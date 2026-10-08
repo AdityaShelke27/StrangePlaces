@@ -51,5 +51,8 @@ TagManager:
   - name: Player
     uniqueID: 1232386401
     locked: 0
+  - name: Storm
+    uniqueID: 938333055
+    locked: 0
   m_RenderingLayers:
   - Default
