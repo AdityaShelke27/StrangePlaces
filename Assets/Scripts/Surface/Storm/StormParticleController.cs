@@ -23,8 +23,15 @@ public class StormParticleController : MonoBehaviour
 	[Header("Debris")]
 	[SerializeField] private float m_MinDebrisSpeed = 6f;
 	[SerializeField] private float m_MaxDebrisSpeed = 18f;
-	[SerializeField] private int m_MinDebrisBurst = 2;
-	[SerializeField] private int m_MaxDebrisBurst = 8;
+
+	[SerializeField] private int m_MinDebrisBurst = 4;
+	[SerializeField] private int m_MaxDebrisBurst = 12;
+
+	[SerializeField] private float m_MinDebrisInterval = 0.1f;
+	[SerializeField] private float m_MaxDebrisInterval = 0.35f;
+
+	private float m_DebrisTimer;
+	private float m_NextDebrisBurst;
 
 	[Header("Dust Sheets")]
 	[SerializeField] private float m_MaxDustSheetEmission = 5f;
@@ -72,6 +79,7 @@ public class StormParticleController : MonoBehaviour
 
 		m_DebrisVelocity = m_DebrisParticles.velocityOverLifetime;
 		m_DebrisVelocity.enabled = true;
+		ScheduleNextDebrisBurst();
 
 		m_DustSheetEmission = m_DustSheetParticles.emission;
 		m_DustSheetVelocity = m_DustSheetParticles.velocityOverLifetime;
@@ -91,13 +99,10 @@ public class StormParticleController : MonoBehaviour
 	private void UpdateDust(float intensity)
 	{
 		float emission = m_DustEmissionCurve.Evaluate(intensity) * m_MaxDustEmission;
-
 		m_DustEmission.rateOverTime = emission;
 
 		float gust = m_StormController.GustIntensity;
-
 		float speed = Mathf.Lerp(m_MinDustSpeed, m_MaxDustSpeed, intensity);
-
 		speed *= Mathf.Lerp(1f, 1.8f, gust);
 
 		Vector2 wind = m_StormController.WindDirection;
@@ -109,13 +114,11 @@ public class StormParticleController : MonoBehaviour
 	private void UpdateWindStreaks(float intensity)
 	{
 		float emission = m_StreakEmissionCurve.Evaluate(intensity) * m_MaxStreakEmission;
-
 		float gustBoost = Mathf.Lerp(1f, 2.5f, m_StormController.GustIntensity);
 
 		m_StreakEmission.rateOverTime = emission * gustBoost;
 
 		float speed = Mathf.Lerp(m_MinStreakSpeed, m_MaxStreakSpeed, intensity);
-
 		speed *= Mathf.Lerp(1f, 2f, m_StormController.GustIntensity);
 
 		Vector2 wind = m_StormController.WindDirection;
@@ -125,22 +128,45 @@ public class StormParticleController : MonoBehaviour
 	}
 	private void UpdateDebris(float intensity, float gust)
 	{
-		float speed = Mathf.Lerp(m_MinDebrisSpeed, m_MaxDebrisSpeed, intensity);
-
 		Vector2 wind = m_StormController.WindDirection;
+
+		float speed = Mathf.Lerp(m_MinDebrisSpeed, m_MaxDebrisSpeed, intensity);
+		speed *= Mathf.Lerp( 1f, 1.5f, gust);
 
 		m_DebrisVelocity.x = wind.x * speed;
 		m_DebrisVelocity.y = wind.y * speed;
 
-		bool gustStarted = gust > 0.1f && !m_WasGusting;
-
-		if (gustStarted && intensity > 0.4f)
+		// No debris during weaker storm stages.
+		if (intensity < 0.4f)
 		{
-			int amount = Random.Range(m_MinDebrisBurst, m_MaxDebrisBurst + 1);
-			m_DebrisParticles.Emit(amount);
+			m_DebrisTimer = 0f;
+			return;
 		}
 
-		m_WasGusting = gust > 0.1f;
+		// Debris becomes much more active during gusts.
+		float activity = Mathf.Lerp(0.25f, 1f, gust);
+
+		m_DebrisTimer += Time.deltaTime * activity;
+
+		if (m_DebrisTimer >= m_NextDebrisBurst)
+		{
+			EmitDebris(intensity, gust);
+			ScheduleNextDebrisBurst();
+		}
+	}
+	private void EmitDebris(float intensity, float gust)
+	{
+		float amountFactor = Mathf.Clamp01(intensity * 0.7f + gust * 0.6f);
+
+		int maxAmount = Mathf.RoundToInt(Mathf.Lerp(m_MinDebrisBurst, m_MaxDebrisBurst, amountFactor));
+		int amount = Random.Range(m_MinDebrisBurst, maxAmount + 1);
+
+		m_DebrisParticles.Emit(amount);
+	}
+	private void ScheduleNextDebrisBurst()
+	{
+		m_DebrisTimer = 0f;
+		m_NextDebrisBurst = Random.Range(m_MinDebrisInterval, m_MaxDebrisInterval);
 	}
 	private void UpdateDustSheets(float intensity, float gust)
 	{

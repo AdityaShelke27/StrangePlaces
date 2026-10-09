@@ -80,6 +80,7 @@ public class ResourceMachineInstance : MachineInstance
 		m_InventoryPanel.SetActive(false);
 		m_MachineNameText.text = m_MachineData.itemName;
 		m_MachineIconImage.sprite = m_MachineData.itemImage;
+		m_MachineIconImage.preserveAspect = true;
 
 		m_InputSocket.transform.localPosition = m_MachineData.ConveyorInputPos;
 		m_OutputSocket.transform.localPosition = m_MachineData.ConveyorOutputPos;

@@ -36,6 +36,7 @@ public class NodeMachineInstance : MachineInstance
 		m_InventoryPanel.SetActive(false);
 		m_MachineNameText.text = m_MachineData.itemName;
 		m_MachineIconImage.sprite = m_MachineData.itemImage;
+		m_MachineIconImage.preserveAspect = true;
 
 		m_OutputSocket.transform.localPosition = m_MachineData.ConveyorOutputPos;
 		m_OutputSocket.SetActive(false);

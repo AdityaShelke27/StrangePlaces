@@ -1597,8 +1597,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 0.8
+      scalar: 3
+      minScalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11340,7 +11340,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 23f4351ed89c1e540a8d69e37c018643, type: 2}
+  - {fileID: 2100000, guid: ff58463fb73a738438a745c8748716a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11584,7 +11584,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.27450982, g: 0.1764706, b: 0.105882354, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11648,8 +11648,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.45
-      minScalar: 0.15
+      scalar: 0.17
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11806,7 +11806,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -11859,7 +11859,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -11912,8 +11912,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 6.283185
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -12499,10 +12499,10 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -12555,7 +12555,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -12608,9 +12608,9 @@ ParticleSystem:
         m_RotationOrder: 4
     curve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.7853982
-      minScalar: 0.7853982
+      minMaxState: 3
+      scalar: 3.1415925
+      minScalar: 0.5235988
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -12670,8 +12670,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 0.2509804}
-        key2: {r: 1, g: 1, b: 1, a: 0.2509804}
+        key1: {r: 1, g: 1, b: 1, a: 0.47058824}
+        key2: {r: 1, g: 1, b: 1, a: 0.47058824}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -14050,7 +14050,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.15
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -21141,10 +21141,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: a73d42978fe78394197c46422832d8fd, type: 2}
+      objectReference: {fileID: 11400000, guid: eda131da0a2880e4e814e1281946e568, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21206,8 +21206,8 @@ MonoBehaviour:
   m_StormController: {fileID: 832631704}
   m_Camera: {fileID: 519420031}
   m_DarkeningRenderer: {fileID: 817330610}
-  m_StormColor: {r: 0.08, g: 0.1, b: 0.13, a: 1}
-  m_MaxDarkness: 0.35
+  m_StormColor: {r: 0, g: 0, b: 0, a: 1}
+  m_MaxDarkness: 0.9
   m_DarknessCurve:
     serializedVersion: 2
     m_Curve:
@@ -21224,46 +21224,19 @@ MonoBehaviour:
       time: 0.2
       value: 0
       inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      outSlope: 1.7565832
+      tangentMode: 1
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.4
-      value: 0.1
-      inSlope: 0.8081634
-      outSlope: 0.8081634
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.4691356
-    - serializedVersion: 3
-      time: 0.6
-      value: 0.35
-      inSlope: 1.4501405
-      outSlope: 1.4501405
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.36419722
-    - serializedVersion: 3
-      time: 0.8
-      value: 0.7
-      inSlope: 2.2050533
-      outSlope: 2.2050533
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.07921813
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.053613614
+      outSlope: 0.053613614
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.17746918
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -21419,7 +21392,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_WindDirection: {x: 1, y: -0.25}
-  m_DebugMode: 1
+  m_DebugMode: 0
   m_DebugStormIntensity: 0
   m_MinGustInterval: 4
   m_MaxGustInterval: 10
@@ -21466,16 +21439,18 @@ MonoBehaviour:
   m_WindStreakParticles: {fileID: 735547286}
   m_DebrisParticles: {fileID: 609438264}
   m_DustSheetParticles: {fileID: 641177918}
-  m_MaxDustEmission: 80
+  m_MaxDustEmission: 200
   m_MinDustSpeed: 0.5
   m_MaxDustSpeed: 5
-  m_MaxStreakEmission: 60
+  m_MaxStreakEmission: 120
   m_MinStreakSpeed: 4
   m_MaxStreakSpeed: 15
   m_MinDebrisSpeed: 6
   m_MaxDebrisSpeed: 18
   m_MinDebrisBurst: 2
   m_MaxDebrisBurst: 8
+  m_MinDebrisInterval: 0.1
+  m_MaxDebrisInterval: 0.35
   m_MaxDustSheetEmission: 5
   m_MinDustSheetSpeed: 1.5
   m_MaxDustSheetSpeed: 6
@@ -22752,6 +22727,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_ItemSlot.item
+      value: 
+      objectReference: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
+    - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
+      propertyPath: m_ItemSlot.amount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22861,10 +22844,10 @@ PrefabInstance:
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.item
       value: 
-      objectReference: {fileID: 11400000, guid: 24a3b80ab01faa54ea4718dcd5a4023b, type: 2}
+      objectReference: {fileID: 11400000, guid: e74814c797a349342a88bb2fede20d68, type: 2}
     - target: {fileID: 6700502645079445356, guid: a700cadd64d77374186d6e362332d686, type: 3}
       propertyPath: m_ItemSlot.amount
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

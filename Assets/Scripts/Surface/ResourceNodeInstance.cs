@@ -4,6 +4,7 @@ using UnityEngine;
 public class ResourceNodeInstance : MonoBehaviour
 {
 	[SerializeField] SpriteRenderer m_SpriteRenderer;
+	[SerializeField] Material m_WindDeformMat;
 	[SerializeField] ResourceNode m_ResourceNodeData;
 	int m_MaxAmount;
 	[SerializeField] int m_AmountAvailable;
@@ -18,6 +19,11 @@ public class ResourceNodeInstance : MonoBehaviour
 		m_SpriteRenderer.sprite = m_ResourceNodeData.itemImage;
 		m_MaxAmount = m_ResourceNodeData.MaxAmount;
 		m_AmountAvailable = m_MaxAmount;
+
+		if(m_ResourceNodeData.NodeType == E_SurfaceNode.Plant_Node)
+		{
+			m_SpriteRenderer.material = m_WindDeformMat;
+		}
 	}
 	public int FetchResource(int amount)
 	{

@@ -37,6 +37,9 @@ public class ResourceHandler : MonoBehaviour, IActivate
 			_constObj.transform.position = _pos;
 			SpriteRenderer _rend = _constObj.GetComponent<SpriteRenderer>();
 			_rend.sprite = m_MachineConstructionSprites[0];
+			_rend.sortingLayerName = "WorldItems";
+			_rend.sortingOrder = 3;
+
 			StartCoroutine(DelayAction(m_BuildTime / 2, () =>
 			{
 				_rend.sprite = m_MachineConstructionSprites[1];
@@ -68,6 +71,9 @@ public class ResourceHandler : MonoBehaviour, IActivate
 			_constObj.transform.position = _pos;
 			SpriteRenderer _rend = _constObj.GetComponent<SpriteRenderer>();
 			_rend.sprite = m_MachineConstructionSprites[0];
+			_rend.sortingLayerName = "WorldItems";
+			_rend.sortingOrder = 3;
+
 			StartCoroutine(DelayAction(m_BuildTime / 2, () =>
 			{
 				_rend.sprite = m_MachineConstructionSprites[1];

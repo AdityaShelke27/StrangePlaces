@@ -4,6 +4,8 @@ public class StormController : MonoBehaviour
 {
 	[Header("Storm")]
 	[SerializeField] private float m_StormBuildUpDuration = 180f;
+	[SerializeField] private float m_StormBuildUpMin = 240f;
+	[SerializeField] private float m_StormBuildUpMax = 360f;
 
 	[SerializeField]
 	private AnimationCurve m_StormIntensityCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
@@ -46,6 +48,9 @@ public class StormController : MonoBehaviour
 
 	private void Start()
 	{
+		m_StormBuildUpDuration = Random.Range(m_StormBuildUpMin, m_StormBuildUpMax);
+
+		StartStorm();
 		SetStormIntensity(0f);
 		ScheduleNextGust();
 	}
