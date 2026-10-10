@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -5,14 +6,25 @@ using UnityEngine.SceneManagement;
 public class Bunker : MonoBehaviour, IActivate
 {
 	public static Bunker Instance;
+	public static Action s_PlayerFailed;
 
 	[SerializeField] int m_StorageSaveFrequency;
 	[SerializeField] ItemSlot[] m_StorageSlots;
+	[SerializeField] GameObject m_ConveyorInput1;
+	[SerializeField] GameObject m_ConveyorInput2;
 	bool m_IsActivated = false;
 	Animator m_Animator;
 
 	int m_CurrentStorageSaveCounter = 0;
 
+	private void OnEnable()
+	{
+		s_PlayerFailed += PlayerFailed;
+	}
+	private void OnDisable()
+	{
+		s_PlayerFailed -= PlayerFailed;
+	}
 	private void Awake()
 	{
 		if(Instance == null) Instance = this;
@@ -22,6 +34,9 @@ public class Bunker : MonoBehaviour, IActivate
 	{
 		m_Animator = GetComponent<Animator>();
 		AssignStorageSlots();
+
+		m_ConveyorInput1.SetActive(ItemDatabase.Instance.DoesItemIDExistInResearch("bunker-input-node-1"));
+		m_ConveyorInput2.SetActive(ItemDatabase.Instance.DoesItemIDExistInResearch("bunker-input-node-2"));
 	}
 	private void OnMouseDown()
 	{
@@ -60,6 +75,21 @@ public class Bunker : MonoBehaviour, IActivate
 		yield return new WaitForSeconds(1);
 
 		MovePlayerToBunker();
+	}
+	void PlayerFailed()
+	{
+		for (int i = 0; i < PlayerData.itemSlot.Length; i++)
+		{
+			PlayerData.itemSlot[i] = new(null, 0);
+		}
+
+		PlayerData.electricity = PlayerStatsManager.Instance.GetElectricity();
+		PlayerData.hunger = PlayerStatsManager.Instance.GetHunger();
+		PlayerData.researchPoints = PlayerStatsManager.Instance.GetResearchPoints();
+
+		PlayerData.SaveData();
+		SaveStorage();
+		SceneManager.LoadScene(Constant.SCENE_BUNKER);
 	}
 
 	void AssignStorageSlots()

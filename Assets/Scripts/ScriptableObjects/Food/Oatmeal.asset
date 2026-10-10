@@ -21,5 +21,6 @@ MonoBehaviour:
   WorldPrefab: {fileID: 0}
   PlacableNodes: []
   Size: {x: 0, y: 0}
+  ItemType: Food
   hungerRestored: 30
   buffID: 

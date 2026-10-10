@@ -24,7 +24,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f6a86c44b7c84842a04b2dbd995d70d, type: 2}
   - {fileID: 11400000, guid: fdfad2a392e54a745b2f4c848db34041, type: 2}
   Size: {x: 2, y: 2}
+  ItemType: Node Machine
   TimeToProduce: 1
   MachineHaltCheck: 1
+  ElectricityConsumption: 1
   OutputSlots: 1
   InputNode: {fileID: 11400000, guid: 9975a3b173e15f349bd05b899642d926, type: 2}
+  ConveyorOutputPos: {x: 0, y: 0}

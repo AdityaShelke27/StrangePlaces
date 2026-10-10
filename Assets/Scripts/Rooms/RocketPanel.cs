@@ -84,11 +84,13 @@ public class RocketPanel : MonoBehaviour
 		UpdateConstructMode();
 		UpdateSpriteAndText();
 	}
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
+		if (InputManager.IsADrag()) return;
+
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (InputManager.IsPointerOverUI()) return;
 
 			m_RCPanelUI.SetActive(true);
 		}));

@@ -36,11 +36,13 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		ClosePanel();
 		AssignRCPartsData();
 	}
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
+		if (InputManager.IsADrag()) return;
+
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (InputManager.IsPointerOverUI()) return;
 			if (!m_AreResourcesAssigned)
 			{
 				Debug.LogWarning("Construction resources are not yet assigned");

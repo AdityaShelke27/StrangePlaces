@@ -22,7 +22,10 @@ MonoBehaviour:
   PlacableNodes:
   - {fileID: 11400000, guid: d550277ebf530404da46bd942f7a8ae1, type: 2}
   Size: {x: 2, y: 2}
+  ItemType: Node Machine
   TimeToProduce: 1
   MachineHaltCheck: 1
+  ElectricityConsumption: 1
   OutputSlots: 1
   InputNode: {fileID: 11400000, guid: d550277ebf530404da46bd942f7a8ae1, type: 2}
+  ConveyorOutputPos: {x: 0, y: 0}

@@ -123,11 +123,14 @@ public static class PlayerData
 			_saveItems[i] = _item != null ? new(_item.itemID, itemSlot[i].amount) : new("", 0);
 		}
 
-		PlayerPrefs.SetString(Constant.PREF_SAVE_PLAYERDATA, JsonUtility.ToJson(new Save_PlayerData(_saveItems, 0, 0, 0)));
+		PlayerPrefs.SetString(Constant.PREF_SAVE_PLAYERDATA, JsonUtility.ToJson(new Save_PlayerData(_saveItems)));
 		PlayerPrefs.SetInt(Constant.PREF_SAVE_ELECTRICITY, electricity);
 		PlayerPrefs.SetInt(Constant.PREF_SAVE_HUNGER, hunger);
 		PlayerPrefs.SetInt(Constant.PREF_SAVE_RESEARCHPOINTS, researchPoints);
 	}
+	public static void SaveElectricity() => PlayerPrefs.SetInt(Constant.PREF_SAVE_ELECTRICITY, electricity);
+	public static void SaveHunger() => PlayerPrefs.SetInt(Constant.PREF_SAVE_HUNGER, hunger);
+	public static void SaveResearchPoints() => PlayerPrefs.SetInt(Constant.PREF_SAVE_RESEARCHPOINTS, researchPoints);
 }
 [Serializable]
 public class Save_Inventory
@@ -161,16 +164,10 @@ public class Save_ItemSlotArray
 public class Save_PlayerData
 {
 	public Save_ItemSlotArray[] itemSlotArray;
-	public int hunger;
-	public int electricity;
-	public int researchPoints;
 
-	public Save_PlayerData(Save_ItemSlotArray[] _itemSlotArray, int _hunger, int _electricity, int _researchPoints)
+	public Save_PlayerData(Save_ItemSlotArray[] _itemSlotArray)
 	{
 		itemSlotArray = _itemSlotArray;
-		hunger = _hunger;
-		electricity = _electricity;
-		researchPoints = _researchPoints;
 	}
 }
 [Serializable]

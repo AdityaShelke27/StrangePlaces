@@ -131,7 +131,6 @@ public class ResearchNode : MonoBehaviour
 		}
 		PlayerStatsManager.Instance.AddResearchPoints(-m_ResearchNodeInfo.ResearchCost);
 
-
 		if (!PlayerPrefs.HasKey(Constant.PREF_RESEARCHEDNODES))
 		{
 			PlayerPrefs.SetString(Constant.PREF_RESEARCHEDNODES, "0 ");

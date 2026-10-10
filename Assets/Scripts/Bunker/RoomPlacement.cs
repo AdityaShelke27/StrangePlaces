@@ -35,7 +35,6 @@ public class RoomPlacement : MonoBehaviour
 		Save_RoomData _roomData = Save_RoomData.LoadData();
 		if (_roomData == null) return;
 
-		int _roomCount = 0;
 		foreach(Save_Room _room in _roomData.Rooms)
 		{
 			ConstructRoomDirectly(_room.Pos, _room.DoorDir, _room.GroundLevel, _room.RoomID);

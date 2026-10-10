@@ -271,7 +271,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	{
 		m_Selection_Icon.sprite = m_ItemSlot.item.itemImage;
 		m_Selection_Name.text = m_ItemSlot.item.itemName;
-		m_Selection_Type.text = m_ItemSlot.item.itemName;
+		m_Selection_Type.text = m_ItemSlot.item.ItemType;
 		m_Selection_Description.text = m_ItemSlot.item.itemDescription;
 		m_Selection_Amount.text = "x" + m_ItemSlot.amount.ToString();
 	}

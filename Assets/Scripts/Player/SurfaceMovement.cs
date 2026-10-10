@@ -83,7 +83,7 @@ public class SurfaceMovement : MonoBehaviour
 	}
 	void UpdatePosition(InputAction.CallbackContext ctx)
 	{
-		if (EventSystem.current.IsPointerOverGameObject()) return;
+		if (InputManager.IsPointerOverUI()) return;
 
 		if(m_IsHasWork)
 		{

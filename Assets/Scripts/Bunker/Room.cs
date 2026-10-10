@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class Room : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class Room : MonoBehaviour
 		m_Collider = GetComponent<BoxCollider2D>();
 		SwitchToInteractableCollider(false);
 	}
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
+		if (InputManager.IsADrag()) return;
+
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (InputManager.IsPointerOverUI()) return;
 
 			BunkerMovement.s_MoveHere?.Invoke(m_GroundLevel, m_PlayerPresentPoint.position.x, m_RoomID);
 		}));

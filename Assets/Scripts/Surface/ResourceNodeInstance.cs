@@ -5,14 +5,24 @@ public class ResourceNodeInstance : MonoBehaviour
 {
 	[SerializeField] SpriteRenderer m_SpriteRenderer;
 	[SerializeField] Material m_WindDeformMat;
-	[SerializeField] ResourceNode m_ResourceNodeData;
-	int m_MaxAmount;
 	[SerializeField] int m_AmountAvailable;
+	ResourceNode m_ResourceNodeData;
+	int m_MaxAmount;
 	bool m_AllResourcesDepleted = false;
 
 	void Start()
 	{
 		Initialize();
+	}
+	private void OnMouseUpAsButton()
+	{
+		if (InputManager.IsADrag()) return;
+
+		StartCoroutine(Constant.DelayExecute(() =>
+		{
+			if (InputManager.IsPointerOverUI()) return;
+			ResourceTracker.s_ShowNodeDetails?.Invoke(this);
+		}));
 	}
 	void Initialize()
 	{
@@ -20,7 +30,7 @@ public class ResourceNodeInstance : MonoBehaviour
 		m_MaxAmount = m_ResourceNodeData.MaxAmount;
 		m_AmountAvailable = m_MaxAmount;
 
-		if(m_ResourceNodeData.NodeType == E_SurfaceNode.Plant_Node)
+		if (m_ResourceNodeData.NodeType == E_SurfaceNode.Plant_Node)
 		{
 			m_SpriteRenderer.material = m_WindDeformMat;
 		}

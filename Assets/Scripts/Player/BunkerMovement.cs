@@ -11,7 +11,7 @@ public class BunkerMovement : MonoBehaviour
 	[SerializeField] SpriteRenderer m_PlayerRenderer;
 	[SerializeField] Animator m_Animator;
 	[SerializeField] Transform m_PointsParent;
-	[SerializeField] Transform m_MainCam;
+	//[SerializeField] Transform m_MainCam;
 	[SerializeField] Transform m_RoomListParent;
 	[SerializeField] int m_CurrentRoomID;
 	[SerializeField] float m_CamMoveSpeed;
@@ -38,10 +38,10 @@ public class BunkerMovement : MonoBehaviour
 	}
 	private void Update()
 	{
-		Vector3 pos = m_MainCam.transform.position;
-		pos.y = Mathf.Lerp(pos.y, transform.position.y + m_CameraYOffset, Time.deltaTime * m_CamMoveSpeed);
-		pos.z = -10;
-		m_MainCam.transform.position = pos;
+		//Vector3 pos = m_MainCam.transform.position;
+		//pos.y = Mathf.Lerp(pos.y, transform.position.y + m_CameraYOffset, Time.deltaTime * m_CamMoveSpeed);
+		//pos.z = -10;
+		//m_MainCam.transform.position = pos;
 	}
 	void MoveToPoint(int _groundLevel, float _pointX, int _roomID)
 	{

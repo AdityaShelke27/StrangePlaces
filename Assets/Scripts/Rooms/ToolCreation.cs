@@ -25,11 +25,13 @@ public class ToolCreation : MonoBehaviour
 		ClosePanel();
 		AssignMachineCraftingData();
 	}
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
+		if (InputManager.IsADrag()) return;
+
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (InputManager.IsPointerOverUI()) return;
 			if (!m_AreResourcesAssigned)
 			{
 				Debug.LogWarning("Construction resources art not yet assigned");

@@ -129,10 +129,10 @@ TextureImporter:
       name: Axe_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 237
-        height: 239
+        x: 26
+        y: 14
+        width: 216
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

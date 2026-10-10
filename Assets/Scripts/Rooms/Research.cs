@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -43,11 +42,13 @@ public class Research : MonoBehaviour
 		CreateResearchNodeStatus();
 		CreateBazierConnections();
 	}
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
+		if (InputManager.IsADrag()) return;
+
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (InputManager.IsPointerOverUI()) return;
 
 			m_ResearchCanvas.SetActive(true);
 			SelectMainResearch();

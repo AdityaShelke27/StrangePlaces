@@ -1,11 +1,28 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ResourceTracker : MonoBehaviour
 {
 	public static ResourceTracker Instance;
+	public static Action<ResourceNodeInstance> s_ShowNodeDetails;
 
+	[SerializeField] GameObject m_DetailPanel;
+	[SerializeField] TMP_Text m_NameText;
 	[SerializeField] InventorySlot[] m_PlayerInventory;
+
+	bool m_IsShowingPanel = false;
+
+	private void OnEnable()
+	{
+		s_ShowNodeDetails += SetNodeDetails;
+	}
+	private void OnDisable()
+	{
+		s_ShowNodeDetails -= SetNodeDetails;
+	}
 
 	private void Awake()
 	{
@@ -20,7 +37,26 @@ public class ResourceTracker : MonoBehaviour
 	}
 	private void Start()
 	{
-		//m_PlayerInventory = m_Player.GetPlayerInventory();
+		m_DetailPanel.SetActive(false);
+	}
+	void SetNodeDetails(ResourceNodeInstance _node)
+	{
+		if (m_IsShowingPanel) return;
+
+		StartCoroutine(ShowNode(_node));
+	}
+	IEnumerator ShowNode(ResourceNodeInstance _node)
+	{
+		m_DetailPanel.transform.position = _node.gameObject.transform.position + Vector3.up;
+		ResourceNode _data = _node.GetResourceNodeData();
+		m_NameText.text = ItemDatabase.Instance.DoesItemIDExistInResearch(_data.itemID) ? _data.itemName : "???";
+		m_DetailPanel.SetActive(true);
+		m_IsShowingPanel = true;
+
+		yield return new WaitForSeconds(2);
+
+		m_DetailPanel.SetActive(false);
+		m_IsShowingPanel = false;
 	}
 	public bool SearchResourceAvailable(StorableItem _item, int _amount)
 	{

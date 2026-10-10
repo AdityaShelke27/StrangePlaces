@@ -16,11 +16,21 @@ public class PlayerStatsManager : MonoBehaviour
 	float m_HungerDepletionInterval = 3;
 
 	[Header("UI")]
+	[SerializeField] private GameObject m_ElectricityPanel;
 	[SerializeField] private Slider m_ElectricitySlider;
 	[SerializeField] private Slider m_HungerSlider;
 	[SerializeField] private TMP_Text m_ElectricityText;
 	[SerializeField] private TMP_Text m_HungerText;
 	[SerializeField] private TMP_Text m_ResearchPointsText;
+
+	private void OnEnable()
+	{
+		ResearchNode.s_ResearchedAction += UnlockElectricity;
+	}
+	private void OnDisable()
+	{
+		ResearchNode.s_ResearchedAction -= UnlockElectricity;
+	}
 	private void Awake()
 	{
 		if (Instance == null)
@@ -34,6 +44,8 @@ public class PlayerStatsManager : MonoBehaviour
 	}
 	private void Start()
 	{
+		m_ElectricityPanel.SetActive(ItemDatabase.Instance.DoesItemIDExistInResearch("electricity"));
+
 		m_ElectricitySlider.maxValue = m_MaxElectricity;
 		m_HungerSlider.maxValue = m_MaxHunger;
 		UpdateElectricityUI();
@@ -85,6 +97,7 @@ public class PlayerStatsManager : MonoBehaviour
 		}
 		m_Electricity = _sum;
 		UpdateElectricityUI();
+		SaveElectricity();
 	}
 	public void AddHunger(int _val)
 	{
@@ -112,6 +125,7 @@ public class PlayerStatsManager : MonoBehaviour
 
 		m_ResearchPoints = _sum;
 		UpdateResearchPointsUI();
+		SaveResearchPoints();
 	}
 	public int GetElectricity() => m_Electricity;
 	public int GetHunger() => m_Hunger;
@@ -131,5 +145,19 @@ public class PlayerStatsManager : MonoBehaviour
 		m_ResearchPointsText.text = m_ResearchPoints.ToString();
 	}
 
+	private void UnlockElectricity(int _id)
+	{
+		m_ElectricityPanel.SetActive(ItemDatabase.Instance.DoesItemIDExistInResearch("electricity"));
+	}
+	public void SaveElectricity()
+	{
+		PlayerData.electricity = GetElectricity();
+		PlayerData.SaveElectricity();
+	}
+	public void SaveResearchPoints()
+	{
+		PlayerData.researchPoints = GetResearchPoints();
+		PlayerData.SaveResearchPoints();
+	}
 	public bool GetIsInBunker() => m_IsInBunker;
 }

@@ -9,6 +9,7 @@ public class StorableItem : Item
 	public GameObject WorldPrefab;
 	public List<ResourceNode> PlacableNodes;
 	public Vector2 Size;
+	public string ItemType;
 
 	public List<ResourceNode> GetPlacableNodes() => PlacableNodes;
 	public GameObject GetWorldPrefab() => WorldPrefab;

@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Used for mining ores
+  m_text: Used for mining
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2cf56043aa2239a419e97a23d120e391, type: 2}
   m_sharedMaterial: {fileID: 2431922506649205973, guid: 2cf56043aa2239a419e97a23d120e391, type: 2}
@@ -167,12 +167,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.55
+  m_fontSize: 22
   m_fontSizeBase: 21.55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -246,8 +246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.3, y: 24.9}
-  m_SizeDelta: {x: 224.8128, y: 24.6016}
+  m_AnchoredPosition: {x: 38.3, y: 22.15}
+  m_SizeDelta: {x: 224.8128, y: 30.101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5184299253756241305
 CanvasRenderer:
@@ -277,7 +277,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Machine
+  m_text: 'Machine
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09acf866972adda4a88313bbe9fdbf9b, type: 2}
   m_sharedMaterial: {fileID: -6161178995279811425, guid: 09acf866972adda4a88313bbe9fdbf9b, type: 2}
@@ -304,10 +306,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
+  m_fontSize: 23.55
   m_fontSizeBase: 23
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -383,8 +385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.7849, y: 57.3}
-  m_SizeDelta: {x: 211.7827, y: 50}
+  m_AnchoredPosition: {x: 29.4084, y: 60.332}
+  m_SizeDelta: {x: 207.0298, y: 46.265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6600842248298144460
 CanvasRenderer:
@@ -414,7 +416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Miner
+  m_text: Fiber Mesh
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a36d75d044587d41a72dee8b38fd433, type: 2}
   m_sharedMaterial: {fileID: -9025902277971753165, guid: 1a36d75d044587d41a72dee8b38fd433, type: 2}
@@ -441,15 +443,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43
+  m_fontSize: 36.25
   m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -670,8 +672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -74.776566, y: -38.7}
-  m_SizeDelta: {x: 92.821594, y: 50}
+  m_AnchoredPosition: {x: -48.733, y: -37.167194}
+  m_SizeDelta: {x: 66.687, y: 46.2638}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5400272613478117051
 CanvasRenderer:
@@ -951,7 +953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5881845199918676236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1048,9 +1050,9 @@ RectTransform:
   m_Father: {fileID: 5833032438733543700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.800003, y: -38.06488}
-  m_SizeDelta: {x: -42.1632, y: -76.1293}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8270035775995544030
 CanvasRenderer:
@@ -1107,14 +1109,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 66.6
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0

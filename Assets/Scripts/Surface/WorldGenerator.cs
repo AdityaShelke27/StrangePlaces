@@ -267,6 +267,25 @@ public class WorldGenerator : MonoBehaviour
 				}
 			}
 		}
+
+		int _startIdxX = m_HalfWidth - (int)m_BunkerGrassRadius;
+		int _startIdxY = m_HalfHeight - (int)m_BunkerGrassRadius;
+
+		int _endIdxX = _startIdxX + 2 * (int)m_BunkerGrassRadius;
+		int _endIdxY = _startIdxY + 2 * (int)m_BunkerGrassRadius;
+
+		for (int i = _startIdxX; i < _endIdxX; i++)
+		{
+			for (int j = _startIdxY; j < _endIdxY; j++)
+			{
+				Vector2 _key = new(i, j);
+				if(m_ResourcesSpawns.ContainsKey(_key))
+				{
+					Destroy(m_ResourcesSpawns[_key]);
+					m_ResourcesSpawns.Remove(_key);
+				}
+			}
+		}
 	}
 
 	private float GenerateNoise(int _x, int _y)
@@ -310,35 +329,6 @@ public class WorldGenerator : MonoBehaviour
 		_grassInfluence = Mathf.SmoothStep(0f, 1f, _grassInfluence);
 
 		return Mathf.Lerp(_noise, m_BunkerGrassTarget, _grassInfluence);
-	}
-	public float[,] KerneledImage(float[,] image2d, float[,] kernel2d, int imageLength, int kernelLength)
-	{
-		int clampVal = imageLength - kernelLength + 1;
-		float[,] newImage = new float[imageLength, imageLength];
-		for (int i = 0; i < imageLength; i++)
-		{
-			for (int j = 0; j < imageLength; j++)
-			{
-				if(i < clampVal && j < clampVal)
-				{
-					float sum = 0;
-					for (int k = 0; k < kernelLength; k++)
-					{
-						for (int l = 0; l < kernelLength; l++)
-						{
-							sum += image2d[i + k, j + l] * kernel2d[k, l];
-						}
-					}
-					newImage[i, j] = sum;
-				}
-				else
-				{
-					newImage[i, j] = image2d[i, j];
-				}
-			}
-		}
-
-		return newImage;
 	}
 	private float RandomOffset(int _seed)
 	{

@@ -30,11 +30,13 @@ public class Storage : MonoBehaviour
 			m_StorageInventory.Add(_slot);
 		}
 	}
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
+		if (InputManager.IsADrag()) return;
+
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
-			if (EventSystem.current.IsPointerOverGameObject()) return;
+			if (InputManager.IsPointerOverUI()) return;
 
 			m_InventoryPanelUI.SetActive(true);
 		}));

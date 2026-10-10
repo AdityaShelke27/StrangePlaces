@@ -17,7 +17,7 @@ public class ResourceMachineInstance : MachineInstance
 	List<StorableItem> m_AddableInputItems;
 
 	bool m_IsOutputAbstract = false;
-
+	bool m_WillConsumeElectricity = true;
 	private void OnEnable()
 	{
 		ConveyorManager.s_StartConveyorMode += StartConveyorMode;
@@ -158,7 +158,10 @@ public class ResourceMachineInstance : MachineInstance
 			{
 				SetMachineState(E_MachineState.Halted);
 			}
-			PlayerStatsManager.Instance.AddElectricity(-m_MachineData.ElectricityConsumption);
+			if(m_WillConsumeElectricity)
+			{
+				PlayerStatsManager.Instance.AddElectricity(-m_MachineData.ElectricityConsumption);
+			}
 		}
 		SetMachineState(E_MachineState.Halted);
 	}
@@ -215,6 +218,7 @@ public class ResourceMachineInstance : MachineInstance
 				if(_resourceAmt.Resource.itemID == _id)
 				{
 					m_SelectedRecipeIdx = i;
+					m_WillConsumeElectricity = m_MachineData.RecipeData[m_SelectedRecipeIdx].Output[0].Resource.itemID.Equals("electricity");
 					return;
 				}
 			}

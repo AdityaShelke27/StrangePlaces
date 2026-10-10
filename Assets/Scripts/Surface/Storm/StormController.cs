@@ -1,11 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class StormController : MonoBehaviour
 {
 	[Header("Storm")]
-	[SerializeField] private float m_StormBuildUpDuration = 180f;
 	[SerializeField] private float m_StormBuildUpMin = 240f;
 	[SerializeField] private float m_StormBuildUpMax = 360f;
+	private float m_StormBuildUpDuration = 180f;
 
 	[SerializeField]
 	private AnimationCurve m_StormIntensityCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
@@ -27,8 +28,11 @@ public class StormController : MonoBehaviour
 	[SerializeField] private float m_MinGustDuration = 0.5f;
 	[SerializeField] private float m_MaxGustDuration = 1.5f;
 
-	[SerializeField]
-	private AnimationCurve m_GustCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+	[SerializeField] private AnimationCurve m_GustCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+
+	[Header("Player Alive Time")]
+	[SerializeField] private float m_MinPlayerAdditionalAliveTime = 5;
+	[SerializeField] private float m_MaxPlayerAdditionalAliveTime = 15;
 
 	private float m_GustTimer;
 	private float m_NextGustTime;
@@ -46,9 +50,12 @@ public class StormController : MonoBehaviour
 	private static readonly int WindDirectionID = Shader.PropertyToID("_WindDirection");
 	private static readonly int GustIntensityID = Shader.PropertyToID("_GustIntensity");
 
+	[SerializeField] float m_PlayerAliveTimer; 
+
 	private void Start()
 	{
 		m_StormBuildUpDuration = Random.Range(m_StormBuildUpMin, m_StormBuildUpMax);
+		m_PlayerAliveTimer = Random.Range(m_MinPlayerAdditionalAliveTime, m_MaxPlayerAdditionalAliveTime);
 
 		StartStorm();
 		SetStormIntensity(0f);
@@ -69,7 +76,6 @@ public class StormController : MonoBehaviour
 		m_StormTimer += Time.deltaTime;
 
 		float progress = Mathf.Clamp01(m_StormTimer / m_StormBuildUpDuration);
-
 		float intensity = m_StormIntensityCurve.Evaluate(progress);
 
 		SetStormIntensity(intensity);
@@ -127,6 +133,17 @@ public class StormController : MonoBehaviour
 	private void OnFullStormReached()
 	{
 		Debug.Log("Full storm reached.");
+		StartCoroutine(PlayerAdditionalAliveTime());
+	}
+	IEnumerator PlayerAdditionalAliveTime()
+	{
+		while(m_PlayerAliveTimer > 0)
+		{
+			yield return null;
+			m_PlayerAliveTimer -= Time.deltaTime;
+		}
+
+		Bunker.s_PlayerFailed?.Invoke();
 	}
 	private void UpdateGusts()
 	{
