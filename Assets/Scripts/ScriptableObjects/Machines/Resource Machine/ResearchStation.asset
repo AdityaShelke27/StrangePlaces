@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: research-station
   itemName: Research Station
   itemImage: {fileID: 21300000, guid: 813a1a6b828461b488d2b481976ddd2b, type: 3}
-  itemDescription: 
+  itemDescription: Converts Alien Artifacts into Research Points.
   PlacementType: 2
   StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 8a79a81b536cec441a0f1041f38bedbf, type: 3}

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: alien-artifact
   itemName: Alien Artifact
   itemImage: {fileID: 21300000, guid: 0490e4cdadc47a445bd30ee44ae876bd, type: 3}
-  itemDescription: 
+  itemDescription: Strange alien technology that can be converted into Research Points.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

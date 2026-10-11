@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: pickaxe
   itemName: Pickaxe
   itemImage: {fileID: 21300000, guid: 252bf26c2aa6976408c5a6af54527323, type: 3}
-  itemDescription: 
+  itemDescription: Hand tool used to manually mine ore deposits.
   PlacementType: 1
   StackableAmount: 5
   WorldPrefab: {fileID: 0}

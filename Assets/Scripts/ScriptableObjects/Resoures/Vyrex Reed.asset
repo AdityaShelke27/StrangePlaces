@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: vyrex-reed
   itemName: Vyrex Reed
   itemImage: {fileID: 21300000, guid: c1b51fee95504fb459d668ef4b7ff0cb, type: 3}
-  itemDescription: 
+  itemDescription: Tough fibrous plant processed into Fiber Mesh.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

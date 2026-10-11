@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: miner
   itemName: Miner
   itemImage: {fileID: 21300000, guid: 5607deed9e478404b92380a96d1798b2, type: 3}
-  itemDescription: 
+  itemDescription: Automatically extracts ores from ore deposits.
   PlacementType: 1
   StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}

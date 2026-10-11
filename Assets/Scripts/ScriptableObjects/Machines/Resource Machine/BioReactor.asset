@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: bio-reactor
   itemName: Bio Reactor
   itemImage: {fileID: 21300000, guid: bab12c6e57d759041ac37c152d72d31b, type: 3}
-  itemDescription: 
+  itemDescription: Converts Bio Resin into usable electricity.
   PlacementType: 2
   StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 8a79a81b536cec441a0f1041f38bedbf, type: 3}

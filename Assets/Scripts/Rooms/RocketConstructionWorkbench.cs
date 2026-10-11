@@ -77,13 +77,11 @@ public class RocketConstructionWorkbench : MonoBehaviour
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
 			int _idx = i;
-			Button _objButtonComp = _objButton.GetComponent<Button>();
-			_objButtonComp.onClick.AddListener(() => ConstructRCParts(m_CraftParts[_idx]));
+			_buttonManager.GetButton().onClick.AddListener(() => ConstructRCParts(m_CraftParts[_idx]));
+			_buttonManager.SetNotResearchedPanel(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftParts[i].CraftItem.itemID));
+			_buttonManager.GetButton().interactable = _buttonManager.IsResearched();
 
-			GameObject _notResearched = _objButton.transform.Find("NotResearchedPanel").gameObject;
-			_notResearched.SetActive(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftParts[i].CraftItem.itemID));
-			_objButtonComp.interactable = !_notResearched.activeSelf;
-			if (!_notResearched.activeSelf)
+			if (!_buttonManager.IsResearched())
 			{
 				Debug.LogWarning("Machine not researched");
 			}

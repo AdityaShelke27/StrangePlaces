@@ -21,7 +21,7 @@ public class ResourceNodeInstance : MonoBehaviour
 		StartCoroutine(Constant.DelayExecute(() =>
 		{
 			if (InputManager.IsPointerOverUI()) return;
-			ResourceTracker.s_ShowNodeDetails?.Invoke(this);
+			SurfaceManager.s_ShowNodeDetails?.Invoke(this);
 		}));
 	}
 	void Initialize()

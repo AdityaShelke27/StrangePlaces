@@ -8,9 +8,18 @@ public class MachineCraftingButtonManager : MonoBehaviour
 	[SerializeField] TMP_Text m_MachineName;
 	[SerializeField] Button m_Button;
 	[SerializeField] Transform m_ResourceInputParent;
+	[SerializeField] GameObject m_NotResearchedPanel;
+	bool m_Researched = false;
 
 	public void SetName(string _name) => m_MachineName.text = _name;
 	public void SetImage(Sprite _image) => m_Image.sprite = _image;
 	public Button GetButton() => m_Button;
 	public Transform GetResourceInputParent() => m_ResourceInputParent;
+	public void SetNotResearchedPanel(bool _val) 
+	{
+		m_Researched = false;
+		m_NotResearchedPanel.SetActive(_val); 
+	}
+
+	public bool IsResearched() => m_Researched;
 }

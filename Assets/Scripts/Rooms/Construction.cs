@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Construction : MonoBehaviour
@@ -77,13 +76,12 @@ public class Construction : MonoBehaviour
 			}
 
 			int _idx = i;
-			Button _objButtonComp = _objButton.GetComponent<Button>();
-			_objButtonComp.onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
 
-			GameObject _notResearched = _objButton.transform.Find("NotResearchedPanel").gameObject;
-			_notResearched.SetActive(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID));
-			_objButtonComp.interactable = !_notResearched.activeSelf;
-			if (!_notResearched.activeSelf)
+			_buttonManager.GetButton().onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
+			_buttonManager.SetNotResearchedPanel(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID));
+			_buttonManager.GetButton().interactable = _buttonManager.IsResearched();
+
+			if (!_buttonManager.IsResearched())
 			{
 				Debug.LogWarning("Machine not researched");
 			}

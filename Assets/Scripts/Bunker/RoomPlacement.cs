@@ -175,6 +175,16 @@ public class RoomPlacement : MonoBehaviour
 
 		Save_Room _roomData = new(_roomID, _groundLevel, _pos, _doorFacingDirection);
 		Save_RoomData.AppendNewRoom(_roomData);
+
+		switch(_roomID)
+		{
+			case 0:
+				TutorialManager.s_Trigger?.Invoke("1");
+				break;
+			case 1:
+				TutorialManager.s_Trigger?.Invoke("2");
+				break;
+		}
 	}
 
 	void ConstructNewGroundLevel()

@@ -34,6 +34,10 @@ public class StormController : MonoBehaviour
 	[SerializeField] private float m_MinPlayerAdditionalAliveTime = 5;
 	[SerializeField] private float m_MaxPlayerAdditionalAliveTime = 15;
 
+	[Header("UI")]
+	[SerializeField] private GameObject m_StormApproachingText;
+	bool m_ShownStormApproachingPopup = false;
+
 	private float m_GustTimer;
 	private float m_NextGustTime;
 
@@ -50,10 +54,16 @@ public class StormController : MonoBehaviour
 	private static readonly int WindDirectionID = Shader.PropertyToID("_WindDirection");
 	private static readonly int GustIntensityID = Shader.PropertyToID("_GustIntensity");
 
-	[SerializeField] float m_PlayerAliveTimer; 
+	float m_PlayerAliveTimer; 
 
 	private void Start()
 	{
+		m_StormApproachingText.SetActive(false);
+		if(PlayerPrefs.GetInt(Constant.PREF_DAY) == 1)
+		{
+			SetStormIntensity(1);
+			return;
+		}
 		m_StormBuildUpDuration = Random.Range(m_StormBuildUpMin, m_StormBuildUpMax);
 		m_PlayerAliveTimer = Random.Range(m_MinPlayerAdditionalAliveTime, m_MaxPlayerAdditionalAliveTime);
 
@@ -78,6 +88,8 @@ public class StormController : MonoBehaviour
 		float progress = Mathf.Clamp01(m_StormTimer / m_StormBuildUpDuration);
 		float intensity = m_StormIntensityCurve.Evaluate(progress);
 
+		if(intensity >= 0.5 && !m_ShownStormApproachingPopup) StartCoroutine(ShowStormPopup());
+
 		SetStormIntensity(intensity);
 
 		if (progress >= 1f)
@@ -89,7 +101,15 @@ public class StormController : MonoBehaviour
 		}
 		
 	}
+	IEnumerator ShowStormPopup()
+	{
+		m_ShownStormApproachingPopup = true;
+		m_StormApproachingText.SetActive(true);
 
+		yield return new WaitForSeconds(3);
+
+		m_StormApproachingText.SetActive(false);
+	}
 	public void StartStorm()
 	{
 		m_StormTimer = 0f;

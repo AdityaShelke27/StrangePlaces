@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d822886221c0364b9fc056e41f01c23, type: 3}
+  m_Name: 1_BunkerEnter
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  ID: 0
+  Message:
+  - Bunker is a safe space where you can craft resources, machines, tools, research
+    new technology and Construct the rocket to escape this planet.
+  - You can move the camera vertically by dragging your finger up and down, you can
+    also zoom in and out by pinching.
+  - You can construct different types of rooms by pressing the + button on the top
+    right corner of the screen. Start by constructing a Mechanic room.

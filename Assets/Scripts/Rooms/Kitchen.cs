@@ -65,7 +65,14 @@ public class Kitchen : MonoBehaviour
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
 			int _idx = i;
-			_objButton.GetComponent<Button>().onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
+			_buttonManager.GetButton().onClick.AddListener(() => ConstructMachine(m_CraftMachines[_idx]));
+			_buttonManager.SetNotResearchedPanel(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftMachines[i].CraftItem.itemID));
+			_buttonManager.GetButton().interactable = _buttonManager.IsResearched();
+
+			if (!_buttonManager.IsResearched())
+			{
+				Debug.LogWarning("Machine not researched");
+			}
 		}
 		m_AreResourcesAssigned = true;
 	}

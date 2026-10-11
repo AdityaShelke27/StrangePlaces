@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: copper-wires
   itemName: Copper Wires
   itemImage: {fileID: 21300000, guid: 5015ff0b99d38074aa59ca24176f2671, type: 3}
-  itemDescription: 
+  itemDescription: Conductive wiring used in powered machines and electronics.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

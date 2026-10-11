@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: lumabloom
   itemName: Lumabloom
   itemImage: {fileID: 21300000, guid: 5053721296158424f98fc161b97a050e, type: 3}
-  itemDescription: 
+  itemDescription: Energy-rich glowing plant processed into Bio Resin.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

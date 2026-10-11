@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: titanium-alloy
   itemName: Titanium Alloy
   itemImage: {fileID: 21300000, guid: d8fe75efb056b3f408af214604c931ea, type: 3}
-  itemDescription: 
+  itemDescription: Advanced metal used for high-tier machines and rocket parts.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

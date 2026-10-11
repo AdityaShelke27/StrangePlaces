@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: axe
   itemName: Axe
   itemImage: {fileID: 21300000, guid: 0b2de056b8d82b4479c2c52cbe8d59d1, type: 3}
-  itemDescription: 
+  itemDescription: Hand tool used to manually harvest alien plants.
   PlacementType: 1
   StackableAmount: 5
   WorldPrefab: {fileID: 0}

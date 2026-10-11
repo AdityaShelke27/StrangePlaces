@@ -1,13 +1,18 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Bed : MonoBehaviour
 {
-	private void OnMouseDown()
+	private void OnMouseUpAsButton()
 	{
-		if (EventSystem.current.IsPointerOverGameObject()) return;
+		if (InputManager.IsADrag()) return;
 
-		SceneManager.LoadScene(Constant.SCENE_SURFACE);
+		StartCoroutine(Constant.DelayExecute(() =>
+		{
+			if (InputManager.IsPointerOverUI()) return;
+
+			PlayerPrefs.SetInt(Constant.PREF_DAY, PlayerPrefs.GetInt(Constant.PREF_DAY) + 1);
+			SceneManager.LoadScene(Constant.SCENE_SURFACE);
+		}));
 	}
 }

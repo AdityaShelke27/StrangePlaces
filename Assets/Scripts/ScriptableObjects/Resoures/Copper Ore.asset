@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: copper-ore
   itemName: Copper Ore
   itemImage: {fileID: 21300000, guid: 30e26b14b6f70e14c8ff0f780f5b3868, type: 3}
-  itemDescription: 
+  itemDescription: Conductive ore used to produce Copper Wires.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

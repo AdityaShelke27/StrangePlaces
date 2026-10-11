@@ -136,7 +136,6 @@ public class ResourceHandler : MonoBehaviour, IActivate
             _ => (false, Vector3.zero, null),
         };
     }
-
     (bool, Vector3, ResourceNodeInstance) CheckNodePlacement(StorableItem _item, Vector3 _pos)
     {
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(_pos);
@@ -166,7 +165,6 @@ public class ResourceHandler : MonoBehaviour, IActivate
         }
         return (false, Vector3.zero, null);
     }
-
 	public void Activate()
 	{
 		PlaceMachine?.Invoke();

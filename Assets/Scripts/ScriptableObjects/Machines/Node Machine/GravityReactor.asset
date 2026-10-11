@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: gravity-reactor
   itemName: Gravity Reactor
   itemImage: {fileID: 21300000, guid: fa963f70504795049a8d6685798ee7da, type: 3}
-  itemDescription: 
+  itemDescription: Harnesses gravitational anomalies to generate electricity.
   PlacementType: 1
   StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}

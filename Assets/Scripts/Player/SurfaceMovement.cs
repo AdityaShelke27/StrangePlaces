@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class SurfaceMovement : MonoBehaviour
@@ -20,8 +19,8 @@ public class SurfaceMovement : MonoBehaviour
 	bool m_IsMoving = false;
 	bool m_IsHasWork = false;
 
-	Vector2 SCREEN_SIZE = new(Screen.width, Screen.height);
-	Vector2 SCREEN_CENTER = new(Screen.width / 2, Screen.height / 2);
+	Vector2 SCREEN_SIZE;
+	Vector2 SCREEN_CENTER;
 	float m_EdgePadding = 60f;
 
 	IActivate m_SelectedObject;
@@ -34,6 +33,9 @@ public class SurfaceMovement : MonoBehaviour
 	}
 	void Start()
 	{
+		SCREEN_SIZE  = new(Screen.width, Screen.height);
+		SCREEN_CENTER = new(Screen.width / 2, Screen.height / 2);
+
 		PlayerData.LoadData();
 		PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);
 		PlayerStatsManager.Instance.SetHunger(PlayerData.hunger);
@@ -112,7 +114,6 @@ public class SurfaceMovement : MonoBehaviour
 		Vector3 screenPos = m_Camera.WorldToScreenPoint(m_Bunker.position);
 
 		bool isBehindCamera = screenPos.z < 0;
-
 		bool isVisible =
 			screenPos.x >= 0 &&
 			screenPos.x <= SCREEN_SIZE[0] &&
@@ -132,8 +133,7 @@ public class SurfaceMovement : MonoBehaviour
 		Vector2 direction = (Vector2)bunkerScreenPos - SCREEN_CENTER;
 
 		// If bunker is behind the camera, reverse the direction.
-		if (bunkerScreenPos.z < 0)
-			direction = -direction;
+		if (bunkerScreenPos.z < 0) direction = -direction;
 
 		direction.Normalize();
 
@@ -147,22 +147,12 @@ public class SurfaceMovement : MonoBehaviour
 		float distance = Mathf.Min(scaleX, scaleY);
 
 		Vector2 arrowScreenPos = SCREEN_CENTER + direction * distance;
-
 		m_BunkerPointer.position = arrowScreenPos;
-		//m_BunkerPointer.position = Vector3.Lerp(
-		//	m_BunkerPointer.position,
-		//	arrowScreenPos,
-		//	Time.deltaTime * 10f
-		//);
 
 		// Rotate arrow so its UP direction points toward bunker.
 		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-		m_BunkerPointer.rotation = Quaternion.Euler(
-			0f,
-			0f,
-			angle - 90f
-		);
+		m_BunkerPointer.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
 	}
 	public Animator GetAnimator() => m_Animator;
 	void SelectObject(GameObject _Obj) => m_SelectedObject = _Obj.GetComponent<IActivate>();

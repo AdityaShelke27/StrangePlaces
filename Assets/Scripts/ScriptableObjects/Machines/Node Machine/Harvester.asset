@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: harvester
   itemName: Harvester
   itemImage: {fileID: 21300000, guid: 8aae711fb0d7b8c4e87674509136e3c3, type: 3}
-  itemDescription: 
+  itemDescription: Automatically harvests plants from plant nodes.
   PlacementType: 1
   StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}

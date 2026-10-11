@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: fiber-mesh
   itemName: Fiber Mesh
   itemImage: {fileID: 21300000, guid: f0bd3c4bde854614a9110ce5946b5866, type: 3}
-  itemDescription: 
+  itemDescription: Flexible reinforced material used for bindings and construction.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

@@ -23,7 +23,10 @@ public static class Constant
 	// PLAYER_PREFS
 	public const string PREF_ROOMSUNLOCKED = "RoomsUnlocked";
 	public const string PREF_RESEARCHEDNODES = "ResearchedNodes";
-	public const string PREF_AVAILABLE = "Save_Available";
+	public const string PREF_TUTORIAL = "Tutorial";
+	public const string PREF_TUTORIAL_FINISHED_IDS = "TutorialFinishedIDs";
+	public const string PREF_DAY = "Day";
+	public const string PREF_SAVEAVAILABLE = "Save_SaveAvailable";
 	public const string PREF_SAVE_PLAYERDATA = "Save_PlayerData";
 	public const string PREF_SAVE_ELECTRICITY = "Save_Electricity";
 	public const string PREF_SAVE_HUNGER = "Save_Hunger";

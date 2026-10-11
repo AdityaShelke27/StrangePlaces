@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: artifact-scanner
   itemName: Artifact Scanner
   itemImage: {fileID: 21300000, guid: 2740485f65d3ced4380db78279e1797d, type: 3}
-  itemDescription: 
+  itemDescription: Extracts Alien Artifacts from ancient alien ruins.
   PlacementType: 1
   StackableAmount: 1
   WorldPrefab: {fileID: 8756248712972513278, guid: 1833092ab59713049a1180e614208192, type: 3}

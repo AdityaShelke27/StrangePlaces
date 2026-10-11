@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ToolCreation : MonoBehaviour
@@ -65,7 +64,15 @@ public class ToolCreation : MonoBehaviour
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
 			int _idx = i;
-			_objButton.GetComponent<Button>().onClick.AddListener(() => ConstructMachine(m_CraftTools[_idx]));
+
+			_buttonManager.GetButton().onClick.AddListener(() => ConstructMachine(m_CraftTools[_idx]));
+			_buttonManager.SetNotResearchedPanel(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftTools[i].CraftItem.itemID));
+			_buttonManager.GetButton().interactable = _buttonManager.IsResearched();
+
+			if (!_buttonManager.IsResearched())
+			{
+				Debug.LogWarning("Machine not researched");
+			}
 		}
 		m_AreResourcesAssigned = true;
 	}

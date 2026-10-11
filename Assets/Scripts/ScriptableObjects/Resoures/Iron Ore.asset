@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: iron-ore
   itemName: Iron Ore
   itemImage: {fileID: 21300000, guid: c5df4102afe077546832ec0536341f6e, type: 3}
-  itemDescription: 
+  itemDescription: Common ore used to produce Iron Plates.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d822886221c0364b9fc056e41f01c23, type: 3}
+  m_Name: 2_MechanicRoom
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  ID: 1
+  Message:
+  - <color=#CC8C4C>Mechanic Room</color> has 2 benches where both the benches are
+    used to craft different items.
+  - The bench under the orange light is the <color=#FF7E00><b>Workbench</b></color>
+    which can be used to craft resources.
+  - The bench under the white light is the <color=#999999><b>Tool Creation Bench</b></color>
+    which can be used to craft tools.
+  - Tap on any of the bench to start crafting

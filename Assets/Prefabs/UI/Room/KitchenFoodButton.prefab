@@ -916,6 +916,7 @@ MonoBehaviour:
   m_MachineName: {fileID: 210652096944144155}
   m_Button: {fileID: 8065446274965323323}
   m_ResourceInputParent: {fileID: 5343158897443200889}
+  m_NotResearchedPanel: {fileID: 7052133972340502906}
 --- !u!1 &7052133972340502906
 GameObject:
   m_ObjectHideFlags: 0

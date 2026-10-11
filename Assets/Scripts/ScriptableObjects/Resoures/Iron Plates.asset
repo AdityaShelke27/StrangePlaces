@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: iron-plates
   itemName: Iron Plates
   itemImage: {fileID: 21300000, guid: 3bb2c375cb42bb146981c470ec088c0e, type: 3}
-  itemDescription: 
+  itemDescription: Heavy structural material used for machines and construction.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

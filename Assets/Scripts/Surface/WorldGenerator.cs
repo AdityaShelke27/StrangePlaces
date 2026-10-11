@@ -164,6 +164,48 @@ public class WorldGenerator : MonoBehaviour
 			}
 		}
 	}
+	private void SmoothenTerrain()
+	{
+		for (int x = 1; x < m_Width - 1; x++)
+		{
+			for (int y = 1; y < m_Height - 1; y++)
+			{
+				Dictionary<E_TerrainTypes, int> _neighbors = new();
+				for(int z = 0; z < 9; z++)
+				{
+					if(z == 4) continue;
+					int _neighborX = x + (z % 3) - 1;
+					int _neighborY = y + (z / 3) - 1;
+					//Debug.Log($"X: {_neighborX}, Y: {_neighborY}");
+					if (_neighbors.ContainsKey(m_Terrain[_neighborX, _neighborY]))
+					{
+						_neighbors[m_Terrain[_neighborX, _neighborY]]++;
+					}
+					else
+					{
+						_neighbors[m_Terrain[_neighborX, _neighborY]] = 1;
+					}
+				}
+
+				E_TerrainTypes _maxKey = E_TerrainTypes.Grass;
+				int _maxVal = -1;
+
+				foreach(E_TerrainTypes _key in _neighbors.Keys)
+				{
+					if (_neighbors[_key] > _maxVal)
+					{
+						_maxVal = _neighbors[_key];
+						_maxKey = _key;
+					}
+				}
+
+				if(m_Terrain[x, y] != _maxKey && _neighbors[_maxKey] >= 6)
+				{
+					m_Terrain[x, y] = _maxKey;
+				}
+			}
+		}
+	}
 	private TileBase[] AssignTiles(TileBase[] _tiles)
 	{
 		int _index = 0;

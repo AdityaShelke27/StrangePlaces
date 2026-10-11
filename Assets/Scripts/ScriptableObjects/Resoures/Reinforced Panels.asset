@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: reinforced-panels
   itemName: Reinforced Panels
   itemImage: {fileID: 21300000, guid: 121283b410d96744c9203c6c3f6df3b4, type: 3}
-  itemDescription: 
+  itemDescription: Lightweight structural panels used for advanced construction.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}

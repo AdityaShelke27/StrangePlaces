@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: energy-core
   itemName: Energy Core
   itemImage: {fileID: 21300000, guid: 4519bfc9ea93dd1418806edf8bacd687, type: 3}
-  itemDescription: 
+  itemDescription: Compact high-density power source for rocket systems.
   PlacementType: 0
   StackableAmount: 10
   WorldPrefab: {fileID: 0}
