@@ -79,7 +79,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	{
 		if (s_DragImage != null) Destroy(s_DragImage.transform.parent.gameObject);
 		if (eventData.pointerEnter != null) return;
-		if (ConveyorManager.Instance.GetIsInConveyorMode()) return;
+		if (!PlayerStatsManager.Instance.GetIsInBunker() && ConveyorManager.Instance.GetIsInConveyorMode()) return;
 		if (CanPlace)
 		{
 			if (m_ItemSlot.item.PlacementType == E_PlacementType.NodePlacement)

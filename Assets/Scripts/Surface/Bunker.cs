@@ -44,7 +44,7 @@ public class Bunker : MonoBehaviour, IActivate
 	}
 	void MovePlayerToBunker()
 	{
-		InventorySlot[] _inventory = ResourceHandler.Instance.GetInventorySlots();
+		InventorySlot[] _inventory = ResourceTracker.Instance.GetPlayerInventory();
 
 		for (int i = 0; i < _inventory.Length; i++)
 		{

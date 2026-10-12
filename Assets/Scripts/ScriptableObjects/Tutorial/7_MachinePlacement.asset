@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d822886221c0364b9fc056e41f01c23, type: 3}
+  m_Name: 7_MachinePlacement
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  ID: 6
+  Message:
+  - 'A machine can be placed by simply dragging and dropping a machine from the inventory
+    to the world '
+  - 'Node Machines can only be placed on a specific node like Miner can only be placed
+    on any ore deposit, Harverster can only be placed on any plant and an Artifact
+    Scanner can only be placed on an Alien Ruin '
+  - 'Resource machines can be placed anywhere if there is free space to build. Resource
+    machine take a resource as an input and produce an output. '

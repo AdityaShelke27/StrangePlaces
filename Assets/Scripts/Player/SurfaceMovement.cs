@@ -37,6 +37,12 @@ public class SurfaceMovement : MonoBehaviour
 		SCREEN_CENTER = new(Screen.width / 2, Screen.height / 2);
 
 		PlayerData.LoadData();
+		ItemSlot[] _items = PlayerData.itemSlot;
+		InventorySlot[] _inv = ResourceTracker.Instance.GetPlayerInventory();
+		for (int i = 0; i < _items.Length; i++)
+		{
+			_inv[i].SetItemSlot(_items[i].item, _items[i].amount);
+		}
 		PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);
 		PlayerStatsManager.Instance.SetHunger(PlayerData.hunger);
 		PlayerStatsManager.Instance.SetResearchPoints(PlayerData.researchPoints);

@@ -184,6 +184,15 @@ public class RoomPlacement : MonoBehaviour
 			case 1:
 				TutorialManager.s_Trigger?.Invoke("2");
 				break;
+			case 2:
+				TutorialManager.s_Trigger?.Invoke("3");
+				break;
+			case 3:
+				TutorialManager.s_Trigger?.Invoke("4");
+				break;
+			case 5:
+				TutorialManager.s_Trigger?.Invoke("5");
+				break;
 		}
 	}
 

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d822886221c0364b9fc056e41f01c23, type: 3}
+  m_Name: 5_ResearchRoom
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  ID: 4
+  Message:
+  - '<color=#C25CFF>Research Room</color> has a purple panel where you can research
+    new technology and rocket parts. '
+  - Every research requires some resources and research points, You can see your
+    current research points at the top of the screen with the <b>Magnifying Glass
+    Icon</b>
+  - Research Points can be gathered by processing Alien Artifacts ( <sprite=0> )
+    which can be found by mining Alien Ruins ( <sprite=1> )

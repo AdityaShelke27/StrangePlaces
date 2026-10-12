@@ -38,6 +38,23 @@ public class SurfaceManager : MonoBehaviour
 	{
 		m_DetailPanel.SetActive(false);
 		CloseObjectivePanel();
+
+		StartCoroutine(StartMachineTutorial());
+	}
+	IEnumerator StartMachineTutorial()
+	{
+		yield return new WaitForSeconds(1);
+
+		InventorySlot[] _inv = ResourceTracker.Instance.GetPlayerInventory();
+
+		foreach (InventorySlot slot in _inv)
+		{
+			if(slot.GetItem() is Machine)
+			{
+				TutorialManager.s_Trigger?.Invoke("6");
+				yield break;
+			}
+		}
 	}
 	void SetNodeDetails(ResourceNodeInstance _node)
 	{

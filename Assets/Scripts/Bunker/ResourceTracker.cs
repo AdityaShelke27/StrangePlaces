@@ -159,4 +159,6 @@ public class ResourceTracker : MonoBehaviour
 			Debug.LogWarning($"Remaining amount cannot be added: {_amountToAdd} for item {_item.itemName}");
 		}
 	}
+
+	public InventorySlot[] GetPlayerInventory() => m_PlayerInventory;
 }

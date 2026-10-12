@@ -143,6 +143,7 @@ public class ResourceHandler : MonoBehaviour, IActivate
         if (col && col.CompareTag(Constant.TAG_RESOURCE_NODE))
         {
             ResourceNodeInstance m_Node = col.GetComponent<ResourceNodeInstance>();
+			Debug.Log($"Item Placable: {_item.GetPlacableNodes()[0]}, ResourceData: {m_Node.GetResourceNodeData()}");
             if(_item.GetPlacableNodes().Contains(m_Node.GetResourceNodeData()))
             {
 				return (true, m_Node.transform.position, m_Node);

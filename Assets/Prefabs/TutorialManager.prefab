@@ -556,6 +556,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66c1a9855f662e243bffe6a3a59376b4, type: 2}
   - {fileID: 11400000, guid: e1d7dd0640093c349878c5ddffa2cefd, type: 2}
   - {fileID: 11400000, guid: fdedaeb19ead99f47a324600f28debb3, type: 2}
+  - {fileID: 11400000, guid: d14d1c67bec16d94abecaae863a1822a, type: 2}
+  - {fileID: 11400000, guid: f5fc7a4c76752494da65528b98a1ad27, type: 2}
+  - {fileID: 11400000, guid: 912f820b632fce448be3cf21416283bb, type: 2}
+  - {fileID: 11400000, guid: 58513b5f7c56e654ab3c6e323576140e, type: 2}
   m_TutorialText: {fileID: 6243798530372494513}
 --- !u!1 &8684642884549605675
 GameObject:

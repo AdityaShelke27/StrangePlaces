@@ -19,5 +19,6 @@ MonoBehaviour:
   - The bench under the orange light is the <color=#FF7E00><b>Workbench</b></color>
     which can be used to craft resources.
   - The bench under the white light is the <color=#999999><b>Tool Creation Bench</b></color>
-    which can be used to craft tools.
+    which can be used to craft tools. You can craft a Pickaxe that can mine ores
+    and alien ruins or an Axe that can harvest plants
   - Tap on any of the bench to start crafting

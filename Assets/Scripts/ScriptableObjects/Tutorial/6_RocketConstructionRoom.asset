@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d822886221c0364b9fc056e41f01c23, type: 3}
+  m_Name: 6_RocketConstructionRoom
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  ID: 5
+  Message:
+  - '<color=#FF2A00>Rocket Construction Room</color> has 2 panels one is the rocket
+    panel and the other is rocket part construction panel '
+  - 'The Panel with the blue light is the <color=#00C2FF>Rocket Part Construction
+    Panel</color>. The rocket requires special resources like Nano Alloy, Energy
+    Core and Quantum Circuit. You can craft those resources on this panel. '
+  - The Panel with the red light is the <color=#FF475B>Rocket Panel</color>. This
+    is the place where you will construct the actual rocket. The rocket will be constructed
+    in stages and you can add resources from your inventory here.
+  - Once all parts of the rocket are constructed then you can hop into your rocket
+    and escape this planet.
