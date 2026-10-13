@@ -12,6 +12,7 @@ public class SurfaceManager : MonoBehaviour
 	[SerializeField] private GameObject m_DetailPanel;
 	[SerializeField] private TMP_Text m_NameText;
 	[SerializeField] private GameObject m_ObjectivePanel;
+	[SerializeField] private TMP_Text m_DayText;
 	bool m_IsShowingPanel = false;
 
 	private void OnEnable()
@@ -40,6 +41,13 @@ public class SurfaceManager : MonoBehaviour
 		CloseObjectivePanel();
 
 		StartCoroutine(StartMachineTutorial());
+
+		if(ItemDatabase.Instance.DoesItemIDExistInResearch("conveyor"))
+		{
+			TutorialManager.s_Trigger?.Invoke("7");
+		}
+
+		m_DayText.text = $"DAY {PlayerPrefs.GetInt(Constant.PREF_DAY)}";
 	}
 	IEnumerator StartMachineTutorial()
 	{

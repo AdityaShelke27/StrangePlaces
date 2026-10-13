@@ -560,6 +560,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5fc7a4c76752494da65528b98a1ad27, type: 2}
   - {fileID: 11400000, guid: 912f820b632fce448be3cf21416283bb, type: 2}
   - {fileID: 11400000, guid: 58513b5f7c56e654ab3c6e323576140e, type: 2}
+  - {fileID: 11400000, guid: 2065e700efe0a574e91af0160a9d201e, type: 2}
   m_TutorialText: {fileID: 6243798530372494513}
 --- !u!1 &8684642884549605675
 GameObject:

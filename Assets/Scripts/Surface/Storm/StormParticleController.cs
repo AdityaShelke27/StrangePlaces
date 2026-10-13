@@ -1,7 +1,10 @@
 using UnityEngine;
-
+using System;
+using Random = UnityEngine.Random;
 public class StormParticleController : MonoBehaviour
 {
+	public event Action<float> OnDebrisBurst;
+
 	[Header("References")]
 	[SerializeField] private StormController m_StormController;
 
@@ -162,6 +165,7 @@ public class StormParticleController : MonoBehaviour
 		int amount = Random.Range(m_MinDebrisBurst, maxAmount + 1);
 
 		m_DebrisParticles.Emit(amount);
+		OnDebrisBurst?.Invoke(amountFactor);
 	}
 	private void ScheduleNextDebrisBurst()
 	{

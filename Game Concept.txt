@@ -52,6 +52,6 @@ New To Do List:
 - Create and add UI to all panels //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Create Main Menu, Settings and all that shit //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Create storm effect to warn player that radiation storm is approaching //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
-- Create Tutorial
+- Create Tutorial //////////////////////DONE\\\\\\\\\\\\\\\\\\\\\\\\\\
 - Add Sound
 - Add Haptics

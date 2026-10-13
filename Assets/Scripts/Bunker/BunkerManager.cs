@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class BunkerManager : MonoBehaviour
@@ -6,6 +7,7 @@ public class BunkerManager : MonoBehaviour
 
 	[SerializeField] private GameObject m_TutorialManager;
 	[SerializeField] private GameObject m_ObjectivePanel;
+	[SerializeField] private TMP_Text m_DayText;
 	private void Awake()
 	{
 		if (Instance == null)
@@ -23,6 +25,7 @@ public class BunkerManager : MonoBehaviour
 		CloseObjectivePanel();
 
 		TutorialManager.s_Trigger?.Invoke("0");
+		m_DayText.text = $"DAY {PlayerPrefs.GetInt(Constant.PREF_DAY)}";
 	}
 
 	public void ShowObjectivePanel()

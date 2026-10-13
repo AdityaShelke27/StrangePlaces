@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d822886221c0364b9fc056e41f01c23, type: 3}
+  m_Name: 8_AutomationSurface
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  ID: 7
+  Message:
+  - 'Automation allows you to automate the production of resources instead of manually
+    picking and dropping resources from one machine to other '
+  - You can enter the automation mode by pressing the <b>AUTO</b> button on the top
+    right of the screen. Once the button turns yellow then you are in automation
+    mode. You can press the button again to exit automation mode.
+  - Automation mode allows you to place conveyors from one machine's output node
+    to other machine's input node.
+  - Once in automation mode you will see a <color=green>green</color> and <color=red>red
+    dot</color> on the placed machines. The <color=green>green dot</color> is the
+    input node and the <color=red>red dot</color> is the output node.
+  - To construct a conveyor drag from one machine's <color=red>red node (output)</color>
+    to other machine's <color=green>green node (input)</color>. If the conveyor does
+    not build that means that the first machine's output is not compatible with second
+    machine's input
