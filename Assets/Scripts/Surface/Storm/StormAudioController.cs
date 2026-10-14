@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class StormAudioController : MonoBehaviour
 {
 	[Header("References")]
@@ -56,8 +56,25 @@ public class StormAudioController : MonoBehaviour
 	private float m_MaxDebrisVolume = 0.4f;
 
 	[SerializeField]
-	private Vector2 m_DebrisPitchRange =
-		new Vector2(0.9f, 1.15f);
+	private Vector2 m_DebrisPitchRange = new(0.9f, 1.15f);
+
+	[Header("Thunder")]
+	[SerializeField] private StormLightningController m_LightningController;
+	[SerializeField] private AudioSource m_ThunderSource;
+
+	[SerializeField] private AudioClip[] m_ThunderClips;
+
+	[SerializeField] private float m_MinThunderDelay = 0.3f;
+	[SerializeField] private float m_MaxThunderDelay = 2.5f;
+
+	[SerializeField, Range(0f, 1f)]
+	private float m_MinThunderVolume = 0.35f;
+
+	[SerializeField, Range(0f, 1f)]
+	private float m_MaxThunderVolume = 0.85f;
+
+	[SerializeField]
+	private Vector2 m_ThunderPitchRange = new(0.92f, 1.05f);
 
 	private bool m_WasGusting;
 
@@ -65,12 +82,18 @@ public class StormAudioController : MonoBehaviour
 	{
 		if (m_ParticleController != null)
 			m_ParticleController.OnDebrisBurst += PlayDebris;
+
+		if (m_LightningController != null)
+			m_LightningController.OnLightningFlash += OnLightning;
 	}
 
 	private void OnDisable()
 	{
 		if (m_ParticleController != null)
 			m_ParticleController.OnDebrisBurst -= PlayDebris;
+
+		if (m_LightningController != null)
+			m_LightningController.OnLightningFlash -= OnLightning;
 	}
 
 	private void Awake()
@@ -292,6 +315,58 @@ public class StormAudioController : MonoBehaviour
 			);
 
 		m_DebrisSource.PlayOneShot(
+			clip,
+			volume
+		);
+	}
+
+	private void OnLightning(float stormIntensity)
+	{
+		StartCoroutine(
+			PlayThunderDelayed(stormIntensity)
+		);
+	}
+
+	private IEnumerator PlayThunderDelayed(float stormIntensity)
+	{
+		float delay =
+			Random.Range(
+				m_MinThunderDelay,
+				m_MaxThunderDelay
+			);
+
+		yield return new WaitForSeconds(delay);
+
+		PlayThunder(stormIntensity);
+	}
+	private void PlayThunder(float stormIntensity)
+	{
+		if (m_ThunderClips == null ||
+			m_ThunderClips.Length == 0)
+			return;
+
+		AudioClip clip =
+			m_ThunderClips[
+				Random.Range(
+					0,
+					m_ThunderClips.Length
+				)
+			];
+
+		float volume =
+			Mathf.Lerp(
+				m_MinThunderVolume,
+				m_MaxThunderVolume,
+				stormIntensity
+			);
+
+		m_ThunderSource.pitch =
+			Random.Range(
+				m_ThunderPitchRange.x,
+				m_ThunderPitchRange.y
+			);
+
+		m_ThunderSource.PlayOneShot(
 			clip,
 			volume
 		);

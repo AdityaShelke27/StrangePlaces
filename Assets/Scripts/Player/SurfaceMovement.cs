@@ -41,6 +41,8 @@ public class SurfaceMovement : MonoBehaviour
 		InventorySlot[] _inv = ResourceTracker.Instance.GetPlayerInventory();
 		for (int i = 0; i < _items.Length; i++)
 		{
+			if (_items[i] == null) continue;
+
 			_inv[i].SetItemSlot(_items[i].item, _items[i].amount);
 		}
 		PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);

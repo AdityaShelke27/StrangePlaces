@@ -9,15 +9,13 @@ public class BunkerPlayer : MonoBehaviour
 	}
 	void AssignInventory()
 	{
-		//if (!PlayerData.isDataSaved) return;
-
-		//PlayerData.isDataSaved = false;
-
 		PlayerData.LoadData();
 
 		ItemSlot[] _items = PlayerData.itemSlot;
 		for (int i = 0; i < _items.Length; i++)
 		{
+			if (_items[i] == null) continue;
+
 			m_InventorySlots[i].SetItemSlot(_items[i].item, _items[i].amount);
 		}
 

@@ -107,6 +107,7 @@ public class ResearchNode : MonoBehaviour
 		if(PlayerStatsManager.Instance.GetResearchPoints() < m_ResearchNodeInfo.ResearchCost)
 		{
 			Debug.LogWarning("Not enough research points");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 
@@ -123,6 +124,7 @@ public class ResearchNode : MonoBehaviour
 		if (!_areResourcesAvailable)
 		{
 			Debug.LogWarning("Not enough resources available in the inventory");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 		for (int j = 0; j < _requirements.Length; j++)

@@ -22,7 +22,7 @@ public class BunkerManager : MonoBehaviour
 	}
 	private void Start()
 	{
-		CloseObjectivePanel();
+		m_ObjectivePanel.SetActive(false);
 
 		TutorialManager.s_Trigger?.Invoke("0");
 		m_DayText.text = $"DAY {PlayerPrefs.GetInt(Constant.PREF_DAY)}";
@@ -31,10 +31,12 @@ public class BunkerManager : MonoBehaviour
 	public void ShowObjectivePanel()
 	{
 		m_ObjectivePanel.SetActive(true);
+		AudioManager.Instance.PlayButtonClick();
 	}
 
 	public void CloseObjectivePanel()
 	{
 		m_ObjectivePanel.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
 	}
 }

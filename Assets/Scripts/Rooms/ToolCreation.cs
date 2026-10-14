@@ -21,7 +21,7 @@ public class ToolCreation : MonoBehaviour
 	}
 	private void Start()
 	{
-		ClosePanel();
+		m_ToolPanelUI.SetActive(false);
 		AssignMachineCraftingData();
 	}
 	private void OnMouseUpAsButton()
@@ -96,6 +96,7 @@ public class ToolCreation : MonoBehaviour
 		if (!ResourceTracker.Instance.IsItemAddable(_craftMachine.CraftItem, _craftMachine.CraftAmount))
 		{
 			Debug.LogWarning("Not enough inventory slots available");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 
@@ -112,6 +113,7 @@ public class ToolCreation : MonoBehaviour
 		if (!_areResourcesAvailable)
 		{
 			Debug.LogWarning("Not enough resources available in the inventory");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 		for (int j = 0; j < _requirements.Length; j++)
@@ -120,7 +122,13 @@ public class ToolCreation : MonoBehaviour
 		}
 		ResourceTracker.Instance.AddStorableItemToInventory(_craftMachine.CraftItem, _craftMachine.CraftAmount);
 		CheckAvailableResources();
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 
-	public void ClosePanel() => m_ToolPanelUI.SetActive(false);
+	public void ClosePanel()
+	{
+		m_ToolPanelUI.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 }

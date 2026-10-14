@@ -29,6 +29,7 @@ public abstract class MachineInstance : WorldInstance, IActivate
 	public void CloseButton()
 	{
 		m_InventoryPanel.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
 	}
 
 	private void OnMouseDown()

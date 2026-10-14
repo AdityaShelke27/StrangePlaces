@@ -31,7 +31,7 @@ public class Construction : MonoBehaviour
 	}
 	private void Start()
 	{
-		ClosePanel();
+		m_MachinePanelUI.SetActive(false);
 		AssignMachineCraftingData();
 	}
 	private void OnMouseUpAsButton()
@@ -107,6 +107,7 @@ public class Construction : MonoBehaviour
 		if (!ResourceTracker.Instance.IsItemAddable(_craftMachine.CraftItem, _craftMachine.CraftAmount))
 		{
 			Debug.LogWarning("Not enough inventory slots available");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 
@@ -123,6 +124,7 @@ public class Construction : MonoBehaviour
 		if (!_areResourcesAvailable)
 		{
 			Debug.LogWarning("Not enough resources available in the inventory");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 		for (int j = 0; j < _requirements.Length; j++)
@@ -131,6 +133,8 @@ public class Construction : MonoBehaviour
 		}
 		ResourceTracker.Instance.AddStorableItemToInventory(_craftMachine.CraftItem, _craftMachine.CraftAmount);
 		CheckAvailableResources();
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 
 	void UnlockMachineResearched(int _id)
@@ -144,5 +148,9 @@ public class Construction : MonoBehaviour
 			m_MachineButtons[i].GetComponent<Button>().interactable = !_notResearched.activeSelf;
 		}
 	}
-	public void ClosePanel() => m_MachinePanelUI.SetActive(false);
+	public void ClosePanel()
+	{ 
+		m_MachinePanelUI.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 }

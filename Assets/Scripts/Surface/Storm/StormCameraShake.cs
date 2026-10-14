@@ -37,7 +37,7 @@ public class StormCameraShake : MonoBehaviour
 			m_LightningController.OnLightningFlash -= OnLightningFlash;
 	}
 
-	private void OnLightningFlash()
+	private void OnLightningFlash(float _stormIntensitys)
 	{
 		m_LightningKick =
 			m_LightningKickStrength;

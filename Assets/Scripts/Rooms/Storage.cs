@@ -20,7 +20,7 @@ public class Storage : MonoBehaviour
 	}
 	private void Start()
 	{
-		ClosePanel();
+		m_InventoryPanelUI.SetActive(false);
 		for (int i = 0; i < Constant.STORAGE_SLOT_COUNT; i++)
 		{
 			GameObject _invSlot = Instantiate(m_InventorySlotPrefab, m_InventoryParent);
@@ -42,7 +42,11 @@ public class Storage : MonoBehaviour
 		}));
 	}
 	public List<InventorySlot> GetStorageInventory() => m_StorageInventory;
-	public void ClosePanel() => m_InventoryPanelUI.SetActive(false);
+	public void ClosePanel()
+	{
+		m_InventoryPanelUI.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 
 	public void SaveStorage()
 	{

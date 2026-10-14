@@ -33,7 +33,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 	}
 	private void Start()
 	{
-		ClosePanel();
+		m_RCWorkbenchUI.SetActive(false);
 		AssignRCPartsData();
 	}
 	private void OnMouseUpAsButton()
@@ -108,6 +108,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		if (!ResourceTracker.Instance.IsItemAddable(_craftRCParts.CraftItem, _craftRCParts.CraftAmount))
 		{
 			Debug.LogWarning("Not enough inventory slots available");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 
@@ -124,6 +125,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		if (!_areResourcesAvailable)
 		{
 			Debug.LogWarning("Not enough resources available in the inventory");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 		for (int j = 0; j < _requirements.Length; j++)
@@ -132,6 +134,8 @@ public class RocketConstructionWorkbench : MonoBehaviour
 		}
 		ResourceTracker.Instance.AddStorableItemToInventory(_craftRCParts.CraftItem, _craftRCParts.CraftAmount);
 		CheckAvailableResources();
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 
 	void UnlockRCPartResearched(int _id)
@@ -145,5 +149,9 @@ public class RocketConstructionWorkbench : MonoBehaviour
 			m_RCPartsButtons[i].GetComponent<Button>().interactable = !_notResearched.activeSelf;
 		}
 	}
-	public void ClosePanel() => m_RCWorkbenchUI.SetActive(false);
+	public void ClosePanel()
+	{
+		m_RCWorkbenchUI.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 }

@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class StormLightningController : MonoBehaviour
 {
-	public event Action OnLightningFlash;
+	public event Action<float> OnLightningFlash;
 
 	[Header("References")]
 	[SerializeField] private StormController m_StormController;
@@ -80,7 +80,7 @@ public class StormLightningController : MonoBehaviour
 				normalizedIntensity
 			);
 
-		OnLightningFlash?.Invoke();
+		OnLightningFlash?.Invoke(stormIntensity);
 		// First flash
 		SetFlashAlpha(alpha);
 

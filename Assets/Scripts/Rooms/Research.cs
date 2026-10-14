@@ -65,6 +65,8 @@ public class Research : MonoBehaviour
 
 		m_MainResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_SELECTED;
 		m_RocketResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_UNSELECTED;
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	public void SelectRocketResearch()
 	{
@@ -76,6 +78,8 @@ public class Research : MonoBehaviour
 
 		m_MainResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_UNSELECTED;
 		m_RocketResearchButtonText.color = Constant.RESEARCH_BUTTON_TEXT_SELECTED;
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	void CreateBazierConnections()
 	{
@@ -222,5 +226,9 @@ public class Research : MonoBehaviour
 			}
 		}
 	}
-	public void ClosePanel() => m_ResearchCanvas.SetActive(false);
+	public void ClosePanel()
+	{
+		m_ResearchCanvas.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 }

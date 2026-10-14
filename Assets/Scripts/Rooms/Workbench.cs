@@ -22,7 +22,7 @@ public class Workbench : MonoBehaviour
 	}
 	private void Start()
 	{
-		ClosePanel();
+		m_WorkbenchPanelUI.SetActive(false);
 		AssignMachineCraftingData();
 	}
 	private void OnMouseUpAsButton()
@@ -101,6 +101,7 @@ public class Workbench : MonoBehaviour
 		if (!ResourceTracker.Instance.IsItemAddable(_craftMachine.CraftItem, _craftMachine.CraftAmount))
 		{
 			Debug.LogWarning("Not enough inventory slots available");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 
@@ -117,6 +118,7 @@ public class Workbench : MonoBehaviour
 		if (!_areResourcesAvailable)
 		{
 			Debug.LogWarning("Not enough resources available in the inventory");
+			AudioManager.Instance.PlayButtonError();
 			return;
 		}
 		for (int j = 0; j < _requirements.Length; j++)
@@ -125,6 +127,8 @@ public class Workbench : MonoBehaviour
 		}
 		ResourceTracker.Instance.AddStorableItemToInventory(_craftMachine.CraftItem, _craftMachine.CraftAmount);
 		CheckAvailableResources();
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	void AddResearchPoint(CraftObject _craftMachine)
 	{
@@ -150,5 +154,9 @@ public class Workbench : MonoBehaviour
 		CheckAvailableResources();
 		PlayerStatsManager.Instance.AddResearchPoints(_craftMachine.CraftAmount);
 	}
-	public void ClosePanel() => m_WorkbenchPanelUI.SetActive(false);
+	public void ClosePanel()
+	{
+		m_WorkbenchPanelUI.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 }

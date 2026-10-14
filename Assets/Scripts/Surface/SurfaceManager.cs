@@ -86,10 +86,12 @@ public class SurfaceManager : MonoBehaviour
 	public void ShowObjectivePanel()
 	{
 		m_ObjectivePanel.SetActive(true);
+		AudioManager.Instance.PlayButtonClick();
 	}
 
 	public void CloseObjectivePanel()
 	{
 		m_ObjectivePanel.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
 	}
 }

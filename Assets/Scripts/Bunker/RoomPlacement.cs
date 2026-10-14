@@ -194,6 +194,8 @@ public class RoomPlacement : MonoBehaviour
 				TutorialManager.s_Trigger?.Invoke("5");
 				break;
 		}
+
+		AudioManager.Instance.PlayRoomConstruct();
 	}
 
 	void ConstructNewGroundLevel()

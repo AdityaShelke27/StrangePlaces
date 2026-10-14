@@ -100,6 +100,7 @@ public class RoomConstruction : MonoBehaviour
 		if (!_areResourcesAvailable)
 		{
 			Debug.LogWarning("Not enough resources available in the inventory");
+			AudioManager.Instance.PlayButtonError();
 			return false;
 		}
 		
@@ -113,12 +114,16 @@ public class RoomConstruction : MonoBehaviour
 		{
 			ResourceTracker.Instance.SearchAndRemoveResource(_requirements[j].item as StorableItem, _requirements[j].amount);
 		}
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	public void ToggleRoomConstructionPanel()
 	{
 		CheckAvailableResources();
 		m_IsRoomConstructionPanelActive = !m_IsRoomConstructionPanelActive;
 		RoomConstructionPanel.SetActive(m_IsRoomConstructionPanelActive);
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	public void CloseRoomConstructionPanel()
 	{

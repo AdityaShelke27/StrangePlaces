@@ -51,7 +51,7 @@ public class RocketPanel : MonoBehaviour
 	}
 	private void Start()
 	{
-		ClosePanel();
+		m_RCPanelUI.SetActive(false);
 
 		m_RocketResourceRequirement = new ResourceRequirement[][]
 		{
@@ -175,6 +175,8 @@ public class RocketPanel : MonoBehaviour
 		}
 
 		CheckAvailableResources();
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	void CheckAvailableResources()
 	{
@@ -199,5 +201,9 @@ public class RocketPanel : MonoBehaviour
 		m_PartImage.preserveAspect = true;
 	}
 
-	public void ClosePanel() => m_RCPanelUI.SetActive(false);
+	public void ClosePanel()
+	{
+		m_RCPanelUI.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
+	}
 }
