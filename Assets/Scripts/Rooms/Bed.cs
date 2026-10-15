@@ -11,6 +11,7 @@ public class Bed : MonoBehaviour
 		{
 			if (InputManager.IsPointerOverUI()) return;
 
+			AudioManager.Instance.PlayButtonClick();
 			InventorySlot[] _inventory = ResourceTracker.Instance.GetPlayerInventory();
 
 			for (int i = 0; i < _inventory.Length; i++)

@@ -38,7 +38,7 @@ public class SurfaceManager : MonoBehaviour
 	private void Start()
 	{
 		m_DetailPanel.SetActive(false);
-		CloseObjectivePanel();
+		m_ObjectivePanel.SetActive(false);
 
 		StartCoroutine(StartMachineTutorial());
 

@@ -40,6 +40,7 @@ public class Workbench : MonoBehaviour
 
 			CheckAvailableResources();
 			m_WorkbenchPanelUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	private void AssignMachineCraftingData()

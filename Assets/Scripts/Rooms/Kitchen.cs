@@ -40,6 +40,7 @@ public class Kitchen : MonoBehaviour
 
 			CheckAvailableResources();
 			m_FoodPanelUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	private void AssignMachineCraftingData()

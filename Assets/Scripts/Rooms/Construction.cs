@@ -49,6 +49,7 @@ public class Construction : MonoBehaviour
 
 			CheckAvailableResources();
 			m_MachinePanelUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	private void AssignMachineCraftingData()

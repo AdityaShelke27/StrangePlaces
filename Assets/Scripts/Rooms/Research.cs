@@ -53,6 +53,7 @@ public class Research : MonoBehaviour
 			m_ResearchCanvas.SetActive(true);
 			SelectMainResearch();
 			SetResourceAvailableForResearch();
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	public void SelectMainResearch()

@@ -51,6 +51,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 
 			CheckAvailableResources();
 			m_RCWorkbenchUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	private void AssignRCPartsData()

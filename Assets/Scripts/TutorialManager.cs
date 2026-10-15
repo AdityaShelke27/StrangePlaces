@@ -48,7 +48,7 @@ public class TutorialManager : MonoBehaviour
 			m_TutorialDict[m_TutorialHints[i].ID] = m_TutorialHints[i];
 		}
 		AssignFinishedTutorialIds();
-		ClosePopup();
+		m_TutorialCanvas.SetActive(false);
 	}
 	void AssignFinishedTutorialIds()
 	{
@@ -96,10 +96,12 @@ public class TutorialManager : MonoBehaviour
 		m_CurrentMessageIdx++;
 		CheckLastPage();
 		m_TutorialText.text = m_CurrentTutorial.Message[m_CurrentMessageIdx];
+		AudioManager.Instance.PlayButtonClick();
 	}
 	public void ClosePopup()
 	{
 		m_TutorialCanvas.SetActive(false);
+		AudioManager.Instance.PlayButtonClick();
 	}
 
 	void CheckLastPage()

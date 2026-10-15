@@ -71,6 +71,7 @@ public class Bunker : MonoBehaviour, IActivate
 	IEnumerator ActivateTime()
 	{
 		m_Animator.SetTrigger(Constant.BUNKER_OPEN);
+		AudioManager.Instance.PlayBunkerOpen();
 
 		yield return new WaitForSeconds(1);
 

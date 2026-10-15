@@ -129,6 +129,8 @@ public class RoomConstruction : MonoBehaviour
 	{
 		m_IsRoomConstructionPanelActive = false;
 		RoomConstructionPanel.SetActive(m_IsRoomConstructionPanelActive);
+
+		AudioManager.Instance.PlayButtonClick();
 	}
 	void UnlockRoomResearched(int _id)
 	{

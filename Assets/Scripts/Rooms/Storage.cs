@@ -39,6 +39,7 @@ public class Storage : MonoBehaviour
 			if (InputManager.IsPointerOverUI()) return;
 
 			m_InventoryPanelUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	public List<InventorySlot> GetStorageInventory() => m_StorageInventory;

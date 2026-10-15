@@ -39,6 +39,7 @@ public class ToolCreation : MonoBehaviour
 
 			CheckAvailableResources();
 			m_ToolPanelUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	private void AssignMachineCraftingData()

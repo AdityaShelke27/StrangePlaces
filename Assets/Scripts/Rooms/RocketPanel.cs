@@ -93,6 +93,7 @@ public class RocketPanel : MonoBehaviour
 			if (InputManager.IsPointerOverUI()) return;
 
 			m_RCPanelUI.SetActive(true);
+			AudioManager.Instance.PlayButtonClick();
 		}));
 	}
 	public void ConstructButton()

@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using System.Collections;
 using UnityEngine;
 
@@ -105,6 +106,7 @@ public class StormController : MonoBehaviour
 	{
 		m_ShownStormApproachingPopup = true;
 		m_StormApproachingText.SetActive(true);
+		MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.Warning);
 
 		yield return new WaitForSeconds(3);
 

@@ -868,7 +868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldGenerator
   m_GroundTilemap: {fileID: 1900157436}
   m_GroundTile: {fileID: 11400000, guid: 2eaea588da27e0742ae2b5094522a50c, type: 2}
-  m_GrassTile: {fileID: 11400000, guid: 7a6183b05ebbd584cb2b70a1c44b5221, type: 2}
+  m_GrassTile: {fileID: 11400000, guid: 1b96792598365b94589df0356cd63826, type: 2}
   m_SandTile: {fileID: 11400000, guid: 0e757f6c64fe2be4fb01875d6cfa9c6e, type: 2}
   m_WaterTile: {fileID: 11400000, guid: 0ffb7624c960df84eb330650edec0d43, type: 2}
   m_Width: 256
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_DebrisSource: {fileID: 544115916}
   m_DebrisClips:
   - {fileID: 8300000, guid: 86f6a99d0d6570b4ead8fdd33418c9c0, type: 3}
-  - {fileID: 8300000, guid: b7379573fec7b9f45a4b6f987a64b4f7, type: 3}
+  - {fileID: 8300000, guid: ace1116a15f230f489ed8587dcba7d71, type: 3}
   - {fileID: 8300000, guid: 35e19be21cb983c40a9ae8604a45d9f9, type: 3}
   m_MinDebrisVolume: 0.08
   m_MaxDebrisVolume: 0.25
@@ -22573,8 +22573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3782fa1719393948a03dae6943be9bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StormController
-  m_StormBuildUpMin: 240
-  m_StormBuildUpMax: 360
+  m_StormBuildUpMin: 180
+  m_StormBuildUpMax: 300
   m_StormIntensityCurve:
     serializedVersion: 2
     m_Curve:

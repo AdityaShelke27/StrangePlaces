@@ -40,6 +40,10 @@ public class ConveyorManager : MonoBehaviour
 		s_StartConveyorMode -= StartConveyorMode;
 		s_EndConveyorMode += EndConveyorMode;
 	}
+	private void Start()
+	{
+		m_ConveyorButtonImage.gameObject.SetActive(ItemDatabase.Instance.DoesItemIDExistInResearch("conveyor"));
+	}
 	public void ToggleConvetModeButton()
 	{
 		if(m_IsInConveyorMode) s_EndConveyorMode?.Invoke();

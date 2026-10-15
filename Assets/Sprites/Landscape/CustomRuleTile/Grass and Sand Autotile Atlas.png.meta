@@ -1,0 +1,1275 @@
+fileFormatVersion: 2
+guid: cbc76b2c6d3b5af4f88e72569815de57
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4498718493732789330
+    second: Grass and Sand Autotile Atlas_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 178
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c5c6382a8ae6e30800000000000000
+      internalID: 4498718493732789330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d58091b99a43c047aa93a9e3c4bf14d
+      internalID: 1280787433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5c3daa51f58d04d9ad5ef5d6580781
+      internalID: -1821631062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc971f3b66ef8834488d0edd496f535f
+      internalID: -1273420811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff496d4bdff5d54ea6f26c5e7b9b550
+      internalID: -791994175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1e97a149beff84d852aa6e86574da0
+      internalID: 1138811945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 1075
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d82cb131018fc4e9722c15ee1819f2
+      internalID: -70450537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ebb6e0db6d14a4c8df68a927167e02
+      internalID: 1254849739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fef6628024895042a029520a095013f
+      internalID: 1728077268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdae79088af44f4a8c3fea319f2f566
+      internalID: 133405743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9717a3b473b41154d9a47a4b94b551f2
+      internalID: 1156107586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b797ce9b5b82148b0e4c769ac7d05d
+      internalID: 63941776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f0772d7a6c75f4f86e509b9f5d254c
+      internalID: -1168134320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 897
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b8ab45d46d354439746a1cb996c32c
+      internalID: -1391925808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18eccee51b88cbc4090744439ea438cc
+      internalID: 493798021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264d55d9cad0cc842a67a4987fca61db
+      internalID: 1516976955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2843bd79732ca5c489208e50fbfa63a6
+      internalID: -586489182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0edd4e8808b2cc4f8ae5da5f6126f75
+      internalID: 1745201862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f04eb2118be7d40824d27b5723ac58
+      internalID: 262445151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b396b8b3d72f18145b0ba2bc0f9c8c3f
+      internalID: 792187283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 719
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52eff7040223de4b941be7719350417
+      internalID: 1846582923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72b123706453ab49a31740dab2e41da
+      internalID: -326758741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9f97c8ec7c74c499dbf9819b3a6267
+      internalID: -933436589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140c3dcaaf4176f4c92aa919b586847c
+      internalID: 2146656304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f93f11baa6f8a4898b8d6526333704
+      internalID: -1908496542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a37b0cd5b32d4840a91de83c561d844
+      internalID: 869833444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd947206cd1dc9347952e192d184d79d
+      internalID: 931955673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 541
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c705b86443bb424fbc2d0f04fb3336c
+      internalID: -1649907832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83a653dd3a051543ae5e5a1b2c864cc
+      internalID: 361273406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16d3225d5b9bfe46939572b73bcea3f
+      internalID: 622079447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961d75805b7b160488c2dbe5685f1d55
+      internalID: 564643022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de2a3f31bc01e04d9546af81b36d04b
+      internalID: 1986894925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0807868cf57e447915c5f1b4efcf61
+      internalID: 940121288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3797ea5c4e6c2f645aa7bb0bce8a3303
+      internalID: 1077321062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 363
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf485bdbef951a347bed0549ad469fa5
+      internalID: 1033810024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4b8d7957b6f5344b3f58e816921972
+      internalID: -950042179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc9fd2d08f8ca04b9e37f2a8ca50e50
+      internalID: 448800002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e2403b0af0cf34eb4316f6a5db720c
+      internalID: 847688762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc69c726da860d4798dcf971bc68f86
+      internalID: -362652782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fe421d0acdcc048b83770a4cf8ebc7
+      internalID: 526706363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a382ad588c2e4304bb1b42d887d25bd7
+      internalID: -1522646195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 185
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f405c9b36768c43b175d54f7f2d487
+      internalID: 1046701344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bf12f529eaece4c823cc8f608e25c2
+      internalID: 276494228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf978160fd6b7b34f8901cec791506a4
+      internalID: -713801201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c05a13689b528248804474af9a5cead
+      internalID: -153556966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4e3196a805db64fbb5a5100abf7b7e
+      internalID: 1972776827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7994dcb689579c468b2330150539807
+      internalID: 1976413867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfa5b7345167a342b2ca042434141f4
+      internalID: -1281977702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass and Sand Autotile Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 7
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372aa544cedfe1847a421afd36d309ce
+      internalID: 565389083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bf371c423f85156409f3ffd2674082df
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":178.0,"y":178.0},"gridSpriteOffset":{"x":1.0,"y":1.0},"gridSpritePadding":{"x":1.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Grass and Sand Autotile Atlas_0: 4498718493732789330
+      Grass and Sand Autotile Atlas_1: 1280787433
+      Grass and Sand Autotile Atlas_10: 1156107586
+      Grass and Sand Autotile Atlas_11: 63941776
+      Grass and Sand Autotile Atlas_12: -1168134320
+      Grass and Sand Autotile Atlas_13: -1391925808
+      Grass and Sand Autotile Atlas_14: 493798021
+      Grass and Sand Autotile Atlas_15: 1516976955
+      Grass and Sand Autotile Atlas_16: -586489182
+      Grass and Sand Autotile Atlas_17: 1745201862
+      Grass and Sand Autotile Atlas_18: 262445151
+      Grass and Sand Autotile Atlas_19: 792187283
+      Grass and Sand Autotile Atlas_2: -1821631062
+      Grass and Sand Autotile Atlas_20: 1846582923
+      Grass and Sand Autotile Atlas_21: -326758741
+      Grass and Sand Autotile Atlas_22: -933436589
+      Grass and Sand Autotile Atlas_23: 2146656304
+      Grass and Sand Autotile Atlas_24: -1908496542
+      Grass and Sand Autotile Atlas_25: 869833444
+      Grass and Sand Autotile Atlas_26: 931955673
+      Grass and Sand Autotile Atlas_27: -1649907832
+      Grass and Sand Autotile Atlas_28: 361273406
+      Grass and Sand Autotile Atlas_29: 622079447
+      Grass and Sand Autotile Atlas_3: -1273420811
+      Grass and Sand Autotile Atlas_30: 564643022
+      Grass and Sand Autotile Atlas_31: 1986894925
+      Grass and Sand Autotile Atlas_32: 940121288
+      Grass and Sand Autotile Atlas_33: 1077321062
+      Grass and Sand Autotile Atlas_34: 1033810024
+      Grass and Sand Autotile Atlas_35: -950042179
+      Grass and Sand Autotile Atlas_36: 448800002
+      Grass and Sand Autotile Atlas_37: 847688762
+      Grass and Sand Autotile Atlas_38: -362652782
+      Grass and Sand Autotile Atlas_39: 526706363
+      Grass and Sand Autotile Atlas_4: -791994175
+      Grass and Sand Autotile Atlas_40: -1522646195
+      Grass and Sand Autotile Atlas_41: 1046701344
+      Grass and Sand Autotile Atlas_42: 276494228
+      Grass and Sand Autotile Atlas_43: -713801201
+      Grass and Sand Autotile Atlas_44: -153556966
+      Grass and Sand Autotile Atlas_45: 1972776827
+      Grass and Sand Autotile Atlas_46: 1976413867
+      Grass and Sand Autotile Atlas_47: -1281977702
+      Grass and Sand Autotile Atlas_48: 565389083
+      Grass and Sand Autotile Atlas_5: 1138811945
+      Grass and Sand Autotile Atlas_6: -70450537
+      Grass and Sand Autotile Atlas_7: 1254849739
+      Grass and Sand Autotile Atlas_8: 1728077268
+      Grass and Sand Autotile Atlas_9: 133405743
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

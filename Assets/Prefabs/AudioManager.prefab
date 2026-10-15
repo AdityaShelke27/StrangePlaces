@@ -145,3 +145,4 @@ MonoBehaviour:
   m_ButtonClickClip: {fileID: 8300000, guid: 47216bb3e76b5594b909ff2e88a7c480, type: 3}
   m_ButtonErrorClip: {fileID: 8300000, guid: 33f68c425bd36764f88994dc8ec8ef51, type: 3}
   m_RoomConstructClip: {fileID: 8300000, guid: f2f06fdfc8949c845885727a328b4761, type: 3}
+  m_BunkerOpenClip: {fileID: 8300000, guid: b8a1e29298c28c144bb384104544e8ff, type: 3}
