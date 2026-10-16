@@ -239,10 +239,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_5
       rect:
         serializedVersion: 2
-        x: 785
-        y: 1097
-        width: 157
-        height: 157
+        x: 787
+        y: 1100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +261,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_6
       rect:
         serializedVersion: 2
-        x: 942
-        y: 1097
-        width: 157
-        height: 157
+        x: 944
+        y: 1100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,10 +393,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_12
       rect:
         serializedVersion: 2
-        x: 785
-        y: 940
-        width: 157
-        height: 157
+        x: 787
+        y: 944
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,10 +415,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_13
       rect:
         serializedVersion: 2
-        x: 942
-        y: 940
-        width: 157
-        height: 157
+        x: 944
+        y: 944
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,10 +437,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 783
-        width: 157
-        height: 157
+        x: 4
+        y: 786
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1053,10 +1053,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_42
       rect:
         serializedVersion: 2
-        x: 0
-        y: 155
-        width: 157
-        height: 157
+        x: 4
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1075,10 +1075,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_43
       rect:
         serializedVersion: 2
-        x: 157
-        y: 155
-        width: 157
-        height: 157
+        x: 160
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1097,10 +1097,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_44
       rect:
         serializedVersion: 2
-        x: 314
-        y: 155
-        width: 157
-        height: 157
+        x: 317
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1119,10 +1119,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_45
       rect:
         serializedVersion: 2
-        x: 471
-        y: 155
-        width: 157
-        height: 157
+        x: 473
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1141,10 +1141,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_46
       rect:
         serializedVersion: 2
-        x: 628
-        y: 155
-        width: 157
-        height: 157
+        x: 630
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1185,10 +1185,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_48
       rect:
         serializedVersion: 2
-        x: 942
-        y: 155
-        width: 157
-        height: 157
+        x: 943
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1207,10 +1207,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_49
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 1098
-        width: 156
-        height: 156
+        x: 1100
+        y: 1100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1229,10 +1229,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_50
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 940
-        width: 156
-        height: 156
+        x: 1100
+        y: 944
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1339,10 +1339,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_55
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 158
-        width: 156
-        height: 156
+        x: 1100
+        y: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1361,10 +1361,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_56
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 0
-        width: 156
-        height: 156
+        x: 1100
+        y: 3
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1383,10 +1383,10 @@ TextureImporter:
       name: ChatGPT Image Sep 14, 2026, 09_30_01 PM_57
       rect:
         serializedVersion: 2
-        x: 941
-        y: 0
-        width: 156
-        height: 156
+        x: 944
+        y: 3
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

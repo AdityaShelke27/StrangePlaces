@@ -868,7 +868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldGenerator
   m_GroundTilemap: {fileID: 1900157436}
   m_GroundTile: {fileID: 11400000, guid: 2eaea588da27e0742ae2b5094522a50c, type: 2}
-  m_GrassTile: {fileID: 11400000, guid: 1b96792598365b94589df0356cd63826, type: 2}
+  m_GrassTile: {fileID: 11400000, guid: 7a6183b05ebbd584cb2b70a1c44b5221, type: 2}
   m_SandTile: {fileID: 11400000, guid: 0e757f6c64fe2be4fb01875d6cfa9c6e, type: 2}
   m_WaterTile: {fileID: 11400000, guid: 0ffb7624c960df84eb330650edec0d43, type: 2}
   m_Width: 256
