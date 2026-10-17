@@ -99,8 +99,33 @@ public class WorldGenerator : MonoBehaviour
 		m_FinalIronSpawnChance = m_TitaniumSpawnChance + m_CopperSpawnChance + m_IronSpawnChance;
 
 		GenerateWorld();
+		//StartCoroutine(VideoWorldGenerator());
 	}
+	IEnumerator VideoWorldGenerator()
+	{
+		TileBase[] _tiles = new TileBase[m_Width * m_Height];
+		m_Terrain = new E_TerrainTypes[m_Width, m_Height];
+		m_RawTerrain = new float[m_Width, m_Height];
 
+		yield return new WaitForSeconds(2);
+
+		for(int i = 0; i < 10; i++)
+		{
+			m_GroundTilemap.ClearAllTiles();
+
+			m_OffsetX = RandomOffset(m_Seed + i);
+			m_OffsetY = RandomOffset(m_Seed + 1 + i);
+
+			GenerateRawTerrain();
+			AssignTerrain();
+			_tiles = AssignTiles(_tiles);
+			BoundsInt _bounds = new(new Vector3Int(-m_HalfWidth, -m_HalfHeight, 0), new Vector3Int(m_Width, m_Height, 1));
+			m_GroundTilemap.SetTilesBlock(_bounds, _tiles);
+
+			yield return new WaitForSeconds(1);
+		}
+		
+	}
 	private void GenerateWorld()
 	{
 		DateTime _start = DateTime.Now;

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Automation
   m_EditorClassIdentifier: Assembly-CSharp::ResearchNodeInfo
   ID: 21
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 632159d26e8a9bc4a9aea4c5e5671da8, type: 3}
   Name: Automation
+  Description: 
   ResearchCost: 0
   ResourceRequirements: []
   Prerequisites:

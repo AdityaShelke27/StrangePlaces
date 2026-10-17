@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TitaniumAlloy
   m_EditorClassIdentifier: Assembly-CSharp::ResearchNodeInfo
   ID: 16
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: d8fe75efb056b3f408af214604c931ea, type: 3}
   Name: Titanium Alloy
   Description: Advanced metal used for high-tier construction.
   ResearchCost: 200

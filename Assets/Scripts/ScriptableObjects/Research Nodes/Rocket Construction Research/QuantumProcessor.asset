@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: QuantumProcessor
   m_EditorClassIdentifier: Assembly-CSharp::ResearchNodeInfo
   ID: 32
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: bfcc6ac945394904f8f003670e8dbfba, type: 3}
   Name: Quantum Processor
   Description: Advanced computer that handles the rocket's complex systems.
   ResearchCost: 600

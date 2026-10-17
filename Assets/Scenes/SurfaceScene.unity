@@ -1814,6 +1814,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1895,6 +1896,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 44368686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80d20a42e21cc94a8c053c3d788b5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameaZoomOut
+  m_TotalTime: 0.5
+  m_TargetFov: 6
 --- !u!1 &522583297
 GameObject:
   m_ObjectHideFlags: 0
@@ -23295,6 +23310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038287415}
+  - component: {fileID: 1038287416}
   m_Layer: 0
   m_Name: CameraRoot
   m_TagString: Untagged
@@ -23318,6 +23334,21 @@ Transform:
   - {fileID: 44368686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038287416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038287414}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec3cdff3fbed524c8eb760846dc4a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrailerCameraMove
+  m_MoveSpeed: 5
+  m_SmoothTime: 0.25
+  m_BoostMultiplier: 2
 --- !u!1 &1046395767
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ResearchStation
   m_EditorClassIdentifier: Assembly-CSharp::ResearchNodeInfo
   ID: 19
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 813a1a6b828461b488d2b481976ddd2b, type: 3}
   Name: Research Station
   Description: Produces Research Points from alien artifacts.
   ResearchCost: 175

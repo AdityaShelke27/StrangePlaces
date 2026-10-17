@@ -1,0 +1,1275 @@
+fileFormatVersion: 2
+guid: 79c79c8acf1dfc04e806b279254e4955
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1548866690691284732
+    second: Beach and Water Tileset Atlas_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 170
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfeb6178c0eae7510800000000000000
+      internalID: 1548866690691284732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a0b57cea8d3644fab8412c5e0c1134
+      internalID: 1898624509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6933753c6a27a204dbae0c5459d5759f
+      internalID: -1076596684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79671f629555f8b4b83e1d6df215be30
+      internalID: 1209653218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b961ab7c06b32e941bff9e72e38c338b
+      internalID: 176079908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5edf71c16513d844fb7d8e4953be9741
+      internalID: -950311535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 1075
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0ac3b9186f2df40baabdc25264aaf1
+      internalID: 1339114206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa00f2bd7fdafb74badd31f23df4fc47
+      internalID: 736762593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b8567784828aa4f8d4ff2b84b41a84
+      internalID: -1887097911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e5bb19332c7a847ad796e45fe778c9
+      internalID: 1617780421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a59553a51e7f9849abc385a21e15562
+      internalID: 1804577199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d823bf63a6f67b74db33f646fc0b6417
+      internalID: -113198883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073f5d439520d1345920df0bee7318f7
+      internalID: -501125842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 896
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dd74fdf47409d49923abae3599a197
+      internalID: -45272187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc02357483116e44aa6b355b0e5a8a6
+      internalID: -1641333734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c42a32852ffbf40b81b542b20b5816
+      internalID: 1602853620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052b4f8f265b43243bab17b8760125ce
+      internalID: -1475967806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9e545bc8619394ea34df3646c17848
+      internalID: 1434082053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f287a70a2310b4dacb1ef713bb8272
+      internalID: 1858587144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606b6353aee7e3d439816e376092f71c
+      internalID: -2100045155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 717
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ecc850ee3a0c54fac0f49ad195b864
+      internalID: -1505547449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687d21c8707a75143a5eab986ad94974
+      internalID: -1353158984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0783df8a9d618c04fa8b0878b9eb4477
+      internalID: 1580946601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000b0448201f144458f14a68c0eea1b7
+      internalID: -1081452641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35468f5961415194c94efac8fa268d55
+      internalID: -761420206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ebdd588d5e1db47a086720db3373a0
+      internalID: -1023278554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13691f4401cf0c6489f78a2e9dbf603e
+      internalID: -72157564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 538
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4b4d923666bf0479d013f93f7d3f1f
+      internalID: 631788298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 359
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fff65119165254696b30493dedd167
+      internalID: 427386774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 359
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430a5a06965cdab46ac787e5c0bd369f
+      internalID: 289423247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 367
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e0231b95930f54ba8a921e9704641a
+      internalID: 366521402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 366
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b328f4aae2aaa014a921cd6b6de2c7c9
+      internalID: 1895418381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 367
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc8d3cb6d489b54f98d148d217876de
+      internalID: -1823540381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 359
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c8aff223cd5c448928fbe748c20167
+      internalID: 834157774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 367
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a5a0299b48aed488a569719a42ed19
+      internalID: 1788173829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 180
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34577bd4e23384b479a32d29b1d32444
+      internalID: 1716460961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 180
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8998bf3cb2908e547a77c5663490a2ad
+      internalID: -9275821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 190
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f63437289550347b7f87347b578640
+      internalID: -1883208451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 190
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b826f8a341ac8349aaf9366c654ecb1
+      internalID: 66683755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 180
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b014f0bd2798c3d4d8e5ef384341b402
+      internalID: -1025189776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 180
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad10cdec8ffb6734dbdffbf0f2402f83
+      internalID: 1097554556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 180
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd06aae469390ef419d806582c6ddc50
+      internalID: 946506130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde124aece91b3a48adf1bf25154343f
+      internalID: 1013123942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ec1d32d7704624d9b25ef06dfc8190
+      internalID: 1337845952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7821186deb92342b6f1a26e9c63635
+      internalID: 336214479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eabc98e767098047ae31ab7722cc68e
+      internalID: -163969641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 11
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c80cf1a0c5143746866525176232a8e
+      internalID: 1774701987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3052c38a1bf414a41b6b8286719c4b5a
+      internalID: -1157263244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach and Water Tileset Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 1
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8e0cc9f701b604a814cac787749ffa
+      internalID: -1142309999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ae7c9340ef324404494d04c6909e7315
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":177.0,"y":177.0},"gridSpriteOffset":{"x":2.0,"y":2.0},"gridSpritePadding":{"x":2.0,"y":2.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Beach and Water Tileset Atlas_0: 1548866690691284732
+      Beach and Water Tileset Atlas_1: 1898624509
+      Beach and Water Tileset Atlas_10: 1804577199
+      Beach and Water Tileset Atlas_11: -113198883
+      Beach and Water Tileset Atlas_12: -501125842
+      Beach and Water Tileset Atlas_13: -45272187
+      Beach and Water Tileset Atlas_14: -1641333734
+      Beach and Water Tileset Atlas_15: 1602853620
+      Beach and Water Tileset Atlas_16: -1475967806
+      Beach and Water Tileset Atlas_17: 1434082053
+      Beach and Water Tileset Atlas_18: 1858587144
+      Beach and Water Tileset Atlas_19: -2100045155
+      Beach and Water Tileset Atlas_2: -1076596684
+      Beach and Water Tileset Atlas_20: -1505547449
+      Beach and Water Tileset Atlas_21: -1353158984
+      Beach and Water Tileset Atlas_22: 1580946601
+      Beach and Water Tileset Atlas_23: -1081452641
+      Beach and Water Tileset Atlas_24: -761420206
+      Beach and Water Tileset Atlas_25: -1023278554
+      Beach and Water Tileset Atlas_26: -72157564
+      Beach and Water Tileset Atlas_27: 631788298
+      Beach and Water Tileset Atlas_28: 427386774
+      Beach and Water Tileset Atlas_29: 289423247
+      Beach and Water Tileset Atlas_3: 1209653218
+      Beach and Water Tileset Atlas_30: 366521402
+      Beach and Water Tileset Atlas_31: 1895418381
+      Beach and Water Tileset Atlas_32: -1823540381
+      Beach and Water Tileset Atlas_33: 834157774
+      Beach and Water Tileset Atlas_34: 1788173829
+      Beach and Water Tileset Atlas_35: 1716460961
+      Beach and Water Tileset Atlas_36: -9275821
+      Beach and Water Tileset Atlas_37: -1883208451
+      Beach and Water Tileset Atlas_38: 66683755
+      Beach and Water Tileset Atlas_39: -1025189776
+      Beach and Water Tileset Atlas_4: 176079908
+      Beach and Water Tileset Atlas_40: 1097554556
+      Beach and Water Tileset Atlas_41: 946506130
+      Beach and Water Tileset Atlas_42: 1013123942
+      Beach and Water Tileset Atlas_43: 1337845952
+      Beach and Water Tileset Atlas_44: 336214479
+      Beach and Water Tileset Atlas_45: -163969641
+      Beach and Water Tileset Atlas_46: 1774701987
+      Beach and Water Tileset Atlas_47: -1157263244
+      Beach and Water Tileset Atlas_48: -1142309999
+      Beach and Water Tileset Atlas_5: -950311535
+      Beach and Water Tileset Atlas_6: 1339114206
+      Beach and Water Tileset Atlas_7: 736762593
+      Beach and Water Tileset Atlas_8: -1887097911
+      Beach and Water Tileset Atlas_9: 1617780421
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

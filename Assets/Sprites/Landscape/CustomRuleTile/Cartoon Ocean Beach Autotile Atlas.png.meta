@@ -1,0 +1,1620 @@
+fileFormatVersion: 2
+guid: dc6ca27b2148d9f4d9c6e9e6cac89732
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7665207293626523639
+    second: Cartoon Ocean Beach Autotile Atlas_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1098
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff975aeb69406a60800000000000000
+      internalID: 7665207293626523639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff02acf20f8f7664f8b4f74a3557268f
+      internalID: 2126073051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1ab1b973cf72446934f7d99f4c14b9
+      internalID: -982971447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e2e520ff852354d942418109e936b8
+      internalID: -171793536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc5debee58d70a45827c12cb06f12f6
+      internalID: 2095340227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de4bf76460840042b8697754d3dbfec
+      internalID: 1719426592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c9b00a796e9594395794fe09d2019a
+      internalID: -1180507195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1101
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b59ebea706aa9428ea0c9e561d57c7
+      internalID: 1188040723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b850b37fbc1684b8120100a9578ea3
+      internalID: -480186517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802d53598f07395449d3e65c18710059
+      internalID: 171288693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c165a5d2ec620440ae35f7beb5c182c
+      internalID: 1322844657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d291ea378b8d044a8819f9f73bd726d
+      internalID: 960675572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a49a36619d37cb44a549051b9941a94
+      internalID: 87264276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4806f79ee180042a2cd67e2a3e1ba7
+      internalID: -92291053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed135ac9fcf036544a1e57a179a0fa57
+      internalID: 285054346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 942
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce625b0165705442be1b604dfb702b1
+      internalID: -411467945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff848c223a3ca84dbeb9e87f653b1b8
+      internalID: 1419718646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f657324ed6ea14c91dbee53af82f7e
+      internalID: 1858157536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba660c50e8a727e4ca08592cb116f55d
+      internalID: -1099097450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc278c63201700e4791e7070c374bd70
+      internalID: -1716087442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6433d2b8c178344873ce8c0b53ee7f
+      internalID: -1859688587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d86919f6b964746984bc7b725d864f
+      internalID: -241373721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1ed6853ab605d4fad39af507783844
+      internalID: 2047113362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 786
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00422ef5c18912c479ebe1300df071fb
+      internalID: 1880057327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 630
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb20b0ba75221a4d9cd79bd48007866
+      internalID: -969211493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 630
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afad49e7886a0346b80373b97e4e500
+      internalID: 1866149914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 630
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcac60230100984380ae5a6534df751
+      internalID: -1221979207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 631
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba74dc8527fdf664396ff9c3ce197d2c
+      internalID: 772537678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 630
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f1e266b7e3b8c4590aecc9426d6110
+      internalID: 837843999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 630
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d519f3f37ce48478da1435a7fb76f3
+      internalID: -302628639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 630
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b472e3d521210b44e8217d6d1f951344
+      internalID: 110494522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 630
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfdbb93f49de604d9567b2cfe3324a8
+      internalID: 709117795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 474
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca55ea99956e9747b5f219b95131706
+      internalID: -1224203836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 474
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cd070f0d1f5c5468f38a43a4dbd992
+      internalID: 511752926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 474
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a82a91b0d0085b48bc75923057c85d6
+      internalID: 958878658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 474
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81312f5f1bad3a94895b37036681ba8c
+      internalID: -292306193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 474
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dd52167b2a7074296f504a68a39ac3
+      internalID: 962771433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 474
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b838f6db002000845885c5b427085910
+      internalID: 1029089788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 474
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ae0522ecdb33c478bf9e61b5f568a7
+      internalID: -190747650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 474
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c230be0bc892f94bb230340282b697d
+      internalID: -623324250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6757a0b499cb40418cc56fa8d885bf9
+      internalID: -1967803622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13823440d454dd94e91739873acb63e8
+      internalID: -575848139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 318
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39fa955fb0308f46bb03e1dadbb3a0c
+      internalID: -236510814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86b601628c58644287a8ea52601ab8f
+      internalID: 1880797867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbf14ed33ec4b7479575812f1c37706
+      internalID: 25582848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152bad884c86ae84588bbb0e661daf4a
+      internalID: 1009845990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73bfe830574f51f47a095bdec4260469
+      internalID: 1607023169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae4cf294888438409666a2b1684f47a
+      internalID: -1026896922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3329f790a76c4af4e85bd8eb48119830
+      internalID: -225806369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e385ac1d5c49448b2077ee857e411b
+      internalID: 2121539166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a928c85ecca69c14098895a3802af213
+      internalID: 1296457750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffff486e2706cd4a930b921ab17200f
+      internalID: 1156870281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20be956e198181c4e93a40aabb8ffb61
+      internalID: 2095781094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059f0913683327647a5f7086effe4cb9
+      internalID: -319570789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7045ef6fe3d194db583a3e6cea17c6
+      internalID: -786366321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 162
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403f166dfad2c8b4db96bfd829affaac
+      internalID: -415208984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3661819206ce54696764445a30a25c
+      internalID: -967675575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 4
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae9c75a5c4ebb24fa00e7de25ca709a
+      internalID: -1625736733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 4
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee49bc40e94851408e55d9caf415806
+      internalID: 112453672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 4
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab5777348f36524696bf5efd8536992
+      internalID: -763766123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 4
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b3d1b4e32913e448c105ca6d4d554f
+      internalID: -227694295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 4
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df98453467e99940a27431e140f722a
+      internalID: -1244385635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560b2df56d90d764cb5489c42d6e5f9b
+      internalID: -1788737639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Ocean Beach Autotile Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 3
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d28d52703b0ee47a962e2c6c4d47c9
+      internalID: -1218417976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 281341805832d9540993f2ddb7d6259b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":155.0,"y":155.0},"gridSpriteOffset":{"x":1.0,"y":1.0},"gridSpritePadding":{"x":1.0,"y":1.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cartoon Ocean Beach Autotile Atlas_0: 7665207293626523639
+      Cartoon Ocean Beach Autotile Atlas_1: 2126073051
+      Cartoon Ocean Beach Autotile Atlas_10: 1322844657
+      Cartoon Ocean Beach Autotile Atlas_11: 960675572
+      Cartoon Ocean Beach Autotile Atlas_12: 87264276
+      Cartoon Ocean Beach Autotile Atlas_13: -92291053
+      Cartoon Ocean Beach Autotile Atlas_14: 285054346
+      Cartoon Ocean Beach Autotile Atlas_15: -411467945
+      Cartoon Ocean Beach Autotile Atlas_16: 1419718646
+      Cartoon Ocean Beach Autotile Atlas_17: 1858157536
+      Cartoon Ocean Beach Autotile Atlas_18: -1099097450
+      Cartoon Ocean Beach Autotile Atlas_19: -1716087442
+      Cartoon Ocean Beach Autotile Atlas_2: -982971447
+      Cartoon Ocean Beach Autotile Atlas_20: -1859688587
+      Cartoon Ocean Beach Autotile Atlas_21: -241373721
+      Cartoon Ocean Beach Autotile Atlas_22: 2047113362
+      Cartoon Ocean Beach Autotile Atlas_23: 1880057327
+      Cartoon Ocean Beach Autotile Atlas_24: -969211493
+      Cartoon Ocean Beach Autotile Atlas_25: 1866149914
+      Cartoon Ocean Beach Autotile Atlas_26: -1221979207
+      Cartoon Ocean Beach Autotile Atlas_27: 772537678
+      Cartoon Ocean Beach Autotile Atlas_28: 837843999
+      Cartoon Ocean Beach Autotile Atlas_29: -302628639
+      Cartoon Ocean Beach Autotile Atlas_3: -171793536
+      Cartoon Ocean Beach Autotile Atlas_30: 110494522
+      Cartoon Ocean Beach Autotile Atlas_31: 709117795
+      Cartoon Ocean Beach Autotile Atlas_32: -1224203836
+      Cartoon Ocean Beach Autotile Atlas_33: 511752926
+      Cartoon Ocean Beach Autotile Atlas_34: 958878658
+      Cartoon Ocean Beach Autotile Atlas_35: -292306193
+      Cartoon Ocean Beach Autotile Atlas_36: 962771433
+      Cartoon Ocean Beach Autotile Atlas_37: 1029089788
+      Cartoon Ocean Beach Autotile Atlas_38: -190747650
+      Cartoon Ocean Beach Autotile Atlas_39: -623324250
+      Cartoon Ocean Beach Autotile Atlas_4: 2095340227
+      Cartoon Ocean Beach Autotile Atlas_40: -1967803622
+      Cartoon Ocean Beach Autotile Atlas_41: -575848139
+      Cartoon Ocean Beach Autotile Atlas_42: -236510814
+      Cartoon Ocean Beach Autotile Atlas_43: 1880797867
+      Cartoon Ocean Beach Autotile Atlas_44: 25582848
+      Cartoon Ocean Beach Autotile Atlas_45: 1009845990
+      Cartoon Ocean Beach Autotile Atlas_46: 1607023169
+      Cartoon Ocean Beach Autotile Atlas_47: -1026896922
+      Cartoon Ocean Beach Autotile Atlas_48: -225806369
+      Cartoon Ocean Beach Autotile Atlas_49: 2121539166
+      Cartoon Ocean Beach Autotile Atlas_5: 1719426592
+      Cartoon Ocean Beach Autotile Atlas_50: 1296457750
+      Cartoon Ocean Beach Autotile Atlas_51: 1156870281
+      Cartoon Ocean Beach Autotile Atlas_52: 2095781094
+      Cartoon Ocean Beach Autotile Atlas_53: -319570789
+      Cartoon Ocean Beach Autotile Atlas_54: -786366321
+      Cartoon Ocean Beach Autotile Atlas_55: -415208984
+      Cartoon Ocean Beach Autotile Atlas_56: -967675575
+      Cartoon Ocean Beach Autotile Atlas_57: -1625736733
+      Cartoon Ocean Beach Autotile Atlas_58: 112453672
+      Cartoon Ocean Beach Autotile Atlas_59: -763766123
+      Cartoon Ocean Beach Autotile Atlas_6: -1180507195
+      Cartoon Ocean Beach Autotile Atlas_60: -227694295
+      Cartoon Ocean Beach Autotile Atlas_61: -1244385635
+      Cartoon Ocean Beach Autotile Atlas_62: -1788737639
+      Cartoon Ocean Beach Autotile Atlas_63: -1218417976
+      Cartoon Ocean Beach Autotile Atlas_7: 1188040723
+      Cartoon Ocean Beach Autotile Atlas_8: -480186517
+      Cartoon Ocean Beach Autotile Atlas_9: 171288693
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
