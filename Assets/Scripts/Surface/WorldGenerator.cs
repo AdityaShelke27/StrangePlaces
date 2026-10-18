@@ -78,6 +78,17 @@ public class WorldGenerator : MonoBehaviour
 
 	private int m_HalfWidth;
 	private int m_HalfHeight;
+
+	TileBase[] _tempTiles;
+
+	//private void OnEnable()
+	//{
+	//	CameaZoomOut.m_StartGeneration += VideoShoot;
+	//}
+	//private void OnDisable()
+	//{
+	//	CameaZoomOut.m_StartGeneration -= VideoShoot;
+	//}
 	private void Start()
 	{
 		m_TerrainTileMapping = new() {
@@ -99,22 +110,40 @@ public class WorldGenerator : MonoBehaviour
 		m_FinalIronSpawnChance = m_TitaniumSpawnChance + m_CopperSpawnChance + m_IronSpawnChance;
 
 		GenerateWorld();
-		//StartCoroutine(VideoWorldGenerator());
+
+		// ---------------------------------- VIDEO -------------------------------------------------
+
+		//TileBase[] _tiles = new TileBase[m_Width * m_Height];
+		//m_Terrain = new E_TerrainTypes[m_Width, m_Height];
+		//m_RawTerrain = new float[m_Width, m_Height];
+		//m_GroundTilemap.ClearAllTiles();
+
+		//m_OffsetX = RandomOffset(m_Seed);
+		//m_OffsetY = RandomOffset(m_Seed + 1);
+
+		//GenerateRawTerrain();
+		//AssignTerrain();
+		//_tiles = AssignTiles(_tiles);
+		//BoundsInt _bounds = new(new Vector3Int(-m_HalfWidth, -m_HalfHeight, 0), new Vector3Int(m_Width, m_Height, 1));
+		//m_GroundTilemap.SetTilesBlock(_bounds, _tiles);
+
+		//_tempTiles = _tiles;
+
+		// ------------------------------------------------------------------------------------------
 	}
-	IEnumerator VideoWorldGenerator()
+	void VideoShoot()
 	{
-		TileBase[] _tiles = new TileBase[m_Width * m_Height];
-		m_Terrain = new E_TerrainTypes[m_Width, m_Height];
-		m_RawTerrain = new float[m_Width, m_Height];
-
-		yield return new WaitForSeconds(2);
-
-		for(int i = 0; i < 10; i++)
+		
+		StartCoroutine(VideoWorldGenerator(_tempTiles));
+	}
+	IEnumerator VideoWorldGenerator(TileBase[] _tiles)
+	{
+		for(int i = 0; i < 30; i++)
 		{
 			m_GroundTilemap.ClearAllTiles();
 
-			m_OffsetX = RandomOffset(m_Seed + i);
-			m_OffsetY = RandomOffset(m_Seed + 1 + i);
+			m_OffsetX = RandomOffset(m_Seed + i + 1);
+			m_OffsetY = RandomOffset(m_Seed + 2 + i);
 
 			GenerateRawTerrain();
 			AssignTerrain();
@@ -122,7 +151,18 @@ public class WorldGenerator : MonoBehaviour
 			BoundsInt _bounds = new(new Vector3Int(-m_HalfWidth, -m_HalfHeight, 0), new Vector3Int(m_Width, m_Height, 1));
 			m_GroundTilemap.SetTilesBlock(_bounds, _tiles);
 
-			yield return new WaitForSeconds(1);
+			if(i == 0)
+			{
+				yield return new WaitForSeconds(1.3f);
+			}
+			else if (i == 1)
+			{
+				yield return new WaitForSeconds(1f);
+			}
+			else
+			{
+				yield return new WaitForSeconds(0.7f / (i * 0.51f));
+			}
 		}
 		
 	}

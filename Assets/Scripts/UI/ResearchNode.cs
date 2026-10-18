@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -86,6 +87,7 @@ public class ResearchNode : MonoBehaviour
 			if (s_SelectedButton == this)
 			{
 				s_SelectedButton.SetResearchButtonActive(!m_MiddleSection.activeSelf);
+				Research.Instance.RefreshTree();
 				return;
 			}
 			else s_SelectedButton.SetResearchButtonActive(false);
@@ -93,7 +95,9 @@ public class ResearchNode : MonoBehaviour
 
 		s_SelectedButton = this;
 		SetResearchButtonActive(true);
+		Research.Instance.RefreshTree();
 	}
+
 	public void SetResearchButtonActive(bool _active)
 	{
 		if(m_ResearchNodeStatus == E_ResearchStatus.Locked)
@@ -147,6 +151,8 @@ public class ResearchNode : MonoBehaviour
 		Research.Instance.RefreshResearchNodeStatus();
 		ItemDatabase.Instance.AddResearchID(_researchID);
 		s_ResearchedAction?.Invoke(_researchID);
+
+		Research.Instance.RefreshTree();
 	}
 	public void SetResearchPointAvailableStatus(bool _areResearchPointsAvailable)
 	{

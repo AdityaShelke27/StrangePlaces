@@ -1,8 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Research : MonoBehaviour
@@ -18,6 +18,8 @@ public class Research : MonoBehaviour
 	[SerializeField] Transform m_RocketConnectionsParent;
 	[SerializeField] GameObject m_BazierConnection;
 	[SerializeField] GameObject m_ResearchCanvas;
+
+	List<BezierUIConnection> m_Connections = new();
 
 	[Header("UI Update")]
 	[SerializeField] Image m_MainResearchButtonImage;
@@ -41,6 +43,8 @@ public class Research : MonoBehaviour
 		CreateResearchDictionary();
 		CreateResearchNodeStatus();
 		CreateBazierConnections();
+
+		RefreshTree();
 	}
 	private void OnMouseUpAsButton()
 	{
@@ -53,8 +57,30 @@ public class Research : MonoBehaviour
 			m_ResearchCanvas.SetActive(true);
 			SelectMainResearch();
 			SetResourceAvailableForResearch();
+			RefreshTree();
 			AudioManager.Instance.PlayButtonClick();
 		}));
+	}
+	public void RefreshTree()
+	{
+		StartCoroutine(RefreshTreeRoutine());
+	}
+	private IEnumerator RefreshTreeRoutine()
+	{
+		// Let text / ContentSizeFitter / LayoutGroups update first.
+		yield return new WaitForEndOfFrame();
+
+		Canvas.ForceUpdateCanvases();
+
+		LayoutRebuilder.ForceRebuildLayoutImmediate(m_MainConnectionsParent.gameObject.GetComponent<RectTransform>());
+		LayoutRebuilder.ForceRebuildLayoutImmediate(m_RocketConnectionsParent.gameObject.GetComponent<RectTransform>());
+
+		Canvas.ForceUpdateCanvases();
+
+		foreach (var connection in m_Connections)
+		{
+			connection.Rebuild();
+		}
 	}
 	public void SelectMainResearch()
 	{
@@ -88,12 +114,14 @@ public class Research : MonoBehaviour
 		{
 			ResearchNodeInfo[] _unlocks = m_ResearchNode_Dict[_key].GetResearchNodeInfo().Unlocks;
 			RectTransform _nodeTransform = m_ResearchNode_Dict[_key].GetComponent<RectTransform>();
-			Transform _connectionParent = _nodeTransform.parent == m_MainResearchContentParent ? m_MainConnectionsParent : m_RocketConnectionsParent;
+			bool _isMain = _nodeTransform.parent == m_MainResearchContentParent;
+			Transform _connectionParent = _isMain ? m_MainConnectionsParent : m_RocketConnectionsParent;
 
 			foreach (ResearchNodeInfo _unlock in _unlocks)
 			{
 				GameObject _connection = Instantiate(m_BazierConnection, _connectionParent);
 				BezierUIConnection _bezier = _connection.GetComponent<BezierUIConnection>();
+				m_Connections.Add(_bezier);
 				_bezier.SetEndpoints(_nodeTransform, m_ResearchNode_Dict[_unlock.ID].GetComponent<RectTransform>());
 			}
 		}

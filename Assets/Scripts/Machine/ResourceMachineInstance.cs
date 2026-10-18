@@ -248,8 +248,8 @@ public class ResourceMachineInstance : MachineInstance
 
 	protected override void StartConveyorMode()
 	{
-		m_InputSocket.SetActive(!m_IsOutputAbstract);
-		m_OutputSocket.SetActive(true);
+		m_InputSocket.SetActive(true);
+		m_OutputSocket.SetActive(!m_IsOutputAbstract);
 	}
 	protected override void EndConveyorMode()
 	{

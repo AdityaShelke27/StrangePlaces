@@ -45,7 +45,7 @@ public class SurfaceMovement : MonoBehaviour
 
 			_inv[i].SetItemSlot(_items[i].item, _items[i].amount);
 		}
-		PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);
+		//PlayerStatsManager.Instance.SetElectricity(PlayerData.electricity);
 		PlayerStatsManager.Instance.SetHunger(PlayerData.hunger);
 		PlayerStatsManager.Instance.SetResearchPoints(PlayerData.researchPoints);
 
@@ -94,6 +94,7 @@ public class SurfaceMovement : MonoBehaviour
 	void UpdatePosition(InputAction.CallbackContext ctx)
 	{
 		if (InputManager.IsPointerOverUI()) return;
+		if (ConveyorManager.Instance.GetIsInConveyorMode()) return;
 
 		if(m_IsHasWork)
 		{
