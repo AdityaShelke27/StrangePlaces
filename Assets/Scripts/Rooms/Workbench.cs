@@ -51,6 +51,7 @@ public class Workbench : MonoBehaviour
 			GameObject _objButton = Instantiate(m_WorkbenchCraftButtonPrefab, m_ButtonContentParent);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftItems[i].CraftItem.itemName);
+			_buttonManager.SetType(m_CraftItems[i].CraftItem.ItemType);
 			_buttonManager.SetImage(m_CraftItems[i].CraftItem.itemImage);
 
 			ResourceRequirement[] _requirements = m_CraftItems[i].ResourceRequirements;
@@ -66,6 +67,7 @@ public class Workbench : MonoBehaviour
 				m_RequiredResourcesTexts[i][j] = _objResourceManager.GetAmountText();
 			}
 			int _idx = i;
+			Debug.Log("Works");
 			_buttonManager.GetButton().onClick.AddListener(() => ConstructMachine(m_CraftItems[_idx]));
 			_buttonManager.SetNotResearchedPanel(!ItemDatabase.Instance.DoesItemIDExistInResearch(m_CraftItems[i].CraftItem.itemID));
 			_buttonManager.GetButton().interactable = _buttonManager.IsResearched();
@@ -94,6 +96,7 @@ public class Workbench : MonoBehaviour
 	}
 	void ConstructMachine(CraftObject _craftMachine)
 	{
+		
 		if (_craftMachine.CraftItem.itemID == "research-point") 
 		{
 			AddResearchPoint(_craftMachine);

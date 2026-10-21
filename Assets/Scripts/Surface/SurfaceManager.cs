@@ -8,11 +8,16 @@ public class SurfaceManager : MonoBehaviour
 	public static SurfaceManager Instance;
 	public static Action<ResourceNodeInstance> s_ShowNodeDetails;
 
+	[SerializeField] private GameObject m_Player;
 	[SerializeField] private GameObject m_TutorialManager;
 	[SerializeField] private GameObject m_DetailPanel;
 	[SerializeField] private TMP_Text m_NameText;
 	[SerializeField] private GameObject m_ObjectivePanel;
 	[SerializeField] private TMP_Text m_DayText;
+
+	[Header("First Day")]
+	[SerializeField] private Transform m_InitialPos;
+	[SerializeField] private GameObject m_MainPanel;
 	bool m_IsShowingPanel = false;
 
 	private void OnEnable()
@@ -47,7 +52,15 @@ public class SurfaceManager : MonoBehaviour
 			TutorialManager.s_Trigger?.Invoke("7");
 		}
 
-		m_DayText.text = $"DAY {PlayerPrefs.GetInt(Constant.PREF_DAY)}";
+		int _day = PlayerPrefs.GetInt(Constant.PREF_DAY);
+		m_DayText.text = $"DAY {_day}";
+
+		if(_day == 1)
+		{
+			m_Player.transform.position = m_InitialPos.position;
+			m_Player.GetComponent<SurfaceMovement>().SetCameraPosition(m_InitialPos.position);
+			m_MainPanel.SetActive(false);
+		}
 	}
 	IEnumerator StartMachineTutorial()
 	{

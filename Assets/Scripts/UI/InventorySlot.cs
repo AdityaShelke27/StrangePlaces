@@ -239,6 +239,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 	public void RemoveItemFromInventory()
 	{
 		SetItemSlot(null, 0);
+		SetActiveSelectionPanel(false);
 	}
 
 	public void ShouldAcceptAllItems(bool _val) => m_ShouldAcceptAllItems = _val;

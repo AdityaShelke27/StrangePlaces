@@ -15,6 +15,7 @@ public class SurfaceMovement : MonoBehaviour
 	[SerializeField] RectTransform m_BunkerPointer;
 	[SerializeField] float m_CamMoveSpeed;
 	[SerializeField] Camera m_Camera;
+	[SerializeField] float m_CameraZOffset = -10;
 	private NavMeshAgent agent;
 	bool m_IsMoving = false;
 	bool m_IsHasWork = false;
@@ -23,7 +24,8 @@ public class SurfaceMovement : MonoBehaviour
 	Vector2 SCREEN_CENTER;
 	float m_EdgePadding = 60f;
 
-	IActivate m_SelectedObject;
+	IActivate m_SelectedObjectAction;
+	GameObject m_SelectedObject;
 	private void Awake()
 	{
 		if (Instance == null)
@@ -67,7 +69,7 @@ public class SurfaceMovement : MonoBehaviour
 	void Update()
 	{
 		Vector3 pos = Vector3.Lerp(m_MainCam.position, transform.position, Time.deltaTime * m_CamMoveSpeed);
-		pos.z = -10;
+		pos.z = m_CameraZOffset;
 		m_MainCam.position = pos;
 
 		if(m_IsMoving)
@@ -77,9 +79,11 @@ public class SurfaceMovement : MonoBehaviour
 			{
 				if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
 				{
-					if (m_SelectedObject != null)
+					if (m_SelectedObjectAction != null)
 					{
-						m_SelectedObject.Activate();
+						m_SelectedObjectAction.Activate();
+						m_PlayerRenderer.flipX = m_SelectedObject.transform.position.x - transform.position.x > 0;
+						m_SelectedObjectAction = null;
 						m_SelectedObject = null;
 						m_IsHasWork = false;
 					}
@@ -91,13 +95,20 @@ public class SurfaceMovement : MonoBehaviour
 
 		PointToBunker();
 	}
+	public void SetCameraPosition(Vector3 _pos)
+	{
+		_pos.z = m_CameraZOffset;
+		m_MainCam.position = _pos;
+	}
 	void UpdatePosition(InputAction.CallbackContext ctx)
 	{
 		if (InputManager.IsPointerOverUI()) return;
 		if (ConveyorManager.Instance.GetIsInConveyorMode()) return;
+		if (m_Animator.GetBool(Constant.PLAYER_BUILD)) return;
 
 		if(m_IsHasWork)
 		{
+			m_SelectedObjectAction = null;
 			m_SelectedObject = null;
 			m_IsHasWork = false;
 		}
@@ -164,5 +175,9 @@ public class SurfaceMovement : MonoBehaviour
 		m_BunkerPointer.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
 	}
 	public Animator GetAnimator() => m_Animator;
-	void SelectObject(GameObject _Obj) => m_SelectedObject = _Obj.GetComponent<IActivate>();
+	void SelectObject(GameObject _Obj)
+	{
+		m_SelectedObject = _Obj;
+		m_SelectedObjectAction = m_SelectedObject.GetComponent<IActivate>();
+	}
 }

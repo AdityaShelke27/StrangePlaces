@@ -51,6 +51,7 @@ public class Kitchen : MonoBehaviour
 			GameObject _objButton = Instantiate(m_FoodCraftButtonPrefab, m_ButtonContentParent);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftMachines[i].CraftItem.itemName);
+			_buttonManager.SetType(m_CraftMachines[i].CraftItem.ItemType);
 			_buttonManager.SetImage(m_CraftMachines[i].CraftItem.itemImage);
 
 			ResourceRequirement[] _requirements = m_CraftMachines[i].ResourceRequirements;

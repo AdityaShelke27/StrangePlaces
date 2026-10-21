@@ -61,6 +61,7 @@ public class Construction : MonoBehaviour
 			m_MachineButtons.Add(_objButton);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftMachines[i].CraftItem.itemName);
+			_buttonManager.SetType(m_CraftMachines[i].CraftItem.ItemType);
 			_buttonManager.SetImage(m_CraftMachines[i].CraftItem.itemImage);
 
 			ResourceRequirement[] _requirements = m_CraftMachines[i].ResourceRequirements;

@@ -63,6 +63,7 @@ public class RocketConstructionWorkbench : MonoBehaviour
 			m_RCPartsButtons.Add(_objButton);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftParts[i].CraftItem.itemName);
+			_buttonManager.SetType(m_CraftParts[i].CraftItem.ItemType);
 			_buttonManager.SetImage(m_CraftParts[i].CraftItem.itemImage);
 
 			ResourceRequirement[] _requirements = m_CraftParts[i].ResourceRequirements;

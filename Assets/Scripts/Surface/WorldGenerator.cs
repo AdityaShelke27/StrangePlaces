@@ -109,6 +109,8 @@ public class WorldGenerator : MonoBehaviour
 		m_FinalCopperSpawnChance = m_TitaniumSpawnChance + m_CopperSpawnChance;
 		m_FinalIronSpawnChance = m_TitaniumSpawnChance + m_CopperSpawnChance + m_IronSpawnChance;
 
+		m_Seed = PlayerPrefs.GetInt(Constant.PREF_DAY) == 1 ? 100 : Random.Range(int.MinValue, int.MaxValue);
+
 		GenerateWorld();
 
 		// ---------------------------------- VIDEO -------------------------------------------------

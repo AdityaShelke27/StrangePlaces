@@ -50,6 +50,7 @@ public class ToolCreation : MonoBehaviour
 			GameObject _objButton = Instantiate(m_ToolCraftButtonPrefab, m_ButtonContentParent);
 			MachineCraftingButtonManager _buttonManager = _objButton.GetComponent<MachineCraftingButtonManager>();
 			_buttonManager.SetName(m_CraftTools[i].CraftItem.itemName);
+			_buttonManager.SetType(m_CraftTools[i].CraftItem.ItemType);
 			_buttonManager.SetImage(m_CraftTools[i].CraftItem.itemImage);
 
 			ResourceRequirement[] _requirements = m_CraftTools[i].ResourceRequirements;

@@ -13196,7 +13196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Used to research new resources and Rocket Parts
+  m_text: Used to research new resources, rooms and Rocket Parts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3078196eac6ac7249b2637d005551242, type: 2}
   m_sharedMaterial: {fileID: 5733075657552930938, guid: 3078196eac6ac7249b2637d005551242, type: 2}

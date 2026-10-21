@@ -67,7 +67,7 @@ public static class Constant
 
 	public static readonly Dictionary<int, List<string>> m_ResearchID_ToItemID = new()
 	{
-		{ 0, new () { "alien-ruin-node", "research-point", "iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },
+		{ 0, new () { "alien-ruin-node", "alien-artifact", "research-point", "iron-ore-node", "iron-ore", "copper-ore", "copper-ore-node", "vyrex-reed-node", "vyrex-reed", "lumabloom-node", "lumabloom", "fiber-mesh", "copper-wires", "nutrient-paste", "iron-plates", "pickaxe", "axe", "0", "3", "4", "nutrient-bar" } },
 		{ 1, new () {"karth-bamboo-node", "karth-bamboo" } },								// Done
 		{ 2, new () {"reinforced-panels" } },												// Done
 		{ 3, new () {"bio-resin" } },														// Done

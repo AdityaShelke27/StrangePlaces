@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: Pickaxe
   m_EditorClassIdentifier: Assembly-CSharp::CraftObject
   CraftItem: {fileID: 11400000, guid: 70fa1ef6c432eb64cbf7ee1cd7952d02, type: 2}
-  ResourceRequirements:
-  - item: {fileID: 11400000, guid: 445ee3fad2137a1489bb7e7405058ee8, type: 2}
-    amount: 2
-  - item: {fileID: 11400000, guid: afbeac8b333ffee4299fa36d196a136e, type: 2}
-    amount: 3
+  ResourceRequirements: []
   CraftAmount: 1
