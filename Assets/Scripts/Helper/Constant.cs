@@ -26,6 +26,7 @@ public static class Constant
 	public const string PREF_TUTORIAL = "Tutorial";
 	public const string PREF_TUTORIAL_FINISHED_IDS = "TutorialFinishedIDs";
 	public const string PREF_DAY = "Day";
+	public const string PREF_ROCKET_PROGRESSION = "RocketProgression";
 	public const string PREF_SAVEAVAILABLE = "Save_SaveAvailable";
 	public const string PREF_SAVE_PLAYERDATA = "Save_PlayerData";
 	public const string PREF_SAVE_ELECTRICITY = "Save_Electricity";

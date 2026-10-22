@@ -10,6 +10,8 @@ public class Research : MonoBehaviour
 	public static Research Instance;
 
 	[Header("UI")]
+	[SerializeField] Button m_RocketResearchButton;
+	[SerializeField] GameObject m_RocketResearchLockImage;
 	[SerializeField] GameObject m_MainResearchPanel;
 	[SerializeField] GameObject m_RocketResearchPanel;
 	[SerializeField] Transform m_MainResearchContentParent;
@@ -33,6 +35,14 @@ public class Research : MonoBehaviour
 
 	Dictionary<int, ResearchNode> m_ResearchNode_Dict = new();
 
+	private void OnEnable()
+	{
+		ResearchNode.s_ResearchedAction += UnlockRocketResearchPanel;
+	}
+	private void OnDisable()
+	{
+		ResearchNode.s_ResearchedAction -= UnlockRocketResearchPanel;
+	}
 	private void Awake()
 	{
 		if (Instance == null) Instance = this;
@@ -57,6 +67,11 @@ public class Research : MonoBehaviour
 			m_ResearchCanvas.SetActive(true);
 			SelectMainResearch();
 			SetResourceAvailableForResearch();
+
+			bool _rocketRoomResearched = ItemDatabase.Instance.DoesItemIDExistInResearch("5");
+			m_RocketResearchButton.interactable = _rocketRoomResearched;
+			m_RocketResearchLockImage.gameObject.SetActive(!_rocketRoomResearched);
+
 			RefreshTree();
 			AudioManager.Instance.PlayButtonClick();
 		}));
@@ -254,6 +269,12 @@ public class Research : MonoBehaviour
 				_script.SetResearchPointAvailableStatus(_availableResearchPoints >= _script.GetResearchNodeInfo().ResearchCost);
 			}
 		}
+	}
+	void UnlockRocketResearchPanel(int _id)
+	{
+		bool _rocketRoomResearched = ItemDatabase.Instance.DoesItemIDExistInResearch("5");
+		m_RocketResearchButton.interactable = _rocketRoomResearched;
+		m_RocketResearchLockImage.gameObject.SetActive(!_rocketRoomResearched);
 	}
 	public void ClosePanel()
 	{

@@ -1,12 +1,13 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RocketPanel : MonoBehaviour
 {
 	public static RocketPanel Instance;
 	[SerializeField] GameObject m_RCPanelUI;
+	[SerializeField] GameObject m_RocketPanelContent;
+	[SerializeField] GameObject m_RocketCompleteContent;
 	[SerializeField] int m_RocketProgression;
 	[SerializeField] Image m_BlueprintImage;
 	[SerializeField] Image m_PartImage;
@@ -63,9 +64,17 @@ public class RocketPanel : MonoBehaviour
 			m_CockpitRequirement,
 		};
 
+		m_RocketProgression = PlayerPrefs.GetInt(Constant.PREF_ROCKET_PROGRESSION, 0);
 		m_RocketProgression = Mathf.Min(m_RocketProgression, 6);
 		m_IsResearchComplete = !(m_RocketProgression <= 5);
 		m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
+
+		if(m_IsResearchComplete)
+		{
+			m_RocketPanelContent.SetActive(false);
+			m_RocketCompleteContent.SetActive(true);
+			return;
+		}
 
 		for (int i = 0; i < m_RocketProgression; i++)
 		{
@@ -107,6 +116,7 @@ public class RocketPanel : MonoBehaviour
 			m_SideSlotParent.GetChild(m_RocketProgression).Find("IconBG").GetComponent<Image>().sprite = m_CompletedIconBG;
 
 			m_RocketProgression++;
+			PlayerPrefs.SetInt(Constant.PREF_ROCKET_PROGRESSION, m_RocketProgression);
 			m_IsResearchComplete = !(m_RocketProgression <= 5);
 			m_ConstructButton.gameObject.SetActive(!m_IsResearchComplete);
 
@@ -118,6 +128,11 @@ public class RocketPanel : MonoBehaviour
 				m_SideSlotParent.GetChild(m_RocketProgression).GetComponent<Image>().sprite = m_SelectedBG;
 				m_SideSlotParent.GetChild(m_RocketProgression).Find("IconBG").GetComponent<Image>().sprite = m_SelectedIconBG;
 			}
+			else
+			{
+				m_RocketPanelContent.SetActive(false);
+				m_RocketCompleteContent.SetActive(true);
+			}	
 			UpdateSpriteAndText();
 			AddResources();
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BunkerInputNode2
   m_EditorClassIdentifier: Assembly-CSharp::ResearchNodeInfo
   ID: 25
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: a3843b9d4c8abc5429e8cea251cabd2a, type: 3}
   Name: Bunker Input Node II
   Description: Adds 1 extra Bunker Input Node.
   ResearchCost: 250
